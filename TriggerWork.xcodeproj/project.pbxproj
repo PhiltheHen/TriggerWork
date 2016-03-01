@@ -14,6 +14,7 @@
 		4E3A821E1C853C03002561E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */; };
 		4E3A82291C853C03002561E2 /* TriggerWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82281C853C03002561E2 /* TriggerWorkTests.swift */; };
 		4E3A82341C853C03002561E2 /* TriggerWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82331C853C03002561E2 /* TriggerWorkUITests.swift */; };
+		C1445E568E0003ABD496E150 /* libPods-TriggerWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8DC6E048EE3BA0E77C7234 /* libPods-TriggerWork.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
 		4E3A82101C853C03002561E2 /* TriggerWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriggerWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3A82131C853C03002561E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E3A82151C853C03002561E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		4E3A822F1C853C03002561E2 /* TriggerWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriggerWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3A82331C853C03002561E2 /* TriggerWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerWorkUITests.swift; sourceTree = "<group>"; };
 		4E3A82351C853C03002561E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
+		DC8DC6E048EE3BA0E77C7234 /* libPods-TriggerWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TriggerWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1445E568E0003ABD496E150 /* libPods-TriggerWork.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				4E3A82271C853C03002561E2 /* TriggerWorkTests */,
 				4E3A82321C853C03002561E2 /* TriggerWorkUITests */,
 				4E3A82111C853C03002561E2 /* Products */,
+				A418FE00B0B3A1628019D27A /* Pods */,
+				6165F4287DE7FF9409844195 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = TriggerWorkUITests;
 			sourceTree = "<group>";
 		};
+		6165F4287DE7FF9409844195 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC8DC6E048EE3BA0E77C7234 /* libPods-TriggerWork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A418FE00B0B3A1628019D27A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */,
+				689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3A82381C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWork" */;
 			buildPhases = (
+				211D39BADF5FB109DDEA70F7 /* Check Pods Manifest.lock */,
 				4E3A820C1C853C03002561E2 /* Sources */,
 				4E3A820D1C853C03002561E2 /* Frameworks */,
 				4E3A820E1C853C03002561E2 /* Resources */,
+				8453A35A138062D693C676E4 /* Embed Pods Frameworks */,
+				D0A3A63BE5EE1176DBEB2E0B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		211D39BADF5FB109DDEA70F7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8453A35A138062D693C676E4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0A3A63BE5EE1176DBEB2E0B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E3A820C1C853C03002561E2 /* Sources */ = {
@@ -397,6 +472,7 @@
 		};
 		4E3A82391C853C03002561E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TriggerWork/Info.plist;
@@ -408,6 +484,7 @@
 		};
 		4E3A823A1C853C03002561E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TriggerWork/Info.plist;
@@ -484,6 +561,7 @@
 				4E3A823A1C853C03002561E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E3A823B1C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWorkTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +570,7 @@
 				4E3A823D1C853C03002561E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E3A823E1C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWorkUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				4E3A82401C853C03002561E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
