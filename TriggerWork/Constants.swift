@@ -7,9 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 #if STAGING
-    let firebaseURL = "triggerworkstaging.firebaseIO.com"
+    let firebaseURL = "https://triggerworkstaging.firebaseIO.com"
 #else
-    let firebaseURL = "triggerwork.firebaseIO.com"
+    let firebaseURL = "https://triggerwork.firebaseIO.com"
 #endif
+
+
+extension CALayer {
+    func setBorderColorFromUIColor(color: UIColor) {
+        self.borderColor = color.CGColor
+    }
+}

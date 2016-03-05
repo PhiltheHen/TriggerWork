@@ -7,21 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
+  
+    // MARK: Constants
+    let ref = Firebase(url: firebaseURL)
 
+    
+    // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: UI Settings
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
-
     /*
     // MARK: - Navigation
 

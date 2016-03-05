@@ -16,7 +16,7 @@
 		4E5A6CB81C8B75AB00806161 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB71C8B75AB00806161 /* User.swift */; };
 		4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
 		4E5A6CC81C8B833700806161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
-		C1445E568E0003ABD496E150 /* libPods-TriggerWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8DC6E048EE3BA0E77C7234 /* libPods-TriggerWork.a */; };
+		4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,10 @@
 		4E5A6CB71C8B75AB00806161 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4E5A6CB91C8B76D200806161 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TriggerWork-Bridging-Header.h"; sourceTree = "<group>"; };
 		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
+		7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
-		DC8DC6E048EE3BA0E77C7234 /* libPods-TriggerWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TriggerWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC9E583CD6B58F70EB8B9D8 /* Pods-TriggerWork.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug staging.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1445E568E0003ABD496E150 /* libPods-TriggerWork.a in Frameworks */,
+				4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,14 +112,12 @@
 		4E3A82121C853C03002561E2 /* TriggerWork */ = {
 			isa = PBXGroup;
 			children = (
-				4E3A82131C853C03002561E2 /* AppDelegate.swift */,
-				4E5A6CC71C8B833700806161 /* Constants.swift */,
-				4E5A6CB91C8B76D200806161 /* LoginViewController.swift */,
-				4E5A6CB71C8B75AB00806161 /* User.swift */,
-				4E3A82171C853C03002561E2 /* Main.storyboard */,
+				4E5A6CCE1C8B88C200806161 /* Models */,
+				4E5A6CCD1C8B88BD00806161 /* Controllers */,
+				4E5A6CCB1C8B88A900806161 /* Layouts */,
+				4E5A6CCC1C8B88B000806161 /* Other */,
 				4E3A821A1C853C03002561E2 /* Assets.xcassets */,
-				4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */,
-				4E3A821F1C853C03002561E2 /* Info.plist */,
+				4E5A6CCA1C8B889D00806161 /* Supporting Files */,
 			);
 			path = TriggerWork;
 			sourceTree = "<group>";
@@ -141,10 +140,53 @@
 			path = TriggerWorkUITests;
 			sourceTree = "<group>";
 		};
+		4E5A6CCA1C8B889D00806161 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */,
+				4E3A821F1C853C03002561E2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E5A6CCB1C8B88A900806161 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				4E3A82171C853C03002561E2 /* Main.storyboard */,
+				4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		4E5A6CCC1C8B88B000806161 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4E5A6CC71C8B833700806161 /* Constants.swift */,
+				4E3A82131C853C03002561E2 /* AppDelegate.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		4E5A6CCD1C8B88BD00806161 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E5A6CB91C8B76D200806161 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4E5A6CCE1C8B88C200806161 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E5A6CB71C8B75AB00806161 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		6165F4287DE7FF9409844195 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DC8DC6E048EE3BA0E77C7234 /* libPods-TriggerWork.a */,
+				7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -443,6 +485,7 @@
 				NAME_SUFFIX = "-Production";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,6 +526,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				NAME_SUFFIX = "-Production";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -603,6 +647,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DSTAGING -DDEBUG";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -679,6 +724,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				NAME_SUFFIX = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -757,6 +803,7 @@
 				NAME_SUFFIX = "-Staging";
 				OTHER_SWIFT_FLAGS = "-DSTAGING -DRELEASE";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
