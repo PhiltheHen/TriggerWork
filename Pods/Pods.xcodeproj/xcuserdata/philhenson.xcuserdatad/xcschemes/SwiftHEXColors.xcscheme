@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '319FC5301551C945852A9EC9'
-               BlueprintName = 'Pods-TriggerWork'
+               BlueprintIdentifier = '04745C4D6FB8A583B1DBFB63'
+               BlueprintName = 'SwiftHEXColors'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_TriggerWork.framework'>
+               BuildableName = 'SwiftHEXColors.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -82,3 +82,24 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-TriggerWork/Firebase.framework"
+  install_framework "Pods-TriggerWork/SwiftHEXColors.framework"
+fi
+if [[ "$CONFIGURATION" == "Debug Staging" ]]; then
+  install_framework "Pods-TriggerWork/Firebase.framework"
+  install_framework "Pods-TriggerWork/SwiftHEXColors.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-TriggerWork/Firebase.framework"
+  install_framework "Pods-TriggerWork/SwiftHEXColors.framework"
+fi
+if [[ "$CONFIGURATION" == "Release Staging" ]]; then
+  install_framework "Pods-TriggerWork/Firebase.framework"
+  install_framework "Pods-TriggerWork/SwiftHEXColors.framework"
+fi
+if [[ "$CONFIGURATION" == "App Store" ]]; then
+  install_framework "Pods-TriggerWork/Firebase.framework"
+  install_framework "Pods-TriggerWork/SwiftHEXColors.framework"
+fi
