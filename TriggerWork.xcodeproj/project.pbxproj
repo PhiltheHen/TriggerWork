@@ -13,6 +13,9 @@
 		4E3A821E1C853C03002561E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */; };
 		4E3A82291C853C03002561E2 /* TriggerWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82281C853C03002561E2 /* TriggerWorkTests.swift */; };
 		4E3A82341C853C03002561E2 /* TriggerWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82331C853C03002561E2 /* TriggerWorkUITests.swift */; };
+		4E3FB7E01C8CE270007D22FD /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7DF1C8CE270007D22FD /* MyriadPro-Bold.otf */; };
+		4E3FB7E21C8CE324007D22FD /* MyriadPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */; };
+		4E3FB7E41C8CE330007D22FD /* MyriadPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */; };
 		4E5A6CB81C8B75AB00806161 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB71C8B75AB00806161 /* User.swift */; };
 		4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
 		4E5A6CC81C8B833700806161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
@@ -52,6 +55,9 @@
 		4E3A822F1C853C03002561E2 /* TriggerWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriggerWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3A82331C853C03002561E2 /* TriggerWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerWorkUITests.swift; sourceTree = "<group>"; };
 		4E3A82351C853C03002561E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E3FB7DF1C8CE270007D22FD /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Light.otf"; sourceTree = "<group>"; };
+		4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Black.otf"; sourceTree = "<group>"; };
 		4E5A6CB71C8B75AB00806161 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4E5A6CB91C8B76D200806161 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -142,9 +148,20 @@
 			path = TriggerWorkUITests;
 			sourceTree = "<group>";
 		};
+		4E3FB7E51C8CE334007D22FD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4E3FB7DF1C8CE270007D22FD /* MyriadPro-Bold.otf */,
+				4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */,
+				4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		4E5A6CCA1C8B889D00806161 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E3FB7E51C8CE334007D22FD /* Fonts */,
 				4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */,
 				4E3A821F1C853C03002561E2 /* Info.plist */,
 			);
@@ -314,7 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E3A821E1C853C03002561E2 /* LaunchScreen.storyboard in Resources */,
+				4E3FB7E41C8CE330007D22FD /* MyriadPro-Black.otf in Resources */,
+				4E3FB7E21C8CE324007D22FD /* MyriadPro-Light.otf in Resources */,
 				4E3A821B1C853C03002561E2 /* Assets.xcassets in Resources */,
+				4E3FB7E01C8CE270007D22FD /* MyriadPro-Bold.otf in Resources */,
 				4E3A82191C853C03002561E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

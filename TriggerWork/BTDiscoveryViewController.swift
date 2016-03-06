@@ -10,7 +10,6 @@ import UIKit
 
 class BTDiscoveryViewController: UIViewController {
 
-    @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyStateView: UIView!
     
@@ -23,7 +22,7 @@ class BTDiscoveryViewController: UIViewController {
         
         //BTUtility.checkForDevices();
         
-        tableContainerView.hidden = !areDevicesAvailable
+        tableView.hidden = !areDevicesAvailable
 
     }
 
