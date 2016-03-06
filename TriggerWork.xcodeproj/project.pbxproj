@@ -16,6 +16,7 @@
 		4E5A6CB81C8B75AB00806161 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB71C8B75AB00806161 /* User.swift */; };
 		4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
 		4E5A6CC81C8B833700806161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
+		4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
 		4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		4E5A6CB91C8B76D200806161 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TriggerWork-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscoveryViewController.swift; sourceTree = "<group>"; };
 		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
 		7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5A6CB91C8B76D200806161 /* LoginViewController.swift */,
+				4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */,
 				4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */,
 				4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */,
 				4E5A6CB81C8B75AB00806161 /* User.swift in Sources */,
