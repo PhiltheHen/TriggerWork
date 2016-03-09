@@ -17,6 +17,7 @@
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
+            <string>MyriadPro-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -49,7 +50,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trigger Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwr-tG-O2Z">
-                                <rect key="frame" x="160" y="70" width="282" height="49"/>
+                                <rect key="frame" x="159" y="70" width="282" height="49"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="49"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -69,9 +70,6 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="BGu-IX-yi8" kind="show" id="wzA-0J-Eyd"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKW-w0-wSk">
                                 <rect key="frame" x="70" y="395" width="460" height="27"/>
@@ -91,16 +89,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgI-gW-Dsl">
+                                <rect key="frame" x="500" y="540" width="80" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Myt-es-tJq"/>
+                                    <constraint firstAttribute="width" constant="80" id="ePw-AO-fan"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="15"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BGu-IX-yi8" kind="show" id="qce-ei-pCW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Xwr-tG-O2Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="23J-dd-Mjw"/>
                             <constraint firstItem="WKW-w0-wSk" firstAttribute="trailing" secondItem="dWM-zn-URa" secondAttribute="trailing" id="4Aa-fP-udE"/>
                             <constraint firstItem="0gN-rf-0Jz" firstAttribute="top" secondItem="Xwr-tG-O2Z" secondAttribute="bottom" constant="120" id="4oX-uA-Ofr"/>
+                            <constraint firstItem="zgI-gW-Dsl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4oc-I3-ced"/>
                             <constraint firstItem="dWM-zn-URa" firstAttribute="trailing" secondItem="emx-hP-grr" secondAttribute="trailing" id="A2J-po-n6N"/>
                             <constraint firstItem="dWM-zn-URa" firstAttribute="top" secondItem="emx-hP-grr" secondAttribute="bottom" constant="40" id="Aln-xD-NrL"/>
                             <constraint firstItem="emx-hP-grr" firstAttribute="top" secondItem="0gN-rf-0Jz" secondAttribute="bottom" constant="8" id="Geg-uO-X9N"/>
                             <constraint firstItem="emx-hP-grr" firstAttribute="leading" secondItem="0gN-rf-0Jz" secondAttribute="leading" id="Vho-sy-wJO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zgI-gW-Dsl" secondAttribute="bottom" constant="20" id="Vub-Gw-aNf"/>
                             <constraint firstItem="WKW-w0-wSk" firstAttribute="top" secondItem="dWM-zn-URa" secondAttribute="bottom" constant="8" id="bPS-Qy-0AV"/>
                             <constraint firstItem="dWM-zn-URa" firstAttribute="leading" secondItem="emx-hP-grr" secondAttribute="leading" id="jb9-fl-CAx"/>
                             <constraint firstItem="WKW-w0-wSk" firstAttribute="leading" secondItem="dWM-zn-URa" secondAttribute="leading" id="jid-pc-8N2"/>
@@ -131,14 +151,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Bluetooth Devices Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VL5-pa-q5Y">
-                                        <rect key="frame" x="203" y="200" width="195" height="17"/>
+                                        <rect key="frame" x="203" y="300" width="195" height="17"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="17"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ty-MW-CVg">
-                                        <rect key="frame" x="247" y="287" width="107" height="27"/>
+                                        <rect key="frame" x="239" y="387" width="123" height="31"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                         <state key="normal" title="Scan for devices">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -158,25 +179,38 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluetooth-icon" translatesAutoresizingMaskIntoConstraints="NO" id="380-PO-Lqf">
-                                        <rect key="frame" x="274" y="100" width="53" height="80"/>
+                                        <rect key="frame" x="274" y="200" width="53" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="5fx-ak-jHy"/>
                                             <constraint firstAttribute="width" constant="53" id="ddS-mO-jW3"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsj-0n-QCr">
+                                        <rect key="frame" x="550" y="20" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="saq-vh-1ig"/>
+                                            <constraint firstAttribute="width" constant="30" id="xSG-y1-nYT"/>
+                                        </constraints>
+                                        <state key="normal" image="close">
+                                            <color key="titleColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeButtonDidTouch:" destination="uo4-Fg-Dsg" eventType="touchUpInside" id="F6R-Jy-8FL"/>
+                                        </connections>
+                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eto-nE-Ga0">
-                                        <rect key="frame" x="20" y="60" width="560" height="480"/>
+                                        <rect key="frame" x="20" y="60" width="560" height="380"/>
                                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Eyk-6o-Fzk" customClass="BTDeviceTableViewCell" customModule="TriggerWork" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyk-6o-Fzk" id="2wf-MJ-lNd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
-                                                            <rect key="frame" x="58" y="13" width="384" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
+                                                            <rect key="frame" x="58" y="13" width="444" height="17"/>
                                                             <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -204,13 +238,15 @@
                                 <constraints>
                                     <constraint firstItem="2ty-MW-CVg" firstAttribute="centerX" secondItem="gOE-rb-Zlp" secondAttribute="centerX" id="13M-yz-avd"/>
                                     <constraint firstItem="380-PO-Lqf" firstAttribute="centerX" secondItem="gOE-rb-Zlp" secondAttribute="centerX" id="AjA-HI-k76"/>
-                                    <constraint firstAttribute="bottom" secondItem="eto-nE-Ga0" secondAttribute="bottom" constant="60" id="Jc6-0D-eSJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="eto-nE-Ga0" secondAttribute="bottom" constant="160" id="Jc6-0D-eSJ"/>
                                     <constraint firstItem="VL5-pa-q5Y" firstAttribute="centerX" secondItem="gOE-rb-Zlp" secondAttribute="centerX" id="KKW-yR-JNv"/>
                                     <constraint firstItem="eto-nE-Ga0" firstAttribute="leading" secondItem="gOE-rb-Zlp" secondAttribute="leading" constant="20" id="N3s-yS-YDQ"/>
-                                    <constraint firstItem="380-PO-Lqf" firstAttribute="top" secondItem="gOE-rb-Zlp" secondAttribute="top" constant="100" id="N8x-54-nXq"/>
+                                    <constraint firstItem="380-PO-Lqf" firstAttribute="top" secondItem="gOE-rb-Zlp" secondAttribute="top" constant="200" id="N8x-54-nXq"/>
                                     <constraint firstItem="eto-nE-Ga0" firstAttribute="top" secondItem="gOE-rb-Zlp" secondAttribute="top" constant="60" id="Xgm-Dd-m8S"/>
                                     <constraint firstItem="2ty-MW-CVg" firstAttribute="top" secondItem="VL5-pa-q5Y" secondAttribute="bottom" constant="70" id="gxG-yA-kWG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lsj-0n-QCr" secondAttribute="trailing" constant="20" id="iWw-8P-T5v"/>
                                     <constraint firstAttribute="trailing" secondItem="eto-nE-Ga0" secondAttribute="trailing" constant="20" id="r0h-rG-8Qp"/>
+                                    <constraint firstItem="Lsj-0n-QCr" firstAttribute="top" secondItem="gOE-rb-Zlp" secondAttribute="top" constant="20" id="uM9-MX-8Ia"/>
                                     <constraint firstItem="VL5-pa-q5Y" firstAttribute="top" secondItem="380-PO-Lqf" secondAttribute="bottom" constant="20" id="xqb-E3-NKu"/>
                                 </constraints>
                             </view>
@@ -230,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKe-B1-7pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1114" y="575"/>
+            <point key="canvasLocation" x="504" y="-849"/>
         </scene>
         <!--Results-->
         <scene sceneID="ITT-vB-vEa">
@@ -254,7 +290,7 @@
         <!--Record-->
         <scene sceneID="te3-EN-Dns">
             <objects>
-                <viewController id="Ou9-Sr-jZ4" sceneMemberID="viewController">
+                <viewController id="Ou9-Sr-jZ4" customClass="RecordSessionViewController" customModule="TriggerWork" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kl7-gx-PYb"/>
                         <viewControllerLayoutGuide type="bottom" id="nSj-Lm-zMo"/>
@@ -265,6 +301,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" id="Xh9-9i-3fU"/>
+                    <connections>
+                        <segue destination="uo4-Fg-Dsg" kind="presentation" identifier="loadBluetoothDiscovery" id="Iox-Yd-XcC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-N2-Pd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,7 +321,6 @@
                     <connections>
                         <segue destination="Ou9-Sr-jZ4" kind="relationship" relationship="viewControllers" id="F8I-Vh-54t"/>
                         <segue destination="kSS-8H-gdd" kind="relationship" relationship="viewControllers" id="foY-Yh-r7W"/>
-                        <segue destination="uo4-Fg-Dsg" kind="presentation" identifier="ShowBTDiscovery" id="4vL-MJ-yS8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JgX-v1-7yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -292,5 +330,6 @@
     </scenes>
     <resources>
         <image name="bluetooth-icon" width="65" height="112"/>
+        <image name="close" width="54" height="54"/>
     </resources>
 </document>

@@ -26,8 +26,13 @@ class BTDiscoveryViewController: UIViewController, UITableViewDataSource, UITabl
 
     }
 
+    // MARK: IBActions
     @IBAction func scanDevicesDidTouch(sender: UIButton) {
         
+    }
+    
+    @IBAction func closeButtonDidTouch(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: UI Settings
