@@ -9,6 +9,7 @@ target 'TriggerWork' do
 
 pod 'Firebase', '>= 2.5.0'
 pod 'SwiftHEXColors'
+pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 
 end
 

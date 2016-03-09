@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BTDiscoveryViewController: UIViewController {
+class BTDiscoveryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyStateView: UIView!
@@ -35,6 +35,20 @@ class BTDiscoveryViewController: UIViewController {
         return true
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80.0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! BTDeviceTableViewCell
+        cell.bTDeviceName.text = "UUID or Athlete Name"
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0;
+    }
 
     /*
     // MARK: - Navigation

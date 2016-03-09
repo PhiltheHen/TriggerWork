@@ -1,13 +1,25 @@
 PODS:
   - Firebase (2.5.1)
+  - SVProgressHUD (2.0-beta8)
   - SwiftHEXColors (1.0.2)
 
 DEPENDENCIES:
   - Firebase (>= 2.5.0)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - SwiftHEXColors
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: 2241d428ac866e6603388430aac83902a01b111c
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
   SwiftHEXColors: 1238ce6ee5c698ef9caf00fad72876602ecd9df6
 
 COCOAPODS: 0.39.0
