@@ -271,6 +271,7 @@
         <!--Results-->
         <scene sceneID="ITT-vB-vEa">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUD-Db-PZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kSS-8H-gdd" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kaP-RR-CQa"/>
@@ -283,13 +284,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Results" id="HNz-AN-gxp"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gUD-Db-PZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-294" y="49"/>
         </scene>
         <!--Record-->
         <scene sceneID="te3-EN-Dns">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-N2-Pd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Ou9-Sr-jZ4" customClass="RecordSessionViewController" customModule="TriggerWork" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kl7-gx-PYb"/>
@@ -305,13 +306,13 @@
                         <segue destination="uo4-Fg-Dsg" kind="presentation" identifier="loadBluetoothDiscovery" id="Iox-Yd-XcC"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-N2-Pd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-294" y="-612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B6b-i7-iK0">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgX-v1-7yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="BGu-IX-yi8" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VXq-Ff-Luf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -323,7 +324,6 @@
                         <segue destination="kSS-8H-gdd" kind="relationship" relationship="viewControllers" id="foY-Yh-r7W"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JgX-v1-7yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1114" y="-281"/>
         </scene>
