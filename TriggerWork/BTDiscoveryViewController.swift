@@ -18,10 +18,6 @@ class BTDiscoveryViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: create BTUtility class
-        
-        //BTUtility.checkForDevices();
-        
         tableView.hidden = !areDevicesAvailable
 
     }
