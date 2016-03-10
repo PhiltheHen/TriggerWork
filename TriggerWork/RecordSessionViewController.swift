@@ -32,5 +32,10 @@ class RecordSessionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: UI Settings
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
 }
