@@ -3,7 +3,7 @@
 //  TriggerWorkTests
 //
 //  Created by Phil Henson on 2/29/16.
-//  Copyright © 2016 Craftsbury Outdoor Center. All rights reserved.
+//  Copyright © 2016 Lost Nation R & D. All rights reserved.
 //
 
 import XCTest

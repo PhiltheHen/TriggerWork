@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftHEXColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>31CAA1D4BA5605C74AEC7E70F37B7175</key>
+		<key>466B0227FEF5D2BA0EB1FB60822796BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87F37248461E525DCB9990B0635BD441</key>
+		<key>4B7BBF5D395F58AD3655EEE879235CF8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3FFFD28B2736214F6FC13EFFC990C16</key>
 		<dict>
 			<key>primary</key>
 			<true/>

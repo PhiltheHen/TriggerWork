@@ -7,43 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03DA3F9CF1BDB5324053A8FB4041191E /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADAC408EA61FD06FE780A69D3623FB6 /* Firebase-dummy.m */; };
-		0A0766AE95B7C90D1C74609EFC0D39CF /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9677A0A1DF3E321EBC8FD74D58B313CB /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14A54A6FBF9D7F73F5A1750B13DD91B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
-		14B2C4C8FAF215CE6EBC7212F7372F11 /* Pods-TriggerWork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28518C58025DB32D14E6B99079E2E48A /* Pods-TriggerWork-dummy.m */; };
-		1F45126F851A79EF3EB6C0A05FCD127D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
-		23E0BE3F60C0B4716DD1B0E9627C43E3 /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30809961EE57EB514609B71A8C0B311B /* SwiftHEXColors.swift */; };
-		270D3695AF68C446EB133E3CF4735230 /* Pods-TriggerWork-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53557D32E36261C543CF5E5CF378FFF3 /* Pods-TriggerWork-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A3039C059F99BC294937A10EA46679B /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F80DF4D2994C637E9900629E9949A04 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		351F81CCE954D0DF99EE1FF23C662EF4 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 163BCC48BA384FC0C886F58FC40B13E7 /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38BC41439FEA0C37B75C979AE286B865 /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AD2BDD72A8B2F78664197AB3619716 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		463F216FDB4BCF30C2AAA56D0C369F42 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 99359992B6DD61112D2A4DDB4E9D8878 /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A689973BF84787073FD93FF4B84F8FC /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E9FAD4B301696349DE4CD10B2F7810 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68DF3809B55142805C969ECB678A84D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
-		68ED0F4C9E8C6786AF847C0A1817F020 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = ACBB090D304DA069AA9B0AC750F72D15 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D807CFF432E1A22443F14732EEEAE7B /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FF10176E08E8244FB2167C7588F189 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		735A2DBB0A94544A448C3F96DF3FE854 /* SwiftHEXColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF247308D9B428CED2CB5892306B364 /* SwiftHEXColors-dummy.m */; };
-		777DDFDD55C3113C0D2AE62FEFF10E4C /* SwiftHEXColors.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0C21D92093E15AC0A9E9CA0545601E /* SwiftHEXColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FB9ED067CF538DE0E911989F09F469F /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E03F6DBB55103E9C86DA1D027641A5AC /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87451470F9BE2CB7DE8B40716E77CECC /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D79A1D6D7C85B5ADC2563CFBFF7A98 /* Empty.m */; };
-		A71B4020DA0C1D19C2BEE1870D7694D9 /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = 693454D8094EF31E49DCA977FB245042 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B23B5A0AA52FEDC3E2D8B17B9EBE3413 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */; };
-		B995397AFE08E0E56A39D25783C82F85 /* SwiftHEXColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC0C999718737795378ECC9AC1DF6CAB /* SwiftHEXColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C59CA88384DBA682C6ADA96C53B78C3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */; };
-		CE470C9206B274124131FE5D2702709F /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 56A233119B7EF025FB61229DA9FAF6B2 /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7B3F253CA898C20DF464CEEB96AEBF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */; };
-		E57FBE975AD5F06F76BABE9F33404AE8 /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C3DCA8ACC3A95C3DDC0A27289ADA725 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DA3F9CF1BDB5324053A8FB4041191E /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FF47CBDE15402351051CC5B8AE57C0 /* Firebase-dummy.m */; };
+		087708DB8709E681570C929E0C257160 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0541769902DDA7A4379D6AE0CE053C11 /* SVProgressHUD.bundle */; };
+		0A0766AE95B7C90D1C74609EFC0D39CF /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9404DBFCB94C80674C8201BE70C707DA /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		126EFA958BE61708121B53367F2B6933 /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F26AF018ACAAB2F70710779149EB984C /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14A54A6FBF9D7F73F5A1750B13DD91B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		1ED785D02E4A878FDA16722FB69D2A66 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4867A01305AA9D9CD4B54D8096C7EDF8 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFA18D60CA011A98E9E7C6CD70F7DB0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A82BC95A7478335FF4524A87C4C4FDA /* SVIndefiniteAnimatedView.m */; };
+		2A3039C059F99BC294937A10EA46679B /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4EEF02D3E4EFBA9447349B64B6D221 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CA65AC04797F13FC8F6516D8103FB45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		2F44AA9242F003605CB2990383808748 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2991A5FAEDB5E6ACB06637F5A5A428A3 /* SVProgressHUD-dummy.m */; };
+		3379067F5933BA7631C938C990FC2250 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		351F81CCE954D0DF99EE1FF23C662EF4 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 326DA7F06DD8A6173F7EDA2A5A530FD5 /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BC41439FEA0C37B75C979AE286B865 /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = F14AC1D388FBB8F8DCFDB1FFFB7CA365 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4306EDD22F8A0396E4F1D0D60F3B81FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		463F216FDB4BCF30C2AAA56D0C369F42 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 81627F95E04939D3FF527BE18B332E1E /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5283DBC4FA4DB05AE4DDDD35886369EB /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7290A5FFD5B0543C5233EA42518B5D /* SwiftHEXColors.swift */; };
+		5A689973BF84787073FD93FF4B84F8FC /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = D839961BC1A895546BFC1470DADCEBC1 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BE1FF1CAE4CA79BD47A5CB5AF7A6F98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F253A8D544BF37E460DFB4A0DB24DC /* QuartzCore.framework */; };
+		68ED0F4C9E8C6786AF847C0A1817F020 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 982D3578F14D97D6C7928C3083B7BAA6 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D807CFF432E1A22443F14732EEEAE7B /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8555394D5E2A8BEBB11BA04C46456AB8 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74369AA0DDD7971FFA84AAA08E5764A0 /* SwiftHEXColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFA2C6785C1757E12AAD25442CCB541 /* SwiftHEXColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		752645E10153AB1A2BD9E6D993D63E09 /* SwiftHEXColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB71E989D94FA08D9922134803E6CA6 /* SwiftHEXColors-dummy.m */; };
+		7FB9ED067CF538DE0E911989F09F469F /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E330242ACB4C2542616BC8D569CACDE /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87451470F9BE2CB7DE8B40716E77CECC /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 467E10ED189786EE38F84293737F4384 /* Empty.m */; };
+		8C88DBE6D7CE98532C3C978BCAEBFF16 /* SwiftHEXColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D3B1F968E3962530E9FA6DEAC467B76 /* SwiftHEXColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D004D8689CA9468F1E02FEFE220061F /* Pods-TriggerWork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28518C58025DB32D14E6B99079E2E48A /* Pods-TriggerWork-dummy.m */; };
+		A71B4020DA0C1D19C2BEE1870D7694D9 /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3145C6492DCBD3E4574DD5A530153854 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABD081B6B0F76257857A6B64FCDE3EA /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F7B56D31CBA5E578410CC0C0D7CA0611 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B23B5A0AA52FEDC3E2D8B17B9EBE3413 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EADEED890CA19CC41EA706B73EB0B /* CFNetwork.framework */; };
+		C59CA88384DBA682C6ADA96C53B78C3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE568498BA21E87626041CD39CEA8DD /* SystemConfiguration.framework */; };
+		CE470C9206B274124131FE5D2702709F /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CC769F9FBB1A0BDBD33899872CE44F /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7B3F253CA898C20DF464CEEB96AEBF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9534E6263C487FEDD253BD5E3F8CDEA0 /* Security.framework */; };
+		DB864F97D9DB6526DA6C557FA3224611 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 560D126A106F49486E0D2D5203A98F0E /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57FBE975AD5F06F76BABE9F33404AE8 /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E851B13BD87F46061162D0BF947F04 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7EBEF55C351B9EB5AFDB917467A48B3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BF209FE0E5050D19AC15B5FC7E9EDE6F /* SVProgressHUD.m */; };
+		FC197E18B529FC6A1DC5350E4BF366CB /* Pods-TriggerWork-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53557D32E36261C543CF5E5CF378FFF3 /* Pods-TriggerWork-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC3F8FB4E6AF8B3EDB5505FDA6FBB873 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D38B95982927FC104CDF23FFBB3C49C1 /* SVRadialGradientLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		12CC84FB4DBD679A813F430485E7B103 /* PBXContainerItemProxy */ = {
+		07A777DF97E464C7F88365D91AE8A79A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 31CAA1D4BA5605C74AEC7E70F37B7175;
+			remoteGlobalIDString = C3FFFD28B2736214F6FC13EFFC990C16;
 			remoteInfo = SwiftHEXColors;
 		};
-		D8C22679244A6D0455922ED0B8286965 /* PBXContainerItemProxy */ = {
+		695BDF53A772AA1637546355279079DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 466B0227FEF5D2BA0EB1FB60822796BD;
+			remoteInfo = SVProgressHUD;
+		};
+		EC410E8F3438F92DBD3CBB74BE5DAB92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -53,62 +71,78 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AF247308D9B428CED2CB5892306B364 /* SwiftHEXColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHEXColors-dummy.m"; sourceTree = "<group>"; };
-		126821FB85958EEE9B22CE4B120C5028 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12E9FAD4B301696349DE4CD10B2F7810 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		0541769902DDA7A4379D6AE0CE053C11 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		0809530FB3980ADE3A75166D45F1891A /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE568498BA21E87626041CD39CEA8DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		142D715E1719A67C74866246D78A6B7E /* Pods-TriggerWork-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TriggerWork-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1481CD8D1C85396949A1C58B3E6D4D6F /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
-		163BCC48BA384FC0C886F58FC40B13E7 /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
-		1A52CE7032C89B7D79CA6573ACA9E537 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		16EC4E9E27B03D0CF33B077A11738251 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AFA2C6785C1757E12AAD25442CCB541 /* SwiftHEXColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftHEXColors.h; path = Sources/SwiftHEXColors.h; sourceTree = "<group>"; };
+		22FF47CBDE15402351051CC5B8AE57C0 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
 		28518C58025DB32D14E6B99079E2E48A /* Pods-TriggerWork-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TriggerWork-dummy.m"; sourceTree = "<group>"; };
 		285EA7F1C3BB631CD86FE5C824206A3F /* Pods-TriggerWork.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TriggerWork.modulemap"; sourceTree = "<group>"; };
+		2991A5FAEDB5E6ACB06637F5A5A428A3 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		2C9B540D855D8A67E3C6578AB40DE14B /* Pods-TriggerWork-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TriggerWork-resources.sh"; sourceTree = "<group>"; };
-		30809961EE57EB514609B71A8C0B311B /* SwiftHEXColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = Sources/SwiftHEXColors.swift; sourceTree = "<group>"; };
+		2E1EADEED890CA19CC41EA706B73EB0B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		2E330242ACB4C2542616BC8D569CACDE /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		3145C6492DCBD3E4574DD5A530153854 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
+		326DA7F06DD8A6173F7EDA2A5A530FD5 /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
 		3E47974A43665A638F5453C6DDF60026 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41D79A1D6D7C85B5ADC2563CFBFF7A98 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
 		466F7AEC67F3CCBAA4C7EBAFCAD0E285 /* Pods-TriggerWork-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TriggerWork-frameworks.sh"; sourceTree = "<group>"; };
+		467E10ED189786EE38F84293737F4384 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		4867A01305AA9D9CD4B54D8096C7EDF8 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		53557D32E36261C543CF5E5CF378FFF3 /* Pods-TriggerWork-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TriggerWork-umbrella.h"; sourceTree = "<group>"; };
-		56A233119B7EF025FB61229DA9FAF6B2 /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
-		60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		671ECE053956BDBFE37A426AA3AA251C /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		54550CF3AF08986990C5C0BD1998771A /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		557DF23D0B5FDC6C9D0F4840C1BBF27E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560D126A106F49486E0D2D5203A98F0E /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		5749DD88A6FD7BF95E1775CBF74141C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61F6ECF76D2506CFC26BF582AFDDC74E /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		63CC769F9FBB1A0BDBD33899872CE44F /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
+		64D0E8D5341722D070CED1E49A1EE021 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
+		68CC439068CEFA8350A34DABB7B59545 /* SwiftHEXColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftHEXColors.modulemap; sourceTree = "<group>"; };
 		68DF3C4C214455A830E8637FBFBACC7F /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
-		693454D8094EF31E49DCA977FB245042 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
-		6F80DF4D2994C637E9900629E9949A04 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
-		77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7C3DCA8ACC3A95C3DDC0A27289ADA725 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
-		86FF10176E08E8244FB2167C7588F189 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
-		8ADAC408EA61FD06FE780A69D3623FB6 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
-		8B3C05F4C36E1758A91799DDB7DE2F87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93580EC379A5F980C0615E93F3F031ED /* SwiftHEXColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-prefix.pch"; sourceTree = "<group>"; };
-		9677A0A1DF3E321EBC8FD74D58B313CB /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
-		99359992B6DD61112D2A4DDB4E9D8878 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
-		A505DAA5E462A441334DCAB41D5D32C3 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
-		AA0D81F4953E3F49C1519AB4E59C03E3 /* SwiftHEXColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftHEXColors.modulemap; sourceTree = "<group>"; };
-		ACBB090D304DA069AA9B0AC750F72D15 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
-		B2AD2BDD72A8B2F78664197AB3619716 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		7D3B1F968E3962530E9FA6DEAC467B76 /* SwiftHEXColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-umbrella.h"; sourceTree = "<group>"; };
+		81627F95E04939D3FF527BE18B332E1E /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
+		8555394D5E2A8BEBB11BA04C46456AB8 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		89F253A8D544BF37E460DFB4A0DB24DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		8D85808761BE19E7926CC2F7E447F533 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		8DE0A07042CB0E2EB60063B052C6C228 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB71E989D94FA08D9922134803E6CA6 /* SwiftHEXColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHEXColors-dummy.m"; sourceTree = "<group>"; };
+		9123EA6EB5314F814F65C40FBF604599 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		92F93FE90192E4BA41CF2B540AF9070F /* SwiftHEXColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-prefix.pch"; sourceTree = "<group>"; };
+		9404DBFCB94C80674C8201BE70C707DA /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		9534E6263C487FEDD253BD5E3F8CDEA0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		982D3578F14D97D6C7928C3083B7BAA6 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		9A82BC95A7478335FF4524A87C4C4FDA /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		A13A529F0A061B2C878374AFAFDED8F3 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		AB753D727251116B5A31D3A1D1B8F76C /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D6C633464695856EE2C70D13C68007 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC91CDAE00EA8926B4391E293DB6AFF0 /* Pods-TriggerWork.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.debug staging.xcconfig"; sourceTree = "<group>"; };
-		BF4A0D2D4005E58D6563DB763EDA16DC /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C25C93DC72A2D3AEDC05F4CE82403D9B /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		BF209FE0E5050D19AC15B5FC7E9EDE6F /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		C49225B6C45A4A685EFB70D83C179DE7 /* Pods-TriggerWork.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.app store.xcconfig"; sourceTree = "<group>"; };
-		C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		C7C80230C0C4C1ACFA926C90959AF859 /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA8733A27A36096BD2323FCFE03C8DF7 /* SwiftHEXColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHEXColors.xcconfig; sourceTree = "<group>"; };
-		DC0C999718737795378ECC9AC1DF6CAB /* SwiftHEXColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-umbrella.h"; sourceTree = "<group>"; };
-		DD0C21D92093E15AC0A9E9CA0545601E /* SwiftHEXColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftHEXColors.h; path = Sources/SwiftHEXColors.h; sourceTree = "<group>"; };
-		E03F6DBB55103E9C86DA1D027641A5AC /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
-		F1434CDBDA9F5CC879B49AB055B9AD13 /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D38B95982927FC104CDF23FFBB3C49C1 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		D839961BC1A895546BFC1470DADCEBC1 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		DC4EEF02D3E4EFBA9447349B64B6D221 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		DC7290A5FFD5B0543C5233EA42518B5D /* SwiftHEXColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = Sources/SwiftHEXColors.swift; sourceTree = "<group>"; };
+		E3E851B13BD87F46061162D0BF947F04 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHEXColors.xcconfig; sourceTree = "<group>"; };
+		F14AC1D388FBB8F8DCFDB1FFFB7CA365 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		F26AF018ACAAB2F70710779149EB984C /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		F7B56D31CBA5E578410CC0C0D7CA0611 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		F8D7B05F65C749C392C88937F6967AB4 /* Pods-TriggerWork-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TriggerWork-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0989EC05627A1BD02760257432E02A15 /* Frameworks */ = {
+		0BF00C02862EE88BA2D6F79EE95C81BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F45126F851A79EF3EB6C0A05FCD127D /* Foundation.framework in Frameworks */,
+				3379067F5933BA7631C938C990FC2250 /* Foundation.framework in Frameworks */,
+				5BE1FF1CAE4CA79BD47A5CB5AF7A6F98 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,44 +157,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F24346144676BDC1A48114E3CD901C1E /* Frameworks */ = {
+		35685384610FAE82362EFD10CB9F4946 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68DF3809B55142805C969ECB678A84D5 /* Foundation.framework in Frameworks */,
+				4306EDD22F8A0396E4F1D0D60F3B81FF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C679D3638C4F839D8BAF44AA8F106ACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA65AC04797F13FC8F6516D8103FB45 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F24585065BA2DAAD4B24E094FE600A4 /* Support Files */ = {
+		1021FECCBA3CD6E12559793814F0CB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1A52CE7032C89B7D79CA6573ACA9E537 /* Firebase.modulemap */,
-				671ECE053956BDBFE37A426AA3AA251C /* Firebase.xcconfig */,
-				8ADAC408EA61FD06FE780A69D3623FB6 /* Firebase-dummy.m */,
-				C25C93DC72A2D3AEDC05F4CE82403D9B /* Firebase-prefix.pch */,
-				6F80DF4D2994C637E9900629E9949A04 /* Firebase-umbrella.h */,
-				8B3C05F4C36E1758A91799DDB7DE2F87 /* Info.plist */,
+				2E1EADEED890CA19CC41EA706B73EB0B /* CFNetwork.framework */,
+				D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */,
+				89F253A8D544BF37E460DFB4A0DB24DC /* QuartzCore.framework */,
+				9534E6263C487FEDD253BD5E3F8CDEA0 /* Security.framework */,
+				0BE568498BA21E87626041CD39CEA8DD /* SystemConfiguration.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Firebase";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				843A690C4A272ACCFA5202DC4499C74E /* iOS */,
+				1021FECCBA3CD6E12559793814F0CB81 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		35D65AF399F2D948E7A03275451CF139 /* Pods */ = {
+		293C4DA933D1FD458634E54D94A81633 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				E9A7E2B5FE57D1840164FA832358380E /* Firebase */,
-				9B62A58E499D0E96C421AEDD725A6ECB /* SwiftHEXColors */,
+				467E10ED189786EE38F84293737F4384 /* Empty.m */,
+				3145C6492DCBD3E4574DD5A530153854 /* FAuthData.h */,
+				9404DBFCB94C80674C8201BE70C707DA /* FAuthType.h */,
+				8555394D5E2A8BEBB11BA04C46456AB8 /* FConfig.h */,
+				63CC769F9FBB1A0BDBD33899872CE44F /* FDataSnapshot.h */,
+				326DA7F06DD8A6173F7EDA2A5A530FD5 /* FEventType.h */,
+				D839961BC1A895546BFC1470DADCEBC1 /* Firebase.h */,
+				E3E851B13BD87F46061162D0BF947F04 /* FirebaseApp.h */,
+				982D3578F14D97D6C7928C3083B7BAA6 /* FirebaseServerValue.h */,
+				F14AC1D388FBB8F8DCFDB1FFFB7CA365 /* FMutableData.h */,
+				2E330242ACB4C2542616BC8D569CACDE /* FQuery.h */,
+				81627F95E04939D3FF527BE18B332E1E /* FTransactionResult.h */,
+				C1E861C106C9878B4612619A10C18480 /* Frameworks */,
+				B969FCDD9D3AB3357D6D9D20AAD413CD /* Support Files */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		40A44533F353B5ED2D684D26AE8B58D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				293C4DA933D1FD458634E54D94A81633 /* Firebase */,
+				B88C355D5D0356AB2BDB22E98486755D /* SVProgressHUD */,
+				F42F6F0B94F78AE5DCABBC45479A979D /* SwiftHEXColors */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -171,16 +233,6 @@
 				69C21B678A083078297C2BD073D7E09F /* Pods-TriggerWork */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		66E34C823FBF2EB0018A83642871D859 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BF4A0D2D4005E58D6563DB763EDA16DC /* Firebase.framework */,
-				F1434CDBDA9F5CC879B49AB055B9AD13 /* Pods_TriggerWork.framework */,
-				C7C80230C0C4C1ACFA926C90959AF859 /* SwiftHEXColors.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		69C21B678A083078297C2BD073D7E09F /* Pods-TriggerWork */ = {
@@ -208,75 +260,105 @@
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				35D65AF399F2D948E7A03275451CF139 /* Pods */,
-				66E34C823FBF2EB0018A83642871D859 /* Products */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				40A44533F353B5ED2D684D26AE8B58D5 /* Pods */,
+				DD4254B1F84487AA5FF98073AB3C325C /* Products */,
 				410268CDCA4A388AAC69002357FE9F60 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		843A690C4A272ACCFA5202DC4499C74E /* iOS */ = {
+		B376BC548ADD1FBF3A1CDE9A6D2F6B51 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */,
-				77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */,
-				C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */,
-				6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		9B62A58E499D0E96C421AEDD725A6ECB /* SwiftHEXColors */ = {
-			isa = PBXGroup;
-			children = (
-				DD0C21D92093E15AC0A9E9CA0545601E /* SwiftHEXColors.h */,
-				30809961EE57EB514609B71A8C0B311B /* SwiftHEXColors.swift */,
-				B35A83CCEB3516C4E802132EB65973DA /* Support Files */,
-			);
-			path = SwiftHEXColors;
-			sourceTree = "<group>";
-		};
-		B35A83CCEB3516C4E802132EB65973DA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				126821FB85958EEE9B22CE4B120C5028 /* Info.plist */,
-				AA0D81F4953E3F49C1519AB4E59C03E3 /* SwiftHEXColors.modulemap */,
-				DA8733A27A36096BD2323FCFE03C8DF7 /* SwiftHEXColors.xcconfig */,
-				0AF247308D9B428CED2CB5892306B364 /* SwiftHEXColors-dummy.m */,
-				93580EC379A5F980C0615E93F3F031ED /* SwiftHEXColors-prefix.pch */,
-				DC0C999718737795378ECC9AC1DF6CAB /* SwiftHEXColors-umbrella.h */,
+				8DE0A07042CB0E2EB60063B052C6C228 /* Info.plist */,
+				68CC439068CEFA8350A34DABB7B59545 /* SwiftHEXColors.modulemap */,
+				EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */,
+				8FB71E989D94FA08D9922134803E6CA6 /* SwiftHEXColors-dummy.m */,
+				92F93FE90192E4BA41CF2B540AF9070F /* SwiftHEXColors-prefix.pch */,
+				7D3B1F968E3962530E9FA6DEAC467B76 /* SwiftHEXColors-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftHEXColors";
 			sourceTree = "<group>";
 		};
-		D3DA6C380D3686FA3FBC6295B3609C77 /* Frameworks */ = {
+		B88C355D5D0356AB2BDB22E98486755D /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				A505DAA5E462A441334DCAB41D5D32C3 /* libFirebaseStatic.a */,
+				4867A01305AA9D9CD4B54D8096C7EDF8 /* SVIndefiniteAnimatedView.h */,
+				9A82BC95A7478335FF4524A87C4C4FDA /* SVIndefiniteAnimatedView.m */,
+				560D126A106F49486E0D2D5203A98F0E /* SVProgressHUD.h */,
+				BF209FE0E5050D19AC15B5FC7E9EDE6F /* SVProgressHUD.m */,
+				F7B56D31CBA5E578410CC0C0D7CA0611 /* SVRadialGradientLayer.h */,
+				D38B95982927FC104CDF23FFBB3C49C1 /* SVRadialGradientLayer.m */,
+				CAD206FE7660444224F3930FB8144822 /* Resources */,
+				C3C3A09F8EFFE4FB0B39929D2ECAB801 /* Support Files */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		B969FCDD9D3AB3357D6D9D20AAD413CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D85808761BE19E7926CC2F7E447F533 /* Firebase.modulemap */,
+				9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */,
+				22FF47CBDE15402351051CC5B8AE57C0 /* Firebase-dummy.m */,
+				61F6ECF76D2506CFC26BF582AFDDC74E /* Firebase-prefix.pch */,
+				DC4EEF02D3E4EFBA9447349B64B6D221 /* Firebase-umbrella.h */,
+				5749DD88A6FD7BF95E1775CBF74141C7 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Firebase";
+			sourceTree = "<group>";
+		};
+		C1E861C106C9878B4612619A10C18480 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A13A529F0A061B2C878374AFAFDED8F3 /* libFirebaseStatic.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E9A7E2B5FE57D1840164FA832358380E /* Firebase */ = {
+		C3C3A09F8EFFE4FB0B39929D2ECAB801 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				41D79A1D6D7C85B5ADC2563CFBFF7A98 /* Empty.m */,
-				693454D8094EF31E49DCA977FB245042 /* FAuthData.h */,
-				9677A0A1DF3E321EBC8FD74D58B313CB /* FAuthType.h */,
-				86FF10176E08E8244FB2167C7588F189 /* FConfig.h */,
-				56A233119B7EF025FB61229DA9FAF6B2 /* FDataSnapshot.h */,
-				163BCC48BA384FC0C886F58FC40B13E7 /* FEventType.h */,
-				12E9FAD4B301696349DE4CD10B2F7810 /* Firebase.h */,
-				7C3DCA8ACC3A95C3DDC0A27289ADA725 /* FirebaseApp.h */,
-				ACBB090D304DA069AA9B0AC750F72D15 /* FirebaseServerValue.h */,
-				B2AD2BDD72A8B2F78664197AB3619716 /* FMutableData.h */,
-				E03F6DBB55103E9C86DA1D027641A5AC /* FQuery.h */,
-				99359992B6DD61112D2A4DDB4E9D8878 /* FTransactionResult.h */,
-				D3DA6C380D3686FA3FBC6295B3609C77 /* Frameworks */,
-				0F24585065BA2DAAD4B24E094FE600A4 /* Support Files */,
+				557DF23D0B5FDC6C9D0F4840C1BBF27E /* Info.plist */,
+				64D0E8D5341722D070CED1E49A1EE021 /* SVProgressHUD.modulemap */,
+				94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */,
+				2991A5FAEDB5E6ACB06637F5A5A428A3 /* SVProgressHUD-dummy.m */,
+				9123EA6EB5314F814F65C40FBF604599 /* SVProgressHUD-prefix.pch */,
+				F26AF018ACAAB2F70710779149EB984C /* SVProgressHUD-umbrella.h */,
 			);
-			path = Firebase;
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		CAD206FE7660444224F3930FB8144822 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0541769902DDA7A4379D6AE0CE053C11 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DD4254B1F84487AA5FF98073AB3C325C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB753D727251116B5A31D3A1D1B8F76C /* Firebase.framework */,
+				0809530FB3980ADE3A75166D45F1891A /* Pods_TriggerWork.framework */,
+				16EC4E9E27B03D0CF33B077A11738251 /* SVProgressHUD.framework */,
+				54550CF3AF08986990C5C0BD1998771A /* SwiftHEXColors.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F42F6F0B94F78AE5DCABBC45479A979D /* SwiftHEXColors */ = {
+			isa = PBXGroup;
+			children = (
+				1AFA2C6785C1757E12AAD25442CCB541 /* SwiftHEXColors.h */,
+				DC7290A5FFD5B0543C5233EA42518B5D /* SwiftHEXColors.swift */,
+				B376BC548ADD1FBF3A1CDE9A6D2F6B51 /* Support Files */,
+			);
+			path = SwiftHEXColors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,33 +383,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6BBDD25F32402D9E7A000C10D9D0796 /* Headers */ = {
+		6D3B910DC19B9A9F6A9FDB1DFEAE5654 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				270D3695AF68C446EB133E3CF4735230 /* Pods-TriggerWork-umbrella.h in Headers */,
+				8C88DBE6D7CE98532C3C978BCAEBFF16 /* SwiftHEXColors-umbrella.h in Headers */,
+				74369AA0DDD7971FFA84AAA08E5764A0 /* SwiftHEXColors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF7D377E8AAAE96423AE3359A94412C7 /* Headers */ = {
+		B9C59F5DFC69CA792170EE4B5D38F390 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B995397AFE08E0E56A39D25783C82F85 /* SwiftHEXColors-umbrella.h in Headers */,
-				777DDFDD55C3113C0D2AE62FEFF10E4C /* SwiftHEXColors.h in Headers */,
+				1ED785D02E4A878FDA16722FB69D2A66 /* SVIndefiniteAnimatedView.h in Headers */,
+				126EFA958BE61708121B53367F2B6933 /* SVProgressHUD-umbrella.h in Headers */,
+				DB864F97D9DB6526DA6C557FA3224611 /* SVProgressHUD.h in Headers */,
+				AABD081B6B0F76257857A6B64FCDE3EA /* SVRadialGradientLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9D91629275054488C7CCD170606B26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC197E18B529FC6A1DC5350E4BF366CB /* Pods-TriggerWork-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		31CAA1D4BA5605C74AEC7E70F37B7175 /* SwiftHEXColors */ = {
+		466B0227FEF5D2BA0EB1FB60822796BD /* SVProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6E6C6D48DD7FBCDEFD2FA411489B7FF /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */;
+			buildConfigurationList = 38A2D0A2A81F9F197BA91BEA3317F620 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
 			buildPhases = (
-				899C2F26614B347217B119AB7C07174E /* Sources */,
-				0989EC05627A1BD02760257432E02A15 /* Frameworks */,
-				EF7D377E8AAAE96423AE3359A94412C7 /* Headers */,
+				20F0884ACCC360C217DB860E760F3586 /* Sources */,
+				0BF00C02862EE88BA2D6F79EE95C81BF /* Frameworks */,
+				B9C59F5DFC69CA792170EE4B5D38F390 /* Headers */,
+				D61D112B7A3CBC76FE3E72F8A919E061 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = 16EC4E9E27B03D0CF33B077A11738251 /* SVProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4B7BBF5D395F58AD3655EEE879235CF8 /* Pods-TriggerWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0336D38987DDC5DB6A67E7F20E8B0B15 /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */;
+			buildPhases = (
+				B4911710D9B5352E0986BE0DFE20EAA2 /* Sources */,
+				35685384610FAE82362EFD10CB9F4946 /* Frameworks */,
+				CC9D91629275054488C7CCD170606B26 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1204DCD4157417CC747159EAB8C7EC1 /* PBXTargetDependency */,
+				06C6A7FE5EDA2BEDC31DD3B34266B1EF /* PBXTargetDependency */,
+				D3B7CEF33B874293F7A6717A0FC6C3D9 /* PBXTargetDependency */,
+			);
+			name = "Pods-TriggerWork";
+			productName = "Pods-TriggerWork";
+			productReference = 0809530FB3980ADE3A75166D45F1891A /* Pods_TriggerWork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3FFFD28B2736214F6FC13EFFC990C16 /* SwiftHEXColors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B5935C531DD47AC3E875768CC64526 /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */;
+			buildPhases = (
+				1B8BE05851CCD3BF83502FEA7751AA3D /* Sources */,
+				C679D3638C4F839D8BAF44AA8F106ACE /* Frameworks */,
+				6D3B910DC19B9A9F6A9FDB1DFEAE5654 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -335,26 +466,7 @@
 			);
 			name = SwiftHEXColors;
 			productName = SwiftHEXColors;
-			productReference = C7C80230C0C4C1ACFA926C90959AF859 /* SwiftHEXColors.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		87F37248461E525DCB9990B0635BD441 /* Pods-TriggerWork */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22C3269D1FE549F34437B94F61DB8FF2 /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */;
-			buildPhases = (
-				B5E7EF32F2D988E01B940A9C7BF01534 /* Sources */,
-				F24346144676BDC1A48114E3CD901C1E /* Frameworks */,
-				E6BBDD25F32402D9E7A000C10D9D0796 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				203F76FA6EE35FC074B594265E247F3F /* PBXTargetDependency */,
-				8F79D31E5DC94E2A98CFA1B74A0B7F66 /* PBXTargetDependency */,
-			);
-			name = "Pods-TriggerWork";
-			productName = "Pods-TriggerWork";
-			productReference = F1434CDBDA9F5CC879B49AB055B9AD13 /* Pods_TriggerWork.framework */;
+			productReference = 54550CF3AF08986990C5C0BD1998771A /* SwiftHEXColors.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EF8500EB59F29299865850AE249CDE05 /* Firebase */ = {
@@ -371,7 +483,7 @@
 			);
 			name = Firebase;
 			productName = Firebase;
-			productReference = BF4A0D2D4005E58D6563DB763EDA16DC /* Firebase.framework */;
+			productReference = AB753D727251116B5A31D3A1D1B8F76C /* Firebase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -391,18 +503,50 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 66E34C823FBF2EB0018A83642871D859 /* Products */;
+			productRefGroup = DD4254B1F84487AA5FF98073AB3C325C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EF8500EB59F29299865850AE249CDE05 /* Firebase */,
-				87F37248461E525DCB9990B0635BD441 /* Pods-TriggerWork */,
-				31CAA1D4BA5605C74AEC7E70F37B7175 /* SwiftHEXColors */,
+				4B7BBF5D395F58AD3655EEE879235CF8 /* Pods-TriggerWork */,
+				466B0227FEF5D2BA0EB1FB60822796BD /* SVProgressHUD */,
+				C3FFFD28B2736214F6FC13EFFC990C16 /* SwiftHEXColors */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		D61D112B7A3CBC76FE3E72F8A919E061 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087708DB8709E681570C929E0C257160 /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		1B8BE05851CCD3BF83502FEA7751AA3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				752645E10153AB1A2BD9E6D993D63E09 /* SwiftHEXColors-dummy.m in Sources */,
+				5283DBC4FA4DB05AE4DDDD35886369EB /* SwiftHEXColors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20F0884ACCC360C217DB860E760F3586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFA18D60CA011A98E9E7C6CD70F7DB0 /* SVIndefiniteAnimatedView.m in Sources */,
+				2F44AA9242F003605CB2990383808748 /* SVProgressHUD-dummy.m in Sources */,
+				F7EBEF55C351B9EB5AFDB917467A48B3 /* SVProgressHUD.m in Sources */,
+				FC3F8FB4E6AF8B3EDB5505FDA6FBB873 /* SVRadialGradientLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74C2A21AE0CB723DB64F136C83381630 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,44 +556,153 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		899C2F26614B347217B119AB7C07174E /* Sources */ = {
+		B4911710D9B5352E0986BE0DFE20EAA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				735A2DBB0A94544A448C3F96DF3FE854 /* SwiftHEXColors-dummy.m in Sources */,
-				23E0BE3F60C0B4716DD1B0E9627C43E3 /* SwiftHEXColors.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5E7EF32F2D988E01B940A9C7BF01534 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14B2C4C8FAF215CE6EBC7212F7372F11 /* Pods-TriggerWork-dummy.m in Sources */,
+				9D004D8689CA9468F1E02FEFE220061F /* Pods-TriggerWork-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		203F76FA6EE35FC074B594265E247F3F /* PBXTargetDependency */ = {
+		06C6A7FE5EDA2BEDC31DD3B34266B1EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = 466B0227FEF5D2BA0EB1FB60822796BD /* SVProgressHUD */;
+			targetProxy = 695BDF53A772AA1637546355279079DD /* PBXContainerItemProxy */;
+		};
+		B1204DCD4157417CC747159EAB8C7EC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Firebase;
 			target = EF8500EB59F29299865850AE249CDE05 /* Firebase */;
-			targetProxy = D8C22679244A6D0455922ED0B8286965 /* PBXContainerItemProxy */;
+			targetProxy = EC410E8F3438F92DBD3CBB74BE5DAB92 /* PBXContainerItemProxy */;
 		};
-		8F79D31E5DC94E2A98CFA1B74A0B7F66 /* PBXTargetDependency */ = {
+		D3B7CEF33B874293F7A6717A0FC6C3D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftHEXColors;
-			target = 31CAA1D4BA5605C74AEC7E70F37B7175 /* SwiftHEXColors */;
-			targetProxy = 12CC84FB4DBD679A813F430485E7B103 /* PBXContainerItemProxy */;
+			target = C3FFFD28B2736214F6FC13EFFC990C16 /* SwiftHEXColors */;
+			targetProxy = 07A777DF97E464C7F88365D91AE8A79A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0A794808223B4AF4B59BCA845E3C74A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1481CD8D1C85396949A1C58B3E6D4D6F /* Pods-TriggerWork.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TriggerWork;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0B7202C27B86CCD575F18383877D6C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftHEXColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1039514401EADFE2FB405848732FD5D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2CAD21A19DA922104179818C2B8AFDA5 /* Debug Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftHEXColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug Staging";
+		};
 		37A9DE43E9328465F8B238C1583A1431 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671ECE053956BDBFE37A426AA3AA251C /* Firebase.xcconfig */;
+			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -474,9 +727,9 @@
 			};
 			name = "Release Staging";
 		};
-		3FA23A2366EE8801F7F02837E95BD110 /* Release */ = {
+		3B40963DD3018417C9E17639C5EEAC99 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA8733A27A36096BD2323FCFE03C8DF7 /* SwiftHEXColors.xcconfig */;
+			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -491,15 +744,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftHEXColors;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		418C6E1E5B0AF53BC56107D293CD6C35 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
@@ -534,9 +788,9 @@
 			};
 			name = "Debug Staging";
 		};
-		4C2D0D3A30D998C396112581226405E6 /* Debug */ = {
+		43EB58CFE9FD4C79925E38976A32160D /* Release Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA8733A27A36096BD2323FCFE03C8DF7 /* SwiftHEXColors.xcconfig */;
+			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -551,18 +805,44 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftHEXColors;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release Staging";
+		};
+		70AA92BBAE968224CEB92A5D0C5086DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		58B82A974196D70137C00751A5BF1144 /* Release Staging */ = {
+		732FCAC704BB65FD5B5E74B3E5B858F7 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6D6C633464695856EE2C70D13C68007 /* Pods-TriggerWork.release staging.xcconfig */;
 			buildSettings = {
@@ -592,9 +872,9 @@
 			};
 			name = "Release Staging";
 		};
-		58C9511AC7D5262737F90E4FED2D846C /* Release */ = {
+		7659A60D3A819A3ABA331593DBDC747F /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68DF3C4C214455A830E8637FBFBACC7F /* Pods-TriggerWork.release.xcconfig */;
+			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -603,51 +883,21 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TriggerWork;
+				PRODUCT_NAME = SVProgressHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
-		};
-		69DF583A150248BFDBDFB00C285BC7DE /* App Store */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA8733A27A36096BD2323FCFE03C8DF7 /* SwiftHEXColors.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHEXColors;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "App Store";
+			name = "Debug Staging";
 		};
 		82502FD33FE72B18CB1EE21B68BFF4F2 /* App Store */ = {
 			isa = XCBuildConfiguration;
@@ -723,7 +973,7 @@
 		};
 		8F84D07446AE14ABA3FE41770EE794C4 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671ECE053956BDBFE37A426AA3AA251C /* Firebase.xcconfig */;
+			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -748,7 +998,34 @@
 			};
 			name = "Debug Staging";
 		};
-		98C4C64CBF8F6614580639F0C2AF6CFA /* App Store */ = {
+		AA652B74607F8A0E1A49EE4873D46946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AAF71CB81CC23CDD48DA7F4600DDAFA1 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C49225B6C45A4A685EFB70D83C179DE7 /* Pods-TriggerWork.app store.xcconfig */;
 			buildSettings = {
@@ -778,9 +1055,9 @@
 			};
 			name = "App Store";
 		};
-		9E034FB121BD482135D07438E12D5752 /* Debug Staging */ = {
+		B49CFB1433DA9AEDC53DEDAC31589E7E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC91CDAE00EA8926B4391E293DB6AFF0 /* Pods-TriggerWork.debug staging.xcconfig */;
+			baseConfigurationReference = 68DF3C4C214455A830E8637FBFBACC7F /* Pods-TriggerWork.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -806,38 +1083,11 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "Debug Staging";
-		};
-		AA652B74607F8A0E1A49EE4873D46946 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671ECE053956BDBFE37A426AA3AA251C /* Firebase.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Firebase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
 			name = Release;
 		};
 		BBB71AEFC649F48374EB1805D8353820 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671ECE053956BDBFE37A426AA3AA251C /* Firebase.xcconfig */;
+			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -896,9 +1146,9 @@
 			};
 			name = Release;
 		};
-		D138C8D22218B772469DC8E4EAA1B8D6 /* Debug Staging */ = {
+		D782346E071BA9D7DFBF2359FC217923 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA8733A27A36096BD2323FCFE03C8DF7 /* SwiftHEXColors.xcconfig */;
+			baseConfigurationReference = BC91CDAE00EA8926B4391E293DB6AFF0 /* Pods-TriggerWork.debug staging.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -907,14 +1157,17 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHEXColors;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TriggerWork;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -923,9 +1176,9 @@
 			};
 			name = "Debug Staging";
 		};
-		E8A8FB102FA0E97FD656519A35E20C91 /* Release Staging */ = {
+		DAAA38E274118582BC8C56C9484F21D4 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA8733A27A36096BD2323FCFE03C8DF7 /* SwiftHEXColors.xcconfig */;
+			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -934,14 +1187,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHEXColors;
+				PRODUCT_NAME = SVProgressHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -983,9 +1236,63 @@
 			};
 			name = "Release Staging";
 		};
+		F05133792B0BB3E941A2098CA6DA4E68 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
+		F73E1A7BEC2DC5677D6152FAAC2F1B57 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftHEXColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
 		FABDB9E7CDE923835C1F7AE0E59921D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671ECE053956BDBFE37A426AA3AA251C /* Firebase.xcconfig */;
+			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1010,40 +1317,21 @@
 			};
 			name = Debug;
 		};
-		FD66213F7B6BB61B67E47BFCDB2294BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1481CD8D1C85396949A1C58B3E6D4D6F /* Pods-TriggerWork.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TriggerWork;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0336D38987DDC5DB6A67E7F20E8B0B15 /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF71CB81CC23CDD48DA7F4600DDAFA1 /* App Store */,
+				0A794808223B4AF4B59BCA845E3C74A5 /* Debug */,
+				D782346E071BA9D7DFBF2359FC217923 /* Debug Staging */,
+				B49CFB1433DA9AEDC53DEDAC31589E7E /* Release */,
+				732FCAC704BB65FD5B5E74B3E5B858F7 /* Release Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0B9ED9A7CDCF4D1B7E6C46181D4C363A /* Build configuration list for PBXNativeTarget "Firebase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1052,18 +1340,6 @@
 				8F84D07446AE14ABA3FE41770EE794C4 /* Debug Staging */,
 				AA652B74607F8A0E1A49EE4873D46946 /* Release */,
 				37A9DE43E9328465F8B238C1583A1431 /* Release Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		22C3269D1FE549F34437B94F61DB8FF2 /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98C4C64CBF8F6614580639F0C2AF6CFA /* App Store */,
-				FD66213F7B6BB61B67E47BFCDB2294BB /* Debug */,
-				9E034FB121BD482135D07438E12D5752 /* Debug Staging */,
-				58C9511AC7D5262737F90E4FED2D846C /* Release */,
-				58B82A974196D70137C00751A5BF1144 /* Release Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1080,14 +1356,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6E6C6D48DD7FBCDEFD2FA411489B7FF /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */ = {
+		38A2D0A2A81F9F197BA91BEA3317F620 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69DF583A150248BFDBDFB00C285BC7DE /* App Store */,
-				4C2D0D3A30D998C396112581226405E6 /* Debug */,
-				D138C8D22218B772469DC8E4EAA1B8D6 /* Debug Staging */,
-				3FA23A2366EE8801F7F02837E95BD110 /* Release */,
-				E8A8FB102FA0E97FD656519A35E20C91 /* Release Staging */,
+				F05133792B0BB3E941A2098CA6DA4E68 /* App Store */,
+				70AA92BBAE968224CEB92A5D0C5086DE /* Debug */,
+				7659A60D3A819A3ABA331593DBDC747F /* Debug Staging */,
+				1039514401EADFE2FB405848732FD5D8 /* Release */,
+				DAAA38E274118582BC8C56C9484F21D4 /* Release Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B5935C531DD47AC3E875768CC64526 /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F73E1A7BEC2DC5677D6152FAAC2F1B57 /* App Store */,
+				3B40963DD3018417C9E17639C5EEAC99 /* Debug */,
+				2CAD21A19DA922104179818C2B8AFDA5 /* Debug Staging */,
+				0B7202C27B86CCD575F18383877D6C2B /* Release */,
+				43EB58CFE9FD4C79925E38976A32160D /* Release Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E199C0A1C8FB71000DFAD45 /* RecordSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C091C8FB71000DFAD45 /* RecordSessionViewController.swift */; };
+		4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C171C9114F400DFAD45 /* BTDiscovery.swift */; };
+		4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C181C9114F400DFAD45 /* BTService.swift */; };
 		4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82131C853C03002561E2 /* AppDelegate.swift */; };
 		4E3A82191C853C03002561E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A82171C853C03002561E2 /* Main.storyboard */; };
 		4E3A821B1C853C03002561E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A821A1C853C03002561E2 /* Assets.xcassets */; };
 		4E3A821E1C853C03002561E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */; };
 		4E3A82291C853C03002561E2 /* TriggerWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82281C853C03002561E2 /* TriggerWorkTests.swift */; };
 		4E3A82341C853C03002561E2 /* TriggerWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82331C853C03002561E2 /* TriggerWorkUITests.swift */; };
+		4E3FB7E01C8CE270007D22FD /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7DF1C8CE270007D22FD /* MyriadPro-Bold.otf */; };
+		4E3FB7E21C8CE324007D22FD /* MyriadPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */; };
+		4E3FB7E41C8CE330007D22FD /* MyriadPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */; };
+		4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E91C8CEF55007D22FD /* BTDeviceTableViewCell.swift */; };
 		4E5A6CB81C8B75AB00806161 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB71C8B75AB00806161 /* User.swift */; };
 		4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
 		4E5A6CC81C8B833700806161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
+		4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
 		4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,22 +47,30 @@
 /* Begin PBXFileReference section */
 		21A1A8983F54D53CF905E533 /* Pods-TriggerWork.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.app store.xcconfig"; sourceTree = "<group>"; };
 		4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
+		4E199C091C8FB71000DFAD45 /* RecordSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RecordSessionViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4E199C171C9114F400DFAD45 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscovery.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4E199C181C9114F400DFAD45 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E3A82101C853C03002561E2 /* TriggerWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriggerWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E3A82131C853C03002561E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E3A82131C853C03002561E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E3A82181C853C03002561E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E3A821A1C853C03002561E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E3A821D1C853C03002561E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E3A821F1C853C03002561E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E3A82241C853C03002561E2 /* TriggerWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriggerWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E3A82281C853C03002561E2 /* TriggerWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerWorkTests.swift; sourceTree = "<group>"; };
+		4E3A82281C853C03002561E2 /* TriggerWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TriggerWorkTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E3A822A1C853C03002561E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E3A822F1C853C03002561E2 /* TriggerWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriggerWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E3A82331C853C03002561E2 /* TriggerWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerWorkUITests.swift; sourceTree = "<group>"; };
+		4E3A82331C853C03002561E2 /* TriggerWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TriggerWorkUITests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E3A82351C853C03002561E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E5A6CB71C8B75AB00806161 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4E5A6CB91C8B76D200806161 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TriggerWork-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E3FB7DF1C8CE270007D22FD /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Light.otf"; sourceTree = "<group>"; };
+		4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Black.otf"; sourceTree = "<group>"; };
+		4E3FB7E91C8CEF55007D22FD /* BTDeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDeviceTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4E5A6CB71C8B75AB00806161 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = User.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4E5A6CB91C8B76D200806161 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Constants.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "TriggerWork-Bridging-Header.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscoveryViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
 		7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
@@ -140,9 +156,37 @@
 			path = TriggerWorkUITests;
 			sourceTree = "<group>";
 		};
+		4E3FB7E51C8CE334007D22FD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4E3FB7DF1C8CE270007D22FD /* MyriadPro-Bold.otf */,
+				4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */,
+				4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		4E3FB7EB1C8CEF5A007D22FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4E3FB7E91C8CEF55007D22FD /* BTDeviceTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		4E3FB7EC1C8CEF60007D22FD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4E3A82171C853C03002561E2 /* Main.storyboard */,
+				4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		4E5A6CCA1C8B889D00806161 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E3FB7E51C8CE334007D22FD /* Fonts */,
 				4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */,
 				4E3A821F1C853C03002561E2 /* Info.plist */,
 			);
@@ -152,8 +196,8 @@
 		4E5A6CCB1C8B88A900806161 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				4E3A82171C853C03002561E2 /* Main.storyboard */,
-				4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */,
+				4E3FB7EB1C8CEF5A007D22FD /* Cells */,
+				4E3FB7EC1C8CEF60007D22FD /* Storyboards */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -171,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				4E5A6CB91C8B76D200806161 /* LoginViewController.swift */,
+				4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */,
+				4E199C091C8FB71000DFAD45 /* RecordSessionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				4E5A6CB71C8B75AB00806161 /* User.swift */,
+				4E199C171C9114F400DFAD45 /* BTDiscovery.swift */,
+				4E199C181C9114F400DFAD45 /* BTService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -270,7 +318,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Craftsbury Outdoor Center";
+				ORGANIZATIONNAME = "Lost Nation R&D";
 				TargetAttributes = {
 					4E3A820F1C853C03002561E2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -311,7 +359,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E3A821E1C853C03002561E2 /* LaunchScreen.storyboard in Resources */,
+				4E3FB7E41C8CE330007D22FD /* MyriadPro-Black.otf in Resources */,
+				4E3FB7E21C8CE324007D22FD /* MyriadPro-Light.otf in Resources */,
 				4E3A821B1C853C03002561E2 /* Assets.xcassets in Resources */,
+				4E3FB7E01C8CE270007D22FD /* MyriadPro-Bold.otf in Resources */,
 				4E3A82191C853C03002561E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,10 +436,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */,
 				4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */,
+				4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */,
+				4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */,
 				4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */,
+				4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */,
 				4E5A6CB81C8B75AB00806161 /* User.swift in Sources */,
 				4E5A6CC81C8B833700806161 /* Constants.swift in Sources */,
+				4E199C0A1C8FB71000DFAD45 /* RecordSessionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
