@@ -280,34 +280,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEy-g3-tTC" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bI9-c5-ljF"/>
+                                    <constraint firstAttribute="height" constant="50" id="ldf-mq-I1j"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bI9-c5-ljF"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="6bb-bU-fk2" id="X8o-DU-X33"/>
+                                </connections>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-f5-Zci" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="114" width="600" height="437"/>
+                                <rect key="frame" x="20" y="116" width="560" height="364"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="calendarAppearanceDelegate" destination="6bb-bU-fk2" id="Xg6-3S-IoY"/>
                                     <outlet property="calendarDelegate" destination="6bb-bU-fk2" id="Ldy-89-OUL"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEy-g3-tTC" customClass="CVCalendarMenuView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bI9-c5-ljF"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="menuViewDelegate" destination="6bb-bU-fk2" id="X8o-DU-X33"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="pEy-g3-tTC" secondAttribute="trailing" constant="-20" id="5vz-FE-O7B"/>
-                            <constraint firstItem="QMJ-f5-Zci" firstAttribute="top" secondItem="pEy-g3-tTC" secondAttribute="bottom" id="7xk-7G-37E"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QMJ-f5-Zci" secondAttribute="trailing" constant="-20" id="AvM-B7-2zp"/>
-                            <constraint firstItem="pEy-g3-tTC" firstAttribute="top" secondItem="mqw-Gb-UjG" secondAttribute="bottom" id="FAC-M1-CE1"/>
-                            <constraint firstItem="X3h-Nm-5zu" firstAttribute="top" secondItem="QMJ-f5-Zci" secondAttribute="bottom" id="LaM-HJ-Ixz"/>
-                            <constraint firstItem="pEy-g3-tTC" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" constant="-20" id="lNq-Tw-BdF"/>
-                            <constraint firstItem="QMJ-f5-Zci" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" constant="-20" id="s1l-Bx-d7Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pEy-g3-tTC" secondAttribute="trailing" id="99s-TE-1uT"/>
+                            <constraint firstItem="QMJ-f5-Zci" firstAttribute="top" secondItem="pEy-g3-tTC" secondAttribute="bottom" constant="2" id="BLd-0c-ybP"/>
+                            <constraint firstItem="QMJ-f5-Zci" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" id="H8v-aY-gv1"/>
+                            <constraint firstItem="X3h-Nm-5zu" firstAttribute="top" secondItem="QMJ-f5-Zci" secondAttribute="bottom" constant="71" id="JK2-kJ-8v5"/>
+                            <constraint firstItem="pEy-g3-tTC" firstAttribute="top" secondItem="mqw-Gb-UjG" secondAttribute="bottom" id="Rvh-O5-oqa"/>
+                            <constraint firstItem="pEy-g3-tTC" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" id="WMB-kv-39y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QMJ-f5-Zci" secondAttribute="trailing" id="e8w-tQ-XU8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AIG-xH-8Ac"/>

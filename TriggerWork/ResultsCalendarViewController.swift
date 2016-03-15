@@ -28,12 +28,13 @@ class ResultsCalendarViewController: UIViewController, CVCalendarViewDelegate, C
     }
     
     func firstWeekday() -> Weekday {
-        return .Monday
+        return .Sunday
     }
     
     func presentationMode() -> CalendarMode {
-        return .WeekView
+        return .MonthView
     }
+
     
     /*
     // MARK: - Navigation
