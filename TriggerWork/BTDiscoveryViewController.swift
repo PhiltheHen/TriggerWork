@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BTDiscoveryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BTDiscoveryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyStateView: UIView!
@@ -35,10 +35,10 @@ class BTDiscoveryViewController: UIViewController, UITableViewDataSource, UITabl
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80.0
-    }
+}
+
+// MARK - UITableViewDataSource
+extension BTDiscoveryViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -50,15 +50,12 @@ class BTDiscoveryViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0;
     }
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+// MARK: - UITableViewDelegate
+extension BTDiscoveryViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80.0
     }
-    */
-
 }

@@ -21,3 +21,14 @@ extension CALayer {
         self.borderColor = color.CGColor
     }
 }
+
+struct Fonts {
+    
+    static func defaultLightFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name: "MyriadPro-Light", size: size)!
+    }
+    
+    static func defaultRegularFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name: "MyriadPro-Bold", size: size)!
+    }
+}
