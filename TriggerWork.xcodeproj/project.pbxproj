@@ -25,7 +25,7 @@
 		4E5A6CC81C8B833700806161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
 		4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
-		4EDC50BE1C99AAAE00BA5267 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BD1C99AAAE00BA5267 /* User.swift */; };
+		4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
 		4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,7 @@
 		4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "TriggerWork-Bridging-Header.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscoveryViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
-		4EDC50BD1C99AAAE00BA5267 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
 		7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		4E5A6CCE1C8B88C200806161 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4EDC50BD1C99AAAE00BA5267 /* User.swift */,
+				4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */,
 				4E199C171C9114F400DFAD45 /* BTDiscovery.swift */,
 				4E199C181C9114F400DFAD45 /* BTService.swift */,
 			);
@@ -445,6 +445,7 @@
 				4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */,
 				4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */,
 				4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */,
+				4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */,
 				4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */,
 				4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */,
 				4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */,
@@ -452,7 +453,6 @@
 				4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */,
 				4E5A6CC81C8B833700806161 /* Constants.swift in Sources */,
 				4E199C0A1C8FB71000DFAD45 /* RecordSessionViewController.swift in Sources */,
-				4EDC50BE1C99AAAE00BA5267 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
