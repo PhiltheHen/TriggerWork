@@ -9,8 +9,12 @@
         <mutableArray key="MyriadPro-Bold.otf">
             <string>MyriadPro-Bold</string>
             <string>MyriadPro-Bold</string>
+            <string>MyriadPro-Bold</string>
         </mutableArray>
         <mutableArray key="MyriadPro-Light.otf">
+            <string>MyriadPro-Light</string>
+            <string>MyriadPro-Light</string>
+            <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
@@ -268,29 +272,137 @@
             </objects>
             <point key="canvasLocation" x="504" y="-849"/>
         </scene>
-        <!--Results-->
-        <scene sceneID="ITT-vB-vEa">
+        <!--Calendar Appearance Delegate-->
+        <scene sceneID="PTJ-bJ-izz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gUD-Db-PZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="kSS-8H-gdd" sceneMemberID="viewController">
+                <viewController id="6bb-bU-fk2" customClass="ResultsCalendarViewController" customModule="TriggerWork" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kaP-RR-CQa"/>
-                        <viewControllerLayoutGuide type="bottom" id="hRb-ai-dXG"/>
+                        <viewControllerLayoutGuide type="top" id="mqw-Gb-UjG"/>
+                        <viewControllerLayoutGuide type="bottom" id="X3h-Nm-5zu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yE4-Bv-gkp">
+                    <view key="view" contentMode="scaleToFill" id="reQ-bK-hyw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEy-g3-tTC" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bI9-c5-ljF"/>
+                                    <constraint firstAttribute="height" constant="50" id="ldf-mq-I1j"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bI9-c5-ljF"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="6bb-bU-fk2" id="X8o-DU-X33"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-f5-Zci" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="20" y="116" width="560" height="352"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="calendarAppearanceDelegate" destination="6bb-bU-fk2" id="Xg6-3S-IoY"/>
+                                    <outlet property="calendarDelegate" destination="6bb-bU-fk2" id="Ldy-89-OUL"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athlete Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJn-Hd-Xge">
+                                <rect key="frame" x="40" y="476" width="104" height="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Sessions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohv-bS-BGA">
+                                <rect key="frame" x="40" y="501" width="69" height="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total time: 2:15.4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZr-Lu-0w2">
+                                <rect key="frame" x="40" y="526" width="113" height="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lux-qB-Y4o">
+                                <rect key="frame" x="470" y="490" width="110" height="40"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.74901960779999999" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="DW6-kP-9EP"/>
+                                    <constraint firstAttribute="height" constant="40" id="Em5-6L-FjL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="15"/>
+                                <state key="normal" title="View Results">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Hyf-uw-H4r" kind="show" id="s3f-3N-Al5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dZr-Lu-0w2" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" constant="20" id="7gb-Sg-Iuu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pEy-g3-tTC" secondAttribute="trailing" id="99s-TE-1uT"/>
+                            <constraint firstItem="QMJ-f5-Zci" firstAttribute="top" secondItem="pEy-g3-tTC" secondAttribute="bottom" constant="2" id="BLd-0c-ybP"/>
+                            <constraint firstItem="X3h-Nm-5zu" firstAttribute="top" secondItem="dZr-Lu-0w2" secondAttribute="bottom" constant="8" id="EuF-OO-0V7"/>
+                            <constraint firstItem="QMJ-f5-Zci" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" id="H8v-aY-gv1"/>
+                            <constraint firstItem="X3h-Nm-5zu" firstAttribute="top" secondItem="QMJ-f5-Zci" secondAttribute="bottom" constant="71" id="JK2-kJ-8v5"/>
+                            <constraint firstItem="lux-qB-Y4o" firstAttribute="trailing" secondItem="reQ-bK-hyw" secondAttribute="trailingMargin" id="MIh-MY-Ehy"/>
+                            <constraint firstItem="ohv-bS-BGA" firstAttribute="top" secondItem="AJn-Hd-Xge" secondAttribute="bottom" constant="8" id="PMl-hI-Z6M"/>
+                            <constraint firstItem="AJn-Hd-Xge" firstAttribute="top" secondItem="QMJ-f5-Zci" secondAttribute="bottom" constant="8" id="RL7-hw-3JE"/>
+                            <constraint firstItem="pEy-g3-tTC" firstAttribute="top" secondItem="mqw-Gb-UjG" secondAttribute="bottom" id="Rvh-O5-oqa"/>
+                            <constraint firstItem="ohv-bS-BGA" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" constant="20" id="UQT-J8-67k"/>
+                            <constraint firstItem="pEy-g3-tTC" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" id="WMB-kv-39y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QMJ-f5-Zci" secondAttribute="trailing" id="e8w-tQ-XU8"/>
+                            <constraint firstItem="dZr-Lu-0w2" firstAttribute="top" secondItem="ohv-bS-BGA" secondAttribute="bottom" constant="8" id="hPC-ga-3iH"/>
+                            <constraint firstItem="lux-qB-Y4o" firstAttribute="centerY" secondItem="ohv-bS-BGA" secondAttribute="centerY" id="xyG-uv-iws"/>
+                            <constraint firstItem="AJn-Hd-Xge" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" constant="20" id="yDA-I7-wiH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JK2-kJ-8v5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="AIG-xH-8Ac"/>
+                    <connections>
+                        <outlet property="calendarMenuView" destination="pEy-g3-tTC" id="miC-JH-1V0"/>
+                        <outlet property="calendarView" destination="QMJ-f5-Zci" id="jth-cY-HXw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLR-BA-GcD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1107" y="1499"/>
+        </scene>
+        <!--Results Day View Controller-->
+        <scene sceneID="6oP-wk-UIM">
+            <objects>
+                <viewController id="Hyf-uw-H4r" customClass="ResultsDayViewController" customModule="TriggerWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yuv-U5-ht4"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2U-z4-y2Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vVX-2H-fDH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Results" id="HNz-AN-gxp"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8B-Lx-Sqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="49"/>
+            <point key="canvasLocation" x="-375" y="1499"/>
         </scene>
         <!--Record-->
         <scene sceneID="te3-EN-Dns">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-N2-Pd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Ou9-Sr-jZ4" customClass="RecordSessionViewController" customModule="TriggerWork" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kl7-gx-PYb"/>
@@ -306,13 +418,13 @@
                         <segue destination="uo4-Fg-Dsg" kind="presentation" identifier="loadBluetoothDiscovery" id="Iox-Yd-XcC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-N2-Pd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-294" y="-612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B6b-i7-iK0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JgX-v1-7yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="BGu-IX-yi8" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VXq-Ff-Luf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -321,11 +433,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="Ou9-Sr-jZ4" kind="relationship" relationship="viewControllers" id="F8I-Vh-54t"/>
-                        <segue destination="kSS-8H-gdd" kind="relationship" relationship="viewControllers" id="foY-Yh-r7W"/>
+                        <segue destination="yTg-JB-p8b" kind="relationship" relationship="viewControllers" id="rY1-Ph-XE2"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgX-v1-7yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1114" y="-281"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="KOT-Ia-JR0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTg-JB-p8b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Results" id="LhV-oJ-mPR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="55k-jk-SS9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6bb-bU-fk2" kind="relationship" relationship="rootViewController" id="DiA-tR-Td7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoR-jQ-tXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1107" y="624"/>
         </scene>
     </scenes>
     <resources>

@@ -7,61 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03DA3F9CF1BDB5324053A8FB4041191E /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FF47CBDE15402351051CC5B8AE57C0 /* Firebase-dummy.m */; };
-		087708DB8709E681570C929E0C257160 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0541769902DDA7A4379D6AE0CE053C11 /* SVProgressHUD.bundle */; };
-		0A0766AE95B7C90D1C74609EFC0D39CF /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9404DBFCB94C80674C8201BE70C707DA /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		126EFA958BE61708121B53367F2B6933 /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F26AF018ACAAB2F70710779149EB984C /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DA3F9CF1BDB5324053A8FB4041191E /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E88D137A601BCBB5AE96A46E1D655DC6 /* Firebase-dummy.m */; };
+		0A0766AE95B7C90D1C74609EFC0D39CF /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E694DF36733585DDEF0E6DA3A5865E /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A7CC9B9870C596E143AE147FF2186AD /* CVCalendarViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D585A333278857183CFE130B2D7B2BD /* CVCalendarViewAnimator.swift */; };
+		0ACFE657DEAE0006B94CA802A5F0FD32 /* CVShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F222675897220ED9621EA4DE51FAC44 /* CVShape.swift */; };
+		11D22D64E70AD69959AD65E84B064751 /* CVCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D728AB01C29D844D5B3D0DBFEF89443 /* CVCalendarWeekView.swift */; };
+		11D45513A24D063390E56EE354B7BB36 /* SwiftHEXColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C52980F1BA3DE9EE9CFEF11CA0FD5A /* SwiftHEXColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14A54A6FBF9D7F73F5A1750B13DD91B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
-		1ED785D02E4A878FDA16722FB69D2A66 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4867A01305AA9D9CD4B54D8096C7EDF8 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FFA18D60CA011A98E9E7C6CD70F7DB0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A82BC95A7478335FF4524A87C4C4FDA /* SVIndefiniteAnimatedView.m */; };
-		2A3039C059F99BC294937A10EA46679B /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4EEF02D3E4EFBA9447349B64B6D221 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CA65AC04797F13FC8F6516D8103FB45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
-		2F44AA9242F003605CB2990383808748 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2991A5FAEDB5E6ACB06637F5A5A428A3 /* SVProgressHUD-dummy.m */; };
-		3379067F5933BA7631C938C990FC2250 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
-		351F81CCE954D0DF99EE1FF23C662EF4 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 326DA7F06DD8A6173F7EDA2A5A530FD5 /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38BC41439FEA0C37B75C979AE286B865 /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = F14AC1D388FBB8F8DCFDB1FFFB7CA365 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4306EDD22F8A0396E4F1D0D60F3B81FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
-		463F216FDB4BCF30C2AAA56D0C369F42 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 81627F95E04939D3FF527BE18B332E1E /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5283DBC4FA4DB05AE4DDDD35886369EB /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7290A5FFD5B0543C5233EA42518B5D /* SwiftHEXColors.swift */; };
-		5A689973BF84787073FD93FF4B84F8FC /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = D839961BC1A895546BFC1470DADCEBC1 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5BE1FF1CAE4CA79BD47A5CB5AF7A6F98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F253A8D544BF37E460DFB4A0DB24DC /* QuartzCore.framework */; };
-		68ED0F4C9E8C6786AF847C0A1817F020 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 982D3578F14D97D6C7928C3083B7BAA6 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D807CFF432E1A22443F14732EEEAE7B /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8555394D5E2A8BEBB11BA04C46456AB8 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74369AA0DDD7971FFA84AAA08E5764A0 /* SwiftHEXColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFA2C6785C1757E12AAD25442CCB541 /* SwiftHEXColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		752645E10153AB1A2BD9E6D993D63E09 /* SwiftHEXColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB71E989D94FA08D9922134803E6CA6 /* SwiftHEXColors-dummy.m */; };
-		7FB9ED067CF538DE0E911989F09F469F /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E330242ACB4C2542616BC8D569CACDE /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87451470F9BE2CB7DE8B40716E77CECC /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 467E10ED189786EE38F84293737F4384 /* Empty.m */; };
-		8C88DBE6D7CE98532C3C978BCAEBFF16 /* SwiftHEXColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D3B1F968E3962530E9FA6DEAC467B76 /* SwiftHEXColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D004D8689CA9468F1E02FEFE220061F /* Pods-TriggerWork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28518C58025DB32D14E6B99079E2E48A /* Pods-TriggerWork-dummy.m */; };
-		A71B4020DA0C1D19C2BEE1870D7694D9 /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3145C6492DCBD3E4574DD5A530153854 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AABD081B6B0F76257857A6B64FCDE3EA /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F7B56D31CBA5E578410CC0C0D7CA0611 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		179240D3BD84F67120B43C225BD15812 /* Pods-TriggerWork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28518C58025DB32D14E6B99079E2E48A /* Pods-TriggerWork-dummy.m */; };
+		1AF569F25B97E80FB45ADEFF467008AB /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33281EEFBFE9C25EC7FD827DC4979B4A /* SwiftHEXColors.swift */; };
+		278582A9E321A8CD46724C727442C2DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		2A3039C059F99BC294937A10EA46679B /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1025712DE490331FEE8F4A9C7DBDE58 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F794A1885B2AA5CCFE3A214ECB8653D /* CVScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095CD768B1C82F708A58E3560AA22A33 /* CVScrollDirection.swift */; };
+		307BCA7444621A7C668C864F02980301 /* CVCalendarWeekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC68EDD5543287730FDE8F4154D5A40 /* CVCalendarWeekday.swift */; };
+		351F81CCE954D0DF99EE1FF23C662EF4 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2961F10B246B525F7F1F71CE7E22D019 /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BC41439FEA0C37B75C979AE286B865 /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = F9B7B17618A835865A4617550504175B /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38F296D629DF5DEDE9AC67AEC016FB25 /* CVCalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C6E11A271DD4B54B8E6320D965764 /* CVCalendarMonthView.swift */; };
+		39BEDDD6AEF9CB5AF88CD103EB9D74FF /* CVCalendarViewAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916C06733885681513DE3E50305AC14 /* CVCalendarViewAnimatorDelegate.swift */; };
+		404DF8F24CC1D8AAEBDF672F3CF404E1 /* CVCalendarWeekContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C57BB7DC55897FBA93A90BAB4D559 /* CVCalendarWeekContentViewController.swift */; };
+		463F216FDB4BCF30C2AAA56D0C369F42 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B367AA70D241E51E80BCFC7D8100945 /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46D6F5760F1F9F96E0046BFE2C75DB1B /* CVCalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D8CFE1A3CCF6D3C7608987B23526D /* CVCalendarMenuView.swift */; };
+		474052B888FFC5428F857441B9042924 /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955F9D1EBE374E667DE0D56E4630430 /* CVCalendarContentViewController.swift */; };
+		4B538C4CEFAC9D2E2D0C15AD218E18CF /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 7416C3618214E3F8BC1A70A789504560 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DDB12CFF4ED493D24579A08F7DECA8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		5A689973BF84787073FD93FF4B84F8FC /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 587C9477DAB19835F3BB7DB7D3C3EFEF /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		603B325810587556C2DE6435E77D3090 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F9AB19C47017DA8D94C3262B69686C6D /* SVProgressHUD.bundle */; };
+		630268329F97E4456865BF8030145517 /* CVCalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8253ADE75DDC2642C350CE66E05BF7EC /* CVCalendarDayView.swift */; };
+		64B35AB164FC68DDE7EC460967829AEA /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFC8B4A56D03F7966B39FD9D5FADB44 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68ED0F4C9E8C6786AF847C0A1817F020 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B561B5DF168ECC060F6E9934B4FCF00 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D807CFF432E1A22443F14732EEEAE7B /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B42AEA2EAF8C02C8B65A6C5216702EF2 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D9E8A025E5D62EF707B69B68336004B /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B264FDE9C644A3AF68422A0557DD170 /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7618EA014CA4EE601311E749A167AE9F /* CVCalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3395FF1FE465F7B95D4D38F1771AEA /* CVCalendarViewDelegate.swift */; };
+		7C07FB7A045DD20E5EA458A434B437F0 /* CVCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 527C92862699D83ECF8AB97CF4143085 /* CVCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FB9ED067CF538DE0E911989F09F469F /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 80AF2C209B10EB9E60900223492336F3 /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8147E97E7D8F2940BBE88B8B36B479A7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C2034E2788E826418EE263084B0289 /* SVProgressHUD.m */; };
+		87451470F9BE2CB7DE8B40716E77CECC /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F0BA67569C86E58693302D7BF5D2E2 /* Empty.m */; };
+		8C9BF771EA5C05E843CFAA6551DB3E39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		8E28E2FA58CFC65C41D87E53059C9651 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */; };
+		8E3B6F917BB1F80A7674925C5AF5B5BD /* CVCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D119F5129D11CDD9797BCEB02C0A6FE /* CVCalendarManager.swift */; };
+		95FD7B821EB2D21A14A8760384DC45EA /* CVCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E592C4D2C1FD47C416CB62827DD376D /* CVCalendar-dummy.m */; };
+		9A17F24EF88489463660521F4FCCFFD0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F253A8D544BF37E460DFB4A0DB24DC /* QuartzCore.framework */; };
+		9CEBFBF24215DAE23950043E7C04F11A /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91047579FF443CA36B7A3837DCBAE842 /* SVProgressHUD-dummy.m */; };
+		A71B4020DA0C1D19C2BEE1870D7694D9 /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D2C8C66FB1680A982909953B8F2365 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE599C15090661E3D083034A28915D61 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 563D402C98AF2A4B7D4D2522D8AEBA17 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B23B5A0AA52FEDC3E2D8B17B9EBE3413 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EADEED890CA19CC41EA706B73EB0B /* CFNetwork.framework */; };
+		BE181CF9D5F70E2A52BC4E691D6ADD94 /* CVCalendarTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE9F35A3FEB44974542C574ACD26ED /* CVCalendarTouchController.swift */; };
 		C59CA88384DBA682C6ADA96C53B78C3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE568498BA21E87626041CD39CEA8DD /* SystemConfiguration.framework */; };
-		CE470C9206B274124131FE5D2702709F /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CC769F9FBB1A0BDBD33899872CE44F /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C75C91C1A92308DE719B51EABE188143 /* CVWeekdaySymbolType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13586C8995E5353EDCDB2574D7666927 /* CVWeekdaySymbolType.swift */; };
+		C8DD308D1B069F91E09C5CC0C86E3E68 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4686BB0E938B0259CCC6738CC16DB /* SVRadialGradientLayer.m */; };
+		CC6AEB3369DBD97D4370D3F0866C85C3 /* CVSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E835119FA64E5069AF267C5566F9DD /* CVSet.swift */; };
+		CE470C9206B274124131FE5D2702709F /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 655B3FB2C801265263E2A78FF97992A5 /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3415BFEBFB2D728DC524DA9EE938D27 /* SwiftHEXColors.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB7A7A82D883404EEE46F2966139E4E /* SwiftHEXColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3DBB9DB692670E2058938851A4FC6A0 /* CVCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B802353D8A625492E81B068C978B7C /* CVCalendarView.swift */; };
+		D7680B8BE4C263A9A7852560B8485424 /* CVCalendarViewAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D8BEC5C1444D34E28FB36A41BAF4 /* CVCalendarViewAppearanceDelegate.swift */; };
 		D7B3F253CA898C20DF464CEEB96AEBF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9534E6263C487FEDD253BD5E3F8CDEA0 /* Security.framework */; };
-		DB864F97D9DB6526DA6C557FA3224611 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 560D126A106F49486E0D2D5203A98F0E /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E57FBE975AD5F06F76BABE9F33404AE8 /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E851B13BD87F46061162D0BF947F04 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7EBEF55C351B9EB5AFDB917467A48B3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BF209FE0E5050D19AC15B5FC7E9EDE6F /* SVProgressHUD.m */; };
-		FC197E18B529FC6A1DC5350E4BF366CB /* Pods-TriggerWork-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53557D32E36261C543CF5E5CF378FFF3 /* Pods-TriggerWork-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC3F8FB4E6AF8B3EDB5505FDA6FBB873 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D38B95982927FC104CDF23FFBB3C49C1 /* SVRadialGradientLayer.m */; };
+		DD309B33C805F88BEE1BBE802668DF45 /* CVRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE17D8BC14C374374167A56EF5B68645 /* CVRange.swift */; };
+		DD9FBA99CC27AEBBA5457CF591860CAC /* CVCalendarMenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B055F9C5F047BC6A2FB3E15CDDC572 /* CVCalendarMenuViewDelegate.swift */; };
+		DDA5F1B16539A46E19F4D480ED11F7D9 /* SwiftHEXColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BA3AA180748AEA2E48AEDA9C1356D /* SwiftHEXColors-dummy.m */; };
+		E0B2C76F0DBA13A57D0F6BCBC010283D /* CVCalendarDayViewControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977740F63C964F034CF8042B0590FC6 /* CVCalendarDayViewControlCoordinator.swift */; };
+		E57FBE975AD5F06F76BABE9F33404AE8 /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = A61AA486D9997971ABD3B51F94956542 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7014E9E05BF3CB519A7D369A1F5731C /* Pods-TriggerWork-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53557D32E36261C543CF5E5CF378FFF3 /* Pods-TriggerWork-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF8BF91612DE915685724B9E8371F57F /* CVCalendarViewPresentationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E80519D3BD0899D619C6D5BD788F6 /* CVCalendarViewPresentationMode.swift */; };
+		F1D1C2FD14DB3DABA566C8423BCD4DA3 /* CVAuxiliaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE98D370A3BE20E8CEEEBEA4840F418 /* CVAuxiliaryView.swift */; };
+		F77067A5603F4E8EF43DFCADBC59C8AF /* CVCalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5564CE737B7E01BA11A5A8E55AB43 /* CVCalendarViewAppearance.swift */; };
+		FAA8D3C7E93DAEDBC8DFFCAE116227DB /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A014D7C766ECE710FC872E2AD02FD1DD /* SVIndefiniteAnimatedView.m */; };
+		FC32EDD7C2B4EF5AF7CF3840318A3625 /* CVCalendarMonthContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8132CCC391CA7F056EBF41177D401 /* CVCalendarMonthContentViewController.swift */; };
+		FD250B1B9083331AA29EBBB23AC5CDAA /* CVSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59E0225CAA462371F638DDC561EC /* CVSelectionType.swift */; };
+		FFCB2B4C1C64B2C27C63A555070C716D /* CVDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5465BB42B24FB6E7C66B95C3B3F88 /* CVDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07A777DF97E464C7F88365D91AE8A79A /* PBXContainerItemProxy */ = {
+		01F1247C8088499E30CB66C9BA943125 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C3FFFD28B2736214F6FC13EFFC990C16;
+			remoteGlobalIDString = 1A9AD49AD1A3B3F9A0224E946E03533A;
+			remoteInfo = CVCalendar;
+		};
+		057CEAD81EA188C00FFCBAB1460C7A9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462F7261DAA70A096ADC3850E1BCB756;
 			remoteInfo = SwiftHEXColors;
 		};
-		695BDF53A772AA1637546355279079DD /* PBXContainerItemProxy */ = {
+		AB5BFA7CEDF44A7A370C1FEED8375CD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 466B0227FEF5D2BA0EB1FB60822796BD;
+			remoteGlobalIDString = A52B3C894187EECD6681E6FC79B0B960;
 			remoteInfo = SVProgressHUD;
 		};
-		EC410E8F3438F92DBD3CBB74BE5DAB92 /* PBXContainerItemProxy */ = {
+		D08BA076B6F3DC4A88CD62D9C4F82895 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -71,78 +108,112 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0541769902DDA7A4379D6AE0CE053C11 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
-		0809530FB3980ADE3A75166D45F1891A /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00B802353D8A625492E81B068C978B7C /* CVCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarView.swift; path = CVCalendar/CVCalendarView.swift; sourceTree = "<group>"; };
+		02C8132CCC391CA7F056EBF41177D401 /* CVCalendarMonthContentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMonthContentViewController.swift; path = CVCalendar/CVCalendarMonthContentViewController.swift; sourceTree = "<group>"; };
+		046E80519D3BD0899D619C6D5BD788F6 /* CVCalendarViewPresentationMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewPresentationMode.swift; path = CVCalendar/CVCalendarViewPresentationMode.swift; sourceTree = "<group>"; };
+		04C2034E2788E826418EE263084B0289 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		060C57BB7DC55897FBA93A90BAB4D559 /* CVCalendarWeekContentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekContentViewController.swift; path = CVCalendar/CVCalendarWeekContentViewController.swift; sourceTree = "<group>"; };
+		095CD768B1C82F708A58E3560AA22A33 /* CVScrollDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVScrollDirection.swift; path = CVCalendar/CVScrollDirection.swift; sourceTree = "<group>"; };
+		0B367AA70D241E51E80BCFC7D8100945 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
 		0BE568498BA21E87626041CD39CEA8DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		0C3395FF1FE465F7B95D4D38F1771AEA /* CVCalendarViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewDelegate.swift; path = CVCalendar/CVCalendarViewDelegate.swift; sourceTree = "<group>"; };
+		0D119F5129D11CDD9797BCEB02C0A6FE /* CVCalendarManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarManager.swift; path = CVCalendar/CVCalendarManager.swift; sourceTree = "<group>"; };
+		13586C8995E5353EDCDB2574D7666927 /* CVWeekdaySymbolType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVWeekdaySymbolType.swift; path = CVCalendar/CVWeekdaySymbolType.swift; sourceTree = "<group>"; };
 		142D715E1719A67C74866246D78A6B7E /* Pods-TriggerWork-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TriggerWork-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1481CD8D1C85396949A1C58B3E6D4D6F /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
-		16EC4E9E27B03D0CF33B077A11738251 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AFA2C6785C1757E12AAD25442CCB541 /* SwiftHEXColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftHEXColors.h; path = Sources/SwiftHEXColors.h; sourceTree = "<group>"; };
-		22FF47CBDE15402351051CC5B8AE57C0 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		153C28C082A7669B04B4FBF12C6D4299 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		1977740F63C964F034CF8042B0590FC6 /* CVCalendarDayViewControlCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarDayViewControlCoordinator.swift; path = CVCalendar/CVCalendarDayViewControlCoordinator.swift; sourceTree = "<group>"; };
+		211EB47E5F37234F7BDBF88B149B3BBE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A78268E3E2CB0710F0081E47337556 /* SwiftHEXColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-prefix.pch"; sourceTree = "<group>"; };
+		27E835119FA64E5069AF267C5566F9DD /* CVSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVSet.swift; path = CVCalendar/CVSet.swift; sourceTree = "<group>"; };
 		28518C58025DB32D14E6B99079E2E48A /* Pods-TriggerWork-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TriggerWork-dummy.m"; sourceTree = "<group>"; };
 		285EA7F1C3BB631CD86FE5C824206A3F /* Pods-TriggerWork.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TriggerWork.modulemap"; sourceTree = "<group>"; };
-		2991A5FAEDB5E6ACB06637F5A5A428A3 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		2961F10B246B525F7F1F71CE7E22D019 /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		2B264FDE9C644A3AF68422A0557DD170 /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		2BFC8B4A56D03F7966B39FD9D5FADB44 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		2C8A59E0225CAA462371F638DDC561EC /* CVSelectionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVSelectionType.swift; path = CVCalendar/CVSelectionType.swift; sourceTree = "<group>"; };
 		2C9B540D855D8A67E3C6578AB40DE14B /* Pods-TriggerWork-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TriggerWork-resources.sh"; sourceTree = "<group>"; };
 		2E1EADEED890CA19CC41EA706B73EB0B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		2E330242ACB4C2542616BC8D569CACDE /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
-		3145C6492DCBD3E4574DD5A530153854 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
-		326DA7F06DD8A6173F7EDA2A5A530FD5 /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		33281EEFBFE9C25EC7FD827DC4979B4A /* SwiftHEXColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = Sources/SwiftHEXColors.swift; sourceTree = "<group>"; };
+		37A6D8BEC5C1444D34E28FB36A41BAF4 /* CVCalendarViewAppearanceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAppearanceDelegate.swift; path = CVCalendar/CVCalendarViewAppearanceDelegate.swift; sourceTree = "<group>"; };
 		3E47974A43665A638F5453C6DDF60026 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		466F7AEC67F3CCBAA4C7EBAFCAD0E285 /* Pods-TriggerWork-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TriggerWork-frameworks.sh"; sourceTree = "<group>"; };
-		467E10ED189786EE38F84293737F4384 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
-		4867A01305AA9D9CD4B54D8096C7EDF8 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		495C43ABCD921ACE241CD21561077579 /* CVCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F0BA67569C86E58693302D7BF5D2E2 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		4EC68EDD5543287730FDE8F4154D5A40 /* CVCalendarWeekday.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekday.swift; path = CVCalendar/CVCalendarWeekday.swift; sourceTree = "<group>"; };
+		527C92862699D83ECF8AB97CF4143085 /* CVCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CVCalendar-umbrella.h"; sourceTree = "<group>"; };
 		53557D32E36261C543CF5E5CF378FFF3 /* Pods-TriggerWork-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TriggerWork-umbrella.h"; sourceTree = "<group>"; };
-		54550CF3AF08986990C5C0BD1998771A /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		557DF23D0B5FDC6C9D0F4840C1BBF27E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		560D126A106F49486E0D2D5203A98F0E /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		5749DD88A6FD7BF95E1775CBF74141C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61F6ECF76D2506CFC26BF582AFDDC74E /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
-		63CC769F9FBB1A0BDBD33899872CE44F /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
-		64D0E8D5341722D070CED1E49A1EE021 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
-		68CC439068CEFA8350A34DABB7B59545 /* SwiftHEXColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftHEXColors.modulemap; sourceTree = "<group>"; };
+		563D402C98AF2A4B7D4D2522D8AEBA17 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		5816E129077E85191AA2D1DA65CDDD0A /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
+		587C9477DAB19835F3BB7DB7D3C3EFEF /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		59D9AC62EBCAED6C23B2A160190BFB38 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		5B2BA3AA180748AEA2E48AEDA9C1356D /* SwiftHEXColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHEXColors-dummy.m"; sourceTree = "<group>"; };
+		5BCE7AC27F05DEA9723D42CF924575D1 /* CVCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CVCalendar.modulemap; sourceTree = "<group>"; };
+		61C52980F1BA3DE9EE9CFEF11CA0FD5A /* SwiftHEXColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-umbrella.h"; sourceTree = "<group>"; };
+		63B91BCB8AA5A74A6A65F3DA2A194297 /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		655B3FB2C801265263E2A78FF97992A5 /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
 		68DF3C4C214455A830E8637FBFBACC7F /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
-		7D3B1F968E3962530E9FA6DEAC467B76 /* SwiftHEXColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-umbrella.h"; sourceTree = "<group>"; };
-		81627F95E04939D3FF527BE18B332E1E /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
-		8555394D5E2A8BEBB11BA04C46456AB8 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		6E27CFDAB5336D5D3DC4F64A13DF2665 /* CVCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CVCalendar-prefix.pch"; sourceTree = "<group>"; };
+		7416C3618214E3F8BC1A70A789504560 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		7677FBF2E1E6E2C8DE4B33BCA7FC2BFC /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		797D8CFE1A3CCF6D3C7608987B23526D /* CVCalendarMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMenuView.swift; path = CVCalendar/CVCalendarMenuView.swift; sourceTree = "<group>"; };
+		80AF2C209B10EB9E60900223492336F3 /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		8253ADE75DDC2642C350CE66E05BF7EC /* CVCalendarDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarDayView.swift; path = CVCalendar/CVCalendarDayView.swift; sourceTree = "<group>"; };
+		836939390EA7D1AC8784F590C9F5E671 /* SwiftHEXColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftHEXColors.modulemap; sourceTree = "<group>"; };
+		839A25FD7AE393C7C9E9F2C7C8F0D40F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8916C06733885681513DE3E50305AC14 /* CVCalendarViewAnimatorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAnimatorDelegate.swift; path = CVCalendar/CVCalendarViewAnimatorDelegate.swift; sourceTree = "<group>"; };
 		89F253A8D544BF37E460DFB4A0DB24DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		8D85808761BE19E7926CC2F7E447F533 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
-		8DE0A07042CB0E2EB60063B052C6C228 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FB71E989D94FA08D9922134803E6CA6 /* SwiftHEXColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHEXColors-dummy.m"; sourceTree = "<group>"; };
-		9123EA6EB5314F814F65C40FBF604599 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		92F93FE90192E4BA41CF2B540AF9070F /* SwiftHEXColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-prefix.pch"; sourceTree = "<group>"; };
-		9404DBFCB94C80674C8201BE70C707DA /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
-		94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		8BE98D370A3BE20E8CEEEBEA4840F418 /* CVAuxiliaryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVAuxiliaryView.swift; path = CVCalendar/CVAuxiliaryView.swift; sourceTree = "<group>"; };
+		8D728AB01C29D844D5B3D0DBFEF89443 /* CVCalendarWeekView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekView.swift; path = CVCalendar/CVCalendarWeekView.swift; sourceTree = "<group>"; };
+		8E592C4D2C1FD47C416CB62827DD376D /* CVCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CVCalendar-dummy.m"; sourceTree = "<group>"; };
+		91047579FF443CA36B7A3837DCBAE842 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		9534E6263C487FEDD253BD5E3F8CDEA0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		982D3578F14D97D6C7928C3083B7BAA6 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
-		9A82BC95A7478335FF4524A87C4C4FDA /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
-		A13A529F0A061B2C878374AFAFDED8F3 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
-		AB753D727251116B5A31D3A1D1B8F76C /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B561B5DF168ECC060F6E9934B4FCF00 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		9B646ABCBDE34BDBBB9902D3222846D5 /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D585A333278857183CFE130B2D7B2BD /* CVCalendarViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAnimator.swift; path = CVCalendar/CVCalendarViewAnimator.swift; sourceTree = "<group>"; };
+		9F222675897220ED9621EA4DE51FAC44 /* CVShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVShape.swift; path = CVCalendar/CVShape.swift; sourceTree = "<group>"; };
+		9F6156827CBCB515B3AA2137B7842DCB /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		A014D7C766ECE710FC872E2AD02FD1DD /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		A063F66BD513B5BCB4BD5DDBC8741B4C /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E694DF36733585DDEF0E6DA3A5865E /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		A61AA486D9997971ABD3B51F94956542 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		ABE5465BB42B24FB6E7C66B95C3B3F88 /* CVDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVDate.swift; path = CVCalendar/CVDate.swift; sourceTree = "<group>"; };
+		B1025712DE490331FEE8F4A9C7DBDE58 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		B42AEA2EAF8C02C8B65A6C5216702EF2 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
 		B6D6C633464695856EE2C70D13C68007 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
+		B8DC823142E654D979AD46DF5CEDEA73 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAB7A7A82D883404EEE46F2966139E4E /* SwiftHEXColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftHEXColors.h; path = Sources/SwiftHEXColors.h; sourceTree = "<group>"; };
 		BC91CDAE00EA8926B4391E293DB6AFF0 /* Pods-TriggerWork.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.debug staging.xcconfig"; sourceTree = "<group>"; };
-		BF209FE0E5050D19AC15B5FC7E9EDE6F /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		BCBACEC29A945EFBB403C6FFF7CCF86F /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0F4686BB0E938B0259CCC6738CC16DB /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		C308D5DBEBADBDAB3ACCBA72465FF81A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49225B6C45A4A685EFB70D83C179DE7 /* Pods-TriggerWork.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TriggerWork.app store.xcconfig"; sourceTree = "<group>"; };
+		C81280017986D947B06D478E50525BC7 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		CBFA3B2367CB80A77EAE2AFD7E4BDDE7 /* CVCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CVCalendar.xcconfig; sourceTree = "<group>"; };
 		D1629060E319F7562055A4A3920D88A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D38B95982927FC104CDF23FFBB3C49C1 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		D839961BC1A895546BFC1470DADCEBC1 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		DC4EEF02D3E4EFBA9447349B64B6D221 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
-		DC7290A5FFD5B0543C5233EA42518B5D /* SwiftHEXColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = Sources/SwiftHEXColors.swift; sourceTree = "<group>"; };
-		E3E851B13BD87F46061162D0BF947F04 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
-		EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHEXColors.xcconfig; sourceTree = "<group>"; };
-		F14AC1D388FBB8F8DCFDB1FFFB7CA365 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
-		F26AF018ACAAB2F70710779149EB984C /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		F7B56D31CBA5E578410CC0C0D7CA0611 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		D9D2C8C66FB1680A982909953B8F2365 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
+		E88D137A601BCBB5AE96A46E1D655DC6 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		EAB5564CE737B7E01BA11A5A8E55AB43 /* CVCalendarViewAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAppearance.swift; path = CVCalendar/CVCalendarViewAppearance.swift; sourceTree = "<group>"; };
+		EE17D8BC14C374374167A56EF5B68645 /* CVRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVRange.swift; path = CVCalendar/CVRange.swift; sourceTree = "<group>"; };
+		EF16EEF1CDCE941E55BD8E7A5DDFE224 /* SwiftHEXColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHEXColors.xcconfig; sourceTree = "<group>"; };
+		F2B055F9C5F047BC6A2FB3E15CDDC572 /* CVCalendarMenuViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMenuViewDelegate.swift; path = CVCalendar/CVCalendarMenuViewDelegate.swift; sourceTree = "<group>"; };
+		F7ADDD578BA6ACDDA97F02D95D3C1508 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		F8BE9F35A3FEB44974542C574ACD26ED /* CVCalendarTouchController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarTouchController.swift; path = CVCalendar/CVCalendarTouchController.swift; sourceTree = "<group>"; };
 		F8D7B05F65C749C392C88937F6967AB4 /* Pods-TriggerWork-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TriggerWork-acknowledgements.plist"; sourceTree = "<group>"; };
+		F955F9D1EBE374E667DE0D56E4630430 /* CVCalendarContentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarContentViewController.swift; path = CVCalendar/CVCalendarContentViewController.swift; sourceTree = "<group>"; };
+		F9AB19C47017DA8D94C3262B69686C6D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		F9B7B17618A835865A4617550504175B /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		FB0C6E11A271DD4B54B8E6320D965764 /* CVCalendarMonthView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMonthView.swift; path = CVCalendar/CVCalendarMonthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0BF00C02862EE88BA2D6F79EE95C81BF /* Frameworks */ = {
+		169E0F6ACF337868A67AC87EC23E3D2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3379067F5933BA7631C938C990FC2250 /* Foundation.framework in Frameworks */,
-				5BE1FF1CAE4CA79BD47A5CB5AF7A6F98 /* QuartzCore.framework in Frameworks */,
+				8C9BF771EA5C05E843CFAA6551DB3E39 /* Foundation.framework in Frameworks */,
+				9A17F24EF88489463660521F4FCCFFD0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,25 +228,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35685384610FAE82362EFD10CB9F4946 /* Frameworks */ = {
+		3847D576571CD44185D8CF99F1BD6820 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4306EDD22F8A0396E4F1D0D60F3B81FF /* Foundation.framework in Frameworks */,
+				8E28E2FA58CFC65C41D87E53059C9651 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C679D3638C4F839D8BAF44AA8F106ACE /* Frameworks */ = {
+		AB50A9208DC79D24B85845ABE39E694B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CA65AC04797F13FC8F6516D8103FB45 /* Foundation.framework in Frameworks */,
+				4DDB12CFF4ED493D24579A08F7DECA8A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F19BB89B044FC5D4745E015990258FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278582A9E321A8CD46724C727442C2DC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0146664BBF480CF39CDDD34B60462D42 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8DC823142E654D979AD46DF5CEDEA73 /* Info.plist */,
+				5816E129077E85191AA2D1DA65CDDD0A /* SVProgressHUD.modulemap */,
+				F7ADDD578BA6ACDDA97F02D95D3C1508 /* SVProgressHUD.xcconfig */,
+				91047579FF443CA36B7A3837DCBAE842 /* SVProgressHUD-dummy.m */,
+				C81280017986D947B06D478E50525BC7 /* SVProgressHUD-prefix.pch */,
+				2B264FDE9C644A3AF68422A0557DD170 /* SVProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		09ABBAA3267305671B3395D60DE495BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C308D5DBEBADBDAB3ACCBA72465FF81A /* Info.plist */,
+				836939390EA7D1AC8784F590C9F5E671 /* SwiftHEXColors.modulemap */,
+				EF16EEF1CDCE941E55BD8E7A5DDFE224 /* SwiftHEXColors.xcconfig */,
+				5B2BA3AA180748AEA2E48AEDA9C1356D /* SwiftHEXColors-dummy.m */,
+				24A78268E3E2CB0710F0081E47337556 /* SwiftHEXColors-prefix.pch */,
+				61C52980F1BA3DE9EE9CFEF11CA0FD5A /* SwiftHEXColors-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftHEXColors";
+			sourceTree = "<group>";
+		};
 		1021FECCBA3CD6E12559793814F0CB81 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +295,16 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		11BFEA7346E877CCF0CD1F462C1F8B22 /* SwiftHEXColors */ = {
+			isa = PBXGroup;
+			children = (
+				BAB7A7A82D883404EEE46F2966139E4E /* SwiftHEXColors.h */,
+				33281EEFBFE9C25EC7FD827DC4979B4A /* SwiftHEXColors.swift */,
+				09ABBAA3267305671B3395D60DE495BB /* Support Files */,
+			);
+			path = SwiftHEXColors;
+			sourceTree = "<group>";
+		};
 		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,35 +313,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		293C4DA933D1FD458634E54D94A81633 /* Firebase */ = {
+		397CBD20A75D00B45F1F56D446FAAA12 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				467E10ED189786EE38F84293737F4384 /* Empty.m */,
-				3145C6492DCBD3E4574DD5A530153854 /* FAuthData.h */,
-				9404DBFCB94C80674C8201BE70C707DA /* FAuthType.h */,
-				8555394D5E2A8BEBB11BA04C46456AB8 /* FConfig.h */,
-				63CC769F9FBB1A0BDBD33899872CE44F /* FDataSnapshot.h */,
-				326DA7F06DD8A6173F7EDA2A5A530FD5 /* FEventType.h */,
-				D839961BC1A895546BFC1470DADCEBC1 /* Firebase.h */,
-				E3E851B13BD87F46061162D0BF947F04 /* FirebaseApp.h */,
-				982D3578F14D97D6C7928C3083B7BAA6 /* FirebaseServerValue.h */,
-				F14AC1D388FBB8F8DCFDB1FFFB7CA365 /* FMutableData.h */,
-				2E330242ACB4C2542616BC8D569CACDE /* FQuery.h */,
-				81627F95E04939D3FF527BE18B332E1E /* FTransactionResult.h */,
-				C1E861C106C9878B4612619A10C18480 /* Frameworks */,
-				B969FCDD9D3AB3357D6D9D20AAD413CD /* Support Files */,
+				F9AB19C47017DA8D94C3262B69686C6D /* SVProgressHUD.bundle */,
 			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		40A44533F353B5ED2D684D26AE8B58D5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				293C4DA933D1FD458634E54D94A81633 /* Firebase */,
-				B88C355D5D0356AB2BDB22E98486755D /* SVProgressHUD */,
-				F42F6F0B94F78AE5DCABBC45479A979D /* SwiftHEXColors */,
-			);
-			name = Pods;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		410268CDCA4A388AAC69002357FE9F60 /* Targets Support Files */ = {
@@ -256,109 +350,145 @@
 			path = "Target Support Files/Pods-TriggerWork";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		76F20E3081EC2A04C20644C4CB071E1D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				40A44533F353B5ED2D684D26AE8B58D5 /* Pods */,
-				DD4254B1F84487AA5FF98073AB3C325C /* Products */,
-				410268CDCA4A388AAC69002357FE9F60 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		B376BC548ADD1FBF3A1CDE9A6D2F6B51 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8DE0A07042CB0E2EB60063B052C6C228 /* Info.plist */,
-				68CC439068CEFA8350A34DABB7B59545 /* SwiftHEXColors.modulemap */,
-				EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */,
-				8FB71E989D94FA08D9922134803E6CA6 /* SwiftHEXColors-dummy.m */,
-				92F93FE90192E4BA41CF2B540AF9070F /* SwiftHEXColors-prefix.pch */,
-				7D3B1F968E3962530E9FA6DEAC467B76 /* SwiftHEXColors-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftHEXColors";
-			sourceTree = "<group>";
-		};
-		B88C355D5D0356AB2BDB22E98486755D /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				4867A01305AA9D9CD4B54D8096C7EDF8 /* SVIndefiniteAnimatedView.h */,
-				9A82BC95A7478335FF4524A87C4C4FDA /* SVIndefiniteAnimatedView.m */,
-				560D126A106F49486E0D2D5203A98F0E /* SVProgressHUD.h */,
-				BF209FE0E5050D19AC15B5FC7E9EDE6F /* SVProgressHUD.m */,
-				F7B56D31CBA5E578410CC0C0D7CA0611 /* SVRadialGradientLayer.h */,
-				D38B95982927FC104CDF23FFBB3C49C1 /* SVRadialGradientLayer.m */,
-				CAD206FE7660444224F3930FB8144822 /* Resources */,
-				C3C3A09F8EFFE4FB0B39929D2ECAB801 /* Support Files */,
-			);
-			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
-		B969FCDD9D3AB3357D6D9D20AAD413CD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D85808761BE19E7926CC2F7E447F533 /* Firebase.modulemap */,
-				9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */,
-				22FF47CBDE15402351051CC5B8AE57C0 /* Firebase-dummy.m */,
-				61F6ECF76D2506CFC26BF582AFDDC74E /* Firebase-prefix.pch */,
-				DC4EEF02D3E4EFBA9447349B64B6D221 /* Firebase-umbrella.h */,
-				5749DD88A6FD7BF95E1775CBF74141C7 /* Info.plist */,
+				153C28C082A7669B04B4FBF12C6D4299 /* Firebase.modulemap */,
+				9F6156827CBCB515B3AA2137B7842DCB /* Firebase.xcconfig */,
+				E88D137A601BCBB5AE96A46E1D655DC6 /* Firebase-dummy.m */,
+				63B91BCB8AA5A74A6A65F3DA2A194297 /* Firebase-prefix.pch */,
+				B1025712DE490331FEE8F4A9C7DBDE58 /* Firebase-umbrella.h */,
+				839A25FD7AE393C7C9E9F2C7C8F0D40F /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Firebase";
 			sourceTree = "<group>";
 		};
-		C1E861C106C9878B4612619A10C18480 /* Frameworks */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				A13A529F0A061B2C878374AFAFDED8F3 /* libFirebaseStatic.a */,
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				CA1C22E6C1D8CF3879871F1A4791F4FD /* Pods */,
+				AE2ECD58A7ADB83437B4F66E6C59153A /* Products */,
+				410268CDCA4A388AAC69002357FE9F60 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		90481CE28DF62A40F6055B04AD04BDFF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BCE7AC27F05DEA9723D42CF924575D1 /* CVCalendar.modulemap */,
+				CBFA3B2367CB80A77EAE2AFD7E4BDDE7 /* CVCalendar.xcconfig */,
+				8E592C4D2C1FD47C416CB62827DD376D /* CVCalendar-dummy.m */,
+				6E27CFDAB5336D5D3DC4F64A13DF2665 /* CVCalendar-prefix.pch */,
+				527C92862699D83ECF8AB97CF4143085 /* CVCalendar-umbrella.h */,
+				211EB47E5F37234F7BDBF88B149B3BBE /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CVCalendar";
+			sourceTree = "<group>";
+		};
+		9EB072E9A2DC7D3FBF3B1B6AB822972D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59D9AC62EBCAED6C23B2A160190BFB38 /* libFirebaseStatic.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C3C3A09F8EFFE4FB0B39929D2ECAB801 /* Support Files */ = {
+		AB25D237310C3955B182DA8C4050489F /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				557DF23D0B5FDC6C9D0F4840C1BBF27E /* Info.plist */,
-				64D0E8D5341722D070CED1E49A1EE021 /* SVProgressHUD.modulemap */,
-				94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */,
-				2991A5FAEDB5E6ACB06637F5A5A428A3 /* SVProgressHUD-dummy.m */,
-				9123EA6EB5314F814F65C40FBF604599 /* SVProgressHUD-prefix.pch */,
-				F26AF018ACAAB2F70710779149EB984C /* SVProgressHUD-umbrella.h */,
+				49F0BA67569C86E58693302D7BF5D2E2 /* Empty.m */,
+				D9D2C8C66FB1680A982909953B8F2365 /* FAuthData.h */,
+				A4E694DF36733585DDEF0E6DA3A5865E /* FAuthType.h */,
+				B42AEA2EAF8C02C8B65A6C5216702EF2 /* FConfig.h */,
+				655B3FB2C801265263E2A78FF97992A5 /* FDataSnapshot.h */,
+				2961F10B246B525F7F1F71CE7E22D019 /* FEventType.h */,
+				587C9477DAB19835F3BB7DB7D3C3EFEF /* Firebase.h */,
+				A61AA486D9997971ABD3B51F94956542 /* FirebaseApp.h */,
+				9B561B5DF168ECC060F6E9934B4FCF00 /* FirebaseServerValue.h */,
+				F9B7B17618A835865A4617550504175B /* FMutableData.h */,
+				80AF2C209B10EB9E60900223492336F3 /* FQuery.h */,
+				0B367AA70D241E51E80BCFC7D8100945 /* FTransactionResult.h */,
+				9EB072E9A2DC7D3FBF3B1B6AB822972D /* Frameworks */,
+				76F20E3081EC2A04C20644C4CB071E1D /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SVProgressHUD";
+			path = Firebase;
 			sourceTree = "<group>";
 		};
-		CAD206FE7660444224F3930FB8144822 /* Resources */ = {
+		AE2ECD58A7ADB83437B4F66E6C59153A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0541769902DDA7A4379D6AE0CE053C11 /* SVProgressHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		DD4254B1F84487AA5FF98073AB3C325C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AB753D727251116B5A31D3A1D1B8F76C /* Firebase.framework */,
-				0809530FB3980ADE3A75166D45F1891A /* Pods_TriggerWork.framework */,
-				16EC4E9E27B03D0CF33B077A11738251 /* SVProgressHUD.framework */,
-				54550CF3AF08986990C5C0BD1998771A /* SwiftHEXColors.framework */,
+				495C43ABCD921ACE241CD21561077579 /* CVCalendar.framework */,
+				7677FBF2E1E6E2C8DE4B33BCA7FC2BFC /* Firebase.framework */,
+				9B646ABCBDE34BDBBB9902D3222846D5 /* Pods_TriggerWork.framework */,
+				BCBACEC29A945EFBB403C6FFF7CCF86F /* SVProgressHUD.framework */,
+				A063F66BD513B5BCB4BD5DDBC8741B4C /* SwiftHEXColors.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F42F6F0B94F78AE5DCABBC45479A979D /* SwiftHEXColors */ = {
+		CA1C22E6C1D8CF3879871F1A4791F4FD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1AFA2C6785C1757E12AAD25442CCB541 /* SwiftHEXColors.h */,
-				DC7290A5FFD5B0543C5233EA42518B5D /* SwiftHEXColors.swift */,
-				B376BC548ADD1FBF3A1CDE9A6D2F6B51 /* Support Files */,
+				DFD0DF3B41044D15E454662D576436B8 /* CVCalendar */,
+				AB25D237310C3955B182DA8C4050489F /* Firebase */,
+				D850D9BEC20938C6F478FC21EAC17128 /* SVProgressHUD */,
+				11BFEA7346E877CCF0CD1F462C1F8B22 /* SwiftHEXColors */,
 			);
-			path = SwiftHEXColors;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D850D9BEC20938C6F478FC21EAC17128 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				563D402C98AF2A4B7D4D2522D8AEBA17 /* SVIndefiniteAnimatedView.h */,
+				A014D7C766ECE710FC872E2AD02FD1DD /* SVIndefiniteAnimatedView.m */,
+				7416C3618214E3F8BC1A70A789504560 /* SVProgressHUD.h */,
+				04C2034E2788E826418EE263084B0289 /* SVProgressHUD.m */,
+				2BFC8B4A56D03F7966B39FD9D5FADB44 /* SVRadialGradientLayer.h */,
+				C0F4686BB0E938B0259CCC6738CC16DB /* SVRadialGradientLayer.m */,
+				397CBD20A75D00B45F1F56D446FAAA12 /* Resources */,
+				0146664BBF480CF39CDDD34B60462D42 /* Support Files */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		DFD0DF3B41044D15E454662D576436B8 /* CVCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				8BE98D370A3BE20E8CEEEBEA4840F418 /* CVAuxiliaryView.swift */,
+				F955F9D1EBE374E667DE0D56E4630430 /* CVCalendarContentViewController.swift */,
+				8253ADE75DDC2642C350CE66E05BF7EC /* CVCalendarDayView.swift */,
+				1977740F63C964F034CF8042B0590FC6 /* CVCalendarDayViewControlCoordinator.swift */,
+				0D119F5129D11CDD9797BCEB02C0A6FE /* CVCalendarManager.swift */,
+				797D8CFE1A3CCF6D3C7608987B23526D /* CVCalendarMenuView.swift */,
+				F2B055F9C5F047BC6A2FB3E15CDDC572 /* CVCalendarMenuViewDelegate.swift */,
+				02C8132CCC391CA7F056EBF41177D401 /* CVCalendarMonthContentViewController.swift */,
+				FB0C6E11A271DD4B54B8E6320D965764 /* CVCalendarMonthView.swift */,
+				F8BE9F35A3FEB44974542C574ACD26ED /* CVCalendarTouchController.swift */,
+				00B802353D8A625492E81B068C978B7C /* CVCalendarView.swift */,
+				9D585A333278857183CFE130B2D7B2BD /* CVCalendarViewAnimator.swift */,
+				8916C06733885681513DE3E50305AC14 /* CVCalendarViewAnimatorDelegate.swift */,
+				EAB5564CE737B7E01BA11A5A8E55AB43 /* CVCalendarViewAppearance.swift */,
+				37A6D8BEC5C1444D34E28FB36A41BAF4 /* CVCalendarViewAppearanceDelegate.swift */,
+				0C3395FF1FE465F7B95D4D38F1771AEA /* CVCalendarViewDelegate.swift */,
+				046E80519D3BD0899D619C6D5BD788F6 /* CVCalendarViewPresentationMode.swift */,
+				060C57BB7DC55897FBA93A90BAB4D559 /* CVCalendarWeekContentViewController.swift */,
+				4EC68EDD5543287730FDE8F4154D5A40 /* CVCalendarWeekday.swift */,
+				8D728AB01C29D844D5B3D0DBFEF89443 /* CVCalendarWeekView.swift */,
+				ABE5465BB42B24FB6E7C66B95C3B3F88 /* CVDate.swift */,
+				EE17D8BC14C374374167A56EF5B68645 /* CVRange.swift */,
+				095CD768B1C82F708A58E3560AA22A33 /* CVScrollDirection.swift */,
+				2C8A59E0225CAA462371F638DDC561EC /* CVSelectionType.swift */,
+				27E835119FA64E5069AF267C5566F9DD /* CVSet.swift */,
+				9F222675897220ED9621EA4DE51FAC44 /* CVShape.swift */,
+				13586C8995E5353EDCDB2574D7666927 /* CVWeekdaySymbolType.swift */,
+				90481CE28DF62A40F6055B04AD04BDFF /* Support Files */,
+			);
+			path = CVCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,82 +513,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D3B910DC19B9A9F6A9FDB1DFEAE5654 /* Headers */ = {
+		0C4E16F9C84309BCBA14A10E047A074B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C88DBE6D7CE98532C3C978BCAEBFF16 /* SwiftHEXColors-umbrella.h in Headers */,
-				74369AA0DDD7971FFA84AAA08E5764A0 /* SwiftHEXColors.h in Headers */,
+				7C07FB7A045DD20E5EA458A434B437F0 /* CVCalendar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9C59F5DFC69CA792170EE4B5D38F390 /* Headers */ = {
+		0D022CD251A6E8AAFC6B1111C8E8EA3F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED785D02E4A878FDA16722FB69D2A66 /* SVIndefiniteAnimatedView.h in Headers */,
-				126EFA958BE61708121B53367F2B6933 /* SVProgressHUD-umbrella.h in Headers */,
-				DB864F97D9DB6526DA6C557FA3224611 /* SVProgressHUD.h in Headers */,
-				AABD081B6B0F76257857A6B64FCDE3EA /* SVRadialGradientLayer.h in Headers */,
+				11D45513A24D063390E56EE354B7BB36 /* SwiftHEXColors-umbrella.h in Headers */,
+				D3415BFEBFB2D728DC524DA9EE938D27 /* SwiftHEXColors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC9D91629275054488C7CCD170606B26 /* Headers */ = {
+		0D43CF0DB97D6A623435FD7A43BF20CF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC197E18B529FC6A1DC5350E4BF366CB /* Pods-TriggerWork-umbrella.h in Headers */,
+				E7014E9E05BF3CB519A7D369A1F5731C /* Pods-TriggerWork-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD3A32A0143F0C86BB581BA99D854A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE599C15090661E3D083034A28915D61 /* SVIndefiniteAnimatedView.h in Headers */,
+				6D9E8A025E5D62EF707B69B68336004B /* SVProgressHUD-umbrella.h in Headers */,
+				4B538C4CEFAC9D2E2D0C15AD218E18CF /* SVProgressHUD.h in Headers */,
+				64B35AB164FC68DDE7EC460967829AEA /* SVRadialGradientLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		466B0227FEF5D2BA0EB1FB60822796BD /* SVProgressHUD */ = {
+		1A9AD49AD1A3B3F9A0224E946E03533A /* CVCalendar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38A2D0A2A81F9F197BA91BEA3317F620 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildConfigurationList = C436DC632BCEC4D00A900EF4776E79C0 /* Build configuration list for PBXNativeTarget "CVCalendar" */;
 			buildPhases = (
-				20F0884ACCC360C217DB860E760F3586 /* Sources */,
-				0BF00C02862EE88BA2D6F79EE95C81BF /* Frameworks */,
-				B9C59F5DFC69CA792170EE4B5D38F390 /* Headers */,
-				D61D112B7A3CBC76FE3E72F8A919E061 /* Resources */,
+				0AC4D20821296FFCD60DBF481F8A6EEF /* Sources */,
+				F19BB89B044FC5D4745E015990258FBF /* Frameworks */,
+				0C4E16F9C84309BCBA14A10E047A074B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SVProgressHUD;
-			productName = SVProgressHUD;
-			productReference = 16EC4E9E27B03D0CF33B077A11738251 /* SVProgressHUD.framework */;
+			name = CVCalendar;
+			productName = CVCalendar;
+			productReference = 495C43ABCD921ACE241CD21561077579 /* CVCalendar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4B7BBF5D395F58AD3655EEE879235CF8 /* Pods-TriggerWork */ = {
+		462F7261DAA70A096ADC3850E1BCB756 /* SwiftHEXColors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0336D38987DDC5DB6A67E7F20E8B0B15 /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */;
+			buildConfigurationList = F33967173B4BD1252020DDADE9B6BD7A /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */;
 			buildPhases = (
-				B4911710D9B5352E0986BE0DFE20EAA2 /* Sources */,
-				35685384610FAE82362EFD10CB9F4946 /* Frameworks */,
-				CC9D91629275054488C7CCD170606B26 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B1204DCD4157417CC747159EAB8C7EC1 /* PBXTargetDependency */,
-				06C6A7FE5EDA2BEDC31DD3B34266B1EF /* PBXTargetDependency */,
-				D3B7CEF33B874293F7A6717A0FC6C3D9 /* PBXTargetDependency */,
-			);
-			name = "Pods-TriggerWork";
-			productName = "Pods-TriggerWork";
-			productReference = 0809530FB3980ADE3A75166D45F1891A /* Pods_TriggerWork.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C3FFFD28B2736214F6FC13EFFC990C16 /* SwiftHEXColors */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96B5935C531DD47AC3E875768CC64526 /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */;
-			buildPhases = (
-				1B8BE05851CCD3BF83502FEA7751AA3D /* Sources */,
-				C679D3638C4F839D8BAF44AA8F106ACE /* Frameworks */,
-				6D3B910DC19B9A9F6A9FDB1DFEAE5654 /* Headers */,
+				C4E72B6BF196CC2487B5482009B65EF4 /* Sources */,
+				3847D576571CD44185D8CF99F1BD6820 /* Frameworks */,
+				0D022CD251A6E8AAFC6B1111C8E8EA3F /* Headers */,
 			);
 			buildRules = (
 			);
@@ -466,7 +583,46 @@
 			);
 			name = SwiftHEXColors;
 			productName = SwiftHEXColors;
-			productReference = 54550CF3AF08986990C5C0BD1998771A /* SwiftHEXColors.framework */;
+			productReference = A063F66BD513B5BCB4BD5DDBC8741B4C /* SwiftHEXColors.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A52B3C894187EECD6681E6FC79B0B960 /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E677B27A1A0DF50E9AEB8634B9F54989 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				4E0B45887CB88D47D22C6A177A9260E7 /* Sources */,
+				169E0F6ACF337868A67AC87EC23E3D2D /* Frameworks */,
+				1FD3A32A0143F0C86BB581BA99D854A7 /* Headers */,
+				B9231E08D276093B32EC3F16C33B17BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = BCBACEC29A945EFBB403C6FFF7CCF86F /* SVProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB88DD55EF8190011B41B786857B590D /* Pods-TriggerWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF537B5AD807AD72716A31FF5E6F86D /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */;
+			buildPhases = (
+				D989D8EE8BE24CB1CF7B54C4E6775B76 /* Sources */,
+				AB50A9208DC79D24B85845ABE39E694B /* Frameworks */,
+				0D43CF0DB97D6A623435FD7A43BF20CF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68D762C2CE9E363805F7B2062EA55F3C /* PBXTargetDependency */,
+				4BCD06DC771680EA94EA67A69527ABA9 /* PBXTargetDependency */,
+				7A4515CD5535AB1198D3E3FF3B0C7EE2 /* PBXTargetDependency */,
+				9805617B7DED63869F51E35782F157F7 /* PBXTargetDependency */,
+			);
+			name = "Pods-TriggerWork";
+			productName = "Pods-TriggerWork";
+			productReference = 9B646ABCBDE34BDBBB9902D3222846D5 /* Pods_TriggerWork.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EF8500EB59F29299865850AE249CDE05 /* Firebase */ = {
@@ -483,7 +639,7 @@
 			);
 			name = Firebase;
 			productName = Firebase;
-			productReference = AB753D727251116B5A31D3A1D1B8F76C /* Firebase.framework */;
+			productReference = 7677FBF2E1E6E2C8DE4B33BCA7FC2BFC /* Firebase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -503,47 +659,74 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DD4254B1F84487AA5FF98073AB3C325C /* Products */;
+			productRefGroup = AE2ECD58A7ADB83437B4F66E6C59153A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				1A9AD49AD1A3B3F9A0224E946E03533A /* CVCalendar */,
 				EF8500EB59F29299865850AE249CDE05 /* Firebase */,
-				4B7BBF5D395F58AD3655EEE879235CF8 /* Pods-TriggerWork */,
-				466B0227FEF5D2BA0EB1FB60822796BD /* SVProgressHUD */,
-				C3FFFD28B2736214F6FC13EFFC990C16 /* SwiftHEXColors */,
+				BB88DD55EF8190011B41B786857B590D /* Pods-TriggerWork */,
+				A52B3C894187EECD6681E6FC79B0B960 /* SVProgressHUD */,
+				462F7261DAA70A096ADC3850E1BCB756 /* SwiftHEXColors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D61D112B7A3CBC76FE3E72F8A919E061 /* Resources */ = {
+		B9231E08D276093B32EC3F16C33B17BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				087708DB8709E681570C929E0C257160 /* SVProgressHUD.bundle in Resources */,
+				603B325810587556C2DE6435E77D3090 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1B8BE05851CCD3BF83502FEA7751AA3D /* Sources */ = {
+		0AC4D20821296FFCD60DBF481F8A6EEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				752645E10153AB1A2BD9E6D993D63E09 /* SwiftHEXColors-dummy.m in Sources */,
-				5283DBC4FA4DB05AE4DDDD35886369EB /* SwiftHEXColors.swift in Sources */,
+				F1D1C2FD14DB3DABA566C8423BCD4DA3 /* CVAuxiliaryView.swift in Sources */,
+				95FD7B821EB2D21A14A8760384DC45EA /* CVCalendar-dummy.m in Sources */,
+				474052B888FFC5428F857441B9042924 /* CVCalendarContentViewController.swift in Sources */,
+				630268329F97E4456865BF8030145517 /* CVCalendarDayView.swift in Sources */,
+				E0B2C76F0DBA13A57D0F6BCBC010283D /* CVCalendarDayViewControlCoordinator.swift in Sources */,
+				8E3B6F917BB1F80A7674925C5AF5B5BD /* CVCalendarManager.swift in Sources */,
+				46D6F5760F1F9F96E0046BFE2C75DB1B /* CVCalendarMenuView.swift in Sources */,
+				DD9FBA99CC27AEBBA5457CF591860CAC /* CVCalendarMenuViewDelegate.swift in Sources */,
+				FC32EDD7C2B4EF5AF7CF3840318A3625 /* CVCalendarMonthContentViewController.swift in Sources */,
+				38F296D629DF5DEDE9AC67AEC016FB25 /* CVCalendarMonthView.swift in Sources */,
+				BE181CF9D5F70E2A52BC4E691D6ADD94 /* CVCalendarTouchController.swift in Sources */,
+				D3DBB9DB692670E2058938851A4FC6A0 /* CVCalendarView.swift in Sources */,
+				0A7CC9B9870C596E143AE147FF2186AD /* CVCalendarViewAnimator.swift in Sources */,
+				39BEDDD6AEF9CB5AF88CD103EB9D74FF /* CVCalendarViewAnimatorDelegate.swift in Sources */,
+				F77067A5603F4E8EF43DFCADBC59C8AF /* CVCalendarViewAppearance.swift in Sources */,
+				D7680B8BE4C263A9A7852560B8485424 /* CVCalendarViewAppearanceDelegate.swift in Sources */,
+				7618EA014CA4EE601311E749A167AE9F /* CVCalendarViewDelegate.swift in Sources */,
+				EF8BF91612DE915685724B9E8371F57F /* CVCalendarViewPresentationMode.swift in Sources */,
+				404DF8F24CC1D8AAEBDF672F3CF404E1 /* CVCalendarWeekContentViewController.swift in Sources */,
+				307BCA7444621A7C668C864F02980301 /* CVCalendarWeekday.swift in Sources */,
+				11D22D64E70AD69959AD65E84B064751 /* CVCalendarWeekView.swift in Sources */,
+				FFCB2B4C1C64B2C27C63A555070C716D /* CVDate.swift in Sources */,
+				DD309B33C805F88BEE1BBE802668DF45 /* CVRange.swift in Sources */,
+				2F794A1885B2AA5CCFE3A214ECB8653D /* CVScrollDirection.swift in Sources */,
+				FD250B1B9083331AA29EBBB23AC5CDAA /* CVSelectionType.swift in Sources */,
+				CC6AEB3369DBD97D4370D3F0866C85C3 /* CVSet.swift in Sources */,
+				0ACFE657DEAE0006B94CA802A5F0FD32 /* CVShape.swift in Sources */,
+				C75C91C1A92308DE719B51EABE188143 /* CVWeekdaySymbolType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20F0884ACCC360C217DB860E760F3586 /* Sources */ = {
+		4E0B45887CB88D47D22C6A177A9260E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FFA18D60CA011A98E9E7C6CD70F7DB0 /* SVIndefiniteAnimatedView.m in Sources */,
-				2F44AA9242F003605CB2990383808748 /* SVProgressHUD-dummy.m in Sources */,
-				F7EBEF55C351B9EB5AFDB917467A48B3 /* SVProgressHUD.m in Sources */,
-				FC3F8FB4E6AF8B3EDB5505FDA6FBB873 /* SVRadialGradientLayer.m in Sources */,
+				FAA8D3C7E93DAEDBC8DFFCAE116227DB /* SVIndefiniteAnimatedView.m in Sources */,
+				9CEBFBF24215DAE23950043E7C04F11A /* SVProgressHUD-dummy.m in Sources */,
+				8147E97E7D8F2940BBE88B8B36B479A7 /* SVProgressHUD.m in Sources */,
+				C8DD308D1B069F91E09C5CC0C86E3E68 /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,99 +739,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4911710D9B5352E0986BE0DFE20EAA2 /* Sources */ = {
+		C4E72B6BF196CC2487B5482009B65EF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D004D8689CA9468F1E02FEFE220061F /* Pods-TriggerWork-dummy.m in Sources */,
+				DDA5F1B16539A46E19F4D480ED11F7D9 /* SwiftHEXColors-dummy.m in Sources */,
+				1AF569F25B97E80FB45ADEFF467008AB /* SwiftHEXColors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D989D8EE8BE24CB1CF7B54C4E6775B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179240D3BD84F67120B43C225BD15812 /* Pods-TriggerWork-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		06C6A7FE5EDA2BEDC31DD3B34266B1EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SVProgressHUD;
-			target = 466B0227FEF5D2BA0EB1FB60822796BD /* SVProgressHUD */;
-			targetProxy = 695BDF53A772AA1637546355279079DD /* PBXContainerItemProxy */;
-		};
-		B1204DCD4157417CC747159EAB8C7EC1 /* PBXTargetDependency */ = {
+		4BCD06DC771680EA94EA67A69527ABA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Firebase;
 			target = EF8500EB59F29299865850AE249CDE05 /* Firebase */;
-			targetProxy = EC410E8F3438F92DBD3CBB74BE5DAB92 /* PBXContainerItemProxy */;
+			targetProxy = D08BA076B6F3DC4A88CD62D9C4F82895 /* PBXContainerItemProxy */;
 		};
-		D3B7CEF33B874293F7A6717A0FC6C3D9 /* PBXTargetDependency */ = {
+		68D762C2CE9E363805F7B2062EA55F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CVCalendar;
+			target = 1A9AD49AD1A3B3F9A0224E946E03533A /* CVCalendar */;
+			targetProxy = 01F1247C8088499E30CB66C9BA943125 /* PBXContainerItemProxy */;
+		};
+		7A4515CD5535AB1198D3E3FF3B0C7EE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = A52B3C894187EECD6681E6FC79B0B960 /* SVProgressHUD */;
+			targetProxy = AB5BFA7CEDF44A7A370C1FEED8375CD7 /* PBXContainerItemProxy */;
+		};
+		9805617B7DED63869F51E35782F157F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftHEXColors;
-			target = C3FFFD28B2736214F6FC13EFFC990C16 /* SwiftHEXColors */;
-			targetProxy = 07A777DF97E464C7F88365D91AE8A79A /* PBXContainerItemProxy */;
+			target = 462F7261DAA70A096ADC3850E1BCB756 /* SwiftHEXColors */;
+			targetProxy = 057CEAD81EA188C00FFCBAB1460C7A9C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A794808223B4AF4B59BCA845E3C74A5 /* Debug */ = {
+		210979E196741880C566094F6C409E09 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1481CD8D1C85396949A1C58B3E6D4D6F /* Pods-TriggerWork.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TriggerWork;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0B7202C27B86CCD575F18383877D6C2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHEXColors;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1039514401EADFE2FB405848732FD5D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
+			baseConfigurationReference = F7ADDD578BA6ACDDA97F02D95D3C1508 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -671,11 +811,41 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = "App Store";
 		};
-		2CAD21A19DA922104179818C2B8AFDA5 /* Debug Staging */ = {
+		2878A38B734489C44ED50DF89C129EC1 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
+			baseConfigurationReference = B6D6C633464695856EE2C70D13C68007 /* Pods-TriggerWork.release staging.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TriggerWork;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release Staging";
+		};
+		30B2839B953EBB3EF81E02BAF1603125 /* Release Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF16EEF1CDCE941E55BD8E7A5DDFE224 /* SwiftHEXColors.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -698,11 +868,11 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "Debug Staging";
+			name = "Release Staging";
 		};
 		37A9DE43E9328465F8B238C1583A1431 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
+			baseConfigurationReference = 9F6156827CBCB515B3AA2137B7842DCB /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -727,9 +897,9 @@
 			};
 			name = "Release Staging";
 		};
-		3B40963DD3018417C9E17639C5EEAC99 /* Debug */ = {
+		38E955536FB4E16B4577406181A7AE2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
+			baseConfigurationReference = F7ADDD578BA6ACDDA97F02D95D3C1508 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -738,22 +908,78 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftHEXColors;
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SVProgressHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
+		};
+		3AB847F64DF0AB91100D39504720A854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68DF3C4C214455A830E8637FBFBACC7F /* Pods-TriggerWork.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TriggerWork;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3DD2E26A621EB8C7B75170562E87F8F6 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBFA3B2367CB80A77EAE2AFD7E4BDDE7 /* CVCalendar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CVCalendar/CVCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CVCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CVCalendar/CVCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CVCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
 		};
 		418C6E1E5B0AF53BC56107D293CD6C35 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
@@ -788,63 +1014,9 @@
 			};
 			name = "Debug Staging";
 		};
-		43EB58CFE9FD4C79925E38976A32160D /* Release Staging */ = {
+		6899097749E946F80CA22F56F1C20823 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHEXColors;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Release Staging";
-		};
-		70AA92BBAE968224CEB92A5D0C5086DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SVProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		732FCAC704BB65FD5B5E74B3E5B858F7 /* Release Staging */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6D6C633464695856EE2C70D13C68007 /* Pods-TriggerWork.release staging.xcconfig */;
+			baseConfigurationReference = BC91CDAE00EA8926B4391E293DB6AFF0 /* Pods-TriggerWork.debug staging.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -870,11 +1042,39 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "Release Staging";
+			name = "Debug Staging";
 		};
-		7659A60D3A819A3ABA331593DBDC747F /* Debug Staging */ = {
+		6973C53210D3CD7A19FED446D384360B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
+			baseConfigurationReference = EF16EEF1CDCE941E55BD8E7A5DDFE224 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftHEXColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6D844539A7436D317EAC60642D8CAA5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7ADDD578BA6ACDDA97F02D95D3C1508 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -889,7 +1089,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SVProgressHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -897,7 +1097,95 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "Debug Staging";
+			name = Debug;
+		};
+		736A1D6F36694F56B1EE55287D267BCB /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C49225B6C45A4A685EFB70D83C179DE7 /* Pods-TriggerWork.app store.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TriggerWork;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
+		7CDF311612E545875660977C152702B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1481CD8D1C85396949A1C58B3E6D4D6F /* Pods-TriggerWork.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TriggerWork;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7DC236F3672E4AB2F428A762E468D678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBFA3B2367CB80A77EAE2AFD7E4BDDE7 /* CVCalendar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CVCalendar/CVCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CVCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CVCalendar/CVCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CVCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		82502FD33FE72B18CB1EE21B68BFF4F2 /* App Store */ = {
 			isa = XCBuildConfiguration;
@@ -973,7 +1261,7 @@
 		};
 		8F84D07446AE14ABA3FE41770EE794C4 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
+			baseConfigurationReference = 9F6156827CBCB515B3AA2137B7842DCB /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -998,9 +1286,64 @@
 			};
 			name = "Debug Staging";
 		};
+		9359F71CA2B80345785970299DE0240F /* Release Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBFA3B2367CB80A77EAE2AFD7E4BDDE7 /* CVCalendar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CVCalendar/CVCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CVCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CVCalendar/CVCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CVCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release Staging";
+		};
+		9FC549A6C07816D4E9828FDD2AAAF3AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBFA3B2367CB80A77EAE2AFD7E4BDDE7 /* CVCalendar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CVCalendar/CVCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CVCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CVCalendar/CVCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CVCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		AA652B74607F8A0E1A49EE4873D46946 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
+			baseConfigurationReference = 9F6156827CBCB515B3AA2137B7842DCB /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1017,66 +1360,6 @@
 				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Firebase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AAF71CB81CC23CDD48DA7F4600DDAFA1 /* App Store */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C49225B6C45A4A685EFB70D83C179DE7 /* Pods-TriggerWork.app store.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TriggerWork;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "App Store";
-		};
-		B49CFB1433DA9AEDC53DEDAC31589E7E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68DF3C4C214455A830E8637FBFBACC7F /* Pods-TriggerWork.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TriggerWork;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1087,7 +1370,7 @@
 		};
 		BBB71AEFC649F48374EB1805D8353820 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
+			baseConfigurationReference = 9F6156827CBCB515B3AA2137B7842DCB /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1104,6 +1387,33 @@
 				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "App Store";
+		};
+		C4BFEBEB9D879190754E66BC2E662BD8 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF16EEF1CDCE941E55BD8E7A5DDFE224 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftHEXColors;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1146,9 +1456,9 @@
 			};
 			name = Release;
 		};
-		D782346E071BA9D7DFBF2359FC217923 /* Debug Staging */ = {
+		CE1C7F82D51F4DD698FA9438D59419E2 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC91CDAE00EA8926B4391E293DB6AFF0 /* Pods-TriggerWork.debug staging.xcconfig */;
+			baseConfigurationReference = EF16EEF1CDCE941E55BD8E7A5DDFE224 /* SwiftHEXColors.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1157,17 +1467,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TriggerWork/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TriggerWork/Pods-TriggerWork.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TriggerWork;
+				PRODUCT_NAME = SwiftHEXColors;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1176,9 +1483,36 @@
 			};
 			name = "Debug Staging";
 		};
-		DAAA38E274118582BC8C56C9484F21D4 /* Release Staging */ = {
+		D7A97CDF8E21642CECF39023177ADC1F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
+			baseConfigurationReference = EF16EEF1CDCE941E55BD8E7A5DDFE224 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftHEXColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DC226A276F65FB4059B098D00ED52003 /* Debug Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7ADDD578BA6ACDDA97F02D95D3C1508 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1201,7 +1535,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "Release Staging";
+			name = "Debug Staging";
 		};
 		EEE0C2F5CBD0F04281E537A3F50FF3D2 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
@@ -1236,9 +1570,9 @@
 			};
 			name = "Release Staging";
 		};
-		F05133792B0BB3E941A2098CA6DA4E68 /* App Store */ = {
+		F35AB09A19717724F0DF7BCF81E2419E /* Release Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94997F6D56B0AC3CA86CE87A1107A8B8 /* SVProgressHUD.xcconfig */;
+			baseConfigurationReference = F7ADDD578BA6ACDDA97F02D95D3C1508 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1261,11 +1595,11 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store";
+			name = "Release Staging";
 		};
-		F73E1A7BEC2DC5677D6152FAAC2F1B57 /* App Store */ = {
+		F80B4EEBC2855FC4119AD79CEC10046E /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB7D32A1F1A167A3247F731A3FAF2687 /* SwiftHEXColors.xcconfig */;
+			baseConfigurationReference = CBFA3B2367CB80A77EAE2AFD7E4BDDE7 /* CVCalendar.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1274,25 +1608,25 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CVCalendar/CVCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CVCalendar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MODULEMAP_FILE = "Target Support Files/CVCalendar/CVCalendar.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHEXColors;
+				PRODUCT_NAME = CVCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = "App Store";
+			name = "Debug Staging";
 		};
 		FABDB9E7CDE923835C1F7AE0E59921D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AD956431388D33587682A44AF6C7974 /* Firebase.xcconfig */;
+			baseConfigurationReference = 9F6156827CBCB515B3AA2137B7842DCB /* Firebase.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1320,18 +1654,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0336D38987DDC5DB6A67E7F20E8B0B15 /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AAF71CB81CC23CDD48DA7F4600DDAFA1 /* App Store */,
-				0A794808223B4AF4B59BCA845E3C74A5 /* Debug */,
-				D782346E071BA9D7DFBF2359FC217923 /* Debug Staging */,
-				B49CFB1433DA9AEDC53DEDAC31589E7E /* Release */,
-				732FCAC704BB65FD5B5E74B3E5B858F7 /* Release Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0B9ED9A7CDCF4D1B7E6C46181D4C363A /* Build configuration list for PBXNativeTarget "Firebase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1356,26 +1678,50 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38A2D0A2A81F9F197BA91BEA3317F620 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+		AAF537B5AD807AD72716A31FF5E6F86D /* Build configuration list for PBXNativeTarget "Pods-TriggerWork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F05133792B0BB3E941A2098CA6DA4E68 /* App Store */,
-				70AA92BBAE968224CEB92A5D0C5086DE /* Debug */,
-				7659A60D3A819A3ABA331593DBDC747F /* Debug Staging */,
-				1039514401EADFE2FB405848732FD5D8 /* Release */,
-				DAAA38E274118582BC8C56C9484F21D4 /* Release Staging */,
+				736A1D6F36694F56B1EE55287D267BCB /* App Store */,
+				7CDF311612E545875660977C152702B5 /* Debug */,
+				6899097749E946F80CA22F56F1C20823 /* Debug Staging */,
+				3AB847F64DF0AB91100D39504720A854 /* Release */,
+				2878A38B734489C44ED50DF89C129EC1 /* Release Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96B5935C531DD47AC3E875768CC64526 /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */ = {
+		C436DC632BCEC4D00A900EF4776E79C0 /* Build configuration list for PBXNativeTarget "CVCalendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F73E1A7BEC2DC5677D6152FAAC2F1B57 /* App Store */,
-				3B40963DD3018417C9E17639C5EEAC99 /* Debug */,
-				2CAD21A19DA922104179818C2B8AFDA5 /* Debug Staging */,
-				0B7202C27B86CCD575F18383877D6C2B /* Release */,
-				43EB58CFE9FD4C79925E38976A32160D /* Release Staging */,
+				3DD2E26A621EB8C7B75170562E87F8F6 /* App Store */,
+				9FC549A6C07816D4E9828FDD2AAAF3AA /* Debug */,
+				F80B4EEBC2855FC4119AD79CEC10046E /* Debug Staging */,
+				7DC236F3672E4AB2F428A762E468D678 /* Release */,
+				9359F71CA2B80345785970299DE0240F /* Release Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E677B27A1A0DF50E9AEB8634B9F54989 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210979E196741880C566094F6C409E09 /* App Store */,
+				6D844539A7436D317EAC60642D8CAA5A /* Debug */,
+				DC226A276F65FB4059B098D00ED52003 /* Debug Staging */,
+				38E955536FB4E16B4577406181A7AE2E /* Release */,
+				F35AB09A19717724F0DF7BCF81E2419E /* Release Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33967173B4BD1252020DDADE9B6BD7A /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BFEBEB9D879190754E66BC2E662BD8 /* App Store */,
+				6973C53210D3CD7A19FED446D384360B /* Debug */,
+				CE1C7F82D51F4DD698FA9438D59419E2 /* Debug Staging */,
+				D7A97CDF8E21642CECF39023177ADC1F /* Release */,
+				30B2839B953EBB3EF81E02BAF1603125 /* Release Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
