@@ -15,6 +15,10 @@ class Athlete {
     var password: String
     var shootingDays: [String:String]
     
+    convenience init(id: String) {
+        self.init(id: id, name: "", email: "", password: "")
+    }
+    
     init(id: String, name: String, email: String, password: String) {
         self.id = id
         self.name = name
