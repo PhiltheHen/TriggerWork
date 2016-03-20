@@ -10,8 +10,11 @@
             <string>MyriadPro-Bold</string>
             <string>MyriadPro-Bold</string>
             <string>MyriadPro-Bold</string>
+            <string>MyriadPro-Bold</string>
+            <string>MyriadPro-Bold</string>
         </mutableArray>
         <mutableArray key="MyriadPro-Light.otf">
+            <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
@@ -393,8 +396,96 @@
                     <view key="view" contentMode="scaleToFill" id="vVX-2H-fDH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Sessions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEY-2q-cyR">
+                                <rect key="frame" x="20" y="100" width="57" height="14"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athlete Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvD-Ai-nfA">
+                                <rect key="frame" x="422" y="72" width="158" height="26"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="26"/>
+                                <color key="textColor" red="0.29411764705882354" green="0.70588235294117652" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNJ-8q-AOr">
+                                <rect key="frame" x="20" y="72" width="98" height="20"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yoh-at-p4b">
+                                <rect key="frame" x="0.0" y="234" width="600" height="317"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FUa-FC-YNj" customClass="SessionTableViewCell" customModule="TriggerWork" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUa-FC-YNj" id="cY9-Ox-KQF">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oow-Uy-UJ0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NDm-nG-r1E">
+                                                        <size key="itemSize" width="40" height="40"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Xqp-ty-cLI" customClass="ShotCollectionViewCell" customModule="TriggerWork" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="Hyf-uw-H4r" id="pRo-B5-ydp"/>
+                                                        <outlet property="delegate" destination="Hyf-uw-H4r" id="7EP-4G-kWK"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="oow-Uy-UJ0" secondAttribute="bottom" id="GQV-VL-m1k"/>
+                                                <constraint firstItem="oow-Uy-UJ0" firstAttribute="leading" secondItem="cY9-Ox-KQF" secondAttribute="leading" id="enu-g7-kfd"/>
+                                                <constraint firstItem="oow-Uy-UJ0" firstAttribute="top" secondItem="cY9-Ox-KQF" secondAttribute="top" id="pbJ-qH-CSd"/>
+                                                <constraint firstAttribute="trailing" secondItem="oow-Uy-UJ0" secondAttribute="trailing" id="vUR-L2-d6B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="oow-Uy-UJ0" id="3Ee-8T-esH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hyf-uw-H4r" id="wXj-vm-iYx"/>
+                                    <outlet property="delegate" destination="Hyf-uw-H4r" id="gyB-8y-LV2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yoh-at-p4b" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" constant="-20" id="1o7-0D-xOx"/>
+                            <constraint firstItem="qvD-Ai-nfA" firstAttribute="top" secondItem="yuv-U5-ht4" secondAttribute="bottom" constant="8" id="Awu-nH-j8U"/>
+                            <constraint firstItem="BEY-2q-cyR" firstAttribute="top" secondItem="fNJ-8q-AOr" secondAttribute="bottom" constant="8" id="Ba5-rF-vc1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yoh-at-p4b" secondAttribute="trailing" constant="-20" id="GcL-Gb-EYN"/>
+                            <constraint firstItem="yoh-at-p4b" firstAttribute="top" secondItem="BEY-2q-cyR" secondAttribute="bottom" constant="120" id="PtM-W5-JoJ"/>
+                            <constraint firstItem="qvD-Ai-nfA" firstAttribute="trailing" secondItem="vVX-2H-fDH" secondAttribute="trailingMargin" id="gOg-DK-BEH"/>
+                            <constraint firstItem="C2U-z4-y2Z" firstAttribute="top" secondItem="yoh-at-p4b" secondAttribute="bottom" id="hIO-4i-eNq"/>
+                            <constraint firstItem="fNJ-8q-AOr" firstAttribute="top" secondItem="yuv-U5-ht4" secondAttribute="bottom" constant="8" id="j92-0W-9IY"/>
+                            <constraint firstItem="BEY-2q-cyR" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" id="jlg-Oz-6I0"/>
+                            <constraint firstItem="fNJ-8q-AOr" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" id="q2i-pw-13p"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="yoh-at-p4b" id="IkC-iZ-0VQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8B-Lx-Sqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
