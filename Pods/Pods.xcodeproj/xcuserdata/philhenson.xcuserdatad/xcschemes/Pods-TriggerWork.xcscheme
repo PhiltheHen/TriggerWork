@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '938690505B3C27E1CB9B0032'
+               BlueprintIdentifier = '232B50D9B79E8EA0438F5F90'
                BlueprintName = 'Pods-TriggerWork'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_TriggerWork.framework'>

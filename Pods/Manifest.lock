@@ -1,10 +1,12 @@
 PODS:
+  - CorePlot (2.0)
   - CVCalendar (1.2.9)
   - Firebase (2.5.1)
   - SVProgressHUD (2.0-beta8)
   - SwiftHEXColors (1.0.2)
 
 DEPENDENCIES:
+  - CorePlot
   - CVCalendar (~> 1.2.9)
   - Firebase (>= 2.5.0)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
@@ -20,6 +22,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
+  CorePlot: b7f422ad363f2b0e48152471d6da45ce232eb8c6
   CVCalendar: 0799256e0bc3b43e83b7e86c0729ce9ff0624cb6
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
