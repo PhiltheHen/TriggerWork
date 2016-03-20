@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftHEXColors
 
 #if STAGING
     let firebaseURL = "https://triggerworkstaging.firebaseIO.com"
@@ -30,5 +31,25 @@ struct Fonts {
     
     static func defaultRegularFontWithSize(size: CGFloat) -> UIFont {
         return UIFont(name: "MyriadPro-Bold", size: size)!
+    }
+}
+
+struct Colors {
+    static func defaultDarkGrayColor() -> UIColor {
+        return UIColor(hexString: "#898989")!
+    }
+    
+    static func defaultGreenColor() -> UIColor {
+        return UIColor(hexString: "#4BB48F")!
+    }
+    
+    static func defaultBlackColor() -> UIColor {
+        return UIColor(hexString: "#26252D")!
+    }
+}
+
+struct Helpers {
+    static func sortedKeysAndValuesFromDict(dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
+        return dict.sort { $0.0 < $1.0 }
     }
 }

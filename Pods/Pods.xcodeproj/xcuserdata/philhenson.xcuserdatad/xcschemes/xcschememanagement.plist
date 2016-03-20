@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CorePlot.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Firebase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>462F7261DAA70A096ADC3850E1BCB756</key>
+		<key>3E45F858B7FBDB8E78AD6189C5A86F8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A52B3C894187EECD6681E6FC79B0B960</key>
+		<key>486E85EE2B8CE4A59060B1D0A748128C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB88DD55EF8190011B41B786857B590D</key>
+		<key>65AC6DE10DB5EDDA71C649864C89162D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BECD1753B14F7A27DA13DCED828E45A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,6 +11,11 @@
 		4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C171C9114F400DFAD45 /* BTDiscovery.swift */; };
 		4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C181C9114F400DFAD45 /* BTService.swift */; };
 		4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */; };
+		4E1CAF6E1C9DDBB00049A2DA /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF6D1C9DDBB00049A2DA /* Day.swift */; };
+		4E1CAF701C9DDC1B0049A2DA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF6F1C9DDC1B0049A2DA /* Session.swift */; };
+		4E1CAF721C9DDED20049A2DA /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF711C9DDED20049A2DA /* Shot.swift */; };
+		4E1CAF741C9DE92E0049A2DA /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF731C9DE92E0049A2DA /* SessionTableViewCell.swift */; };
+		4E1CAF761C9DF10C0049A2DA /* ShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF751C9DF10C0049A2DA /* ShotCollectionViewCell.swift */; };
 		4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82131C853C03002561E2 /* AppDelegate.swift */; };
 		4E3A82191C853C03002561E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A82171C853C03002561E2 /* Main.storyboard */; };
 		4E3A821B1C853C03002561E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A821A1C853C03002561E2 /* Assets.xcassets */; };
@@ -24,8 +29,9 @@
 		4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
 		4E5A6CC81C8B833700806161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
 		4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
+		4EABA4721C9F418F00A6DA10 /* sample_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EABA4711C9F418F00A6DA10 /* sample_data.json */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
-		4EDC50BE1C99AAAE00BA5267 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BD1C99AAAE00BA5267 /* User.swift */; };
+		4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
 		4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +59,11 @@
 		4E199C171C9114F400DFAD45 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscovery.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E199C181C9114F400DFAD45 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsCalendarViewController.swift; sourceTree = "<group>"; };
+		4E1CAF6D1C9DDBB00049A2DA /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		4E1CAF6F1C9DDC1B0049A2DA /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		4E1CAF711C9DDED20049A2DA /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		4E1CAF731C9DE92E0049A2DA /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		4E1CAF751C9DF10C0049A2DA /* ShotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E3A82101C853C03002561E2 /* TriggerWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriggerWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3A82131C853C03002561E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E3A82181C853C03002561E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,8 +84,9 @@
 		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Constants.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "TriggerWork-Bridging-Header.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscoveryViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4EABA4711C9F418F00A6DA10 /* sample_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_data.json; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
-		4EDC50BD1C99AAAE00BA5267 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
 		7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				4E3FB7E91C8CEF55007D22FD /* BTDeviceTableViewCell.swift */,
+				4E1CAF731C9DE92E0049A2DA /* SessionTableViewCell.swift */,
+				4E1CAF751C9DF10C0049A2DA /* ShotCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 			children = (
 				4E3FB7E51C8CE334007D22FD /* Fonts */,
 				4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */,
+				4EABA4711C9F418F00A6DA10 /* sample_data.json */,
 				4E3A821F1C853C03002561E2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -230,7 +245,10 @@
 		4E5A6CCE1C8B88C200806161 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4EDC50BD1C99AAAE00BA5267 /* User.swift */,
+				4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */,
+				4E1CAF6D1C9DDBB00049A2DA /* Day.swift */,
+				4E1CAF6F1C9DDC1B0049A2DA /* Session.swift */,
+				4E1CAF711C9DDED20049A2DA /* Shot.swift */,
 				4E199C171C9114F400DFAD45 /* BTDiscovery.swift */,
 				4E199C181C9114F400DFAD45 /* BTService.swift */,
 			);
@@ -328,6 +346,7 @@
 				TargetAttributes = {
 					4E3A820F1C853C03002561E2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = XVTXH22YPM;
 					};
 					4E3A82231C853C03002561E2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -370,6 +389,7 @@
 				4E3A821B1C853C03002561E2 /* Assets.xcassets in Resources */,
 				4E3FB7E01C8CE270007D22FD /* MyriadPro-Bold.otf in Resources */,
 				4E3A82191C853C03002561E2 /* Main.storyboard in Resources */,
+				4EABA4721C9F418F00A6DA10 /* sample_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,15 +464,20 @@
 			files = (
 				4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */,
 				4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */,
+				4E1CAF6E1C9DDBB00049A2DA /* Day.swift in Sources */,
 				4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */,
+				4E1CAF741C9DE92E0049A2DA /* SessionTableViewCell.swift in Sources */,
+				4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */,
 				4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */,
 				4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */,
+				4E1CAF701C9DDC1B0049A2DA /* Session.swift in Sources */,
 				4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */,
 				4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */,
 				4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */,
+				4E1CAF761C9DF10C0049A2DA /* ShotCollectionViewCell.swift in Sources */,
 				4E5A6CC81C8B833700806161 /* Constants.swift in Sources */,
 				4E199C0A1C8FB71000DFAD45 /* RecordSessionViewController.swift in Sources */,
-				4EDC50BE1C99AAAE00BA5267 /* User.swift in Sources */,
+				4E1CAF721C9DDED20049A2DA /* Shot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,10 +626,12 @@
 			baseConfigurationReference = 4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -613,10 +640,12 @@
 			baseConfigurationReference = 689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -722,10 +751,12 @@
 			baseConfigurationReference = FFC9E583CD6B58F70EB8B9D8 /* Pods-TriggerWork.debug staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
 			};
 			name = "Debug Staging";
 		};
@@ -799,10 +830,12 @@
 			baseConfigurationReference = 21A1A8983F54D53CF905E533 /* Pods-TriggerWork.app store.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
 			};
 			name = "App Store";
 		};
@@ -878,10 +911,12 @@
 			baseConfigurationReference = 93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
 			};
 			name = "Release Staging";
 		};

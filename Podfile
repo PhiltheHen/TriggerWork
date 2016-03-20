@@ -11,6 +11,7 @@ pod 'Firebase', '>= 2.5.0'
 pod 'SwiftHEXColors'
 pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 pod 'CVCalendar', '~> 1.2.9'
+pod 'CorePlot'
 
 end
 
