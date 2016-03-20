@@ -7,17 +7,99 @@
 //
 
 import UIKit
+import CorePlot
 
 class ResultsDayViewController: UIViewController {
     
     var storedOffsets = [Int: CGFloat]()
+    var data = [String:String]()
+    var sortedTimes = [(String, AnyObject)]()
 
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var graphView: CPTGraphHostingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = Colors.defaultBlackColor()
         tableView.separatorStyle = .None
+        loadTestData()
+        setupGraphView()
+    }
+    
+    func loadTestData() {
+        guard let path = NSBundle.mainBundle().pathForResource("sample_data", ofType: "json") else { return }
+        do {
+            let jsonData = try NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+            data = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) as! [String : String]
+            sortedTimes = Helpers.sortedKeysAndValuesFromDict(data)
+        }
+        catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+    }
+}
+
+extension ResultsDayViewController: CPTPlotDataSource {
+    func setupGraphView() {
+        
+        // Styles
+        let dataLineStyle = CPTMutableLineStyle()
+        dataLineStyle.lineWidth = 3.0
+        dataLineStyle.lineColor = CPTColor(CGColor: Colors.defaultGreenColor().CGColor)
+        
+        // Plotting Space
+        let graph = CPTXYGraph(frame: CGRectZero)
+        
+        let axisSet = graph.axisSet as! CPTXYAxisSet
+        axisSet.xAxis?.axisLineStyle = nil
+        axisSet.yAxis?.axisLineStyle = nil
+        
+        let plot = CPTScatterPlot()
+        plot.dataSource = self
+        plot.interpolation = .Curved
+        plot.dataLineStyle = dataLineStyle
+        
+        let plotSpace = graph.defaultPlotSpace as! CPTXYPlotSpace
+        let xRange = plotSpace.xRange.mutableCopy() as! CPTMutablePlotRange
+        let yRange = plotSpace.yRange.mutableCopy() as! CPTMutablePlotRange
+        guard let maxKey = data.keys.maxElement() else { return }
+        guard let maxValue = data.keys.maxElement() else { return }
+        xRange.length = Double(maxKey)
+        yRange.length = Double(maxValue)! + 10.0
+        plotSpace.xRange = xRange
+        plotSpace.yRange = yRange
+        
+        graph.addPlot(plot)
+        graphView.hostedGraph = graph
+    }
+    
+    func numberOfRecordsForPlot(plot: CPTPlot) -> UInt {
+        return UInt(data.count)
+    }
+    
+    func doubleForPlot(plot: CPTPlot, field fieldEnum: UInt, recordIndex idx: UInt) -> Double {
+        var dataPoint = ""
+        
+        switch (fieldEnum) {
+        case 0:
+            dataPoint = sortedTimes[Int(idx)].0
+            break;
+        case 1:
+            dataPoint = sortedTimes[Int(idx)].1 as! String
+            break;
+        default:
+            break;
+        }
+        
+        return Double(dataPoint)!
+        
+    }
+}
+
+extension ResultsDayViewController: CPTScatterPlotDataSource {
+    func symbolForScatterPlot(plot: CPTScatterPlot, recordIndex idx: UInt) -> CPTPlotSymbol? {
+        return nil
     }
 }
 

@@ -47,3 +47,9 @@ struct Colors {
         return UIColor(hexString: "#26252D")!
     }
 }
+
+struct Helpers {
+    static func sortedKeysAndValuesFromDict(dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
+        return dict.sort { $0.0 < $1.0 }
+    }
+}

@@ -7,3 +7,4 @@
 //
 
 #import <Firebase/Firebase.h>
+#import <CorePlot/CorePlot.h>

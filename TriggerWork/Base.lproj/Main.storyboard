@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="MyriadPro-Bold.otf">
@@ -213,7 +214,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyk-6o-Fzk" id="2wf-MJ-lNd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
@@ -404,7 +405,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athlete Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvD-Ai-nfA">
-                                <rect key="frame" x="422" y="72" width="158" height="26"/>
+                                <rect key="frame" x="421" y="72" width="159" height="26"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="26"/>
                                 <color key="textColor" red="0.29411764705882354" green="0.70588235294117652" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -416,14 +417,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yoh-at-p4b">
-                                <rect key="frame" x="0.0" y="234" width="600" height="317"/>
+                                <rect key="frame" x="0.0" y="311" width="600" height="240"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FUa-FC-YNj" customClass="SessionTableViewCell" customModule="TriggerWork" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49.5" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="50" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUa-FC-YNj" id="cY9-Ox-KQF">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oow-Uy-UJ0">
@@ -468,22 +469,37 @@
                                     <outlet property="delegate" destination="Hyf-uw-H4r" id="gyB-8y-LV2"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIh-oI-SDL" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="90" y="132" width="420" height="171"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yoh-at-p4b" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" constant="-20" id="1o7-0D-xOx"/>
+                            <constraint firstItem="iIh-oI-SDL" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" constant="70" id="97q-p8-nvd"/>
                             <constraint firstItem="qvD-Ai-nfA" firstAttribute="top" secondItem="yuv-U5-ht4" secondAttribute="bottom" constant="8" id="Awu-nH-j8U"/>
                             <constraint firstItem="BEY-2q-cyR" firstAttribute="top" secondItem="fNJ-8q-AOr" secondAttribute="bottom" constant="8" id="Ba5-rF-vc1"/>
+                            <constraint firstItem="yoh-at-p4b" firstAttribute="height" secondItem="vVX-2H-fDH" secondAttribute="height" multiplier="0.4" id="Dqo-wC-xQ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yoh-at-p4b" secondAttribute="trailing" constant="-20" id="GcL-Gb-EYN"/>
                             <constraint firstItem="yoh-at-p4b" firstAttribute="top" secondItem="BEY-2q-cyR" secondAttribute="bottom" constant="120" id="PtM-W5-JoJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iIh-oI-SDL" secondAttribute="trailing" constant="70" id="X82-S2-L6a"/>
+                            <constraint firstItem="iIh-oI-SDL" firstAttribute="top" secondItem="BEY-2q-cyR" secondAttribute="bottom" constant="18" id="cjf-5y-obV"/>
                             <constraint firstItem="qvD-Ai-nfA" firstAttribute="trailing" secondItem="vVX-2H-fDH" secondAttribute="trailingMargin" id="gOg-DK-BEH"/>
                             <constraint firstItem="C2U-z4-y2Z" firstAttribute="top" secondItem="yoh-at-p4b" secondAttribute="bottom" id="hIO-4i-eNq"/>
                             <constraint firstItem="fNJ-8q-AOr" firstAttribute="top" secondItem="yuv-U5-ht4" secondAttribute="bottom" constant="8" id="j92-0W-9IY"/>
                             <constraint firstItem="BEY-2q-cyR" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" id="jlg-Oz-6I0"/>
                             <constraint firstItem="fNJ-8q-AOr" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" id="q2i-pw-13p"/>
+                            <constraint firstItem="yoh-at-p4b" firstAttribute="top" secondItem="iIh-oI-SDL" secondAttribute="bottom" constant="8" id="ySd-z2-Mt1"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PtM-W5-JoJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="graphView" destination="iIh-oI-SDL" id="93i-xa-HrP"/>
                         <outlet property="tableView" destination="yoh-at-p4b" id="IkC-iZ-0VQ"/>
                     </connections>
                 </viewController>
