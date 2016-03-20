@@ -1844,7 +1844,6 @@
 					"\"${PODS_ROOT}/Headers/Private\"",
 					"\"${PODS_ROOT}/Headers/Private/CorePlot\"/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/CorePlot/framework\"/**",
 				);
 				INFOPLIST_FILE = "Target Support Files/CorePlot/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -2110,7 +2109,6 @@
 					"\"${PODS_ROOT}/Headers/Private\"",
 					"\"${PODS_ROOT}/Headers/Private/CorePlot\"/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/CorePlot/framework\"/**",
 				);
 				INFOPLIST_FILE = "Target Support Files/CorePlot/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -2374,7 +2372,6 @@
 					"\"${PODS_ROOT}/Headers/Private\"",
 					"\"${PODS_ROOT}/Headers/Private/CorePlot\"/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/CorePlot/framework\"/**",
 				);
 				INFOPLIST_FILE = "Target Support Files/CorePlot/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -2436,7 +2433,6 @@
 					"\"${PODS_ROOT}/Headers/Private\"",
 					"\"${PODS_ROOT}/Headers/Private/CorePlot\"/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/CorePlot/framework\"/**",
 				);
 				INFOPLIST_FILE = "Target Support Files/CorePlot/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -2622,7 +2618,6 @@
 					"\"${PODS_ROOT}/Headers/Private\"",
 					"\"${PODS_ROOT}/Headers/Private/CorePlot\"/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/CorePlot/framework\"/**",
 				);
 				INFOPLIST_FILE = "Target Support Files/CorePlot/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
