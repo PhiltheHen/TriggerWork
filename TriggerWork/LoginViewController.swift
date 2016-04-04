@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     // MARK: Constants
     let ref = Firebase(url: firebaseURL)
 
+    @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: View Lifecycle
     override func viewDidLoad() {
@@ -25,6 +26,8 @@ class LoginViewController: UIViewController {
         return true
     }
     
+    
+    
     /*
     // MARK: - Navigation
 
@@ -35,4 +38,11 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        return true
+    }
 }

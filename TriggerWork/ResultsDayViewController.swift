@@ -14,9 +14,13 @@ class ResultsDayViewController: UIViewController {
     var storedOffsets = [Int: CGFloat]()
     var data = [String:String]()
     var sortedTimes = [(String, AnyObject)]()
-
-    @IBOutlet weak var tableView: UITableView!
     
+    // Layout Constraints
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var graphViewHeightConstraint: NSLayoutConstraint!
+    
+    // Storyboard elements
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var graphView: CPTGraphHostingView!
     
     override func viewDidLoad() {
@@ -36,6 +40,16 @@ class ResultsDayViewController: UIViewController {
         }
         catch let error as NSError {
             print("Failed to load: \(error.localizedDescription)")
+        }
+    }
+    
+    func animateViews() {
+        view.layoutIfNeeded()
+        
+        UIView.animateWithDuration(1.0) { 
+            self.tableViewHeightConstraint.priority = UILayoutPriorityDefaultHigh;
+            self.graphViewHeightConstraint.priority = UILayoutPriorityDefaultLow;
+            self.view.layoutIfNeeded()
         }
     }
 }
@@ -64,7 +78,7 @@ extension ResultsDayViewController: CPTPlotDataSource {
         let xRange = plotSpace.xRange.mutableCopy() as! CPTMutablePlotRange
         let yRange = plotSpace.yRange.mutableCopy() as! CPTMutablePlotRange
         guard let maxKey = data.keys.maxElement() else { return }
-        guard let maxValue = data.keys.maxElement() else { return }
+        guard let maxValue = data.values.maxElement() else { return }
         xRange.length = Double(maxKey)
         yRange.length = Double(maxValue)! + 10.0
         plotSpace.xRange = xRange
@@ -153,9 +167,12 @@ extension ResultsDayViewController: UICollectionViewDelegate {
         
         return cell
     }
+
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("Selected Item")
+        if (tableViewHeightConstraint.priority == UILayoutPriorityDefaultLow) {
+            animateViews()
+        }
     }
 }
 
@@ -166,3 +183,5 @@ extension ResultsDayViewController: UICollectionViewDataSource {
     }
     
 }
+
+
