@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -549,7 +549,24 @@
                     <view key="view" contentMode="scaleToFill" id="3sO-kB-DJh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-AZ-9fW">
+                                <rect key="frame" x="555" y="20" width="25" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="EM6-9l-46B"/>
+                                    <constraint firstAttribute="width" constant="25" id="TgC-0M-ZO4"/>
+                                </constraints>
+                                <state key="normal" image="bluetooth-icon"/>
+                                <connections>
+                                    <segue destination="uo4-Fg-Dsg" kind="presentation" id="7dm-CK-q8L"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KnQ-AZ-9fW" firstAttribute="trailing" secondItem="3sO-kB-DJh" secondAttribute="trailingMargin" id="CRo-ty-g6F"/>
+                            <constraint firstItem="KnQ-AZ-9fW" firstAttribute="top" secondItem="kl7-gx-PYb" secondAttribute="bottom" id="lvi-Zk-1un"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" id="Xh9-9i-3fU"/>
                     <connections>
@@ -602,4 +619,7 @@
         <image name="bluetooth-icon" width="65" height="112"/>
         <image name="close" width="54" height="54"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7dm-CK-q8L"/>
+    </inferredMetricsTieBreakers>
 </document>

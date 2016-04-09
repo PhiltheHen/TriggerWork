@@ -28,8 +28,18 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   
   func startScanning() {
     if let central = centralManager {
-      central.scanForPeripheralsWithServices([BLEServiceUUID], options: nil)
+      central.scanForPeripheralsWithServices(nil, options: nil)
     }
+  }
+  
+  var peripheralName: String? {
+    get {
+      return peripheralBLE?.name
+    }
+  }
+  
+  func isConnectedToPeripheral() -> Bool {
+    return (peripheralBLE != nil)
   }
   
   var bleService: BTService? {
@@ -71,7 +81,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     }
     
     // Stop scanning for new devices
-    central.stopScan()
+    //central.stopScan()
   }
   
   func centralManager(central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: NSError?) {
@@ -85,6 +95,10 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     // Start scanning for new devices
     self.startScanning()
   }
+    
+    func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
+        // Alert user that peripheral has failed to connect
+    }
   
   // MARK: - Private
   
