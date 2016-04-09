@@ -625,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
@@ -639,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
@@ -750,6 +752,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FFC9E583CD6B58F70EB8B9D8 /* Pods-TriggerWork.debug staging.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
@@ -829,6 +832,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21A1A8983F54D53CF905E533 /* Pods-TriggerWork.app store.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
@@ -910,6 +914,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TriggerWork/Info.plist;
