@@ -9,18 +9,20 @@
 import UIKit
 
 class BTDeviceTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var bTDeviceName: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  
+  @IBOutlet weak var bTDeviceName: UILabel!
+  @IBOutlet weak var cellCheckmark: UIImageView!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    cellCheckmark.hidden = true
+    self.selectionStyle = .None
+  }
+  
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    cellCheckmark.hidden = !selected
+    cellCheckmark.pumpAnimation()
+  }
+  
 }

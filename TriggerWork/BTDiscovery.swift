@@ -32,6 +32,12 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     }
   }
   
+  func stopScanning() {
+    if let central = centralManager {
+      central.stopScan()
+    }
+  }
+  
   var peripheralName: String? {
     get {
       return peripheralBLE?.name

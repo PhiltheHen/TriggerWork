@@ -21,6 +21,8 @@ class BTDiscoveryViewController: UIViewController {
     return refreshControl
   }()
   
+  //MARK: - Lifecycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -36,6 +38,11 @@ class BTDiscoveryViewController: UIViewController {
     SVProgressHUD.showWithStatus("Searching for triggers...")
     btDiscoverySharedInstance
   
+  }
+  
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    stopRefresh()
   }
   
   deinit {
@@ -64,6 +71,7 @@ class BTDiscoveryViewController: UIViewController {
   
   // MARK: IBActions
   @IBAction func scanDevices(sender: UIButton) {
+    let _ = Timeout(8.0) { self.stopRefresh() }
     SVProgressHUD.showWithStatus("Searching for triggers...")
     btDiscoverySharedInstance.startScanning()
   }
@@ -71,6 +79,12 @@ class BTDiscoveryViewController: UIViewController {
   // MARK: UI Settings
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .LightContent
+  }
+  
+  func stopRefresh() {
+    btDiscoverySharedInstance.stopScanning()
+    SVProgressHUD.dismiss()
+    refreshControl.endRefreshing()
   }
 }
 
@@ -80,7 +94,11 @@ extension BTDiscoveryViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! BTDeviceTableViewCell
-    cell.bTDeviceName.text = "Connected: \(btDiscoverySharedInstance.peripheralName)"
+    if let name = btDiscoverySharedInstance.peripheralName {
+      cell.bTDeviceName.text = "\(name)"
+    } else {
+      cell.bTDeviceName.text = "Unkonwn";
+    }
     return cell
   }
   
@@ -91,6 +109,18 @@ extension BTDiscoveryViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension BTDiscoveryViewController: UITableViewDelegate {
+  
+  func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    let header = view as! UITableViewHeaderFooterView
+    if let sectionTitleLabel = header.textLabel {
+      sectionTitleLabel.font = Fonts.defaultRegularFontWithSize(13.0)
+      sectionTitleLabel.textColor = UIColor.whiteColor();
+    }
+  }
+  
+  func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return "Select a Bluetooth Device..."
+  }
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 80.0

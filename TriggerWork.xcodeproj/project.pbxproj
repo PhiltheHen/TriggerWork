@@ -30,6 +30,8 @@
 		4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
 		4EA15E001CBB2C2600FD83FF /* RecordSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */; };
 		4EABA4721C9F418F00A6DA10 /* sample_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EABA4711C9F418F00A6DA10 /* sample_data.json */; };
+		4EDB8E401CD55CC500BC4459 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */; };
+		4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E411CD5639B00BC4459 /* Timeout.swift */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
 		4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
 		4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */; };
@@ -85,6 +87,8 @@
 		4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscoveryViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSessionViewController.swift; sourceTree = "<group>"; };
 		4EABA4711C9F418F00A6DA10 /* sample_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_data.json; sourceTree = "<group>"; };
+		4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4EDB8E411CD5639B00BC4459 /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
 		4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				4E5A6CC71C8B833700806161 /* Constants.swift */,
+				4EDB8E411CD5639B00BC4459 /* Timeout.swift */,
+				4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */,
 				4E3A82131C853C03002561E2 /* AppDelegate.swift */,
 			);
 			name = Other;
@@ -477,8 +483,10 @@
 				4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */,
 				4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */,
 				4E1CAF761C9DF10C0049A2DA /* ShotCollectionViewCell.swift in Sources */,
+				4EDB8E401CD55CC500BC4459 /* Extensions.swift in Sources */,
 				4E5A6CC81C8B833700806161 /* Constants.swift in Sources */,
 				4E1CAF721C9DDED20049A2DA /* Shot.swift in Sources */,
+				4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

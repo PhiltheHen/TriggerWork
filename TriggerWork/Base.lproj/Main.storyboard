@@ -13,9 +13,9 @@
             <string>MyriadPro-Bold</string>
             <string>MyriadPro-Bold</string>
             <string>MyriadPro-Bold</string>
+            <string>MyriadPro-Bold</string>
         </mutableArray>
         <mutableArray key="MyriadPro-Light.otf">
-            <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
@@ -48,7 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SpJ-VQ-wv7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emx-hP-grr">
@@ -56,7 +56,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="keN-2Y-Vj3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="r8A-vk-kow"/>
@@ -74,7 +74,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="QcN-iU-dBH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="18"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -89,7 +89,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XpI-XN-6RN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="19"/>
                                 <state key="normal" title="Signup">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="-1910" y="-281"/>
         </scene>
-        <!--Record-->
+        <!--Discovery View Controller-->
         <scene sceneID="lSn-48-udM">
             <objects>
                 <viewController id="uo4-Fg-Dsg" customClass="BTDiscoveryViewController" customModule="TriggerWork" customModuleProvider="target" sceneMemberID="viewController">
@@ -204,33 +204,49 @@
                                             <constraint firstAttribute="width" constant="53" id="ddS-mO-jW3"/>
                                         </constraints>
                                     </imageView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eto-nE-Ga0">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eto-nE-Ga0">
                                         <rect key="frame" x="20" y="60" width="560" height="361"/>
                                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Eyk-6o-Fzk" customClass="BTDeviceTableViewCell" customModule="TriggerWork" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                                <rect key="frame" x="0.0" y="49.5" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyk-6o-Fzk" id="2wf-MJ-lNd">
                                                     <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
-                                                            <rect key="frame" x="16" y="13" width="528" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
+                                                            <rect key="frame" x="16" y="12" width="503" height="20"/>
                                                             <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="axY-8C-j4s">
+                                                            <rect key="frame" x="527" y="9" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="28y-uj-h4i"/>
+                                                                <constraint firstAttribute="width" constant="25" id="5MJ-c0-3HM"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="axY-8C-j4s" firstAttribute="leading" secondItem="QRp-I0-3EW" secondAttribute="trailing" constant="8" id="6xu-hj-PRs"/>
                                                         <constraint firstItem="QRp-I0-3EW" firstAttribute="centerY" secondItem="2wf-MJ-lNd" secondAttribute="centerY" id="BCj-5h-brD"/>
+                                                        <constraint firstItem="axY-8C-j4s" firstAttribute="trailing" secondItem="2wf-MJ-lNd" secondAttribute="trailingMargin" id="D9H-gt-vbR"/>
+                                                        <constraint firstItem="axY-8C-j4s" firstAttribute="centerY" secondItem="2wf-MJ-lNd" secondAttribute="centerY" id="E0s-cA-BLl"/>
                                                         <constraint firstItem="QRp-I0-3EW" firstAttribute="leading" secondItem="2wf-MJ-lNd" secondAttribute="leadingMargin" constant="8" id="Nwl-yR-lsh"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="QRp-I0-3EW" secondAttribute="trailing" constant="8" id="xfj-wZ-BSC"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="xfj-wZ-BSC"/>
+                                                        </mask>
+                                                    </variation>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <outlet property="bTDeviceName" destination="QRp-I0-3EW" id="Mbp-SA-lim"/>
+                                                    <outlet property="cellCheckmark" destination="axY-8C-j4s" id="xCG-g8-lPm"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -295,7 +311,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gOE-rb-Zlp" secondAttribute="trailing" constant="-20" id="lUx-gh-p5g"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Record" id="HRe-Fx-TlJ"/>
+                    <navigationItem key="navigationItem" id="I7f-UH-LX0"/>
                     <connections>
                         <outlet property="emptyStateView" destination="gOE-rb-Zlp" id="97e-2F-y72"/>
                         <outlet property="tableView" destination="eto-nE-Ga0" id="Ghh-2R-bpX"/>
@@ -303,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKe-B1-7pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="-242"/>
+            <point key="canvasLocation" x="518" y="-242"/>
         </scene>
         <!--Record Session View Controller-->
         <scene sceneID="UgU-to-VzZ">
@@ -358,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdH-I0-6or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="-242"/>
+            <point key="canvasLocation" x="1449" y="-242"/>
         </scene>
         <!--Calendar Appearance Delegate-->
         <scene sceneID="PTJ-bJ-izz">
@@ -626,7 +642,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uo4-Fg-Dsg" kind="relationship" relationship="viewControllers" id="K65-gm-hAH"/>
+                        <segue destination="gWg-y4-YdC" kind="relationship" relationship="viewControllers" id="K65-gm-hAH"/>
                         <segue destination="yTg-JB-p8b" kind="relationship" relationship="viewControllers" id="rY1-Ph-XE2"/>
                     </connections>
                 </tabBarController>
@@ -653,8 +669,28 @@
             </objects>
             <point key="canvasLocation" x="-1107" y="624"/>
         </scene>
+        <!--Record-->
+        <scene sceneID="pat-Q3-lpQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWg-y4-YdC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Record" id="HRe-Fx-TlJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p0V-ob-beR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uo4-Fg-Dsg" kind="relationship" relationship="rootViewController" id="Yio-3k-F38"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bj-Cu-0N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="-242"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bluetooth-icon" width="65" height="112"/>
+        <image name="checkmark" width="28" height="20"/>
     </resources>
 </document>

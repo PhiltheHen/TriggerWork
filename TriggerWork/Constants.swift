@@ -16,13 +16,6 @@ import SwiftHEXColors
     let firebaseURL = "https://triggerwork.firebaseIO.com"
 #endif
 
-
-extension CALayer {
-    func setBorderColorFromUIColor(color: UIColor) {
-        self.borderColor = color.CGColor
-    }
-}
-
 struct Fonts {
     
     static func defaultLightFontWithSize(size: CGFloat) -> UIFont {
@@ -57,3 +50,4 @@ struct Helpers {
 struct BLEConnectionStatus {
     static let Connected = "isConnected"
 }
+
