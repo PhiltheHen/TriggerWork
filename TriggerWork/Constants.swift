@@ -53,3 +53,7 @@ struct Helpers {
         return dict.sort { $0.0 < $1.0 }
     }
 }
+
+struct BLEConnectionStatus {
+    static let Connected = "isConnected"
+}

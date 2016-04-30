@@ -32,6 +32,16 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     }
   }
   
+  var peripheralName: String? {
+    get {
+      return peripheralBLE?.name
+    }
+  }
+  
+  func isConnectedToPeripheral() -> Bool {
+    return (peripheralBLE != nil)
+  }
+  
   var bleService: BTService? {
     didSet {
       if let service = self.bleService {
@@ -85,6 +95,10 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     // Start scanning for new devices
     self.startScanning()
   }
+    
+    func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
+        // Alert user that peripheral has failed to connect
+    }
   
   // MARK: - Private
   
