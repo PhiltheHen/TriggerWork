@@ -13,11 +13,9 @@ import Foundation
 import CoreBluetooth
 
 /* Services & Characteristics UUIDs */
-let BLEServiceUUID = CBUUID(string: "EE0C2080-8786-40BA-AB96-99B91AC981D8")
-let TestCharUUID = CBUUID(string: "EE0C2084-8786-40BA-AB96-99B91AC981D8")
-
-let TestTwoCharUUID = CBUUID(string: "00001531-1212-EFDE-1523-785FEABCD123")
-let TestThreeCharUUID = CBUUID(string: "00001534-1212-EFDE-1523-785FEABCD123")
+let BLEServiceUUID = CBUUID(string: "180D")
+let MeasurementCharUUID = CBUUID(string: "2A37")
+let LocationCharUUID = CBUUID(string: "2A38")
 
 let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
 
@@ -36,7 +34,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   }
   
   func startDiscoveringServices() {
-    self.peripheral?.discoverServices(nil)
+    self.peripheral?.discoverServices([BLEServiceUUID])
   }
   
   func reset() {
@@ -51,7 +49,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   // Mark: - CBPeripheralDelegate
   
   func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
-    let uuidsForBTService: [CBUUID] = [TestCharUUID]
+    let uuidsForBTService: [CBUUID] = [MeasurementCharUUID, LocationCharUUID]
     
     if (peripheral != self.peripheral) {
       // Wrong Peripheral
@@ -69,7 +67,8 @@ class BTService: NSObject, CBPeripheralDelegate {
     
     for service in peripheral.services! {
       if service.UUID == BLEServiceUUID {
-        peripheral.discoverCharacteristics(nil, forService: service)
+        // Notify that our service has been found
+        peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
       }
     }
   }
@@ -77,13 +76,16 @@ class BTService: NSObject, CBPeripheralDelegate {
   func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
     let buffer: [UInt8] = [0, 1, 2]
     
-    print("Charactaristic UUID: \(characteristic.UUID), Value: \(characteristic.value)")
-    characteristic.value?.getBytes(UnsafeMutablePointer<UInt8>(buffer), length:buffer.count)
+    guard let rawValue = characteristic.value else { return }
+    
+    print("Charactaristic UUID: \(characteristic.UUID), Value: \(rawValue)")
+    
+    rawValue.getBytes(UnsafeMutablePointer<UInt8>(buffer), length:buffer.count)
     print("Buffer value: \(buffer)")
   }
   
   func peripheral(peripheral: CBPeripheral, didUpdateNotificationStateForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
-    //print("\(characteristic.value)")
+    print("Charactaristic UUID: \(characteristic.UUID), Value: \(characteristic.value)")
   }
   
   func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
@@ -97,31 +99,20 @@ class BTService: NSObject, CBPeripheralDelegate {
     }
     
     if let characteristics = service.characteristics {
-        
-
+      
       for characteristic in characteristics {
         //print("\(characteristic.UUID)")
-        //if characteristic.UUID != TestCharUUID {
-          peripheral.readValueForCharacteristic(characteristic)
+        if characteristic.UUID == MeasurementCharUUID {
           peripheral.setNotifyValue(true, forCharacteristic: characteristic)
-          
-          // Send notification that Bluetooth is connected and all required characteristics are discovered
-          //self.sendBTServiceNotificationWithIsBluetoothConnected(true)
+          self.sendBTServiceNotificationWithIsBluetoothConnected(true)
+        } else if characteristic.UUID == LocationCharUUID {
+          //peripheral.readValueForCharacteristic(characteristic)
         }
-      //}
-        self.sendBTServiceNotificationWithIsBluetoothConnected(true)
-
+      }
     }
   }
   
   // Mark: - Private
-  
-  func writePosition(position: UInt8) {
-    
-    /******** (1) CODE TO BE ADDED *******/
-    
-  }
-  
   func sendBTServiceNotificationWithIsBluetoothConnected(isBluetoothConnected: Bool) {
     let connectionDetails = ["isConnected": isBluetoothConnected]
     NSNotificationCenter.defaultCenter().postNotificationName(BLEServiceChangedStatusNotification, object: self, userInfo: connectionDetails)

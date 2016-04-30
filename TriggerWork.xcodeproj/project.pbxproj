@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E199C0A1C8FB71000DFAD45 /* RecordSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C091C8FB71000DFAD45 /* RecordSessionViewController.swift */; };
 		4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C171C9114F400DFAD45 /* BTDiscovery.swift */; };
 		4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C181C9114F400DFAD45 /* BTService.swift */; };
 		4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */; };
@@ -29,6 +28,7 @@
 		4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
 		4E5A6CC81C8B833700806161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
 		4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
+		4EA15E001CBB2C2600FD83FF /* RecordSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */; };
 		4EABA4721C9F418F00A6DA10 /* sample_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EABA4711C9F418F00A6DA10 /* sample_data.json */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
 		4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
@@ -55,7 +55,6 @@
 /* Begin PBXFileReference section */
 		21A1A8983F54D53CF905E533 /* Pods-TriggerWork.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.app store.xcconfig"; sourceTree = "<group>"; };
 		4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
-		4E199C091C8FB71000DFAD45 /* RecordSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RecordSessionViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E199C171C9114F400DFAD45 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscovery.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E199C181C9114F400DFAD45 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsCalendarViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Constants.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "TriggerWork-Bridging-Header.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscoveryViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSessionViewController.swift; sourceTree = "<group>"; };
 		4EABA4711C9F418F00A6DA10 /* sample_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_data.json; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
 		4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
@@ -235,9 +235,9 @@
 			children = (
 				4E5A6CB91C8B76D200806161 /* LoginViewController.swift */,
 				4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */,
-				4E199C091C8FB71000DFAD45 /* RecordSessionViewController.swift */,
 				4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */,
 				4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */,
+				4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +340,7 @@
 		4E3A82081C853C03002561E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Lost Nation R&D";
@@ -472,11 +473,11 @@
 				4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */,
 				4E1CAF701C9DDC1B0049A2DA /* Session.swift in Sources */,
 				4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */,
+				4EA15E001CBB2C2600FD83FF /* RecordSessionViewController.swift in Sources */,
 				4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */,
 				4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */,
 				4E1CAF761C9DF10C0049A2DA /* ShotCollectionViewCell.swift in Sources */,
 				4E5A6CC81C8B833700806161 /* Constants.swift in Sources */,
-				4E199C0A1C8FB71000DFAD45 /* RecordSessionViewController.swift in Sources */,
 				4E1CAF721C9DDED20049A2DA /* Shot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

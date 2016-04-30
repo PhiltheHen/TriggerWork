@@ -11,38 +11,38 @@ import Firebase
 
 class LoginViewController: UIViewController {
   
-    // MARK: Constants
-    let ref = Firebase(url: firebaseURL)
-
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    // MARK: View Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    // MARK: UI Settings
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  // MARK: Constants
+  let ref = Firebase(url: firebaseURL)
+  
+  @IBOutlet weak var passwordTextField: UITextField!
+  
+  // MARK: View Lifecycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  // MARK: UI Settings
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return .LightContent
+  }
+  
+  
+  
+  /*
+   // MARK: - Navigation
+   
+   // In a storyboard-based application, you will often want to do a little preparation before navigation
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+   // Get the new view controller using segue.destinationViewController.
+   // Pass the selected object to the new view controller.
+   }
+   */
+  
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        passwordTextField.resignFirstResponder()
-        return true
-    }
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    passwordTextField.resignFirstResponder()
+    return true
+  }
 }
