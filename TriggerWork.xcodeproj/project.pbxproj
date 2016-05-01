@@ -241,9 +241,9 @@
 			children = (
 				4E5A6CB91C8B76D200806161 /* LoginViewController.swift */,
 				4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */,
+				4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */,
 				4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */,
 				4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */,
-				4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

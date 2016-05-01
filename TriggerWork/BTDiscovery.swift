@@ -28,7 +28,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   
   func startScanning() {
     if let central = centralManager {
-      central.scanForPeripheralsWithServices([BLEServiceUUID], options: nil)
+      central.scanForPeripheralsWithServices([UUID.BLEServiceUUID], options: nil)
     }
   }
   

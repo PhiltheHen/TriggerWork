@@ -9,12 +9,25 @@
 import Foundation
 import UIKit
 import SwiftHEXColors
+import CoreBluetooth
 
 #if STAGING
     let firebaseURL = "https://triggerworkstaging.firebaseIO.com"
 #else
     let firebaseURL = "https://triggerwork.firebaseIO.com"
 #endif
+
+struct Constants {
+  static let CorePlotIdentifier = "DataSourcePlot"
+  static let MaxDataPoints = 50
+  static let MaxYValue = 280
+  static let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
+}
+
+struct UUID {
+  static let BLEServiceUUID = CBUUID(string: "180D")
+  static let MeasurementCharUUID = CBUUID(string: "2A37")
+}
 
 struct Fonts {
     

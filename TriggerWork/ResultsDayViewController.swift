@@ -11,7 +11,6 @@ import CorePlot
 
 class ResultsDayViewController: UIViewController {
   
-  var storedOffsets = [Int: CGFloat]()
   var data = [String:String]()
   var sortedTimes = [(String, AnyObject)]()
   
@@ -23,6 +22,8 @@ class ResultsDayViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var graphView: CPTGraphHostingView!
   
+  
+  // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.backgroundColor = Colors.defaultBlackColor()

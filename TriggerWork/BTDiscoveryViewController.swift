@@ -13,6 +13,7 @@ class BTDiscoveryViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var emptyStateView: UIView!
+  @IBOutlet weak var continueButton: UIButton!
   
   lazy var refreshControl: UIRefreshControl = {
     let refreshControl = UIRefreshControl()
@@ -29,9 +30,10 @@ class BTDiscoveryViewController: UIViewController {
     tableView.addSubview(refreshControl)
     
     tableView.hidden = true
+    continueButton.hidden = true
     
     // Watch Bluetooth connection
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: BLEServiceChangedStatusNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: Constants.BLEServiceChangedStatusNotification, object: nil)
     
     // Start the Bluetooth discovery process
     SVProgressHUD.setDefaultStyle(.Dark)
@@ -46,7 +48,7 @@ class BTDiscoveryViewController: UIViewController {
   }
   
   deinit {
-    NSNotificationCenter.defaultCenter().removeObserver(self, name: BLEServiceChangedStatusNotification, object: nil)
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: Constants.BLEServiceChangedStatusNotification, object: nil)
   }
   
   func connectionChanged(notification: NSNotification) {
@@ -125,4 +127,10 @@ extension BTDiscoveryViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 80.0
   }
+  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    continueButton.hidden = false
+    continueButton.pumpAnimation()
+  }
+  
 }
