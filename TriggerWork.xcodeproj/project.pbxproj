@@ -30,6 +30,9 @@
 		4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
 		4EA15E001CBB2C2600FD83FF /* RecordSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */; };
 		4EABA4721C9F418F00A6DA10 /* sample_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EABA4711C9F418F00A6DA10 /* sample_data.json */; };
+		4EBCE87C1CDEDB3B00436123 /* StartStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCE87B1CDEDB3B00436123 /* StartStopButton.swift */; };
+		4EBCE87E1CDEDE1F00436123 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCE87D1CDEDE1F00436123 /* RoundedButton.swift */; };
+		4EBCE8801CDEE32100436123 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */; };
 		4EDB8E401CD55CC500BC4459 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */; };
 		4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E411CD5639B00BC4459 /* Timeout.swift */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
@@ -87,6 +90,9 @@
 		4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscoveryViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSessionViewController.swift; sourceTree = "<group>"; };
 		4EABA4711C9F418F00A6DA10 /* sample_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_data.json; sourceTree = "<group>"; };
+		4EBCE87B1CDEDB3B00436123 /* StartStopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartStopButton.swift; sourceTree = "<group>"; };
+		4EBCE87D1CDEDE1F00436123 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4EDB8E411CD5639B00BC4459 /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +157,7 @@
 				4E5A6CCE1C8B88C200806161 /* Models */,
 				4E5A6CCD1C8B88BD00806161 /* Controllers */,
 				4E5A6CCB1C8B88A900806161 /* Layouts */,
-				4E5A6CCC1C8B88B000806161 /* Other */,
+				4E5A6CCC1C8B88B000806161 /* Utilities */,
 				4E3A821A1C853C03002561E2 /* Assets.xcassets */,
 				4E5A6CCA1C8B889D00806161 /* Supporting Files */,
 			);
@@ -219,21 +225,23 @@
 		4E5A6CCB1C8B88A900806161 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				4EBCE87A1CDEDB1500436123 /* Custom UI Elements */,
 				4E3FB7EB1C8CEF5A007D22FD /* Cells */,
 				4E3FB7EC1C8CEF60007D22FD /* Storyboards */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
 		};
-		4E5A6CCC1C8B88B000806161 /* Other */ = {
+		4E5A6CCC1C8B88B000806161 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				4E5A6CC71C8B833700806161 /* Constants.swift */,
+				4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */,
 				4EDB8E411CD5639B00BC4459 /* Timeout.swift */,
 				4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */,
 				4E3A82131C853C03002561E2 /* AppDelegate.swift */,
 			);
-			name = Other;
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		4E5A6CCD1C8B88BD00806161 /* Controllers */ = {
@@ -259,6 +267,15 @@
 				4E199C181C9114F400DFAD45 /* BTService.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		4EBCE87A1CDEDB1500436123 /* Custom UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				4EBCE87B1CDEDB3B00436123 /* StartStopButton.swift */,
+				4EBCE87D1CDEDE1F00436123 /* RoundedButton.swift */,
+			);
+			name = "Custom UI Elements";
 			sourceTree = "<group>";
 		};
 		6165F4287DE7FF9409844195 /* Frameworks */ = {
@@ -477,8 +494,11 @@
 				4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */,
 				4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */,
 				4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */,
+				4EBCE8801CDEE32100436123 /* AlertPresenter.swift in Sources */,
+				4EBCE87C1CDEDB3B00436123 /* StartStopButton.swift in Sources */,
 				4E1CAF701C9DDC1B0049A2DA /* Session.swift in Sources */,
 				4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */,
+				4EBCE87E1CDEDE1F00436123 /* RoundedButton.swift in Sources */,
 				4EA15E001CBB2C2600FD83FF /* RecordSessionViewController.swift in Sources */,
 				4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */,
 				4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */,

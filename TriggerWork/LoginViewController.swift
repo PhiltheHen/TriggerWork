@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
   
@@ -19,25 +20,16 @@ class LoginViewController: UIViewController {
   // MARK: View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // Initialize SVProgressHUD style
+    SVProgressHUD.setDefaultStyle(.Dark)
+    SVProgressHUD.setDefaultMaskType(.Black)
   }
   
   // MARK: UI Settings
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .LightContent
   }
-  
-  
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
 }
 
 extension LoginViewController: UITextFieldDelegate {

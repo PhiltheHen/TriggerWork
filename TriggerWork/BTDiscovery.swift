@@ -18,7 +18,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   
   private var centralManager: CBCentralManager?
   private var peripheralBLE: CBPeripheral?
-  
+    
   override init() {
     super.init()
     
@@ -27,15 +27,23 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   }
   
   func startScanning() {
+    self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Started)
     if let central = centralManager {
+      let _ = Timeout(8.0) { self.scanTimeout() }
       central.scanForPeripheralsWithServices([UUID.BLEServiceUUID], options: nil)
     }
   }
   
   func stopScanning() {
+    self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Stopped)
     if let central = centralManager {
       central.stopScan()
     }
+  }
+  
+  func scanTimeout() {
+    self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.TimedOut)
+    self.stopScanning()
   }
   
   var peripheralName: String? {
@@ -87,7 +95,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     }
     
     // Stop scanning for new devices
-    central.stopScan()
+    self.stopScanning()
   }
   
   func centralManager(central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: NSError?) {
@@ -135,6 +143,11 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     case CBCentralManagerState.Unsupported:
       break
     }
+  }
+  
+  func sendBTDiscoveryNotificationWithScanStatus(scanStatus: String) {
+    let scanDetails = [scanStatus: true]
+    NSNotificationCenter.defaultCenter().postNotificationName(Constants.BLEServiceScanStatusNotification, object: self, userInfo: scanDetails)
   }
 
 }

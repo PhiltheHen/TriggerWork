@@ -17,7 +17,6 @@ class RecordSessionViewController: UIViewController {
   var resetPlot = false
   
   // IBOutlets
-  @IBOutlet weak var stopStartSessionButton: UIButton!
   @IBOutlet weak var graphView: CPTGraphHostingView!
   @IBOutlet weak var infoView: UIView!
 
@@ -29,10 +28,6 @@ class RecordSessionViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-  
-  @IBAction func stopStartSession(sender: AnyObject) {
-
   }
   
   // MARK: - UI Settings

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -258,7 +258,7 @@
                                             <outlet property="delegate" destination="uo4-Fg-Dsg" id="1Xp-yI-iRQ"/>
                                         </connections>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9b-PC-shn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9b-PC-shn" customClass="RoundedButton" customModule="TriggerWork" customModuleProvider="target">
                                         <rect key="frame" x="472" y="503" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.34901960780000002" green="0.74901960779999999" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -272,8 +272,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="6"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -306,7 +306,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gOE-rb-Zlp" firstAttribute="top" secondItem="eYC-8i-535" secondAttribute="topMargin" id="3wL-S7-4Bc"/>
                             <constraint firstItem="gOE-rb-Zlp" firstAttribute="leading" secondItem="eYC-8i-535" secondAttribute="leadingMargin" constant="-20" id="PSf-hm-b3e"/>
@@ -337,7 +337,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cu-Jm-eoV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cu-Jm-eoV" customClass="StartStopButton" customModule="TriggerWork" customModuleProvider="target">
                                 <rect key="frame" x="500" y="446" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.34901960780000002" green="0.74901960779999999" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -346,24 +346,14 @@
                                     <constraint firstAttribute="height" constant="80" id="YFt-th-713"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="iTE-pq-lJZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="17"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="40"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="18"/>
+                                <state key="normal" title="Start"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="NZb-sa-9bx"/>
                                         <exclude reference="iTE-pq-lJZ"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <action selector="stopStartSession:" destination="XKL-uZ-WLL" eventType="touchUpInside" id="7k5-UK-Iz8"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrc-8o-yoi" customClass="CPTGraphHostingView">
                                 <rect key="frame" x="10" y="64" width="580" height="362"/>
@@ -434,7 +424,6 @@
                     <connections>
                         <outlet property="graphView" destination="Wrc-8o-yoi" id="kKI-i1-GtQ"/>
                         <outlet property="infoView" destination="dsc-DY-2fu" id="XlB-UO-AkQ"/>
-                        <outlet property="stopStartSessionButton" destination="5cu-Jm-eoV" id="yw0-Lb-wPk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdH-I0-6or" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -596,7 +585,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yoh-at-p4b">
                                 <rect key="frame" x="0.0" y="140" width="600" height="411"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="250" constant="120" id="3uW-1h-Mhx"/>
                                     <constraint firstAttribute="height" priority="750" constant="120" id="lua-2b-uIj"/>

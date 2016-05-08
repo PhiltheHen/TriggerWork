@@ -12,9 +12,9 @@ import SwiftHEXColors
 import CoreBluetooth
 
 #if STAGING
-    let firebaseURL = "https://triggerworkstaging.firebaseIO.com"
+let firebaseURL = "https://triggerworkstaging.firebaseIO.com"
 #else
-    let firebaseURL = "https://triggerwork.firebaseIO.com"
+let firebaseURL = "https://triggerwork.firebaseIO.com"
 #endif
 
 struct Constants {
@@ -22,6 +22,8 @@ struct Constants {
   static let MaxDataPoints = 50
   static let MaxYValue = 280
   static let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
+  static let BLEServiceScanStatusNotification = "kBLEServiceScanStatusNotification"
+
 }
 
 struct UUID {
@@ -30,37 +32,47 @@ struct UUID {
 }
 
 struct Fonts {
-    
-    static func defaultLightFontWithSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "MyriadPro-Light", size: size)!
-    }
-    
-    static func defaultRegularFontWithSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "MyriadPro-Bold", size: size)!
-    }
+  
+  static func defaultLightFontWithSize(size: CGFloat) -> UIFont {
+    return UIFont(name: "MyriadPro-Light", size: size)!
+  }
+  
+  static func defaultRegularFontWithSize(size: CGFloat) -> UIFont {
+    return UIFont(name: "MyriadPro-Bold", size: size)!
+  }
 }
 
 struct Colors {
-    static func defaultDarkGrayColor() -> UIColor {
-        return UIColor(hexString: "#898989")!
-    }
-    
-    static func defaultGreenColor() -> UIColor {
-        return UIColor(hexString: "#4BB48F")!
-    }
-    
-    static func defaultBlackColor() -> UIColor {
-        return UIColor(hexString: "#26252D")!
-    }
+  static func defaultDarkGrayColor() -> UIColor {
+    return UIColor(hexString: "#898989")!
+  }
+  
+  static func defaultGreenColor() -> UIColor {
+    return UIColor(hexString: "#4BB48F")!
+  }
+  
+  static func defaultRedColor() -> UIColor {
+    return UIColor(hexString: "#D64541")!
+  }
+  
+  static func defaultBlackColor() -> UIColor {
+    return UIColor(hexString: "#26252D")!
+  }
 }
 
 struct Helpers {
-    static func sortedKeysAndValuesFromDict(dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
-        return dict.sort { $0.0 < $1.0 }
-    }
+  static func sortedKeysAndValuesFromDict(dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
+    return dict.sort { $0.0 < $1.0 }
+  }
 }
 
 struct BLEConnectionStatus {
-    static let Connected = "isConnected"
+  static let Connected = "isConnected"
+}
+
+struct BLEScanStatus {
+  static let Started = "started"
+  static let Stopped = "stopped"
+  static let TimedOut = "timedOut"
 }
 

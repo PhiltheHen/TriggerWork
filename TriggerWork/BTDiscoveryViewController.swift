@@ -30,16 +30,16 @@ class BTDiscoveryViewController: UIViewController {
     tableView.addSubview(refreshControl)
     
     tableView.hidden = true
-    continueButton.hidden = true
+    continueButton.alpha = 0.5
+    continueButton.enabled = false
     
     // Watch Bluetooth connection
     NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: Constants.BLEServiceChangedStatusNotification, object: nil)
     
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.scanStatusChanged(_:)), name: Constants.BLEServiceScanStatusNotification, object: nil)
+    
     // Start the Bluetooth discovery process
-    SVProgressHUD.setDefaultStyle(.Dark)
-    SVProgressHUD.showWithStatus("Searching for triggers...")
     btDiscoverySharedInstance
-  
   }
   
   override func viewWillDisappear(animated: Bool) {
@@ -49,6 +49,8 @@ class BTDiscoveryViewController: UIViewController {
   
   deinit {
     NSNotificationCenter.defaultCenter().removeObserver(self, name: Constants.BLEServiceChangedStatusNotification, object: nil)
+    
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: Constants.BLEServiceScanStatusNotification, object: nil)
   }
   
   func connectionChanged(notification: NSNotification) {
@@ -73,8 +75,6 @@ class BTDiscoveryViewController: UIViewController {
   
   // MARK: IBActions
   @IBAction func scanDevices(sender: UIButton) {
-    let _ = Timeout(8.0) { self.stopRefresh() }
-    SVProgressHUD.showWithStatus("Searching for triggers...")
     btDiscoverySharedInstance.startScanning()
   }
   
@@ -87,6 +87,36 @@ class BTDiscoveryViewController: UIViewController {
     btDiscoverySharedInstance.stopScanning()
     SVProgressHUD.dismiss()
     refreshControl.endRefreshing()
+  }
+  
+  // Notification methods
+  func scanStatusChanged(notification: NSNotification) {
+    
+    let userInfo = notification.userInfo as! [String: Bool]
+    
+    dispatch_async(dispatch_get_main_queue()) {
+      
+      if let _: Bool = userInfo[BLEScanStatus.Started] {
+        self.emptyStateView.hidden = true
+        SVProgressHUD.showWithStatus("Searching for Bluetooth Devices...")
+      }
+      
+      if let _: Bool = userInfo[BLEScanStatus.Stopped] {
+        self.emptyStateView.hidden = false
+        SVProgressHUD.dismiss()
+        self.refreshControl.endRefreshing()
+      }
+      
+      if let _: Bool = userInfo[BLEScanStatus.TimedOut] {
+        self.emptyStateView.hidden = false
+        SVProgressHUD.dismiss()
+        self.refreshControl.endRefreshing()
+        let alertPresenter = AlertPresenter(controller: self)
+        alertPresenter.presentAlertWithTitle("Try Again",
+                                             message: "Unable to connect to a bluetooth device") { (_) in
+        }
+      }
+    }
   }
 }
 
@@ -129,7 +159,8 @@ extension BTDiscoveryViewController: UITableViewDelegate {
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    continueButton.hidden = false
+    continueButton.alpha = 1
+    continueButton.enabled = true
     continueButton.pumpAnimation()
   }
   
