@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Firebase.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TriggerWork.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,27 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E45F858B7FBDB8E78AD6189C5A86F8E</key>
+		<key>481842F601CA9396BB4B21F8BCEA87DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>486E85EE2B8CE4A59060B1D0A748128C</key>
+		<key>71B047934A7F8AD00160273AF1570E39</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65AC6DE10DB5EDDA71C649864C89162D</key>
+		<key>AB74799959F4C0546F1DF0369541A55E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7BECD1753B14F7A27DA13DCED828E45A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EF8500EB59F29299865850AE249CDE05</key>
+		<key>B483BBDE8B59100198AEEA6030951D48</key>
 		<dict>
 			<key>primary</key>
 			<true/>

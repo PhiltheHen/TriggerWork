@@ -12,6 +12,8 @@ pod 'SwiftHEXColors'
 pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 pod 'CVCalendar', '~> 1.2.9'
 pod 'CorePlot'
+pod 'Fabric'
+pod 'Crashlytics'
 
 end
 

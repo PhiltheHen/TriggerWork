@@ -1,13 +1,34 @@
 PODS:
-  - CorePlot (2.0)
+  - CorePlot (2.1)
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
   - CVCalendar (1.2.9)
-  - Firebase (2.5.1)
-  - SVProgressHUD (2.0-beta8)
-  - SwiftHEXColors (1.0.2)
+  - Fabric (1.6.7)
+  - Firebase (3.2.0):
+    - Firebase/Core (= 3.2.0)
+  - Firebase/Analytics (3.2.0):
+    - FirebaseAnalytics (= 3.2.0)
+  - Firebase/Core (3.2.0):
+    - Firebase/Analytics (= 3.2.0)
+  - FirebaseAnalytics (3.2.0):
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.3)
+  - FirebaseInstanceID (1.0.6)
+  - GoogleInterchangeUtilities (1.2.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.1.1)
+  - GoogleUtilities (1.3.1):
+    - GoogleSymbolUtilities (~> 1.0)
+  - SVProgressHUD (2.0.3)
+  - SwiftHEXColors (1.0.4)
 
 DEPENDENCIES:
   - CorePlot
+  - Crashlytics
   - CVCalendar (~> 1.2.9)
+  - Fabric
   - Firebase (>= 2.5.0)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - SwiftHEXColors
@@ -18,14 +39,21 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SVProgressHUD:
-    :commit: 2241d428ac866e6603388430aac83902a01b111c
+    :commit: c406f0ac1929b21ab444608eb4ab27035bb57a21
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
-  CorePlot: b7f422ad363f2b0e48152471d6da45ce232eb8c6
+  CorePlot: ab9898c79b94999018e9634ab0aa4c21480c8552
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   CVCalendar: 0799256e0bc3b43e83b7e86c0729ce9ff0624cb6
-  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
-  SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
-  SwiftHEXColors: 1238ce6ee5c698ef9caf00fad72876602ecd9df6
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Firebase: 6d4012da1598732a2b43f16d8355eca90f94ed59
+  FirebaseAnalytics: 6f75b04e6bfb8e0b6e9ef298e04c24eea3b13863
+  FirebaseInstanceID: d014d574053a2fe84478f12f7bae96979e7051bb
+  GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
+  GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
+  GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftHEXColors: b0ecc7bd83a1aa2e1956f9ba51f55ebb2bcf86ef
 
 COCOAPODS: 0.39.0
