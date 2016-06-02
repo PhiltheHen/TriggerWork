@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
+    // Configure Firebase
+    FIRApp.configure()
+    
+    // Initialize Crashlytics
     Fabric.with([Crashlytics.self()])
     
     return true

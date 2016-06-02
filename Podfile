@@ -7,7 +7,7 @@ use_frameworks!
 
 target 'TriggerWork' do
 
-pod 'Firebase', '>= 2.5.0'
+pod 'Firebase'
 pod 'SwiftHEXColors'
 pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 pod 'CVCalendar', '~> 1.2.9'

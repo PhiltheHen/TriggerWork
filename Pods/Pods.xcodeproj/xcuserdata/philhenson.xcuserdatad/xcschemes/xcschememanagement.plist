@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TriggerWorkTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TriggerWorkUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>481842F601CA9396BB4B21F8BCEA87DC</key>
+		<key>1E957C02B0880A64927DD22B69636FBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71B047934A7F8AD00160273AF1570E39</key>
+		<key>4D8345B48BC51ADFEAF5C4A71834986C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>614571FA914A37F9D949FF2D9B1E0BF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85D6ECB52E0FC00EFA09A4AE4A179F8B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B483BBDE8B59100198AEEA6030951D48</key>
+		<key>CC7C0A11C6C3FB3D2D9014E4519591F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

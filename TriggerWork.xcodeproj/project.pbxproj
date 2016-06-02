@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA3A20207FC183BC73825BA /* Pods_TriggerWorkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10756D0E1CDCA47897EF831 /* Pods_TriggerWorkUITests.framework */; };
+		1D1422205ADB2B49FFC4D045 /* Pods_TriggerWorkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 974ABF60E6C80B430C534DA6 /* Pods_TriggerWorkTests.framework */; };
+		4E12AAC71CFA129700078BA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E12AAC61CFA129700078BA0 /* GoogleService-Info.plist */; };
+		4E12AAC91CFA13EB00078BA0 /* GoogleService-Info-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E12AAC81CFA13EB00078BA0 /* GoogleService-Info-Staging.plist */; };
 		4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C171C9114F400DFAD45 /* BTDiscovery.swift */; };
 		4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C181C9114F400DFAD45 /* BTService.swift */; };
 		4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */; };
@@ -37,7 +41,7 @@
 		4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E411CD5639B00BC4459 /* Timeout.swift */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
 		4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
-		4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */; };
+		64A5352C336BAF2BAD389DCC /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBA9EF572FBC534C8ABEEED /* Pods_TriggerWork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +62,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21A1A8983F54D53CF905E533 /* Pods-TriggerWork.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.app store.xcconfig"; sourceTree = "<group>"; };
-		4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
+		214B53CD0877171F5909A022 /* Pods-TriggerWorkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A055991B976BBC81C198280 /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
+		4925D6E10D470D78DD192EE9 /* Pods-TriggerWorkUITests.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.release staging.xcconfig"; sourceTree = "<group>"; };
+		4E12AAC61CFA129700078BA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4E12AAC81CFA13EB00078BA0 /* GoogleService-Info-Staging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Staging.plist"; sourceTree = "<group>"; };
 		4E199C171C9114F400DFAD45 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDiscovery.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E199C181C9114F400DFAD45 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsCalendarViewController.swift; sourceTree = "<group>"; };
@@ -97,10 +104,21 @@
 		4EDB8E411CD5639B00BC4459 /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
 		4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
-		689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
-		7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
-		FFC9E583CD6B58F70EB8B9D8 /* Pods-TriggerWork.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug staging.xcconfig"; sourceTree = "<group>"; };
+		51B0747462AD926774514455 /* Pods-TriggerWorkUITests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.app store.xcconfig"; sourceTree = "<group>"; };
+		559485982113B9C2D93C270D /* Pods-TriggerWork.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug staging.xcconfig"; sourceTree = "<group>"; };
+		621D0C74413B9C16D46AE62B /* Pods-TriggerWorkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		679E4B359BF9088A5D36F6A2 /* Pods-TriggerWorkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EBA9EF572FBC534C8ABEEED /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7370FDA939EE064346C24D5C /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
+		85397FCF29DBBCDF83B660B9 /* Pods-TriggerWorkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		974ABF60E6C80B430C534DA6 /* Pods_TriggerWorkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWorkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B685D60FC5592552F4F3E8C8 /* Pods-TriggerWorkTests.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.release staging.xcconfig"; sourceTree = "<group>"; };
+		CD820FB7C3C004F2E011F9B7 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
+		CE08F7F60477DE448AE4545B /* Pods-TriggerWorkUITests.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.debug staging.xcconfig"; sourceTree = "<group>"; };
+		E049A6139F7CC8DF1E6F1D3B /* Pods-TriggerWork.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.app store.xcconfig"; sourceTree = "<group>"; };
+		E10756D0E1CDCA47897EF831 /* Pods_TriggerWorkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWorkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B65875A34FABC9408B8EE9 /* Pods-TriggerWorkTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.app store.xcconfig"; sourceTree = "<group>"; };
+		ECAC34F36B25BD6400E5E47D /* Pods-TriggerWorkTests.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.debug staging.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF701798C597913E08B88DF /* Pods_TriggerWork.framework in Frameworks */,
+				64A5352C336BAF2BAD389DCC /* Pods_TriggerWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1422205ADB2B49FFC4D045 /* Pods_TriggerWorkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,12 +142,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA3A20207FC183BC73825BA /* Pods_TriggerWorkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13870B8DBC50F78C3D191F9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A055991B976BBC81C198280 /* Pods-TriggerWork.debug.xcconfig */,
+				559485982113B9C2D93C270D /* Pods-TriggerWork.debug staging.xcconfig */,
+				CD820FB7C3C004F2E011F9B7 /* Pods-TriggerWork.release.xcconfig */,
+				7370FDA939EE064346C24D5C /* Pods-TriggerWork.release staging.xcconfig */,
+				E049A6139F7CC8DF1E6F1D3B /* Pods-TriggerWork.app store.xcconfig */,
+				214B53CD0877171F5909A022 /* Pods-TriggerWorkTests.debug.xcconfig */,
+				ECAC34F36B25BD6400E5E47D /* Pods-TriggerWorkTests.debug staging.xcconfig */,
+				679E4B359BF9088A5D36F6A2 /* Pods-TriggerWorkTests.release.xcconfig */,
+				B685D60FC5592552F4F3E8C8 /* Pods-TriggerWorkTests.release staging.xcconfig */,
+				E8B65875A34FABC9408B8EE9 /* Pods-TriggerWorkTests.app store.xcconfig */,
+				85397FCF29DBBCDF83B660B9 /* Pods-TriggerWorkUITests.debug.xcconfig */,
+				CE08F7F60477DE448AE4545B /* Pods-TriggerWorkUITests.debug staging.xcconfig */,
+				621D0C74413B9C16D46AE62B /* Pods-TriggerWorkUITests.release.xcconfig */,
+				4925D6E10D470D78DD192EE9 /* Pods-TriggerWorkUITests.release staging.xcconfig */,
+				51B0747462AD926774514455 /* Pods-TriggerWorkUITests.app store.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4E3A82071C853C03002561E2 = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +178,8 @@
 				4E3A82271C853C03002561E2 /* TriggerWorkTests */,
 				4E3A82321C853C03002561E2 /* TriggerWorkUITests */,
 				4E3A82111C853C03002561E2 /* Products */,
-				A418FE00B0B3A1628019D27A /* Pods */,
-				6165F4287DE7FF9409844195 /* Frameworks */,
+				13870B8DBC50F78C3D191F9D /* Pods */,
+				8CF2275F6D77A8206BD03207 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +256,8 @@
 		4E5A6CCA1C8B889D00806161 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E12AAC61CFA129700078BA0 /* GoogleService-Info.plist */,
+				4E12AAC81CFA13EB00078BA0 /* GoogleService-Info-Staging.plist */,
 				4E3FB7E51C8CE334007D22FD /* Fonts */,
 				4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */,
 				4EABA4711C9F418F00A6DA10 /* sample_data.json */,
@@ -278,24 +322,14 @@
 			name = "Custom UI Elements";
 			sourceTree = "<group>";
 		};
-		6165F4287DE7FF9409844195 /* Frameworks */ = {
+		8CF2275F6D77A8206BD03207 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7847043E3C82682DFF40CFCB /* Pods_TriggerWork.framework */,
+				6EBA9EF572FBC534C8ABEEED /* Pods_TriggerWork.framework */,
+				974ABF60E6C80B430C534DA6 /* Pods_TriggerWorkTests.framework */,
+				E10756D0E1CDCA47897EF831 /* Pods_TriggerWorkUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A418FE00B0B3A1628019D27A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */,
-				689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */,
-				FFC9E583CD6B58F70EB8B9D8 /* Pods-TriggerWork.debug staging.xcconfig */,
-				93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */,
-				21A1A8983F54D53CF905E533 /* Pods-TriggerWork.app store.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,13 +339,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3A82381C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWork" */;
 			buildPhases = (
-				211D39BADF5FB109DDEA70F7 /* Check Pods Manifest.lock */,
+				F6A78CBE9DC9CD3E3CE70272 /* [CP] Check Pods Manifest.lock */,
 				4E3A820C1C853C03002561E2 /* Sources */,
 				4E3A820D1C853C03002561E2 /* Frameworks */,
 				4E3A820E1C853C03002561E2 /* Resources */,
-				8453A35A138062D693C676E4 /* Embed Pods Frameworks */,
-				D0A3A63BE5EE1176DBEB2E0B /* Copy Pods Resources */,
 				4E2F7CFF1CEFC6C9006D1DAA /* ShellScript */,
+				170B0E3B855AA1B6D91653DC /* [CP] Embed Pods Frameworks */,
+				83970BDA7A4F6BF1CFF86734 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,9 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3A823B1C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWorkTests" */;
 			buildPhases = (
+				DE295D6EB059F533740E8BB9 /* [CP] Check Pods Manifest.lock */,
 				4E3A82201C853C03002561E2 /* Sources */,
 				4E3A82211C853C03002561E2 /* Frameworks */,
 				4E3A82221C853C03002561E2 /* Resources */,
+				D25F5FC0C67A5EA229D947B7 /* [CP] Embed Pods Frameworks */,
+				CD3156450BA3B3A6271ACB7C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,9 +381,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3A823E1C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWorkUITests" */;
 			buildPhases = (
+				4536BBC75C28A7A9C20E8717 /* [CP] Check Pods Manifest.lock */,
 				4E3A822B1C853C03002561E2 /* Sources */,
 				4E3A822C1C853C03002561E2 /* Frameworks */,
 				4E3A822D1C853C03002561E2 /* Resources */,
+				0E2EF54C7824D1998917BE23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,12 +447,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E12AAC71CFA129700078BA0 /* GoogleService-Info.plist in Resources */,
 				4E3A821E1C853C03002561E2 /* LaunchScreen.storyboard in Resources */,
 				4E3FB7E41C8CE330007D22FD /* MyriadPro-Black.otf in Resources */,
 				4E3FB7E21C8CE324007D22FD /* MyriadPro-Light.otf in Resources */,
 				4E3A821B1C853C03002561E2 /* Assets.xcassets in Resources */,
 				4E3FB7E01C8CE270007D22FD /* MyriadPro-Bold.otf in Resources */,
 				4E3A82191C853C03002561E2 /* Main.storyboard in Resources */,
+				4E12AAC91CFA13EB00078BA0 /* GoogleService-Info-Staging.plist in Resources */,
 				4EABA4721C9F418F00A6DA10 /* sample_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,14 +476,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		211D39BADF5FB109DDEA70F7 /* Check Pods Manifest.lock */ = {
+		0E2EF54C7824D1998917BE23 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		170B0E3B855AA1B6D91653DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4536BBC75C28A7A9C20E8717 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,34 +534,79 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0801403b30bc1234da06872d6776b57ac4537008 41d5fdcadc0190c4f92110bc7b869badf1ba8bba93082f00814270926e9b4c11";
 		};
-		8453A35A138062D693C676E4 /* Embed Pods Frameworks */ = {
+		83970BDA7A4F6BF1CFF86734 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D0A3A63BE5EE1176DBEB2E0B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD3156450BA3B3A6271ACB7C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25F5FC0C67A5EA229D947B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE295D6EB059F533740E8BB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A78CBE9DC9CD3E3CE70272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -666,7 +782,7 @@
 		};
 		4E3A82391C853C03002561E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DD60F01F4F3CC26781605D8 /* Pods-TriggerWork.debug.xcconfig */;
+			baseConfigurationReference = 3A055991B976BBC81C198280 /* Pods-TriggerWork.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -681,7 +797,7 @@
 		};
 		4E3A823A1C853C03002561E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 689DD37978C4EDE15A097E36 /* Pods-TriggerWork.release.xcconfig */;
+			baseConfigurationReference = CD820FB7C3C004F2E011F9B7 /* Pods-TriggerWork.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -696,6 +812,7 @@
 		};
 		4E3A823C1C853C03002561E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 214B53CD0877171F5909A022 /* Pods-TriggerWorkTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TriggerWorkTests/Info.plist;
@@ -708,6 +825,7 @@
 		};
 		4E3A823D1C853C03002561E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 679E4B359BF9088A5D36F6A2 /* Pods-TriggerWorkTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TriggerWorkTests/Info.plist;
@@ -720,6 +838,7 @@
 		};
 		4E3A823F1C853C03002561E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85397FCF29DBBCDF83B660B9 /* Pods-TriggerWorkUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TriggerWorkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -732,6 +851,7 @@
 		};
 		4E3A82401C853C03002561E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 621D0C74413B9C16D46AE62B /* Pods-TriggerWorkUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TriggerWorkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -793,7 +913,7 @@
 		};
 		4E5A6CBC1C8B7D6100806161 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFC9E583CD6B58F70EB8B9D8 /* Pods-TriggerWork.debug staging.xcconfig */;
+			baseConfigurationReference = 559485982113B9C2D93C270D /* Pods-TriggerWork.debug staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -808,6 +928,7 @@
 		};
 		4E5A6CBD1C8B7D6100806161 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECAC34F36B25BD6400E5E47D /* Pods-TriggerWorkTests.debug staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TriggerWorkTests/Info.plist;
@@ -820,6 +941,7 @@
 		};
 		4E5A6CBE1C8B7D6100806161 /* Debug Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE08F7F60477DE448AE4545B /* Pods-TriggerWorkUITests.debug staging.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TriggerWorkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -873,7 +995,7 @@
 		};
 		4E5A6CC01C8B7D7D00806161 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21A1A8983F54D53CF905E533 /* Pods-TriggerWork.app store.xcconfig */;
+			baseConfigurationReference = E049A6139F7CC8DF1E6F1D3B /* Pods-TriggerWork.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -888,6 +1010,7 @@
 		};
 		4E5A6CC11C8B7D7D00806161 /* App Store */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B65875A34FABC9408B8EE9 /* Pods-TriggerWorkTests.app store.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TriggerWorkTests/Info.plist;
@@ -900,6 +1023,7 @@
 		};
 		4E5A6CC21C8B7D7D00806161 /* App Store */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B0747462AD926774514455 /* Pods-TriggerWorkUITests.app store.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TriggerWorkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -955,7 +1079,7 @@
 		};
 		4E5A6CC41C8B7D8500806161 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93C5B9815D25ED5B9340F693 /* Pods-TriggerWork.release staging.xcconfig */;
+			baseConfigurationReference = 7370FDA939EE064346C24D5C /* Pods-TriggerWork.release staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -970,6 +1094,7 @@
 		};
 		4E5A6CC51C8B7D8500806161 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B685D60FC5592552F4F3E8C8 /* Pods-TriggerWorkTests.release staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TriggerWorkTests/Info.plist;
@@ -982,6 +1107,7 @@
 		};
 		4E5A6CC61C8B7D8500806161 /* Release Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4925D6E10D470D78DD192EE9 /* Pods-TriggerWorkUITests.release staging.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TriggerWorkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
