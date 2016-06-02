@@ -1,0 +1,6 @@
+framework module Pods_TriggerWorkTests {
+  umbrella header "Pods-TriggerWorkTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
