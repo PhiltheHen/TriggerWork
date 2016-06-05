@@ -39,7 +39,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SVProgressHUD:
-    :commit: c406f0ac1929b21ab444608eb4ab27035bb57a21
+    :commit: 6ca5946638ed5bbf8ae36e3c3191901f76bf173b
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
