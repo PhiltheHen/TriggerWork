@@ -15,6 +15,7 @@
             <string>MyriadPro-Bold</string>
             <string>MyriadPro-Bold</string>
             <string>MyriadPro-Bold</string>
+            <string>MyriadPro-Bold</string>
         </mutableArray>
         <mutableArray key="MyriadPro-Light.otf">
             <string>MyriadPro-Light</string>
@@ -46,7 +47,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gN-rf-0Jz">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gN-rf-0Jz">
                                 <rect key="frame" x="40" y="199" width="520" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SpJ-VQ-wv7"/>
@@ -54,7 +55,7 @@
                                 <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emx-hP-grr">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emx-hP-grr">
                                 <rect key="frame" x="40" y="247" width="520" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="keN-2Y-Vj3"/>
@@ -78,7 +79,7 @@
                                     <constraint firstAttribute="height" constant="60" id="QcN-iU-dBH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Login with Email">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -125,7 +126,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BGu-IX-yi8" kind="show" id="qce-ei-pCW"/>
+                                    <segue destination="BGu-IX-yi8" kind="show" identifier="LoginSegue" id="qce-ei-pCW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yS-5Y-vwZ">
+                                <rect key="frame" x="40" y="259" width="520" height="60"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4ZL-oT-FxA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="18"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTe-87-jBo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,13 +153,17 @@
                         <constraints>
                             <constraint firstItem="Xwr-tG-O2Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="23J-dd-Mjw"/>
                             <constraint firstItem="WKW-w0-wSk" firstAttribute="trailing" secondItem="dWM-zn-URa" secondAttribute="trailing" id="4Aa-fP-udE"/>
+                            <constraint firstItem="1yS-5Y-vwZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="4aN-RB-ZA3"/>
                             <constraint firstItem="0gN-rf-0Jz" firstAttribute="top" secondItem="Xwr-tG-O2Z" secondAttribute="bottom" constant="80" id="4oX-uA-Ofr"/>
                             <constraint firstItem="zgI-gW-Dsl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4oc-I3-ced"/>
+                            <constraint firstItem="dWM-zn-URa" firstAttribute="top" secondItem="1yS-5Y-vwZ" secondAttribute="bottom" constant="8" id="6QH-gP-wQJ"/>
                             <constraint firstItem="dWM-zn-URa" firstAttribute="trailing" secondItem="emx-hP-grr" secondAttribute="trailing" id="A2J-po-n6N"/>
                             <constraint firstItem="dWM-zn-URa" firstAttribute="top" secondItem="emx-hP-grr" secondAttribute="bottom" constant="40" id="Aln-xD-NrL"/>
                             <constraint firstItem="emx-hP-grr" firstAttribute="top" secondItem="0gN-rf-0Jz" secondAttribute="bottom" constant="8" id="Geg-uO-X9N"/>
+                            <constraint firstItem="1yS-5Y-vwZ" firstAttribute="top" secondItem="WKW-w0-wSk" secondAttribute="bottom" constant="8" id="Nfj-s0-N8f"/>
                             <constraint firstItem="emx-hP-grr" firstAttribute="leading" secondItem="0gN-rf-0Jz" secondAttribute="leading" id="Vho-sy-wJO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zgI-gW-Dsl" secondAttribute="bottom" constant="20" id="Vub-Gw-aNf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1yS-5Y-vwZ" secondAttribute="trailing" constant="20" id="Y7Q-t9-CNX"/>
                             <constraint firstItem="WKW-w0-wSk" firstAttribute="top" secondItem="dWM-zn-URa" secondAttribute="bottom" constant="8" id="bPS-Qy-0AV"/>
                             <constraint firstItem="dWM-zn-URa" firstAttribute="leading" secondItem="emx-hP-grr" secondAttribute="leading" id="jb9-fl-CAx"/>
                             <constraint firstItem="WKW-w0-wSk" firstAttribute="leading" secondItem="dWM-zn-URa" secondAttribute="leading" id="jid-pc-8N2"/>
@@ -148,6 +172,11 @@
                             <constraint firstItem="Xwr-tG-O2Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="vRU-ah-AMZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0gN-rf-0Jz" secondAttribute="trailing" constant="20" id="zaH-Fm-yLn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nfj-s0-N8f"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="emx-hP-grr" id="GoT-qv-etZ"/>
@@ -212,13 +241,13 @@
                                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Eyk-6o-Fzk" customClass="BTDeviceTableViewCell" customModule="TriggerWork" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="49.5" width="560" height="44"/>
+                                                <rect key="frame" x="0.0" y="50" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyk-6o-Fzk" id="2wf-MJ-lNd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
                                                             <rect key="frame" x="16" y="14" width="503" height="17"/>
                                                             <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -592,10 +621,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FUa-FC-YNj" customClass="SessionTableViewCell" customModule="TriggerWork" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49.5" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="50" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUa-FC-YNj" id="cY9-Ox-KQF">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oow-Uy-UJ0">

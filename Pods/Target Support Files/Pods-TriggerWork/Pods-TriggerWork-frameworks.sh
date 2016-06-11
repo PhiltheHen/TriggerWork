@@ -83,31 +83,13 @@ strip_invalid_archs() {
 }
 
 
-if [[ "$CONFIGURATION" == "Debug" ]]; then
+if [[ "$CONFIGURATION" == "Production" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CVCalendar/CVCalendar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CorePlot/CorePlot.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftHEXColors/SwiftHEXColors.framework"
 fi
-if [[ "$CONFIGURATION" == "Debug Staging" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CVCalendar/CVCalendar.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CorePlot/CorePlot.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftHEXColors/SwiftHEXColors.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CVCalendar/CVCalendar.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CorePlot/CorePlot.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftHEXColors/SwiftHEXColors.framework"
-fi
-if [[ "$CONFIGURATION" == "Release Staging" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CVCalendar/CVCalendar.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CorePlot/CorePlot.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftHEXColors/SwiftHEXColors.framework"
-fi
-if [[ "$CONFIGURATION" == "App Store" ]]; then
+if [[ "$CONFIGURATION" == "Staging" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CVCalendar/CVCalendar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CorePlot/CorePlot.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"

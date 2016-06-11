@@ -11,12 +11,6 @@ import UIKit
 import SwiftHEXColors
 import CoreBluetooth
 
-#if STAGING
-let firebaseURL = "https://triggerworkstaging.firebaseIO.com"
-#else
-let firebaseURL = "https://triggerwork.firebaseIO.com"
-#endif
-
 struct Constants {
   static let CorePlotIdentifier = "DataSourcePlot"
   static let MaxDataPoints = 50

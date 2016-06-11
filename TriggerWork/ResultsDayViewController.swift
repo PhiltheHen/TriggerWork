@@ -86,7 +86,7 @@ extension ResultsDayViewController: CPTPlotDataSource {
     let yRange = plotSpace.yRange.mutableCopy() as! CPTMutablePlotRange
     guard let maxKey = data.keys.maxElement() else { return }
     guard let maxValue = data.values.maxElement() else { return }
-    xRange.length = Double(maxKey)
+    xRange.length = Double(maxKey)!
     yRange.length = Double(maxValue)! + 10.0
     plotSpace.xRange = xRange
     plotSpace.yRange = yRange
