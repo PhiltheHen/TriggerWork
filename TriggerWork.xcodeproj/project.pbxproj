@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FA3A20207FC183BC73825BA /* Pods_TriggerWorkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10756D0E1CDCA47897EF831 /* Pods_TriggerWorkUITests.framework */; };
+		18F46A005E2DE759E12E2EA8 /* Pods_TriggerWork_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F17DC6B43D9985E5B3276F /* Pods_TriggerWork_Dev.framework */; };
 		1D1422205ADB2B49FFC4D045 /* Pods_TriggerWorkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 974ABF60E6C80B430C534DA6 /* Pods_TriggerWorkTests.framework */; };
-		4E12AAC71CFA129700078BA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E12AAC61CFA129700078BA0 /* GoogleService-Info.plist */; };
-		4E12AAC91CFA13EB00078BA0 /* GoogleService-Info-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E12AAC81CFA13EB00078BA0 /* GoogleService-Info-Staging.plist */; };
 		4E12ABF51D0CAEF800078BA0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E12ABF21D0CAEF800078BA0 /* FBSDKCoreKit.framework */; };
 		4E12ABF61D0CAEF800078BA0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E12ABF31D0CAEF800078BA0 /* FBSDKLoginKit.framework */; };
 		4E12ABF71D0CAEF800078BA0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E12ABF41D0CAEF800078BA0 /* FBSDKShareKit.framework */; };
@@ -44,6 +43,39 @@
 		4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E411CD5639B00BC4459 /* Timeout.swift */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
 		4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
+		4EF1318D1D0DE37400300960 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
+		4EF1318E1D0DE37400300960 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
+		4EF1318F1D0DE37400300960 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF6D1C9DDBB00049A2DA /* Day.swift */; };
+		4EF131901D0DE37400300960 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
+		4EF131911D0DE37400300960 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF731C9DE92E0049A2DA /* SessionTableViewCell.swift */; };
+		4EF131921D0DE37400300960 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
+		4EF131931D0DE37400300960 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C171C9114F400DFAD45 /* BTDiscovery.swift */; };
+		4EF131941D0DE37400300960 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C181C9114F400DFAD45 /* BTService.swift */; };
+		4EF131951D0DE37400300960 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */; };
+		4EF131961D0DE37400300960 /* StartStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCE87B1CDEDB3B00436123 /* StartStopButton.swift */; };
+		4EF131971D0DE37400300960 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF6F1C9DDC1B0049A2DA /* Session.swift */; };
+		4EF131981D0DE37400300960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A82131C853C03002561E2 /* AppDelegate.swift */; };
+		4EF131991D0DE37400300960 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCE87D1CDEDE1F00436123 /* RoundedButton.swift */; };
+		4EF1319A1D0DE37400300960 /* RecordSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA15DFF1CBB2C2600FD83FF /* RecordSessionViewController.swift */; };
+		4EF1319B1D0DE37400300960 /* BTDeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E91C8CEF55007D22FD /* BTDeviceTableViewCell.swift */; };
+		4EF1319C1D0DE37400300960 /* ResultsCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E199C1F1C911C0500DFAD45 /* ResultsCalendarViewController.swift */; };
+		4EF1319D1D0DE37400300960 /* ShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF751C9DF10C0049A2DA /* ShotCollectionViewCell.swift */; };
+		4EF1319E1D0DE37400300960 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */; };
+		4EF1319F1D0DE37400300960 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CC71C8B833700806161 /* Constants.swift */; };
+		4EF131A01D0DE37400300960 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF711C9DDED20049A2DA /* Shot.swift */; };
+		4EF131A11D0DE37400300960 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E411CD5639B00BC4459 /* Timeout.swift */; };
+		4EF131A31D0DE37400300960 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E12ABF41D0CAEF800078BA0 /* FBSDKShareKit.framework */; };
+		4EF131A51D0DE37400300960 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E12ABF21D0CAEF800078BA0 /* FBSDKCoreKit.framework */; };
+		4EF131A61D0DE37400300960 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E12ABF31D0CAEF800078BA0 /* FBSDKLoginKit.framework */; };
+		4EF131A91D0DE37400300960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A821C1C853C03002561E2 /* LaunchScreen.storyboard */; };
+		4EF131AA1D0DE37400300960 /* MyriadPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */; };
+		4EF131AB1D0DE37400300960 /* MyriadPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */; };
+		4EF131AC1D0DE37400300960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A821A1C853C03002561E2 /* Assets.xcassets */; };
+		4EF131AD1D0DE37400300960 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7DF1C8CE270007D22FD /* MyriadPro-Bold.otf */; };
+		4EF131AE1D0DE37400300960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3A82171C853C03002561E2 /* Main.storyboard */; };
+		4EF131B01D0DE37400300960 /* sample_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EABA4711C9F418F00A6DA10 /* sample_data.json */; };
+		4EF131BF1D0DE7F600300960 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EF131BE1D0DE7F600300960 /* GoogleService-Info.plist */; };
+		4EF131C41D0DE8F300300960 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EF131C31D0DE8F300300960 /* GoogleService-Info.plist */; };
 		64A5352C336BAF2BAD389DCC /* Pods_TriggerWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBA9EF572FBC534C8ABEEED /* Pods_TriggerWork.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,13 +97,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BBFD866E5D291635DFD0FB1 /* Pods-TriggerWork.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.staging.xcconfig"; sourceTree = "<group>"; };
-		1E263043D17ECE61F00990E7 /* Pods-TriggerWorkTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.staging.xcconfig"; sourceTree = "<group>"; };
+		06B71CD04F051A2A7BAA860C /* Pods-TriggerWork-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork-Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork-Dev/Pods-TriggerWork-Dev.release.xcconfig"; sourceTree = "<group>"; };
 		214B53CD0877171F5909A022 /* Pods-TriggerWorkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A055991B976BBC81C198280 /* Pods-TriggerWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug.xcconfig"; sourceTree = "<group>"; };
-		4925D6E10D470D78DD192EE9 /* Pods-TriggerWorkUITests.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.release staging.xcconfig"; sourceTree = "<group>"; };
-		4E12AAC61CFA129700078BA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4E12AAC81CFA13EB00078BA0 /* GoogleService-Info-Staging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Staging.plist"; sourceTree = "<group>"; };
 		4E12ABF21D0CAEF800078BA0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		4E12ABF31D0CAEF800078BA0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		4E12ABF41D0CAEF800078BA0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -112,25 +140,19 @@
 		4EDB8E411CD5639B00BC4459 /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
 		4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
-		51B0747462AD926774514455 /* Pods-TriggerWorkUITests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.app store.xcconfig"; sourceTree = "<group>"; };
-		559485982113B9C2D93C270D /* Pods-TriggerWork.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.debug staging.xcconfig"; sourceTree = "<group>"; };
+		4EF1314F1D0DE0B100300960 /* TriggerWork-Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TriggerWork-Dev-Info.plist"; path = "/Users/philhenson/Documents/Personal/TriggerApp/TriggerWork/TriggerWork-Dev-Info.plist"; sourceTree = "<absolute>"; };
+		4EF131B81D0DE37400300960 /* TriggerWork-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TriggerWork-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EF131BE1D0DE7F600300960 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EF131C31D0DE8F300300960 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		621D0C74413B9C16D46AE62B /* Pods-TriggerWorkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.release.xcconfig"; sourceTree = "<group>"; };
 		679E4B359BF9088A5D36F6A2 /* Pods-TriggerWorkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.release.xcconfig"; sourceTree = "<group>"; };
 		6EBA9EF572FBC534C8ABEEED /* Pods_TriggerWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7370FDA939EE064346C24D5C /* Pods-TriggerWork.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release staging.xcconfig"; sourceTree = "<group>"; };
 		85397FCF29DBBCDF83B660B9 /* Pods-TriggerWorkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		974ABF60E6C80B430C534DA6 /* Pods_TriggerWorkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWorkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B740F4FC5E9CF6F6918BEF3 /* Pods-TriggerWorkUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.staging.xcconfig"; sourceTree = "<group>"; };
-		B685D60FC5592552F4F3E8C8 /* Pods-TriggerWorkTests.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.release staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.release staging.xcconfig"; sourceTree = "<group>"; };
-		B8D8E0C796271A47277BC843 /* Pods-TriggerWork.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.production.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.production.xcconfig"; sourceTree = "<group>"; };
+		9CF00DB6E41581707A326A60 /* Pods-TriggerWork-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork-Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork-Dev/Pods-TriggerWork-Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		CD820FB7C3C004F2E011F9B7 /* Pods-TriggerWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.release.xcconfig"; sourceTree = "<group>"; };
-		CE08F7F60477DE448AE4545B /* Pods-TriggerWorkUITests.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.debug staging.xcconfig"; sourceTree = "<group>"; };
-		D9A88099EA9159CEADDEA0AE /* Pods-TriggerWorkUITests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkUITests.production.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkUITests/Pods-TriggerWorkUITests.production.xcconfig"; sourceTree = "<group>"; };
-		E049A6139F7CC8DF1E6F1D3B /* Pods-TriggerWork.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWork.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWork/Pods-TriggerWork.app store.xcconfig"; sourceTree = "<group>"; };
 		E10756D0E1CDCA47897EF831 /* Pods_TriggerWorkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWorkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1B117E3D8D6C71C2E0EC297 /* Pods-TriggerWorkTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.production.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.production.xcconfig"; sourceTree = "<group>"; };
-		E8B65875A34FABC9408B8EE9 /* Pods-TriggerWorkTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.app store.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.app store.xcconfig"; sourceTree = "<group>"; };
-		ECAC34F36B25BD6400E5E47D /* Pods-TriggerWorkTests.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriggerWorkTests.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-TriggerWorkTests/Pods-TriggerWorkTests.debug staging.xcconfig"; sourceTree = "<group>"; };
+		E6F17DC6B43D9985E5B3276F /* Pods_TriggerWork_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriggerWork_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +183,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EF131A21D0DE37400300960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF131A31D0DE37400300960 /* FBSDKShareKit.framework in Frameworks */,
+				4EF131A51D0DE37400300960 /* FBSDKCoreKit.framework in Frameworks */,
+				4EF131A61D0DE37400300960 /* FBSDKLoginKit.framework in Frameworks */,
+				18F46A005E2DE759E12E2EA8 /* Pods_TriggerWork_Dev.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -168,26 +201,13 @@
 			isa = PBXGroup;
 			children = (
 				3A055991B976BBC81C198280 /* Pods-TriggerWork.debug.xcconfig */,
-				559485982113B9C2D93C270D /* Pods-TriggerWork.debug staging.xcconfig */,
 				CD820FB7C3C004F2E011F9B7 /* Pods-TriggerWork.release.xcconfig */,
-				7370FDA939EE064346C24D5C /* Pods-TriggerWork.release staging.xcconfig */,
-				E049A6139F7CC8DF1E6F1D3B /* Pods-TriggerWork.app store.xcconfig */,
 				214B53CD0877171F5909A022 /* Pods-TriggerWorkTests.debug.xcconfig */,
-				ECAC34F36B25BD6400E5E47D /* Pods-TriggerWorkTests.debug staging.xcconfig */,
 				679E4B359BF9088A5D36F6A2 /* Pods-TriggerWorkTests.release.xcconfig */,
-				B685D60FC5592552F4F3E8C8 /* Pods-TriggerWorkTests.release staging.xcconfig */,
-				E8B65875A34FABC9408B8EE9 /* Pods-TriggerWorkTests.app store.xcconfig */,
 				85397FCF29DBBCDF83B660B9 /* Pods-TriggerWorkUITests.debug.xcconfig */,
-				CE08F7F60477DE448AE4545B /* Pods-TriggerWorkUITests.debug staging.xcconfig */,
 				621D0C74413B9C16D46AE62B /* Pods-TriggerWorkUITests.release.xcconfig */,
-				4925D6E10D470D78DD192EE9 /* Pods-TriggerWorkUITests.release staging.xcconfig */,
-				51B0747462AD926774514455 /* Pods-TriggerWorkUITests.app store.xcconfig */,
-				B8D8E0C796271A47277BC843 /* Pods-TriggerWork.production.xcconfig */,
-				1BBFD866E5D291635DFD0FB1 /* Pods-TriggerWork.staging.xcconfig */,
-				E1B117E3D8D6C71C2E0EC297 /* Pods-TriggerWorkTests.production.xcconfig */,
-				1E263043D17ECE61F00990E7 /* Pods-TriggerWorkTests.staging.xcconfig */,
-				D9A88099EA9159CEADDEA0AE /* Pods-TriggerWorkUITests.production.xcconfig */,
-				9B740F4FC5E9CF6F6918BEF3 /* Pods-TriggerWorkUITests.staging.xcconfig */,
+				9CF00DB6E41581707A326A60 /* Pods-TriggerWork-Dev.debug.xcconfig */,
+				06B71CD04F051A2A7BAA860C /* Pods-TriggerWork-Dev.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -210,6 +230,7 @@
 				4E3A82101C853C03002561E2 /* TriggerWork.app */,
 				4E3A82241C853C03002561E2 /* TriggerWorkTests.xctest */,
 				4E3A822F1C853C03002561E2 /* TriggerWorkUITests.xctest */,
+				4EF131B81D0DE37400300960 /* TriggerWork-Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,7 +242,6 @@
 				4E5A6CCD1C8B88BD00806161 /* Controllers */,
 				4E5A6CCB1C8B88A900806161 /* Layouts */,
 				4E5A6CCC1C8B88B000806161 /* Utilities */,
-				4E3A821A1C853C03002561E2 /* Assets.xcassets */,
 				4E5A6CCA1C8B889D00806161 /* Supporting Files */,
 			);
 			path = TriggerWork;
@@ -277,12 +297,14 @@
 		4E5A6CCA1C8B889D00806161 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4E12AAC61CFA129700078BA0 /* GoogleService-Info.plist */,
-				4E12AAC81CFA13EB00078BA0 /* GoogleService-Info-Staging.plist */,
+				4E3A821A1C853C03002561E2 /* Assets.xcassets */,
 				4E3FB7E51C8CE334007D22FD /* Fonts */,
 				4E5A6CC91C8B884A00806161 /* TriggerWork-Bridging-Header.h */,
 				4EABA4711C9F418F00A6DA10 /* sample_data.json */,
 				4E3A821F1C853C03002561E2 /* Info.plist */,
+				4EF1314F1D0DE0B100300960 /* TriggerWork-Dev-Info.plist */,
+				4EF131BE1D0DE7F600300960 /* GoogleService-Info.plist */,
+				4EF131C21D0DE8F300300960 /* GoogleService-Dev */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -343,6 +365,14 @@
 			name = "Custom UI Elements";
 			sourceTree = "<group>";
 		};
+		4EF131C21D0DE8F300300960 /* GoogleService-Dev */ = {
+			isa = PBXGroup;
+			children = (
+				4EF131C31D0DE8F300300960 /* GoogleService-Info.plist */,
+			);
+			path = "GoogleService-Dev";
+			sourceTree = "<group>";
+		};
 		8CF2275F6D77A8206BD03207 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +382,7 @@
 				6EBA9EF572FBC534C8ABEEED /* Pods_TriggerWork.framework */,
 				974ABF60E6C80B430C534DA6 /* Pods_TriggerWorkTests.framework */,
 				E10756D0E1CDCA47897EF831 /* Pods_TriggerWorkUITests.framework */,
+				E6F17DC6B43D9985E5B3276F /* Pods_TriggerWork_Dev.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -368,7 +399,6 @@
 				4E3A820D1C853C03002561E2 /* Frameworks */,
 				4E3A820E1C853C03002561E2 /* Resources */,
 				4E2F7CFF1CEFC6C9006D1DAA /* ShellScript */,
-				4EF1311B1D0CBE9600300960 /* Google Plist Run Script */,
 				170B0E3B855AA1B6D91653DC /* [CP] Embed Pods Frameworks */,
 				83970BDA7A4F6BF1CFF86734 /* [CP] Copy Pods Resources */,
 			);
@@ -422,6 +452,27 @@
 			productReference = 4E3A822F1C853C03002561E2 /* TriggerWorkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4EF1318A1D0DE37400300960 /* TriggerWork-Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EF131B51D0DE37400300960 /* Build configuration list for PBXNativeTarget "TriggerWork-Dev" */;
+			buildPhases = (
+				4EF1318B1D0DE37400300960 /* [CP] Check Pods Manifest.lock */,
+				4EF1318C1D0DE37400300960 /* Sources */,
+				4EF131A21D0DE37400300960 /* Frameworks */,
+				4EF131A71D0DE37400300960 /* Resources */,
+				4EF131B11D0DE37400300960 /* ShellScript */,
+				4EF131B31D0DE37400300960 /* [CP] Embed Pods Frameworks */,
+				4EF131B41D0DE37400300960 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TriggerWork-Dev";
+			productName = TriggerWork;
+			productReference = 4EF131B81D0DE37400300960 /* TriggerWork-Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -430,7 +481,7 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Lost Nation R&D";
 				TargetAttributes = {
 					4E3A820F1C853C03002561E2 = {
@@ -444,6 +495,9 @@
 					4E3A822E1C853C03002561E2 = {
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = 4E3A820F1C853C03002561E2;
+					};
+					4EF1318A1D0DE37400300960 = {
+						DevelopmentTeam = XVTXH22YPM;
 					};
 				};
 			};
@@ -461,6 +515,7 @@
 			projectRoot = "";
 			targets = (
 				4E3A820F1C853C03002561E2 /* TriggerWork */,
+				4EF1318A1D0DE37400300960 /* TriggerWork-Dev */,
 				4E3A82231C853C03002561E2 /* TriggerWorkTests */,
 				4E3A822E1C853C03002561E2 /* TriggerWorkUITests */,
 			);
@@ -472,14 +527,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E12AAC71CFA129700078BA0 /* GoogleService-Info.plist in Resources */,
 				4E3A821E1C853C03002561E2 /* LaunchScreen.storyboard in Resources */,
 				4E3FB7E41C8CE330007D22FD /* MyriadPro-Black.otf in Resources */,
 				4E3FB7E21C8CE324007D22FD /* MyriadPro-Light.otf in Resources */,
 				4E3A821B1C853C03002561E2 /* Assets.xcassets in Resources */,
+				4EF131BF1D0DE7F600300960 /* GoogleService-Info.plist in Resources */,
 				4E3FB7E01C8CE270007D22FD /* MyriadPro-Bold.otf in Resources */,
 				4E3A82191C853C03002561E2 /* Main.storyboard in Resources */,
-				4E12AAC91CFA13EB00078BA0 /* GoogleService-Info-Staging.plist in Resources */,
 				4EABA4721C9F418F00A6DA10 /* sample_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +549,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EF131A71D0DE37400300960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF131A91D0DE37400300960 /* LaunchScreen.storyboard in Resources */,
+				4EF131C41D0DE8F300300960 /* GoogleService-Info.plist in Resources */,
+				4EF131AA1D0DE37400300960 /* MyriadPro-Black.otf in Resources */,
+				4EF131AB1D0DE37400300960 /* MyriadPro-Light.otf in Resources */,
+				4EF131AC1D0DE37400300960 /* Assets.xcassets in Resources */,
+				4EF131AD1D0DE37400300960 /* MyriadPro-Bold.otf in Resources */,
+				4EF131AE1D0DE37400300960 /* Main.storyboard in Resources */,
+				4EF131B01D0DE37400300960 /* sample_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,19 +628,63 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0801403b30bc1234da06872d6776b57ac4537008 41d5fdcadc0190c4f92110bc7b869badf1ba8bba93082f00814270926e9b4c11";
 		};
-		4EF1311B1D0CBE9600300960 /* Google Plist Run Script */ = {
+		4EF1318B1D0DE37400300960 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Google Plist Run Script";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" == \"Staging\" ]; then\n/usr/libexec/PlistBuddy -c \"Set :CLIENT_ID 674479677063-116r7jerl5lj0ks5mm47qjq267pa5ua9.apps.googleusercontent.com\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :REVERSED_CLIENT_ID 674479677063-com.googleusercontent.apps.674479677063-116r7jerl5lj0ks5mm47qjq267pa5ua9\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :API_KEY AIzaSyDZH4UWs1zltvtnLzzD8-aZ8uHTfex0cKw\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :GCM_SENDER_ID 674479677063\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :BUNDLE_ID com.lostnationrd.TriggerWork.staging\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :PROJECT_ID trigger-work-staging\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :STORAGE_BUCKET trigger-work-staging.appstop.com\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :GOOGLE_APP_ID 1:674479677063:ios:1ba0cbccf55e620b\" GoogleService-Info.plist\n/usr/libexec/PlistBuddy -c \"Set :DATABASE_URL https://trigger-work-staging.firebaseio.com\" GoogleService-Info.plist\nfi";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF131B11D0DE37400300960 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0801403b30bc1234da06872d6776b57ac4537008 41d5fdcadc0190c4f92110bc7b869badf1ba8bba93082f00814270926e9b4c11";
+		};
+		4EF131B31D0DE37400300960 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWork-Dev/Pods-TriggerWork-Dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF131B41D0DE37400300960 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriggerWork-Dev/Pods-TriggerWork-Dev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		83970BDA7A4F6BF1CFF86734 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -695,6 +808,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EF1318C1D0DE37400300960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF1318D1D0DE37400300960 /* BTDiscoveryViewController.swift in Sources */,
+				4EF1318E1D0DE37400300960 /* ResultsDayViewController.swift in Sources */,
+				4EF1318F1D0DE37400300960 /* Day.swift in Sources */,
+				4EF131901D0DE37400300960 /* LoginViewController.swift in Sources */,
+				4EF131911D0DE37400300960 /* SessionTableViewCell.swift in Sources */,
+				4EF131921D0DE37400300960 /* Athlete.swift in Sources */,
+				4EF131931D0DE37400300960 /* BTDiscovery.swift in Sources */,
+				4EF131941D0DE37400300960 /* BTService.swift in Sources */,
+				4EF131951D0DE37400300960 /* AlertPresenter.swift in Sources */,
+				4EF131961D0DE37400300960 /* StartStopButton.swift in Sources */,
+				4EF131971D0DE37400300960 /* Session.swift in Sources */,
+				4EF131981D0DE37400300960 /* AppDelegate.swift in Sources */,
+				4EF131991D0DE37400300960 /* RoundedButton.swift in Sources */,
+				4EF1319A1D0DE37400300960 /* RecordSessionViewController.swift in Sources */,
+				4EF1319B1D0DE37400300960 /* BTDeviceTableViewCell.swift in Sources */,
+				4EF1319C1D0DE37400300960 /* ResultsCalendarViewController.swift in Sources */,
+				4EF1319D1D0DE37400300960 /* ShotCollectionViewCell.swift in Sources */,
+				4EF1319E1D0DE37400300960 /* Extensions.swift in Sources */,
+				4EF1319F1D0DE37400300960 /* Constants.swift in Sources */,
+				4EF131A01D0DE37400300960 /* Shot.swift in Sources */,
+				4EF131A11D0DE37400300960 /* Timeout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -730,7 +871,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4E5A6CC31C8B7D8500806161 /* Production */ = {
+		4E5A6CC31C8B7D8500806161 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -750,9 +891,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -765,26 +907,31 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				NAME_SUFFIX = "";
-				OTHER_SWIFT_FLAGS = "-DRELEASE";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Production;
+			name = Debug;
 		};
-		4E5A6CC41C8B7D8500806161 /* Production */ = {
+		4E5A6CC41C8B7D8500806161 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8D8E0C796271A47277BC843 /* Pods-TriggerWork.production.xcconfig */;
+			baseConfigurationReference = 3A055991B976BBC81C198280 /* Pods-TriggerWork.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"\"${PODS_ROOT}/Headers/Private/CorePlot/ios\"",
 					"$(inherited)",
@@ -801,15 +948,19 @@
 				);
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Production;
+			name = Debug;
 		};
-		4E5A6CC51C8B7D8500806161 /* Production */ = {
+		4E5A6CC51C8B7D8500806161 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1B117E3D8D6C71C2E0EC297 /* Pods-TriggerWorkTests.production.xcconfig */;
+			baseConfigurationReference = 214B53CD0877171F5909A022 /* Pods-TriggerWorkTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TriggerWorkTests/Info.plist;
@@ -818,11 +969,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TriggerWork.app/TriggerWork";
 			};
-			name = Production;
+			name = Debug;
 		};
-		4E5A6CC61C8B7D8500806161 /* Production */ = {
+		4E5A6CC61C8B7D8500806161 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9A88099EA9159CEADDEA0AE /* Pods-TriggerWorkUITests.production.xcconfig */;
+			baseConfigurationReference = 85397FCF29DBBCDF83B660B9 /* Pods-TriggerWorkUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TriggerWorkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -831,9 +982,9 @@
 				TEST_TARGET_NAME = TriggerWork;
 				USES_XCTRUNNER = YES;
 			};
-			name = Production;
+			name = Debug;
 		};
-		4EF1311C1D0CC0CC00300960 /* Staging */ = {
+		4EF1311C1D0CC0CC00300960 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -868,21 +1019,22 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				NAME_SUFFIX = "-Staging";
-				OTHER_SWIFT_FLAGS = "-DSTAGING";
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Staging;
+			name = Release;
 		};
-		4EF1311D1D0CC0CC00300960 /* Staging */ = {
+		4EF1311D1D0CC0CC00300960 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BBFD866E5D291635DFD0FB1 /* Pods-TriggerWork.staging.xcconfig */;
+			baseConfigurationReference = CD820FB7C3C004F2E011F9B7 /* Pods-TriggerWork.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID = com.lostnationrd.TriggerWork;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -904,15 +1056,16 @@
 				);
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
 			};
-			name = Staging;
+			name = Release;
 		};
-		4EF1311E1D0CC0CC00300960 /* Staging */ = {
+		4EF1311E1D0CC0CC00300960 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E263043D17ECE61F00990E7 /* Pods-TriggerWorkTests.staging.xcconfig */;
+			baseConfigurationReference = 679E4B359BF9088A5D36F6A2 /* Pods-TriggerWorkTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TriggerWorkTests/Info.plist;
@@ -921,11 +1074,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TriggerWork.app/TriggerWork";
 			};
-			name = Staging;
+			name = Release;
 		};
-		4EF1311F1D0CC0CC00300960 /* Staging */ = {
+		4EF1311F1D0CC0CC00300960 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B740F4FC5E9CF6F6918BEF3 /* Pods-TriggerWorkUITests.staging.xcconfig */;
+			baseConfigurationReference = 621D0C74413B9C16D46AE62B /* Pods-TriggerWorkUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TriggerWorkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -934,7 +1087,84 @@
 				TEST_TARGET_NAME = TriggerWork;
 				USES_XCTRUNNER = YES;
 			};
-			name = Staging;
+			name = Release;
+		};
+		4EF131B61D0DE37400300960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF00DB6E41581707A326A60 /* Pods-TriggerWork-Dev.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID = com.lostnationrd.TriggerWork.development;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Private/CorePlot/ios\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Headers",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				INFOPLIST_FILE = "TriggerWork-Dev-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEVELOPMENT $(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork.development;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4EF131B71D0DE37400300960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B71CD04F051A2A7BAA860C /* Pods-TriggerWork-Dev.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID = com.lostnationrd.TriggerWork.development;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Private/CorePlot/ios\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Headers",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				INFOPLIST_FILE = "TriggerWork-Dev-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEVELOPMENT $(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork.development;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TriggerWork/TriggerWork-Bridging-Header.h";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -942,38 +1172,47 @@
 		4E3A820B1C853C03002561E2 /* Build configuration list for PBXProject "TriggerWork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E5A6CC31C8B7D8500806161 /* Production */,
-				4EF1311C1D0CC0CC00300960 /* Staging */,
+				4E5A6CC31C8B7D8500806161 /* Debug */,
+				4EF1311C1D0CC0CC00300960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Release;
 		};
 		4E3A82381C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E5A6CC41C8B7D8500806161 /* Production */,
-				4EF1311D1D0CC0CC00300960 /* Staging */,
+				4E5A6CC41C8B7D8500806161 /* Debug */,
+				4EF1311D1D0CC0CC00300960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Release;
 		};
 		4E3A823B1C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWorkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E5A6CC51C8B7D8500806161 /* Production */,
-				4EF1311E1D0CC0CC00300960 /* Staging */,
+				4E5A6CC51C8B7D8500806161 /* Debug */,
+				4EF1311E1D0CC0CC00300960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Release;
 		};
 		4E3A823E1C853C03002561E2 /* Build configuration list for PBXNativeTarget "TriggerWorkUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E5A6CC61C8B7D8500806161 /* Production */,
-				4EF1311F1D0CC0CC00300960 /* Staging */,
+				4E5A6CC61C8B7D8500806161 /* Debug */,
+				4EF1311F1D0CC0CC00300960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Release;
+		};
+		4EF131B51D0DE37400300960 /* Build configuration list for PBXNativeTarget "TriggerWork-Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EF131B61D0DE37400300960 /* Debug */,
+				4EF131B71D0DE37400300960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

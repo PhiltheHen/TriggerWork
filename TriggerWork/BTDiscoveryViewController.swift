@@ -98,7 +98,7 @@ class BTDiscoveryViewController: UIViewController {
       
       if let _: Bool = userInfo[BLEScanStatus.Started] {
         self.emptyStateView.hidden = true
-        SVProgressHUD.showWithStatus("Searching for Bluetooth Devices...")
+        SVProgressHUD.showWithStatus("Searching for Bluetooth Triggers...")
       }
       
       if let _: Bool = userInfo[BLEScanStatus.Stopped] {
@@ -112,8 +112,8 @@ class BTDiscoveryViewController: UIViewController {
         SVProgressHUD.dismiss()
         self.refreshControl.endRefreshing()
         let alertPresenter = AlertPresenter(controller: self)
-        alertPresenter.presentAlertWithTitle("Try Again",
-                                             message: "Unable to connect to a bluetooth device") { (_) in
+        alertPresenter.presentAlertWithTitle("Unable to connect to a trigger",
+                                             message: "Ensure bluetooth is turned on in settings and you are in range of your BLE trigger") { (_) in
         }
       }
     }

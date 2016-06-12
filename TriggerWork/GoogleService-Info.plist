@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>965425408392-4km8d3tsecqcfrt7bcqlc3bvnnhg7gdc.apps.googleusercontent.com</string>
+	<string>404139105183-a09fv3iv5m587t5g3e1f4oo3f5kjnu4e.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.965425408392-4km8d3tsecqcfrt7bcqlc3bvnnhg7gdc</string>
+	<string>com.googleusercontent.apps.404139105183-a09fv3iv5m587t5g3e1f4oo3f5kjnu4e</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBCR0wR8rzFopQ518JKxFyEUuldb4PKtBw</string>
+	<string>AIzaSyC-YL1eDz5kMnVOaMOER7vGj9g2CePX4Fc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>965425408392</string>
+	<string>404139105183</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.lostnationrd.TriggerWork</string>
 	<key>PROJECT_ID</key>
-	<string>trigger-work-3aab5</string>
+	<string>trigger-work-15668</string>
 	<key>STORAGE_BUCKET</key>
-	<string>trigger-work-3aab5.appspot.com</string>
+	<string>trigger-work-15668.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:965425408392:ios:af43f768e16b1d10</string>
+	<string>1:404139105183:ios:af43f768e16b1d10</string>
 	<key>DATABASE_URL</key>
-	<string>https://trigger-work-3aab5.firebaseio.com</string>
+	<string>https://trigger-work-15668.firebaseio.com</string>
 </dict>
 </plist>

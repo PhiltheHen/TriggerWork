@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    
+    let bundleID = NSBundle.mainBundle().bundleIdentifier
+    print ("Bundle ID: \(bundleID)")
+
     // Configure Firebase
     FIRApp.configure()
     

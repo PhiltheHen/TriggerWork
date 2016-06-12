@@ -13,14 +13,15 @@ import SVProgressHUD
 
 class LoginViewController: UIViewController {
   
-  // MARK: Constants
-  let ref = FIRDatabase.database().reference()
+  var ref: FIRDatabaseReference!
   
   @IBOutlet weak var passwordTextField: UITextField!
   
   // MARK: View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    ref = FIRDatabase.database().reference()
     
     // Initialize SVProgressHUD style
     SVProgressHUD.setDefaultStyle(.Dark)

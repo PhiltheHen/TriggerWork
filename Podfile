@@ -5,18 +5,24 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+def shared_pods
+	pod 'Firebase'
+	pod 'Firebase/Database'
+	pod 'Firebase/Auth'
+	pod 'SwiftHEXColors'
+	pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+	pod 'CVCalendar', '~> 1.2.9'
+	pod 'CorePlot'
+	pod 'Fabric'
+	pod 'Crashlytics'
+end
+
 target 'TriggerWork' do
+	shared_pods
+end
 
-pod 'Firebase'
-pod 'Firebase/Database'
-pod 'Firebase/Auth'
-pod 'SwiftHEXColors'
-pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-pod 'CVCalendar', '~> 1.2.9'
-pod 'CorePlot'
-pod 'Fabric'
-pod 'Crashlytics'
-
+target 'TriggerWork-Dev' do
+	shared_pods
 end
 
 target 'TriggerWorkTests' do
