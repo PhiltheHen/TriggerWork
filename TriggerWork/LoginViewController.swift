@@ -38,8 +38,14 @@ class LoginViewController: UIViewController {
         print("Login cancelled")
       } else {
         print("Login successful")
+        dispatch_async(dispatch_get_main_queue()) {
+          SVProgressHUD.show()
+        }
         let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
         FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
+          dispatch_async(dispatch_get_main_queue()) {
+            SVProgressHUD.dismiss()
+          }
           if let error = error {
             print("Firebase sign-in error: \(error.localizedDescription)")
             return

@@ -20,9 +20,12 @@ class RecordSessionViewController: UIViewController {
   @IBOutlet weak var graphView: CPTGraphHostingView!
   @IBOutlet weak var infoView: UIView!
 
+  @IBOutlet weak var startStopButton: StartStopButton!
+  
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    //startStopButton = StartStopButton()
   }
   
   override func didReceiveMemoryWarning() {
@@ -30,6 +33,10 @@ class RecordSessionViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  @IBAction func startStopButtonPressed(sender: AnyObject) {
+    startStopButton.selected = !startStopButton.selected
+   // startStopButton.selected = !startStopButton.selected
+  }
   // MARK: - UI Settings
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .LightContent

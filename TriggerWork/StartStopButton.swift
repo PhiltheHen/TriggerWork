@@ -60,6 +60,12 @@ class StartStopButton: UIButton {
     self.layer.cornerRadius = self.frame.width/2;
     self.backgroundColor = Colors.defaultGreenColor()
     self.tintColor = UIColor.whiteColor()
+
+    self.setTitle("Start", forState: .Normal)
+    self.setTitle("Stop", forState: .Selected)
+    self.setBackgroundImage(nil, forState: .Selected)
+    self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+    self.setTitleColor(UIColor.blackColor(), forState: .Selected)
   }
   
 }

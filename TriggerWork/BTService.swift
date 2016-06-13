@@ -49,7 +49,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   // Mark: - CBPeripheralDelegate
   
   func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
-    let uuidsForBTService: [CBUUID] = [UUID.MeasurementCharUUID]
+    let uuidsForBTService: [CBUUID] = [UUID.MeasurementCharUUID, UUID.LocationCharUUID]
     
     if (peripheral != self.peripheral) {
       // Wrong Peripheral
@@ -105,6 +105,8 @@ class BTService: NSObject, CBPeripheralDelegate {
         if characteristic.UUID == UUID.MeasurementCharUUID {
           peripheral.setNotifyValue(true, forCharacteristic: characteristic)
           self.sendBTServiceNotificationWithIsBluetoothConnected(true)
+        } else if characteristic.UUID == UUID.LocationCharUUID {
+          peripheral.setNotifyValue(true, forCharacteristic: characteristic)
         }
       }
     }
