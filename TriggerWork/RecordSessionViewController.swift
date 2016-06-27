@@ -16,6 +16,9 @@ class RecordSessionViewController: UIViewController {
   var currentIndex = 0
   var resetPlot = false
   
+  // Firebase
+  var ref = FIRDatabase.database().reference()
+  
   // IBOutlets
   @IBOutlet weak var graphView: CPTGraphHostingView!
   @IBOutlet weak var infoView: UIView!
@@ -26,6 +29,18 @@ class RecordSessionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     //startStopButton = StartStopButton()
+    
+    ref.child("test").child("data").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+      
+      let results = snapshot.value as! NSArray
+      
+      for i in 0..<results.count {
+        print("key: \(results[i].allKeys), value: \(results[i].allValues)")
+      }
+      
+    })
+    
+    //self.ref.child("test").setValue(["data" : [["0" : "5"], ["1" : "10"], ["2" : "15"], ["3" : "17"], ["4" : "18"]]])
   }
   
   override func didReceiveMemoryWarning() {
@@ -34,8 +49,15 @@ class RecordSessionViewController: UIViewController {
   }
   
   @IBAction func startStopButtonPressed(sender: AnyObject) {
+    if !startStopButton.selected {
+      // Start data capture
+      //self.ref.child("test")."
+      
+    } else {
+      // Stop data capture
+    }
+    
     startStopButton.selected = !startStopButton.selected
-   // startStopButton.selected = !startStopButton.selected
   }
   // MARK: - UI Settings
   override func preferredStatusBarStyle() -> UIStatusBarStyle {

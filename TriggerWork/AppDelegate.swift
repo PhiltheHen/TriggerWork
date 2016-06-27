@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Configure Firebase
     FIRApp.configure()
+    FIRDatabase.database().persistenceEnabled = true
     
     // Initialize Crashlytics
     Fabric.with([Crashlytics.self()])

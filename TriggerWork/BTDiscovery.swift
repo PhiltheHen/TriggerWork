@@ -124,23 +124,29 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   func centralManagerDidUpdateState(central: CBCentralManager) {
     switch (central.state) {
     case CBCentralManagerState.PoweredOff:
+      print("Bluetooth powered off")
       self.clearDevices()
       
     case CBCentralManagerState.Unauthorized:
       // Indicate to user that the iOS device does not support BLE.
+      print("Bluetooth access unauthorized");
       break
       
     case CBCentralManagerState.Unknown:
       // Wait for another event
+      print("Bluetooth state unknown")
       break
       
     case CBCentralManagerState.PoweredOn:
+      print("Bluetooth powered on")
       self.startScanning()
       
     case CBCentralManagerState.Resetting:
+      print("Bluetooth resetting")
       self.clearDevices()
       
     case CBCentralManagerState.Unsupported:
+      print("Bluetooth not supported by device")
       break
     }
   }
