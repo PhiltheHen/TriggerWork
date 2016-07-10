@@ -43,6 +43,14 @@
 		4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E411CD5639B00BC4459 /* Timeout.swift */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
 		4EDC50D01C9B0F8100BA5267 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */; };
+		4EEFB4691D31AECB0015EFCA /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB4671D31AECB0015EFCA /* CoreDataModel.xcdatamodeld */; };
+		4EEFB46C1D31AFC80015EFCA /* Authentication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB46A1D31AFC80015EFCA /* Authentication+CoreDataProperties.swift */; };
+		4EEFB46D1D31AFC80015EFCA /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB46B1D31AFC80015EFCA /* Authentication.swift */; };
+		4EEFB46F1D31B05C0015EFCA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB46E1D31B05C0015EFCA /* DataController.swift */; };
+		4EEFB4711D31B39D0015EFCA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB46E1D31B05C0015EFCA /* DataController.swift */; };
+		4EEFB4721D31B3A00015EFCA /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB46B1D31AFC80015EFCA /* Authentication.swift */; };
+		4EEFB4731D31B3A30015EFCA /* Authentication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB46A1D31AFC80015EFCA /* Authentication+CoreDataProperties.swift */; };
+		4EEFB4741D31B3A80015EFCA /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB4671D31AECB0015EFCA /* CoreDataModel.xcdatamodeld */; };
 		4EF1318D1D0DE37400300960 /* BTDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CD91C8BA9F900806161 /* BTDiscoveryViewController.swift */; };
 		4EF1318E1D0DE37400300960 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
 		4EF1318F1D0DE37400300960 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CAF6D1C9DDBB00049A2DA /* Day.swift */; };
@@ -140,6 +148,10 @@
 		4EDB8E411CD5639B00BC4459 /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
 		4EDC50CF1C9B0F8100BA5267 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		4EEFB4681D31AECB0015EFCA /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		4EEFB46A1D31AFC80015EFCA /* Authentication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4EEFB46B1D31AFC80015EFCA /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		4EEFB46E1D31B05C0015EFCA /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4EF1314F1D0DE0B100300960 /* TriggerWork-Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TriggerWork-Dev-Info.plist"; path = "/Users/philhenson/Documents/Personal/TriggerApp/TriggerWork/TriggerWork-Dev-Info.plist"; sourceTree = "<absolute>"; };
 		4EF131B81D0DE37400300960 /* TriggerWork-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TriggerWork-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF131BE1D0DE7F600300960 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -239,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5A6CCE1C8B88C200806161 /* Models */,
+				4EEFB4701D31B0630015EFCA /* CoreData */,
 				4E5A6CCD1C8B88BD00806161 /* Controllers */,
 				4E5A6CCB1C8B88A900806161 /* Layouts */,
 				4E5A6CCC1C8B88B000806161 /* Utilities */,
@@ -363,6 +376,17 @@
 				4EBCE87D1CDEDE1F00436123 /* RoundedButton.swift */,
 			);
 			name = "Custom UI Elements";
+			sourceTree = "<group>";
+		};
+		4EEFB4701D31B0630015EFCA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4EEFB46A1D31AFC80015EFCA /* Authentication+CoreDataProperties.swift */,
+				4EEFB46B1D31AFC80015EFCA /* Authentication.swift */,
+				4EEFB46E1D31B05C0015EFCA /* DataController.swift */,
+				4EEFB4671D31AECB0015EFCA /* CoreDataModel.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		4EF131C21D0DE8F300300960 /* GoogleService-Dev */ = {
@@ -770,6 +794,7 @@
 			files = (
 				4E5A6CDA1C8BA9F900806161 /* BTDiscoveryViewController.swift in Sources */,
 				4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */,
+				4EEFB4691D31AECB0015EFCA /* CoreDataModel.xcdatamodeld in Sources */,
 				4E1CAF6E1C9DDBB00049A2DA /* Day.swift in Sources */,
 				4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */,
 				4E1CAF741C9DE92E0049A2DA /* SessionTableViewCell.swift in Sources */,
@@ -777,6 +802,7 @@
 				4E199C191C9114F400DFAD45 /* BTDiscovery.swift in Sources */,
 				4E199C1A1C9114F400DFAD45 /* BTService.swift in Sources */,
 				4EBCE8801CDEE32100436123 /* AlertPresenter.swift in Sources */,
+				4EEFB46F1D31B05C0015EFCA /* DataController.swift in Sources */,
 				4EBCE87C1CDEDB3B00436123 /* StartStopButton.swift in Sources */,
 				4E1CAF701C9DDC1B0049A2DA /* Session.swift in Sources */,
 				4E3A82141C853C03002561E2 /* AppDelegate.swift in Sources */,
@@ -785,10 +811,12 @@
 				4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */,
 				4E199C201C911C0500DFAD45 /* ResultsCalendarViewController.swift in Sources */,
 				4E1CAF761C9DF10C0049A2DA /* ShotCollectionViewCell.swift in Sources */,
+				4EEFB46C1D31AFC80015EFCA /* Authentication+CoreDataProperties.swift in Sources */,
 				4EDB8E401CD55CC500BC4459 /* Extensions.swift in Sources */,
 				4E5A6CC81C8B833700806161 /* Constants.swift in Sources */,
 				4E1CAF721C9DDED20049A2DA /* Shot.swift in Sources */,
 				4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */,
+				4EEFB46D1D31AFC80015EFCA /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,13 +844,17 @@
 				4EF1318E1D0DE37400300960 /* ResultsDayViewController.swift in Sources */,
 				4EF1318F1D0DE37400300960 /* Day.swift in Sources */,
 				4EF131901D0DE37400300960 /* LoginViewController.swift in Sources */,
+				4EEFB4741D31B3A80015EFCA /* CoreDataModel.xcdatamodeld in Sources */,
 				4EF131911D0DE37400300960 /* SessionTableViewCell.swift in Sources */,
+				4EEFB4711D31B39D0015EFCA /* DataController.swift in Sources */,
 				4EF131921D0DE37400300960 /* Athlete.swift in Sources */,
 				4EF131931D0DE37400300960 /* BTDiscovery.swift in Sources */,
+				4EEFB4721D31B3A00015EFCA /* Authentication.swift in Sources */,
 				4EF131941D0DE37400300960 /* BTService.swift in Sources */,
 				4EF131951D0DE37400300960 /* AlertPresenter.swift in Sources */,
 				4EF131961D0DE37400300960 /* StartStopButton.swift in Sources */,
 				4EF131971D0DE37400300960 /* Session.swift in Sources */,
+				4EEFB4731D31B3A30015EFCA /* Authentication+CoreDataProperties.swift in Sources */,
 				4EF131981D0DE37400300960 /* AppDelegate.swift in Sources */,
 				4EF131991D0DE37400300960 /* RoundedButton.swift in Sources */,
 				4EF1319A1D0DE37400300960 /* RecordSessionViewController.swift in Sources */,
@@ -1215,6 +1247,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4EEFB4671D31AECB0015EFCA /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4EEFB4681D31AECB0015EFCA /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 4EEFB4681D31AECB0015EFCA /* CoreDataModel.xcdatamodel */;
+			name = CoreDataModel.xcdatamodeld;
+			path = ../CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4E3A82081C853C03002561E2 /* Project object */;
 }

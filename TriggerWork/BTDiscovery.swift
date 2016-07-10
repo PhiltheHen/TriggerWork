@@ -28,8 +28,14 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   
   func startScanning() {
     self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Started)
+    // Start timer to cancel scan if no devices are found in 8 seconds
+    
+    let _ = Timeout(Constants.BLETimeout) {
+      dispatch_async(dispatch_get_main_queue(), { 
+        self.scanTimeout()
+      })
+    }
     if let central = centralManager {
-      let _ = Timeout(8.0) { self.scanTimeout() }
       central.scanForPeripheralsWithServices([UUID.BLEServiceUUID], options: nil)
     }
   }
@@ -139,6 +145,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
       
     case CBCentralManagerState.PoweredOn:
       print("Bluetooth powered on")
+      self.stopScanning()
       self.startScanning()
       
     case CBCentralManagerState.Resetting:

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E0113424C3158FCD349D222DC8D9062"
+               BlueprintIdentifier = "0CF9ECCD9610A789B7DE19C444DE09C6"
                BuildableName = "Pods_TriggerWork_Dev.framework"
                BlueprintName = "Pods-TriggerWork-Dev"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E0113424C3158FCD349D222DC8D9062"
+            BlueprintIdentifier = "0CF9ECCD9610A789B7DE19C444DE09C6"
             BuildableName = "Pods_TriggerWork_Dev.framework"
             BlueprintName = "Pods-TriggerWork-Dev"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -15,6 +15,7 @@ def shared_pods
 	pod 'CorePlot'
 	pod 'Fabric'
 	pod 'Crashlytics'
+	pod 'ReachabilitySwift'
 end
 
 target 'TriggerWork' do

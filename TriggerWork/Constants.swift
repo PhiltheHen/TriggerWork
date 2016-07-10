@@ -13,6 +13,7 @@ import CoreBluetooth
 
 struct Constants {
   static let CorePlotIdentifier = "DataSourcePlot"
+  static let BLETimeout = 8.0 // seconds
   static let MaxDataPoints = 50
   static let MaxYValue = 280
   static let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"

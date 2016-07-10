@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +52,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>088CA9534494F87FCACFB90BF5B78FD6</key>
+		<key>0CF9ECCD9610A789B7DE19C444DE09C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,17 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1E0113424C3158FCD349D222DC8D9062</key>
+		<key>4FACB09A002904F96C96CC2241C1D1D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82B4884150E361D5BC28992594233ED1</key>
+		<key>5A89B6561DDDA4AD3C178078CE4D9EFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE0EE548084730FCE81F7AE761AC3761</key>
+		<key>8AF19B6AD4A1C0C24529FFAA75F2D918</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D87D844867B5B513DDA09D2681885B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

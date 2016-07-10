@@ -18,6 +18,7 @@ class RecordSessionViewController: UIViewController {
   
   // Firebase
   var ref = FIRDatabase.database().reference()
+  let currentUser = FIRAuth.auth()?.currentUser
   
   // IBOutlets
   @IBOutlet weak var graphView: CPTGraphHostingView!
@@ -30,17 +31,58 @@ class RecordSessionViewController: UIViewController {
     super.viewDidLoad()
     //startStopButton = StartStopButton()
     
-    ref.child("test").child("data").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+    // Swap boolean for testing
+    let save = false
+    let userID = currentUser?.uid
+
+    if save {
+      /******TESTING DATA SAVE********/
+      let key = ref.child("sessions").childByAutoId().key
+      let session : [String : AnyObject] = ["uid" : userID!,
+                     "date" : NSDate.currentDateToString(),
+                     "shot_data" : [["time" : "0:00.4",
+                                    "value" : "10"],
+                                    ["time" : "0:00.9",
+                                      "value" : "30"],
+                                    ["time" : "0:01.3",
+                                      "value" : "50"],
+                                    ["time" : "0:02.1",
+                                      "value" : "60"],
+                                    ["time" : "0:02.8",
+                                      "value" : "70"],
+                                    ["time" : "0:03.5",
+                                      "value" : "80"],
+                                    ["time" : "0:04.2",
+                                      "value" : "85"],
+                                    ["time" : "0:05.0",
+                                      "value" : "89"],
+                                    ["time" : "0:06.8",
+                                      "value" : "91"]]]
       
-      let results = snapshot.value as! NSArray
+      let childUpdates = ["/sessions/\(key)" : session,
+                          "/user-sessions/\(userID!)/\(key)/" : session]
       
-      for i in 0..<results.count {
-        print("key: \(results[i].allKeys), value: \(results[i].allValues)")
-      }
+      ref.updateChildValues(childUpdates)
       
-    })
+    } else {
+      /******* TESTING DATA RETRIEVAL *******/
+      
+      ref.child("sessions").child("-KMGd99UfXcpTufTiJi7").child("shot_data").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        
+        let data = snapshot.value as! NSArray
+        
+        for i in 0..<data.count {
+          print("key: \(data[i]["time"]!), value: \(data[i]["value"]!)")
+        }
+        
+      })
+      
+    }
+
     
-    //self.ref.child("test").setValue(["data" : [["0" : "5"], ["1" : "10"], ["2" : "15"], ["3" : "17"], ["4" : "18"]]])
+    
+
+
   }
   
   override func didReceiveMemoryWarning() {

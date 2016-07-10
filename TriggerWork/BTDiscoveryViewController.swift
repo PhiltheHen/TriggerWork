@@ -31,7 +31,9 @@ class BTDiscoveryViewController: UIViewController {
     
     tableView.hidden = true
     continueButton.alpha = 0.5
-    continueButton.enabled = false
+    
+    // WARNING - set to false after testing
+    continueButton.enabled = true
     
     // Watch Bluetooth connection
     NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: Constants.BLEServiceChangedStatusNotification, object: nil)
