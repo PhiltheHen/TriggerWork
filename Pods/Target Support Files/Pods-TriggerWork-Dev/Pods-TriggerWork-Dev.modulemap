@@ -1,0 +1,6 @@
+framework module Pods_TriggerWork_Dev {
+  umbrella header "Pods-TriggerWork-Dev-umbrella.h"
+
+  export *
+  module * { export * }
+}
