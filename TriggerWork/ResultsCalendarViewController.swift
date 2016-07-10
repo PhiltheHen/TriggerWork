@@ -34,7 +34,7 @@ class ResultsCalendarViewController: UIViewController {
   
 }
 
-// MARK: - Required Calendar View Delegate MEthods
+// MARK: - Required Calendar View Delegate Methods
 extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
   func firstWeekday() -> Weekday {
     return .Sunday
@@ -75,7 +75,7 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
   }
   
   func dotMarker(shouldShowOnDayView dayView: DayView) -> Bool {
-    return false
+    return true
   }
   
   func dotMarker(shouldMoveOnHighlightingOnDayView dayView: DayView) -> Bool {

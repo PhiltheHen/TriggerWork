@@ -50,51 +50,58 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func skipButtonPressed(sender: AnyObject) {
-    
     // Sign in user anonymously to obtain temp user ID
-    FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-      dispatch_async(dispatch_get_main_queue()) {
-        SVProgressHUD.dismiss()
-      }
-      if let error = error {
-        print("Firebase sign-in error: \(error.localizedDescription)")
-        return
-      } else {
-        self.performSegueWithIdentifier("LoginSegue", sender: self)
-      }
-    }
+    self.loginAnonymousUser()
   }
   
   @IBAction func loginButtonPressed(sender: AnyObject) {
     
-    // Check for existing access token
-    if (accessToken != nil) {
-      self.loginAuthorizedUserWithAccessToken(accessToken!)
-    } else {
-      
-      // Check network availability
-      let reachability: Reachability
-      do {
-        reachability = try Reachability.reachabilityForInternetConnection()
-      } catch {
-        print("Unable to create Reachability")
-        return
-      }
-      
-      reachability.whenReachable = { reachability in
-        // If no active token, check first time permissions
-        self.beginFacebookLoginProcedure()
-      }
-      reachability.whenUnreachable = { reachability in
-        // Alert user that Facebook cannot authorize without network connection
-        let alertPresenter = AlertPresenter(controller: self)
-        alertPresenter.presentAlertWithTitle("Network unavailable",
-                                             message: "Can't authorize Facebook without network connection. Skip login now and register with Facebook later to sync your data") { (_) in
+    // 1. Check network availability
+    let reachability: Reachability
+    do {
+      reachability = try Reachability.reachabilityForInternetConnection()
+    } catch {
+      print("Unable to create Reachability")
+      return
+    }
+    
+    // 2. Check if user is already signed in
+    FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+      if user != nil {
+        print("User already signed in.")
+        self.performSegueWithIdentifier("LoginSegue", sender: self)
+      } else {
+        // Check for existing access token
+        if self.accessToken != nil {
+          print("Access token exists - logging in...")
+          if reachability.isReachable() {
+            self.loginAuthorizedUserWithAccessToken(self.accessToken!)
+          } else {
+            // No network connection
+            let alertPresenter = AlertPresenter(controller: self)
+            alertPresenter.presentNoNetworkForLoginError()
+          }
+        } else {
+          // Create new access token
+          if reachability.isReachable() {
+            // Network connection via WiFi or Cellular
+            print("Access token does not exist - trying Facebook login")
+            self.beginFacebookLoginProcedure()
+            
+          } else {
+            // No network connection
+            let alertPresenter = AlertPresenter(controller: self)
+            alertPresenter.presentNoNetworkForLoginError()
+          }
         }
       }
     }
   }
   
+  // MARK - Login Helper Methods
+  
+  
+  // Facebook Login
   func beginFacebookLoginProcedure() {
     let login = FBSDKLoginManager()
     login.logInWithReadPermissions(["public_profile", "email"], fromViewController: self) { (result, error) in
@@ -115,6 +122,7 @@ class LoginViewController: UIViewController {
         
         entity.setValue(FBSDKAccessToken.currentAccessToken().tokenString, forKey: "accessToken")
         
+        print("Saving access token...")
         do {
           try self.moc.save()
         } catch {
@@ -127,6 +135,7 @@ class LoginViewController: UIViewController {
     }
   }
   
+  // Authorized User Login - Facebook
   func loginAuthorizedUserWithAccessToken(accessToken: String) {
     let credential = FIRFacebookAuthProvider.credentialWithAccessToken(accessToken)
     FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
@@ -137,9 +146,36 @@ class LoginViewController: UIViewController {
         print("Firebase sign-in error: \(error.localizedDescription)")
         return
       } else {
-        self.performSegueWithIdentifier("LoginSegue", sender: self)
+        // Link anonymous user with authorized account
+        if let user = user {
+          user.linkWithCredential(credential) { (user, error) in
+            if let error = error {
+              print("Error linking accounts: \(error.localizedDescription)")
+              print("Logging in anyway...")
+              self.performSegueWithIdentifier("LoginSegue", sender: self)
+            } else {
+              self.performSegueWithIdentifier("LoginSegue", sender: self)
+            }
+            
+          }
+        }
       }
     })
+  }
+  
+  // Anonymous User Login
+  func loginAnonymousUser() {
+    FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
+      dispatch_async(dispatch_get_main_queue()) {
+        SVProgressHUD.dismiss()
+      }
+      if let error = error {
+        print("Firebase sign-in error: \(error.localizedDescription)")
+        return
+      } else {
+        self.performSegueWithIdentifier("LoginSegue", sender: self)
+      }
+    }
   }
   
   // MARK: UI Settings

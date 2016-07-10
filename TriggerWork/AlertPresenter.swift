@@ -39,4 +39,11 @@ class AlertPresenter: NSObject {
     alertController.addAction(cancelAction)
     viewController?.presentViewController(alertController, animated: true, completion: nil)
   }
+  
+  func presentNoNetworkForLoginError() {
+    self.presentAlertWithTitle("Network unavailable",
+                                         message: "Can't authorize login without network connection.") { (_) in
+    }
+
+  }
 }
