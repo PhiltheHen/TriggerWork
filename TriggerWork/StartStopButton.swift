@@ -13,7 +13,6 @@ class StartStopButton: UIButton {
   
   override var selected: Bool {
     willSet(newValue) {
-      print("will set")
 
       if newValue {
         self.backgroundColor = Colors.defaultRedColor()
@@ -24,7 +23,6 @@ class StartStopButton: UIButton {
       }
     }
     didSet {
-      print("did set")
 
     }
   }
@@ -60,6 +58,12 @@ class StartStopButton: UIButton {
     self.layer.cornerRadius = self.frame.width/2;
     self.backgroundColor = Colors.defaultGreenColor()
     self.tintColor = UIColor.whiteColor()
+
+    self.setTitle("Start", forState: .Normal)
+    self.setTitle("Stop", forState: .Selected)
+    self.setBackgroundImage(nil, forState: .Selected)
+    self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+    self.setTitleColor(UIColor.whiteColor(), forState: .Selected)
   }
   
 }

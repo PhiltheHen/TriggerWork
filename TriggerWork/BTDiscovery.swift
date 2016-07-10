@@ -28,8 +28,14 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   
   func startScanning() {
     self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Started)
+    // Start timer to cancel scan if no devices are found in 8 seconds
+    
+    let _ = Timeout(Constants.BLETimeout) {
+      dispatch_async(dispatch_get_main_queue(), { 
+        self.scanTimeout()
+      })
+    }
     if let central = centralManager {
-      let _ = Timeout(8.0) { self.scanTimeout() }
       central.scanForPeripheralsWithServices([UUID.BLEServiceUUID], options: nil)
     }
   }
@@ -124,23 +130,30 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   func centralManagerDidUpdateState(central: CBCentralManager) {
     switch (central.state) {
     case CBCentralManagerState.PoweredOff:
+      print("Bluetooth powered off")
       self.clearDevices()
       
     case CBCentralManagerState.Unauthorized:
       // Indicate to user that the iOS device does not support BLE.
+      print("Bluetooth access unauthorized");
       break
       
     case CBCentralManagerState.Unknown:
       // Wait for another event
+      print("Bluetooth state unknown")
       break
       
     case CBCentralManagerState.PoweredOn:
+      print("Bluetooth powered on")
+      self.stopScanning()
       self.startScanning()
       
     case CBCentralManagerState.Resetting:
+      print("Bluetooth resetting")
       self.clearDevices()
       
     case CBCentralManagerState.Unsupported:
+      print("Bluetooth not supported by device")
       break
     }
   }

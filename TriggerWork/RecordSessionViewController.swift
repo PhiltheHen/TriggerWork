@@ -12,22 +12,41 @@ import CorePlot
 class RecordSessionViewController: UIViewController {
   
   // Data
-  var data = [String]()
+  var data = [[String : String]]()
   var currentIndex = 0
   var resetPlot = false
+  
+  // Core Plot
+  var graph : CPTGraph?
+  var plot : CPTPlot?
+  
+  // Firebase
+  let firManager = FIRDataManager()
   
   // IBOutlets
   @IBOutlet weak var graphView: CPTGraphHostingView!
   @IBOutlet weak var infoView: UIView!
-
+  @IBOutlet weak var startStopButton: StartStopButton!
+  
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    // Unsure if this is needed
+    //startStopButton = StartStopButton()
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  // MARK: - IBActions
+  @IBAction func startStopButtonPressed(sender: AnyObject) {
+    if !startStopButton.selected {
+      // Clear plot and prepare to save data
+      self.clearPlot()
+      
+    } else {
+      // Save data and clear plot
+      self.saveDataAndClearPlot()
+    }
+    
+    startStopButton.selected = !startStopButton.selected
   }
   
   // MARK: - UI Settings
@@ -51,13 +70,26 @@ extension RecordSessionViewController: BTServiceDelegate {
   
   func didUpdateTriggerValue(value: String) {
     // Append new values to data array for plotting
-    resetPlot = Int(value) <= 1
-    if Int(value) > 0 {
-      dispatch_async(dispatch_get_main_queue(), { 
-        self.infoView.hidden = true
-        self.updatePlot(value)
-      })
-    }
+    
+    dispatch_async(dispatch_get_main_queue(), {
+      self.infoView.hidden = true
+      self.updatePlot(value)
+    })
+    
+    
+    // The following was used for only plotting values greater than 0
+    // Right now we want continuous plotting regarless of magnitude
+    // Might return to this in the future
+    
+    /*
+        resetPlot = Int(value) <= 1
+        if Int(value) > 0 {
+          dispatch_async(dispatch_get_main_queue(), {
+            self.infoView.hidden = true
+            self.updatePlot(value)
+          })
+        }
+     */
   }
 }
 
@@ -91,38 +123,58 @@ extension RecordSessionViewController: CPTPlotDataSource {
     
     graph.addPlot(plot)
     graphView.hostedGraph = graph
+    
+    self.plot = plot
+    self.graph = graph
+  }
+  
+  // Helpers
+  func clearPlot() {
+    if let _ = plot {
+      // Remove data from array and clear plot space
+      plot!.deleteDataInIndexRange(NSMakeRange(0, data.count))
+      data.removeAll()
+      currentIndex = 0
+    }
+  }
+  
+  func saveDataAndClearPlot() {
+    firManager.saveSessionWithShotData(data)
+    self.clearPlot()
   }
   
   func updatePlot(newValue: String) {
-    guard let graph = graphView.hostedGraph else { return }
-    guard let plot = graph.plotWithIdentifier(Constants.CorePlotIdentifier) else { return }
     
-//    if resetPlot {
-//      plot.deleteDataInIndexRange(NSMakeRange(0, data.count))
-//      data.removeAll()
-//      currentIndex = 0
-//    }
+    // Optional reset when data is < 1. Currently unused
+    //    if resetPlot {
+    //      plot.deleteDataInIndexRange(NSMakeRange(0, data.count))
+    //      data.removeAll()
+    //      currentIndex = 0
+    //    }
     
-    let plotSpace = graph.defaultPlotSpace as! CPTXYPlotSpace
-    let location = currentIndex >= Constants.MaxDataPoints ? currentIndex - Constants.MaxDataPoints + 2 : 0
-    //let location = currentIndex - Constants.MaxDataPoints + 2
-
-    let newRange = CPTPlotRange(location: location,
-                                length: Constants.MaxDataPoints - 2)
-    
-    CPTAnimation.animate(plotSpace,
-                         property: "xRange",
-                         fromPlotRange: plotSpace.xRange,
-                         toPlotRange: newRange,
-                         duration: 0.1)
-    
-    currentIndex += 1
-    data.append(newValue)
-    plot.insertDataAtIndex(UInt(data.count - 1), numberOfRecords: 1)
-    print("location: \(location)")
-    print("xRange length: \(plotSpace.xRange.length)")
-    print("data count: \(data.count)")
-    print("")
+    // If both graph and plot exist, plot points
+    if let _ = graph, _ = plot {
+      
+      let plotSpace = graph!.defaultPlotSpace as! CPTXYPlotSpace
+      let location = currentIndex >= Constants.MaxDataPoints ? currentIndex - Constants.MaxDataPoints + 2 : 0
+      let newRange = CPTPlotRange(location: location,
+                                  length: Constants.MaxDataPoints - 2)
+      
+      CPTAnimation.animate(plotSpace,
+                           property: "xRange",
+                           fromPlotRange: plotSpace.xRange,
+                           toPlotRange: newRange,
+                           duration: 0.1)
+      
+      currentIndex += 1
+      data.append(["location" : "\(data.count)",
+                   "value" : newValue])
+      plot!.insertDataAtIndex(UInt(data.count - 1), numberOfRecords: 1)
+      print("location: \(location)")
+      print("xRange length: \(plotSpace.xRange.length)")
+      print("data count: \(data.count)")
+      print("")
+    }
   }
 
   func numberOfRecordsForPlot(plot: CPTPlot) -> UInt {
@@ -138,10 +190,12 @@ extension RecordSessionViewController: CPTPlotDataSource {
       print("dataX: \(dataPoint)")
       break;
     case 1:
-      if let value = Double(data[Int(idx)]) {
-        dataPoint = value
+      if let stringValue = data[Int(idx)]["value"] {
+        if let value = Double(stringValue) {
+          dataPoint = value
+          print("dataY: \(dataPoint)")
+        }
       }
-      print("dataY: \(dataPoint)")
       break;
     default:
       break;

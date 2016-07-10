@@ -30,7 +30,26 @@ class RoundedButton: UIButton {
     }
   }
   
+  // MARK: Initializers
+  
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+  }
+  
+  convenience init() {
+    self.init(frame:CGRectZero)
+  }
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  override func prepareForInterfaceBuilder() {
+    super.prepareForInterfaceBuilder()
+  }
+
 }

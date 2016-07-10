@@ -7,4 +7,5 @@
 //
 
 #import <Firebase/Firebase.h>
-#import <CorePlot/CorePlot.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
