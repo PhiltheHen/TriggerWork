@@ -37,15 +37,16 @@ class FIRDataManager: NSObject {
     let session : [String : AnyObject] = ["uid" : userID,
                                           "date" : NSDate.currentDateToString(),
                                           "shot_data" : data]
+    
     let childUpdates = ["/sessions/\(key)" : session,
                         "/user-sessions/\(userID!)/\(key)/" : session]
     ref.updateChildValues(childUpdates)
   }
   
   /**
-   Retrieve data with a specific session ID
+   Retrieve data once with a specific session ID
    */
-  func retrieveDataFromSessionWithID(sessionID:String, completion: (result: NSArray) -> Void) {
+  func retrieveDataFromSessionWithID(sessionID:String, completion:(result: NSArray) -> Void) {
     ref.child("sessions").child(sessionID).observeSingleEventOfType(.Value, withBlock: {(snapshot) in
       let data = snapshot.value as! NSArray
       
@@ -56,6 +57,16 @@ class FIRDataManager: NSObject {
        */
       
       completion(result: data)
+    })
+  }
+  
+  /**
+   Retrieve data for specific user ID and create listener for changes to database
+   */
+  func retrieveDataForUser(userID:String, completion:(result: NSDictionary) -> Void) {
+    ref.child("/user-sessions/\(userID)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+      let sessions = snapshot.value as! [String : AnyObject]
+      completion(result: sessions)
     })
   }
 }

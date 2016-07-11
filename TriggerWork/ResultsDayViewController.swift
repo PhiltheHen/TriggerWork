@@ -13,7 +13,14 @@ class ResultsDayViewController: UIViewController {
   
   var data = [String:String]()
   var sortedTimes = [(String, AnyObject)]()
+  var sessionData = [NSArray]()
+  var currentSession = NSArray()
   
+  // Core Plot
+  let plot = CPTScatterPlot()
+  var maxTime: Double = 0
+  var maxValue: Double = 300.0
+
   // Layout Constraints
   @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var graphViewHeightConstraint: NSLayoutConstraint!
@@ -28,7 +35,7 @@ class ResultsDayViewController: UIViewController {
     super.viewDidLoad()
     tableView.backgroundColor = Colors.defaultBlackColor()
     tableView.separatorStyle = .None
-    loadTestData()
+    //loadTestData()
     setupGraphView()
   }
   
@@ -57,12 +64,14 @@ class ResultsDayViewController: UIViewController {
   // MARK: UI Settings
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .LightContent
-  }
-  
+  }  
 }
 
 extension ResultsDayViewController: CPTPlotDataSource {
   func setupGraphView() {
+    
+    // Reset graph view
+    graphView.hostedGraph = nil
     
     // Styles
     let dataLineStyle = CPTMutableLineStyle()
@@ -76,7 +85,6 @@ extension ResultsDayViewController: CPTPlotDataSource {
     axisSet.xAxis?.axisLineStyle = nil
     axisSet.yAxis?.axisLineStyle = nil
     
-    let plot = CPTScatterPlot()
     plot.dataSource = self
     plot.interpolation = .Curved
     plot.dataLineStyle = dataLineStyle
@@ -84,10 +92,8 @@ extension ResultsDayViewController: CPTPlotDataSource {
     let plotSpace = graph.defaultPlotSpace as! CPTXYPlotSpace
     let xRange = plotSpace.xRange.mutableCopy() as! CPTMutablePlotRange
     let yRange = plotSpace.yRange.mutableCopy() as! CPTMutablePlotRange
-    guard let maxKey = data.keys.maxElement() else { return }
-    guard let maxValue = data.values.maxElement() else { return }
-    xRange.length = Double(maxKey)!
-    yRange.length = Double(maxValue)! + 10.0
+    xRange.length = maxTime
+    yRange.length = maxValue + 10.0
     plotSpace.xRange = xRange
     plotSpace.yRange = yRange
     
@@ -96,7 +102,7 @@ extension ResultsDayViewController: CPTPlotDataSource {
   }
   
   func numberOfRecordsForPlot(plot: CPTPlot) -> UInt {
-    return UInt(data.count)
+    return UInt(currentSession.count)
   }
   
   func doubleForPlot(plot: CPTPlot, field fieldEnum: UInt, recordIndex idx: UInt) -> Double {
@@ -104,10 +110,12 @@ extension ResultsDayViewController: CPTPlotDataSource {
     
     switch (fieldEnum) {
     case 0:
-      dataPoint = sortedTimes[Int(idx)].0
+      guard let time = currentSession[Int(idx)]["time"] else { break }
+      dataPoint = time as! String
       break;
     case 1:
-      dataPoint = sortedTimes[Int(idx)].1 as! String
+      guard let value = currentSession[Int(idx)]["value"] else { break }
+      dataPoint = value as! String
       break;
     default:
       break;
@@ -135,34 +143,32 @@ extension ResultsDayViewController: UITableViewDataSource {
     return cell
   }
   
+  func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    
+    // Need control over when delegate and data source are set for the collection view
+    guard let tableViewCell = cell as? SessionTableViewCell else { return }
+    tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
+  }
+  
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
     return 1
   }
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 3
+    return sessionData.count
   }
   
   func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    let title: String!
-    switch (section) {
-    case 0:
-      title = "Session One: 0:43.2"
-      break;
-    case 1:
-      title = "Session Two: 0:45.1"
-      break;
-    case 2:
-      title = "Session Three: 0:37.9"
-      break;
-    default:
-      title = ""
-      break;
+    var time = ""
+    let currentSessionData = sessionData[section]
+    let lastShot = currentSessionData.lastObject as! NSDictionary
+    if let elapsedTime = lastShot["time"] {
+      if let doubleTime = Double(elapsedTime as! String) {
+        time = NSDate.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
+      }
     }
-    
-    return title
-    
+    return "Session \(section): \(time)"
   }
 }
 
@@ -170,13 +176,35 @@ extension ResultsDayViewController: UICollectionViewDelegate {
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! ShotCollectionViewCell
     
-    cell.timeLabel.text = "0:03.2"
+    var time = ""
+    let currentSessionData = sessionData[collectionView.tag]
+    let lastShot = currentSessionData.lastObject as! NSDictionary
+    if let elapsedTime = lastShot["time"] {
+      if let doubleTime = Double(elapsedTime as! String) {
+        time = NSDate.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
+      }
+    }
+    
+    cell.timeLabel.text = time
     
     return cell
   }
   
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
+    // Generate graph for selected session
+    currentSession = sessionData[collectionView.tag]
+    
+    let lastShot = currentSession.lastObject as! NSDictionary
+    if let elapsedTime = lastShot["time"] {
+      if let doubleTime = Double(elapsedTime as! String) {
+        maxTime = doubleTime
+      }
+    }
+    
+    self.setupGraphView()
+    
     if (tableViewHeightConstraint.priority == UILayoutPriorityDefaultLow) {
       animateViews()
     }
@@ -186,7 +214,7 @@ extension ResultsDayViewController: UICollectionViewDelegate {
 extension ResultsDayViewController: UICollectionViewDataSource {
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-    return 5
+    return 1
   }
   
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class SessionTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +25,15 @@ class SessionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+  
+  //https://ashfurrow.com/blog/putting-a-uicollectionview-in-a-uitableviewcell-in-swift/
+  func setCollectionViewDataSourceDelegate
+    <D: protocol<UICollectionViewDataSource, UICollectionViewDelegate>>
+    (dataSourceDelegate: D, forRow row: Int) {
+    
+    collectionView.delegate = dataSourceDelegate
+    collectionView.dataSource = dataSourceDelegate
+    collectionView.tag = row
+    collectionView.reloadData()
+  }
 }

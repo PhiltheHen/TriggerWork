@@ -20,6 +20,10 @@ class RecordSessionViewController: UIViewController {
   var graph : CPTGraph?
   var plot : CPTPlot?
   
+  // Timer
+  var startTime: NSTimeInterval = NSDate.timeIntervalSinceReferenceDate()
+  var currentTime: NSTimeInterval = 0
+  
   // Firebase
   let firManager = FIRDataManager()
   
@@ -40,7 +44,7 @@ class RecordSessionViewController: UIViewController {
     if !startStopButton.selected {
       // Clear plot and prepare to save data
       self.clearPlot()
-      
+      startTime = NSDate.timeIntervalSinceReferenceDate()
     } else {
       // Save data and clear plot
       self.saveDataAndClearPlot()
@@ -167,7 +171,12 @@ extension RecordSessionViewController: CPTPlotDataSource {
                            duration: 0.1)
       
       currentIndex += 1
-      data.append(["location" : "\(data.count)",
+      
+      // Want to save the time for each data point as it comes in
+      currentTime = NSDate.timeIntervalSinceReferenceDate()
+      let elapsedTime = (currentTime - startTime).roundToHundredths()
+      
+      data.append(["time" : "\(Double(elapsedTime))",
                    "value" : newValue])
       plot!.insertDataAtIndex(UInt(data.count - 1), numberOfRecords: 1)
       print("location: \(location)")

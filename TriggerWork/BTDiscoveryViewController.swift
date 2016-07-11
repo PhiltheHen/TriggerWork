@@ -30,9 +30,8 @@ class BTDiscoveryViewController: UIViewController {
     tableView.addSubview(refreshControl)
     
     tableView.hidden = true
-    continueButton.alpha = 0.5
     
-    continueButton.enabled = false
+    continueButton.disable()
     
     // Watch Bluetooth connection
     NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: Constants.BLEServiceChangedStatusNotification, object: nil)
@@ -160,8 +159,7 @@ extension BTDiscoveryViewController: UITableViewDelegate {
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    continueButton.alpha = 1
-    continueButton.enabled = true
+    continueButton.enable()
     continueButton.pumpAnimation()
   }
   
