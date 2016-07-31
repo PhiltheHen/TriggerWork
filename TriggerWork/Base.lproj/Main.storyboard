@@ -30,6 +30,8 @@
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
             <string>MyriadPro-Light</string>
+            <string>MyriadPro-Light</string>
+            <string>MyriadPro-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -243,7 +245,7 @@
                                                 <rect key="frame" x="0.0" y="49.5" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyk-6o-Fzk" id="2wf-MJ-lNd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
@@ -287,7 +289,7 @@
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9b-PC-shn" customClass="RoundedButton" customModule="TriggerWork" customModuleProvider="target">
-                                        <rect key="frame" x="472" y="503" width="120" height="40"/>
+                                        <rect key="frame" x="460" y="503" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.34901960780000002" green="0.74901960779999999" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="6ER-H6-HsN"/>
@@ -295,6 +297,7 @@
                                             <constraint firstAttribute="height" constant="40" id="fsS-Tt-R4x"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="zSX-WF-t6H"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="18"/>
                                         <state key="normal" title="Continue">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -303,6 +306,12 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6ER-H6-HsN"/>
+                                                <exclude reference="zSX-WF-t6H"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <segue destination="XKL-uZ-WLL" kind="show" identifier="ContinueToSession" id="FNA-U1-En3"/>
                                         </connections>
@@ -318,6 +327,7 @@
                                     <constraint firstItem="eto-nE-Ga0" firstAttribute="leading" secondItem="gOE-rb-Zlp" secondAttribute="leading" constant="20" id="N3s-yS-YDQ"/>
                                     <constraint firstItem="380-PO-Lqf" firstAttribute="top" secondItem="gOE-rb-Zlp" secondAttribute="top" constant="200" id="N8x-54-nXq"/>
                                     <constraint firstAttribute="trailing" secondItem="k9b-PC-shn" secondAttribute="trailing" constant="8" id="NcT-cX-0AW"/>
+                                    <constraint firstAttribute="trailing" secondItem="k9b-PC-shn" secondAttribute="trailing" constant="20" id="Tqo-QO-o3i"/>
                                     <constraint firstItem="eto-nE-Ga0" firstAttribute="top" secondItem="gOE-rb-Zlp" secondAttribute="top" constant="60" id="Xgm-Dd-m8S"/>
                                     <constraint firstItem="k9b-PC-shn" firstAttribute="top" secondItem="eto-nE-Ga0" secondAttribute="bottom" constant="8" id="eMO-iV-Sfj"/>
                                     <constraint firstItem="2ty-MW-CVg" firstAttribute="top" secondItem="VL5-pa-q5Y" secondAttribute="bottom" constant="70" id="gxG-yA-kWG"/>
@@ -327,6 +337,7 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="NcT-cX-0AW"/>
                                         <exclude reference="eMO-iV-Sfj"/>
                                         <exclude reference="mtm-za-RTh"/>
                                     </mask>
@@ -350,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKe-B1-7pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="-242"/>
+            <point key="canvasLocation" x="382" y="-209"/>
         </scene>
         <!--Record Session View Controller-->
         <scene sceneID="UgU-to-VzZ">
@@ -373,6 +384,7 @@
                                     <constraint firstAttribute="height" constant="80" id="YFt-th-713"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="iTE-pq-lJZ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="18"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -460,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdH-I0-6or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="-242"/>
+            <point key="canvasLocation" x="1168" y="-209"/>
         </scene>
         <!--Calendar Appearance Delegate-->
         <scene sceneID="PTJ-bJ-izz">
@@ -517,7 +529,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lux-qB-Y4o">
-                                <rect key="frame" x="470" y="490" width="110" height="40"/>
+                                <rect key="frame" x="470" y="503" width="110" height="40"/>
                                 <color key="backgroundColor" red="0.34901960780000002" green="0.74901960779999999" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="DW6-kP-9EP"/>
@@ -553,12 +565,14 @@
                             <constraint firstItem="pEy-g3-tTC" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" id="WMB-kv-39y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QMJ-f5-Zci" secondAttribute="trailing" id="e8w-tQ-XU8"/>
                             <constraint firstItem="dZr-Lu-0w2" firstAttribute="top" secondItem="ohv-bS-BGA" secondAttribute="bottom" constant="8" id="hPC-ga-3iH"/>
+                            <constraint firstItem="X3h-Nm-5zu" firstAttribute="top" secondItem="lux-qB-Y4o" secondAttribute="bottom" constant="8" id="jW7-0Z-utJ"/>
                             <constraint firstItem="lux-qB-Y4o" firstAttribute="centerY" secondItem="ohv-bS-BGA" secondAttribute="centerY" id="xyG-uv-iws"/>
                             <constraint firstItem="AJn-Hd-Xge" firstAttribute="leading" secondItem="reQ-bK-hyw" secondAttribute="leadingMargin" constant="20" id="yDA-I7-wiH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="JK2-kJ-8v5"/>
+                                <exclude reference="xyG-uv-iws"/>
                             </mask>
                         </variation>
                     </view>
@@ -575,7 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLR-BA-GcD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1107" y="1499"/>
+            <point key="canvasLocation" x="-1180" y="1340"/>
         </scene>
         <!--Results Day View Controller-->
         <scene sceneID="6oP-wk-UIM">
@@ -717,12 +731,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8B-Lx-Sqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="1499"/>
+            <point key="canvasLocation" x="-498" y="1340"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="B6b-i7-iK0">
             <objects>
-                <tabBarController id="BGu-IX-yi8" sceneMemberID="viewController">
+                <tabBarController id="BGu-IX-yi8" customClass="MainTabBarController" customModule="TriggerWork" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VXq-Ff-Luf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -741,7 +755,7 @@
         <scene sceneID="KOT-Ia-JR0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTg-JB-p8b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Results" id="LhV-oJ-mPR"/>
+                    <tabBarItem key="tabBarItem" title="Results" image="results-unselected" id="LhV-oJ-mPR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="55k-jk-SS9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -754,13 +768,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoR-jQ-tXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1107" y="624"/>
+            <point key="canvasLocation" x="-1180" y="552"/>
         </scene>
-        <!--Record-->
+        <!--Viewer-->
         <scene sceneID="pat-Q3-lpQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWg-y4-YdC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Record" id="HRe-Fx-TlJ"/>
+                    <tabBarItem key="tabBarItem" title="Viewer" image="viewer-unselected" id="HRe-Fx-TlJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="p0V-ob-beR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -773,11 +787,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bj-Cu-0N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="-242"/>
+            <point key="canvasLocation" x="-384" y="-209"/>
         </scene>
     </scenes>
     <resources>
         <image name="bluetooth-icon" width="65" height="112"/>
         <image name="checkmark" width="28" height="20"/>
+        <image name="results-unselected" width="20" height="20"/>
+        <image name="viewer-unselected" width="20" height="20"/>
     </resources>
 </document>

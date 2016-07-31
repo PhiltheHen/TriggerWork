@@ -28,6 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Initialize Crashlytics
     Fabric.with([Crashlytics.self()])
     
+    // Setup Navigation Bar
+    let navigationBarAppearace = UINavigationBar.appearance()
+    
+    navigationBarAppearace.tintColor = UIColor.whiteColor()
+    navigationBarAppearace.barTintColor = Colors.defaultBlackColor()
+    navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(),
+                                                  NSFontAttributeName:Fonts.defaultRegularFontWithSize(21)]
+
     return true
   }
   
