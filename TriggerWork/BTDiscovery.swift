@@ -30,11 +30,12 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Started)
     // Start timer to cancel scan if no devices are found in 8 seconds
     
-    let _ = Timeout(Constants.BLETimeout) {
-      dispatch_async(dispatch_get_main_queue(), { 
+    dispatch_async(dispatch_get_main_queue(), {
+      let _ = Timeout(Constants.BLETimeout) {
         self.scanTimeout()
-      })
-    }
+      }
+    })
+    
     if let central = centralManager {
       central.scanForPeripheralsWithServices([UUID.BLEServiceUUID], options: nil)
     }

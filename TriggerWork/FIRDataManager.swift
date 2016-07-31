@@ -65,8 +65,9 @@ class FIRDataManager: NSObject {
    */
   func retrieveDataForUser(userID:String, completion:(result: NSDictionary) -> Void) {
     ref.child("/user-sessions/\(userID)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
-      let sessions = snapshot.value as! [String : AnyObject]
-      completion(result: sessions)
+      if let sessions = snapshot.value as? [String : AnyObject] {
+        completion(result: sessions)
+      }
     })
   }
 }

@@ -96,6 +96,8 @@ class BTDiscoveryViewController: UIViewController {
     
     dispatch_async(dispatch_get_main_queue()) {
       
+      print(userInfo)
+      
       if let _: Bool = userInfo[BLEScanStatus.Started] {
         self.emptyStateView.hidden = true
         SVProgressHUD.showWithStatus("Searching for Bluetooth Triggers...")
