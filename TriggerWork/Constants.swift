@@ -24,8 +24,7 @@ struct Constants {
 struct UUID {
   static let BLEServiceUUID = CBUUID(string: "180D")
   static let MeasurementCharUUID = CBUUID(string: "2A37")
-  static let LocationCharUUID = CBUUID(string: "2A38")
-  static let VibrationCharUUID = CBUUID(string: "2A56")
+  static let ShotFiredCharUUID = CBUUID(string: "2A38")
 }
 
 struct Fonts {

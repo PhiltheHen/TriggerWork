@@ -49,7 +49,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   // Mark: - CBPeripheralDelegate
   
   func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
-    let uuidsForBTService: [CBUUID] = [UUID.MeasurementCharUUID, UUID.LocationCharUUID, UUID.VibrationCharUUID]
+    let uuidsForBTService: [CBUUID] = [UUID.MeasurementCharUUID, UUID.ShotFiredCharUUID]
     
     if (peripheral != self.peripheral) {
       // Wrong Peripheral
@@ -78,12 +78,11 @@ class BTService: NSObject, CBPeripheralDelegate {
     
     guard let rawValue = characteristic.value else { return }
     
+    if characteristic.UUID == UUID.ShotFiredCharUUID {
+      print("Shot Fired Value: \(characteristic.value)")
+    }
     
     rawValue.getBytes(UnsafeMutablePointer<UInt8>(buffer), length:buffer.count)
-    if characteristic.UUID == UUID.VibrationCharUUID {
-    //print("Charactaristic UUID: \(characteristic.UUID), Value: \(rawValue)")
-      print("Buffer value: \(buffer)")
-    }
     self.delegate?.didUpdateTriggerValue(String(buffer[1]))
   }
   
@@ -105,12 +104,9 @@ class BTService: NSObject, CBPeripheralDelegate {
       
       for characteristic in characteristics {
         if characteristic.UUID == UUID.MeasurementCharUUID {
-          
           peripheral.setNotifyValue(true, forCharacteristic: characteristic)
           self.sendBTServiceNotificationWithIsBluetoothConnected(true)
-        } else if characteristic.UUID == UUID.LocationCharUUID {
-          peripheral.setNotifyValue(true, forCharacteristic: characteristic)
-        } else if characteristic.UUID == UUID.VibrationCharUUID {
+        } else if characteristic.UUID == UUID.ShotFiredCharUUID {
           peripheral.setNotifyValue(true, forCharacteristic: characteristic)
         }
       }
