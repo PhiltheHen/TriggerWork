@@ -98,6 +98,7 @@ class BTDiscoveryViewController: UIViewController {
       
       if let _: Bool = userInfo[BLEScanStatus.Started] {
         self.emptyStateView.hidden = true
+        SVProgressHUD.dismiss()
         SVProgressHUD.showWithStatus("Searching for Bluetooth Triggers...")
       }
       

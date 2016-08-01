@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
   var ref: FIRDatabaseReference!
   let moc = DataController().managedObjectContext
   var accessToken: String?
+  var isSignedOut = false
+  var authListener: FIRAuthStateDidChangeListenerHandle?
   
   @IBOutlet weak var passwordTextField: UITextField!
   
@@ -56,6 +58,8 @@ class LoginViewController: UIViewController {
   
   @IBAction func loginButtonPressed(sender: AnyObject) {
     
+    isSignedOut = false
+    
     // 1. Check network availability
     let reachability: Reachability
     do {
@@ -66,15 +70,20 @@ class LoginViewController: UIViewController {
     }
     
     // 2. Check if user is already signed in
-    FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+    authListener = FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+      
+      if self.isSignedOut { return }
+      
       if user != nil {
         print("User already signed in.")
+        self.removeAuthStateListener()
         self.performSegueWithIdentifier("LoginSegue", sender: self)
       } else {
         // Check for existing access token
         if self.accessToken != nil {
           print("Access token exists - logging in...")
           if reachability.isReachable() {
+            self.removeAuthStateListener()
             self.loginAuthorizedUserWithAccessToken(self.accessToken!)
           } else {
             // No network connection
@@ -181,6 +190,18 @@ class LoginViewController: UIViewController {
   // MARK: UI Settings
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .LightContent
+  }
+  
+  // MARK: Unwind Segues
+  @IBAction func logoutUser(segue:UIStoryboardSegue) {
+    isSignedOut = true
+    //FBSDKLoginManager().logOut()
+    try! FIRAuth.auth()!.signOut()
+  }
+  
+  // MARK: Navigation
+  func removeAuthStateListener() {
+    FIRAuth.auth()?.removeAuthStateDidChangeListener(authListener!)
   }
 }
 
