@@ -74,6 +74,10 @@ class LoginViewController: UIViewController {
       
       if self.isSignedOut { return }
       
+      dispatch_async(dispatch_get_main_queue()) {
+        SVProgressHUD.show()
+      }
+      
       if user != nil {
         print("User already signed in.")
         self.removeAuthStateListener()
@@ -89,6 +93,9 @@ class LoginViewController: UIViewController {
             // No network connection
             let alertPresenter = AlertPresenter(controller: self)
             alertPresenter.presentNoNetworkForLoginError()
+            dispatch_async(dispatch_get_main_queue()) {
+              SVProgressHUD.dismiss()
+            }
           }
         } else {
           // Create new access token
@@ -101,6 +108,9 @@ class LoginViewController: UIViewController {
             // No network connection
             let alertPresenter = AlertPresenter(controller: self)
             alertPresenter.presentNoNetworkForLoginError()
+            dispatch_async(dispatch_get_main_queue()) {
+              SVProgressHUD.dismiss()
+            }
           }
         }
       }
@@ -121,9 +131,6 @@ class LoginViewController: UIViewController {
         print("Login cancelled")
       } else {
         print("Login successful")
-        dispatch_async(dispatch_get_main_queue()) {
-          SVProgressHUD.show()
-        }
         
         // Save access token to prevent facebok dialog from reappearing after initial authorization
         // Also helps in offline mode to maintain authenticated user's access token

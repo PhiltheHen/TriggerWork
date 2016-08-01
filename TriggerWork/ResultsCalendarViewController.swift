@@ -46,13 +46,16 @@ class ResultsCalendarViewController: UIViewController {
       print("Found \(self.sessions.count) sessions for userID \(self.firManager.userID)")
     
       for session in self.sessions {
+        print("Session: \(session["uid"])")
         let shotDate = session["date"] as! String
         let cvDate = CVDate(date: NSDate.stringToDate(shotDate))
-        let shotData = session["shot_data"] as! NSArray
-        let lastShot = shotData.lastObject as! NSDictionary
-        if let elapsedTime = lastShot["time"] {
-          self.sessionDates.append(["date" : cvDate.convertedDate()!,
-            "sessionTime" : elapsedTime as! String])
+        if let shotData = session["shot_data"] as? NSArray {
+          let lastShot = shotData.lastObject as! NSDictionary
+          if let elapsedTime = lastShot["time"] {
+            self.sessionDates.append(["date" : cvDate.convertedDate()!,
+              "sessionTime" : elapsedTime as! String])
+          }
+
         }
         self.calendarView.contentController.refreshPresentedMonth()
       }
@@ -78,8 +81,9 @@ class ResultsCalendarViewController: UIViewController {
       let shotDate = session["date"] as! String
       let cvDate = CVDate(date: NSDate.stringToDate(shotDate))
       if cvDate.convertedDate() == selectedDay.date.convertedDate() {
-        let shotData = session["shot_data"] as! NSArray
-        dataToPass.append(shotData)
+        if let shotData = session["shot_data"] as? NSArray {
+          dataToPass.append(shotData)
+        }
       }
     }
     
