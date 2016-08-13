@@ -31,6 +31,8 @@
 		4E3FB7E21C8CE324007D22FD /* MyriadPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */; };
 		4E3FB7E41C8CE330007D22FD /* MyriadPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */; };
 		4E3FB7EA1C8CEF55007D22FD /* BTDeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FB7E91C8CEF55007D22FD /* BTDeviceTableViewCell.swift */; };
+		4E4809661D5EC05C00A6079D /* RepeatingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4809651D5EC05C00A6079D /* RepeatingTimer.swift */; };
+		4E4809671D5EC05C00A6079D /* RepeatingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4809651D5EC05C00A6079D /* RepeatingTimer.swift */; };
 		4E5A5C3A1D32BAC2007E71B1 /* FIRDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A5C391D32BAC2007E71B1 /* FIRDataManager.swift */; };
 		4E5A5C3B1D32BAC2007E71B1 /* FIRDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A5C391D32BAC2007E71B1 /* FIRDataManager.swift */; };
 		4E5A6CBA1C8B76D200806161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A6CB91C8B76D200806161 /* LoginViewController.swift */; };
@@ -141,6 +143,7 @@
 		4E3FB7E11C8CE324007D22FD /* MyriadPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Light.otf"; sourceTree = "<group>"; };
 		4E3FB7E31C8CE330007D22FD /* MyriadPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Black.otf"; sourceTree = "<group>"; };
 		4E3FB7E91C8CEF55007D22FD /* BTDeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BTDeviceTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4E4809651D5EC05C00A6079D /* RepeatingTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatingTimer.swift; sourceTree = "<group>"; };
 		4E5A5C391D32BAC2007E71B1 /* FIRDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRDataManager.swift; sourceTree = "<group>"; };
 		4E5A6CB91C8B76D200806161 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4E5A6CC71C8B833700806161 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Constants.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -347,6 +350,7 @@
 				4E5A6CC71C8B833700806161 /* Constants.swift */,
 				4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */,
 				4EDB8E411CD5639B00BC4459 /* Timeout.swift */,
+				4E4809651D5EC05C00A6079D /* RepeatingTimer.swift */,
 				4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */,
 				4E3A82131C853C03002561E2 /* AppDelegate.swift */,
 			);
@@ -825,6 +829,7 @@
 				4E1CAF761C9DF10C0049A2DA /* ShotCollectionViewCell.swift in Sources */,
 				4EEFB46C1D31AFC80015EFCA /* Authentication+CoreDataProperties.swift in Sources */,
 				4E5CF88D1D4EAB4E0026F679 /* MainTabBarController.swift in Sources */,
+				4E4809661D5EC05C00A6079D /* RepeatingTimer.swift in Sources */,
 				4EDB8E401CD55CC500BC4459 /* Extensions.swift in Sources */,
 				4E5A5C3A1D32BAC2007E71B1 /* FIRDataManager.swift in Sources */,
 				4E5CF8901D4EB3080026F679 /* SettingsViewController.swift in Sources */,
@@ -876,6 +881,7 @@
 				4EF1319B1D0DE37400300960 /* BTDeviceTableViewCell.swift in Sources */,
 				4EF1319C1D0DE37400300960 /* ResultsCalendarViewController.swift in Sources */,
 				4E5CF88E1D4EAB4E0026F679 /* MainTabBarController.swift in Sources */,
+				4E4809671D5EC05C00A6079D /* RepeatingTimer.swift in Sources */,
 				4EF1319D1D0DE37400300960 /* ShotCollectionViewCell.swift in Sources */,
 				4E5A5C3B1D32BAC2007E71B1 /* FIRDataManager.swift in Sources */,
 				4E5CF8911D4EB3080026F679 /* SettingsViewController.swift in Sources */,

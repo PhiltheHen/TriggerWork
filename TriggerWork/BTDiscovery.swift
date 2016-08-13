@@ -49,8 +49,10 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   }
   
   func scanTimeout() {
-    self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.TimedOut)
-    self.stopScanning()
+    if (!isConnectedToPeripheral()) {
+      self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.TimedOut)
+      self.stopScanning()
+    }
   }
   
   var peripheralName: String? {

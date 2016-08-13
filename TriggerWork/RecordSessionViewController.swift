@@ -23,6 +23,7 @@ class RecordSessionViewController: UIViewController {
   // Timer
   var startTime: NSTimeInterval = NSDate.timeIntervalSinceReferenceDate()
   var currentTime: NSTimeInterval = 0
+  var fetchTimer: RepeatingTimer?
   
   // Firebase
   let firManager = FIRDataManager()
@@ -37,6 +38,25 @@ class RecordSessionViewController: UIViewController {
     super.viewDidLoad()
     // Unsure if this is needed
     //startStopButton = StartStopButton()
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    // Setup timer for reading characteristic from bluetooth
+    fetchTimer = RepeatingTimer(Constants.BLEDataUpdateInterval) {
+      if let service = btDiscoverySharedInstance.bleService {
+        service.fetchBroadcastingCharacteristicValue()
+      }
+    }
+  }
+  
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+    if (fetchTimer != nil) {
+      fetchTimer?.cancel()
+    }
   }
   
   // MARK: - IBActions
