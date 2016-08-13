@@ -16,7 +16,8 @@ struct Constants {
   static let BLETimeout = 5.0 // seconds
   static let BLEDataUpdateInterval = 0.1 // seconds
   static let MaxDataPoints = 50
-  static let MaxYValue = 280
+  static let MaxYValue = 100
+  static let MinYValue = -10
   static let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
   static let BLEServiceScanStatusNotification = "kBLEServiceScanStatusNotification"
 

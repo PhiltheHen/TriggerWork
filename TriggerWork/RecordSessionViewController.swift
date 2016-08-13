@@ -15,6 +15,7 @@ class RecordSessionViewController: UIViewController {
   var data = [[String : String]]()
   var currentIndex = 0
   var resetPlot = false
+  var currentYMax: Int = Constants.MaxYValue
   
   // Core Plot
   var graph : CPTGraph?
@@ -130,8 +131,10 @@ extension RecordSessionViewController: CPTPlotDataSource {
     let graph = CPTXYGraph(frame: CGRectZero)
     
     let axisSet = graph.axisSet as! CPTXYAxisSet
+    axisSet.xAxis?.labelingPolicy = .None
     axisSet.xAxis?.axisLineStyle = nil
     axisSet.xAxis?.hidden = true
+    axisSet.yAxis?.labelingPolicy = .None
     axisSet.yAxis?.axisLineStyle = nil
     axisSet.yAxis?.hidden = true
     
@@ -143,7 +146,7 @@ extension RecordSessionViewController: CPTPlotDataSource {
     
     let plotSpace = graph.defaultPlotSpace as! CPTXYPlotSpace
     plotSpace.xRange = CPTPlotRange(location: 0, length: Constants.MaxDataPoints - 2)
-    plotSpace.yRange = CPTPlotRange(location: -5, length: Constants.MaxYValue)
+    plotSpace.yRange = CPTPlotRange(location: Constants.MinYValue, length: Constants.MaxYValue)
     
     graph.addPlot(plot)
     graphView.hostedGraph = graph
@@ -159,6 +162,7 @@ extension RecordSessionViewController: CPTPlotDataSource {
       plot!.deleteDataInIndexRange(NSMakeRange(0, data.count))
       data.removeAll()
       currentIndex = 0
+      currentYMax = Constants.MaxYValue
     }
   }
   
@@ -179,16 +183,34 @@ extension RecordSessionViewController: CPTPlotDataSource {
     // If both graph and plot exist, plot points
     if let _ = graph, _ = plot {
       
+      // Shift X Range
       let plotSpace = graph!.defaultPlotSpace as! CPTXYPlotSpace
       let location = currentIndex >= Constants.MaxDataPoints ? currentIndex - Constants.MaxDataPoints + 2 : 0
-      let newRange = CPTPlotRange(location: location,
+      let newXRange = CPTPlotRange(location: location,
                                   length: Constants.MaxDataPoints - 2)
       
       CPTAnimation.animate(plotSpace,
                            property: "xRange",
                            fromPlotRange: plotSpace.xRange,
-                           toPlotRange: newRange,
-                           duration: 0.1)
+                           toPlotRange: newXRange,
+                           duration: CGFloat(Constants.BLEDataUpdateInterval)) // want the animation time to be the same as the update interval
+      
+      // Scale Y Range if necessary - Want the plot to max out 4/5 of the way up
+      if (Float(newValue) > Float(currentYMax) * (4/5)) {
+    
+        currentYMax = Int(Float(newValue)! * 5/4)
+        
+        let newYRange = CPTPlotRange(location: Constants.MinYValue, length: NSNumber(integer: currentYMax))
+        
+        CPTAnimation.animate(plotSpace,
+                             property: "yRange",
+                             fromPlotRange: plotSpace.yRange,
+                             toPlotRange: newYRange,
+                             duration: CGFloat(Constants.BLEDataUpdateInterval))
+
+      }
+      
+
       
       currentIndex += 1
       
