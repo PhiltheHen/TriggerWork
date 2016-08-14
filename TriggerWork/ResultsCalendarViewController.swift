@@ -21,7 +21,7 @@ class ResultsCalendarViewController: UIViewController {
   // Session Data
   var sessions = [AnyObject]()
   var dataToPass = [NSArray]()
-
+  var sessionCount: Int = 0
   // IBOutlets
   @IBOutlet weak var calendarMenuView: CVCalendarMenuView!
   @IBOutlet weak var calendarView: CVCalendarView!
@@ -97,6 +97,8 @@ class ResultsCalendarViewController: UIViewController {
     if segue.identifier == "ViewResultsSegue" {
       let controller = segue.destinationViewController as! ResultsDayViewController
       controller.sessionData = dataToPass
+      controller.sessionCount = sessionCount
+      controller.dayString = selectedDay.date.commonDescription
     }
   }
   
@@ -146,7 +148,7 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
       let formattedSeconds = NSDate.formatElapsedSecondsDouble(totalTime.roundToHundredths())
       sessionTimeLabel.text = "Total time: \(formattedSeconds)"
       numberSessionsLabel.text = numberSessions == 1 ? "\(numberSessions) Session" : "\(numberSessions) Sessions"
-
+      sessionCount = numberSessions
     }
     
         print(dayView.date.commonDescription)

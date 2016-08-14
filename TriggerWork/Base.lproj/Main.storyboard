@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -725,10 +725,13 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="fNJ-8q-AOr" id="wgl-Cx-2UL"/>
                         <outlet property="graphView" destination="iIh-oI-SDL" id="93i-xa-HrP"/>
                         <outlet property="graphViewHeightConstraint" destination="5of-Dv-zT9" id="385-HQ-wK9"/>
+                        <outlet property="numberSessionsLabel" destination="BEY-2q-cyR" id="dR9-LD-EKp"/>
                         <outlet property="tableView" destination="yoh-at-p4b" id="IkC-iZ-0VQ"/>
                         <outlet property="tableViewHeightConstraint" destination="3uW-1h-Mhx" id="wAG-zs-MRz"/>
+                        <outlet property="userNameLabel" destination="qvD-Ai-nfA" id="SEo-cW-GUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8B-Lx-Sqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -771,7 +774,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoR-jQ-tXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="552"/>
+            <point key="canvasLocation" x="-382" y="456"/>
         </scene>
         <!--Viewer-->
         <scene sceneID="pat-Q3-lpQ">

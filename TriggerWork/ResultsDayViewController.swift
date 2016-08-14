@@ -11,10 +11,16 @@ import CorePlot
 
 class ResultsDayViewController: UIViewController {
   
+  // Firebase Manager
+  let firManager = FIRDataManager()
+
+  // Data for plot
   var data = [String:String]()
   var sortedTimes = [(String, AnyObject)]()
   var sessionData = [NSArray]()
   var currentSession = NSArray()
+  var dayString: String = ""
+  var sessionCount: Int = 0
   
   // Core Plot
   let plot = CPTScatterPlot()
@@ -28,6 +34,9 @@ class ResultsDayViewController: UIViewController {
   // Storyboard elements
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var graphView: CPTGraphHostingView!
+  @IBOutlet weak var userNameLabel: UILabel!
+  @IBOutlet weak var dateLabel: UILabel!
+  @IBOutlet weak var numberSessionsLabel: UILabel!
   
   
   // MARK: - Lifecycle
@@ -36,6 +45,10 @@ class ResultsDayViewController: UIViewController {
     tableView.backgroundColor = Colors.defaultBlackColor()
     tableView.separatorStyle = .None
     //loadTestData()
+    
+    userNameLabel.text = firManager.currentUser.displayName
+    dateLabel.text = dayString;
+    numberSessionsLabel.text = sessionCount == 1 ? "\(sessionCount) Session" : "\(sessionCount) Sessions"
     setupGraphView()
   }
   
@@ -82,8 +95,12 @@ extension ResultsDayViewController: CPTPlotDataSource {
     let graph = CPTXYGraph(frame: CGRectZero)
     
     let axisSet = graph.axisSet as! CPTXYAxisSet
+    axisSet.xAxis?.labelingPolicy = .None
     axisSet.xAxis?.axisLineStyle = nil
+    axisSet.xAxis?.hidden = true
+    axisSet.yAxis?.labelingPolicy = .None
     axisSet.yAxis?.axisLineStyle = nil
+    axisSet.yAxis?.hidden = true
     
     plot.dataSource = self
     plot.interpolation = .Curved
@@ -94,8 +111,8 @@ extension ResultsDayViewController: CPTPlotDataSource {
     let yRange = plotSpace.yRange.mutableCopy() as! CPTMutablePlotRange
     xRange.length = maxTime
     yRange.length = maxValue + 10.0
-    plotSpace.xRange = xRange
-    plotSpace.yRange = yRange
+    plotSpace.xRange = CPTPlotRange(location: 0, length: maxTime)
+    plotSpace.yRange = CPTPlotRange(location: Constants.MinYValue, length: maxValue + 10.0)
     
     graph.addPlot(plot)
     graphView.hostedGraph = graph
@@ -168,7 +185,7 @@ extension ResultsDayViewController: UITableViewDataSource {
         time = NSDate.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
       }
     }
-    return "Session \(section): \(time)"
+    return "Session \(section+1): \(time)"
   }
 }
 
