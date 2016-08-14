@@ -25,7 +25,7 @@ class ResultsDayViewController: UIViewController {
   // Core Plot
   let plot = CPTScatterPlot()
   var maxTime: Double = 0
-  var maxValue: Double = 300.0
+  var maxValue: Double = 0
 
   // Layout Constraints
   @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
@@ -80,7 +80,7 @@ class ResultsDayViewController: UIViewController {
   }  
 }
 
-extension ResultsDayViewController: CPTPlotDataSource {
+extension ResultsDayViewController: CPTPlotDataSource, CPTPlotSpaceDelegate {
   func setupGraphView() {
     
     // Reset graph view
@@ -114,6 +114,9 @@ extension ResultsDayViewController: CPTPlotDataSource {
     plotSpace.xRange = CPTPlotRange(location: 0, length: maxTime)
     plotSpace.yRange = CPTPlotRange(location: Constants.MinYValue, length: maxValue + 10.0)
     
+    plotSpace.delegate = self;
+    plotSpace.allowsUserInteraction = true;
+    
     graph.addPlot(plot)
     graphView.hostedGraph = graph
   }
@@ -141,6 +144,11 @@ extension ResultsDayViewController: CPTPlotDataSource {
     return Double(dataPoint)!
     
   }
+  
+  func plotSpace(space: CPTPlotSpace, shouldScaleBy interactionScale: CGFloat, aboutPoint interactionPoint: CGPoint) -> Bool {
+    return true
+  }
+  
 }
 
 extension ResultsDayViewController: CPTScatterPlotDataSource {
@@ -210,8 +218,21 @@ extension ResultsDayViewController: UICollectionViewDelegate {
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     
+    // Reset plot length limits
+    maxValue = 0
+    maxTime = 0
+    
     // Generate graph for selected session
     currentSession = sessionData[collectionView.tag]
+    
+    for session in currentSession {
+      if let stringValue = session["value"] {
+        let value = stringValue as! String
+        if Double(value) > maxValue {
+          maxValue = Double(value)!
+        }
+      }
+    }
     
     let lastShot = currentSession.lastObject as! NSDictionary
     if let elapsedTime = lastShot["time"] {
