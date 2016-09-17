@@ -9,13 +9,13 @@ def shared_pods
 	pod 'Firebase'
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
-	pod 'SwiftHEXColors'
+	pod 'SwiftHEXColors', :git => 'https://github.com/thii/SwiftHEXColors.git', :branch => 'swift-3.0'
 	pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-	pod 'CVCalendar', '~> 1.2.9'
+	pod 'CVCalendar', '~> 1.4.0'
 	pod 'CorePlot'
 	pod 'Fabric'
 	pod 'Crashlytics'
-	pod 'ReachabilitySwift'
+	pod 'ReachabilitySwift', '~> 3'
 end
 
 target 'TriggerWork' do

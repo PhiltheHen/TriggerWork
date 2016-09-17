@@ -31,11 +31,11 @@ struct UUID {
 
 struct Fonts {
   
-  static func defaultLightFontWithSize(size: CGFloat) -> UIFont {
+  static func defaultLightFontWithSize(_ size: CGFloat) -> UIFont {
     return UIFont(name: "MyriadPro-Light", size: size)!
   }
   
-  static func defaultRegularFontWithSize(size: CGFloat) -> UIFont {
+  static func defaultRegularFontWithSize(_ size: CGFloat) -> UIFont {
     return UIFont(name: "MyriadPro-Bold", size: size)!
   }
 }
@@ -59,8 +59,8 @@ struct Colors {
 }
 
 struct Helpers {
-  static func sortedKeysAndValuesFromDict(dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
-    return dict.sort { $0.0 < $1.0 }
+  static func sortedKeysAndValuesFromDict(_ dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
+    return dict.sorted { $0.0 < $1.0 }
   }
 }
 

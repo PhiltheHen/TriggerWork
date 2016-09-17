@@ -31,11 +31,11 @@ class FIRDataManager: NSObject {
   /**
    Save data to current firebase database reference
    */
-  func saveSessionWithShotData(data:[[String:String]]) {
+  func saveSessionWithShotData(_ data:[[String:String]]) {
     
     let key = ref.child("sessions").childByAutoId().key
-    let session : [String : AnyObject] = ["uid" : userID,
-                                          "date" : NSDate.currentDateToString(),
+    let session : [String : AnyObject] = ["uid" : userID as AnyObject,
+                                          "date" : Date.currentDateToString(),
                                           "shot_data" : data]
     
     let childUpdates = ["/sessions/\(key)" : session,
@@ -46,8 +46,8 @@ class FIRDataManager: NSObject {
   /**
    Retrieve data once with a specific session ID
    */
-  func retrieveDataFromSessionWithID(sessionID:String, completion:(result: NSArray) -> Void) {
-    ref.child("sessions").child(sessionID).observeSingleEventOfType(.Value, withBlock: {(snapshot) in
+  func retrieveDataFromSessionWithID(_ sessionID:String, completion:@escaping (_ result: NSArray) -> Void) {
+    ref.child("sessions").child(sessionID).observeSingleEvent(of: .value, with: {(snapshot) in
       let data = snapshot.value as! NSArray
       
       /* Print data for testing (reference)
@@ -56,17 +56,17 @@ class FIRDataManager: NSObject {
       }
        */
       
-      completion(result: data)
+      completion(data)
     })
   }
   
   /**
    Retrieve data for specific user ID and create listener for changes to database
    */
-  func retrieveDataForUser(userID:String, completion:(result: NSDictionary) -> Void) {
-    ref.child("/user-sessions/\(userID)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+  func retrieveDataForUser(_ userID:String, completion:@escaping (_ result: NSDictionary) -> Void) {
+    ref.child("/user-sessions/\(userID)").observe(FIRDataEventType.value, with: { (snapshot) in
       if let sessions = snapshot.value as? [String : AnyObject] {
-        completion(result: sessions)
+        completion(sessions as NSDictionary)
       }
     })
   }

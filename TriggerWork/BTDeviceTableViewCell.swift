@@ -15,13 +15,13 @@ class BTDeviceTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    cellCheckmark.hidden = true
-    self.selectionStyle = .None
+    cellCheckmark.isHidden = true
+    self.selectionStyle = .none
   }
   
-  override func setSelected(selected: Bool, animated: Bool) {
+  override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-    cellCheckmark.hidden = !selected
+    cellCheckmark.isHidden = !selected
     cellCheckmark.pumpAnimation()
   }
   

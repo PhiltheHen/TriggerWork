@@ -20,7 +20,7 @@ class SessionTableViewCell: UITableViewCell {
         collectionView.layer.cornerRadius = 10
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -28,8 +28,8 @@ class SessionTableViewCell: UITableViewCell {
   
   //https://ashfurrow.com/blog/putting-a-uicollectionview-in-a-uitableviewcell-in-swift/
   func setCollectionViewDataSourceDelegate
-    <D: protocol<UICollectionViewDataSource, UICollectionViewDelegate>>
-    (dataSourceDelegate: D, forRow row: Int) {
+    <D: UICollectionViewDataSource & UICollectionViewDelegate>
+    (_ dataSourceDelegate: D, forRow row: Int) {
     
     collectionView.delegate = dataSourceDelegate
     collectionView.dataSource = dataSourceDelegate

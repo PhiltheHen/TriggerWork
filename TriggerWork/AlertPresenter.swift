@@ -17,27 +17,27 @@ class AlertPresenter: NSObject {
     viewController = controller;
   }
   
-  func presentAlertWithTitle(title: String,
+  func presentAlertWithTitle(_ title: String,
                              message: String,
                              okHandler: ((UIAlertAction) -> Void)?) {
     
-    let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-    let okAction = UIAlertAction(title: "Ok", style: .Default, handler: okHandler)
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "Ok", style: .default, handler: okHandler)
     alertController.addAction(okAction)
-    viewController?.presentViewController(alertController, animated: true, completion: nil)
+    viewController?.present(alertController, animated: true, completion: nil)
   }
   
-  func presentAlertWithTitle(title: String,
+  func presentAlertWithTitle(_ title: String,
                              message: String,
                              okHandler: ((UIAlertAction) -> Void)?,
                              cancelHandler: ((UIAlertAction) -> Void)?) {
     
-    let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-    let okAction = UIAlertAction(title: "Ok", style: .Default, handler: okHandler)
-    let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: cancelHandler)
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "Ok", style: .default, handler: okHandler)
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelHandler)
     alertController.addAction(okAction)
     alertController.addAction(cancelAction)
-    viewController?.presentViewController(alertController, animated: true, completion: nil)
+    viewController?.present(alertController, animated: true, completion: nil)
   }
   
   func presentNoNetworkForLoginError() {

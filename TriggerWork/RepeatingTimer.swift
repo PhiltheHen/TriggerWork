@@ -9,13 +9,13 @@
 import Foundation
 
 class RepeatingTimer: NSObject {
-  private var timer: NSTimer?
-  private var callback: (Void -> Void)?
+  fileprivate var timer: Timer?
+  fileprivate var callback: ((Void) -> Void)?
   
-  init(_ delaySeconds: Double, _ callback: Void -> Void) {
+  init(_ delaySeconds: Double, _ callback: @escaping (Void) -> Void) {
     super.init()
     self.callback = callback
-    self.timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(delaySeconds),
+    self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(delaySeconds),
                                                         target: self,
                                                         selector: #selector(Timeout.invoke),
                                                         userInfo: nil,

@@ -11,7 +11,7 @@ import UIKit
 
 class StartStopButton: UIButton {
   
-  override var selected: Bool {
+  override var isSelected: Bool {
     willSet(newValue) {
 
       if newValue {
@@ -34,7 +34,7 @@ class StartStopButton: UIButton {
   }
   
   convenience init() {
-    self.init(frame:CGRectZero)
+    self.init(frame:CGRect.zero)
     setup()
   }
   
@@ -57,13 +57,13 @@ class StartStopButton: UIButton {
   func setup() {
     self.layer.cornerRadius = self.frame.width/2;
     self.backgroundColor = Colors.defaultGreenColor()
-    self.tintColor = UIColor.whiteColor()
+    self.tintColor = UIColor.white
 
-    self.setTitle("Start", forState: .Normal)
-    self.setTitle("Stop", forState: .Selected)
-    self.setBackgroundImage(nil, forState: .Selected)
-    self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-    self.setTitleColor(UIColor.whiteColor(), forState: .Selected)
+    self.setTitle("Start", for: UIControlState())
+    self.setTitle("Stop", for: .selected)
+    self.setBackgroundImage(nil, for: .selected)
+    self.setTitleColor(UIColor.white, for: UIControlState())
+    self.setTitleColor(UIColor.white, for: .selected)
   }
   
 }
