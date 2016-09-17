@@ -13,8 +13,8 @@ import UIKit
  Converts UIColor to CGColor
  */
 extension CALayer {
-  func setBorderColorFromUIColor(color: UIColor) {
-    self.borderColor = color.CGColor
+  func setBorderColorFromUIColor(_ color: UIColor) {
+    self.borderColor = color.cgColor
   }
 }
 
@@ -32,60 +32,60 @@ extension UIView {
    Simple pump animation for a UIView
    */
   func pumpAnimation() {
-    UIView.animateWithDuration(0.3/1.5, animations: { 
-      self.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.1, 1.1)
-      }) { _ in
-        UIView.animateWithDuration(0.3/2, animations: { 
-          self.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.9, 0.9)
+    UIView.animate(withDuration: 0.3/1.5, animations: { 
+      self.transform = CGAffineTransform.identity.scaledBy(x: 1.1, y: 1.1)
+      }, completion: { _ in
+        UIView.animate(withDuration: 0.3/2, animations: { 
+          self.transform = CGAffineTransform.identity.scaledBy(x: 0.9, y: 0.9)
           }, completion: { _ in
-            UIView.animateWithDuration(0.3/2, animations: { 
-              self.transform = CGAffineTransformIdentity
+            UIView.animate(withDuration: 0.3/2, animations: { 
+              self.transform = CGAffineTransform.identity
             })
         })
-    }
+    }) 
   }
 }
 
 extension UIButton {
   func enable() {
     self.alpha = 1.0
-    self.enabled = true
+    self.isEnabled = true
   }
   
   func disable() {
     self.alpha = 0.5
-    self.enabled = false
+    self.isEnabled = false
   }
 }
 
-extension NSDate {
+extension Date {
   /**
    Returns a string from date in the format "dd-MM-yyyy HH:mm:ss"
    */
-  class func currentDateToString() -> (String){
-    let formatter = NSDateFormatter()
+  static func currentDateToString() -> (String){
+    let formatter = DateFormatter()
     formatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
-    let stringDate: String = formatter.stringFromDate(NSDate())
+    let stringDate: String = formatter.string(from: Date())
     return stringDate
   }
   
   /**
    Returns a date from string preferably in the format "dd-MM-yyyy HH:mm:ss"
    */
-  class func stringToDate(dateString:String) -> (NSDate) {
-    let dateFormatter = NSDateFormatter()
+  static func stringToDate(_ dateString:String) -> (Date) {
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
-    return dateFormatter.dateFromString(dateString)!
+    return dateFormatter.date(from: dateString)!
   }
   
   /**
    Formats a string of seconds into HH:mm:ss.0
    Source: http://stackoverflow.com/questions/26794703/swift-integer-conversion-to-hours-minutes-seconds
    */
-  class func formatElapsedSecondsDouble(elapsedSeconds: Double) -> String {
+  static func formatElapsedSecondsDouble(_ elapsedSeconds: Double) -> String {
     let hours = Int(elapsedSeconds / 3600)
-    let minutes = Int((elapsedSeconds % 3600) / 60)
-    let seconds: Double = (elapsedSeconds % 3600) % 60
+    let minutes = Int((elapsedSeconds.truncatingRemainder(dividingBy: 3600)) / 60)
+    let seconds: Double = (elapsedSeconds % 3600).truncatingRemainder(dividingBy: 60)
     
     if hours > 0 {
       return "\(hours):\(minutes):\(seconds)"

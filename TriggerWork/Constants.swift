@@ -14,8 +14,10 @@ import CoreBluetooth
 struct Constants {
   static let CorePlotIdentifier = "DataSourcePlot"
   static let BLETimeout = 5.0 // seconds
+  static let BLEDataUpdateInterval = 0.1 // seconds
   static let MaxDataPoints = 50
-  static let MaxYValue = 280
+  static let MaxYValue = 100
+  static let MinYValue = -5
   static let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
   static let BLEServiceScanStatusNotification = "kBLEServiceScanStatusNotification"
 
@@ -29,11 +31,11 @@ struct UUID {
 
 struct Fonts {
   
-  static func defaultLightFontWithSize(size: CGFloat) -> UIFont {
+  static func defaultLightFontWithSize(_ size: CGFloat) -> UIFont {
     return UIFont(name: "MyriadPro-Light", size: size)!
   }
   
-  static func defaultRegularFontWithSize(size: CGFloat) -> UIFont {
+  static func defaultRegularFontWithSize(_ size: CGFloat) -> UIFont {
     return UIFont(name: "MyriadPro-Bold", size: size)!
   }
 }
@@ -57,8 +59,8 @@ struct Colors {
 }
 
 struct Helpers {
-  static func sortedKeysAndValuesFromDict(dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
-    return dict.sort { $0.0 < $1.0 }
+  static func sortedKeysAndValuesFromDict(_ dict: Dictionary<String, AnyObject>) -> [(String, AnyObject)] {
+    return dict.sorted { $0.0 < $1.0 }
   }
 }
 

@@ -14,14 +14,15 @@ import CoreBluetooth
 
 // MARK: - BTService Delegate Methods
 protocol BTServiceDelegate: class {
-  func didUpdateTriggerValue(value: String)
+  func didUpdateTriggerValue(_ value: String)
 }
 
 class BTService: NSObject, CBPeripheralDelegate {
   
   weak var delegate: BTServiceDelegate?
   var peripheral: CBPeripheral?
-  
+  var broadcastingCharacteristic: CBCharacteristic?
+  var cachedValue: Data?
   init(initWithPeripheral peripheral: CBPeripheral) {
     super.init()
     
@@ -48,7 +49,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   
   // Mark: - CBPeripheralDelegate
   
-  func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
+  func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
     let uuidsForBTService: [CBUUID] = [UUID.MeasurementCharUUID, UUID.ShotFiredCharUUID]
     
     if (peripheral != self.peripheral) {
@@ -66,31 +67,56 @@ class BTService: NSObject, CBPeripheralDelegate {
     }
     
     for service in peripheral.services! {
-      if service.UUID == UUID.BLEServiceUUID {
+      if service.uuid == UUID.BLEServiceUUID {
         // Notify that our service has been found
-        peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
+        peripheral.discoverCharacteristics(uuidsForBTService, for: service)
       }
     }
   }
   
-  func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+  // Want to manually control the data retrieval instead of relying on automatic updates from the receiver
+  func fetchBroadcastingCharacteristicValue() {
+    if let characteristic = broadcastingCharacteristic {
+      
+      // This method calls the peripheral:didUpdateValueForCharacteristic:error: method
+      peripheral?.readValue(for: characteristic)
+    }
+  }
+  
+  func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
     let buffer: [UInt8] = [0, 1, 2]
     
-    guard let rawValue = characteristic.value else { return }
+    let value: Data?
     
-    if characteristic.UUID == UUID.ShotFiredCharUUID {
+    // Want to ensure value is not nil
+    if let rawValue = characteristic.value {
+      value = rawValue
+    } else {
+      if (cachedValue != nil) {
+        value = cachedValue
+      } else {
+        return
+      }
+    }
+    
+    if characteristic.uuid == UUID.ShotFiredCharUUID {
       print("Shot Fired Value: \(characteristic.value)")
     }
     
-    rawValue.getBytes(UnsafeMutablePointer<UInt8>(buffer), length:buffer.count)
+    // Cache latest value in case we can't read from the characteristic
+    cachedValue = characteristic.value
+    
+    // Value guaranteed to not be nil
+    (value! as NSData).getBytes(UnsafeMutablePointer<UInt8>(mutating: buffer), length:buffer.count)
     self.delegate?.didUpdateTriggerValue(String(buffer[1]))
   }
+
   
-  func peripheral(peripheral: CBPeripheral, didUpdateNotificationStateForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
+  func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
     //print("Charactaristic UUID: \(characteristic.UUID), Value: \(characteristic.value)")
   }
   
-  func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
+  func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
     if (peripheral != self.peripheral) {
       // Wrong Peripheral
       return
@@ -103,20 +129,28 @@ class BTService: NSObject, CBPeripheralDelegate {
     if let characteristics = service.characteristics {
       
       for characteristic in characteristics {
-        if characteristic.UUID == UUID.MeasurementCharUUID {
-          peripheral.setNotifyValue(true, forCharacteristic: characteristic)
+        if characteristic.uuid == UUID.MeasurementCharUUID {
+          
+          // Saving this variable so we can query the characteristic for its value at any point
+          broadcastingCharacteristic = characteristic
+          
+          // Set up notifications for updates to the characteristic - not going this route at the moment
+          //peripheral.setNotifyValue(true, forCharacteristic: characteristic)
+          
           self.sendBTServiceNotificationWithIsBluetoothConnected(true)
-        } else if characteristic.UUID == UUID.ShotFiredCharUUID {
-          peripheral.setNotifyValue(true, forCharacteristic: characteristic)
+          
+        } else if characteristic.uuid == UUID.ShotFiredCharUUID {
+          // TODO: Not implemented yet
+          peripheral.setNotifyValue(true, for: characteristic)
         }
       }
     }
   }
   
   // Mark: - Private
-  func sendBTServiceNotificationWithIsBluetoothConnected(isBluetoothConnected: Bool) {
+  func sendBTServiceNotificationWithIsBluetoothConnected(_ isBluetoothConnected: Bool) {
     let connectionDetails = ["isConnected": isBluetoothConnected]
-    NSNotificationCenter.defaultCenter().postNotificationName(Constants.BLEServiceChangedStatusNotification, object: self, userInfo: connectionDetails)
+    NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.BLEServiceChangedStatusNotification), object: self, userInfo: connectionDetails)
   }
   
 }

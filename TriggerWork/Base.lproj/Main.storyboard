@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -363,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKe-B1-7pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="-209"/>
+            <point key="canvasLocation" x="1040" y="-281"/>
         </scene>
         <!--Record Session View Controller-->
         <scene sceneID="UgU-to-VzZ">
@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdH-I0-6or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="-209"/>
+            <point key="canvasLocation" x="1718" y="-281"/>
         </scene>
         <!--Calendar Appearance Delegate-->
         <scene sceneID="PTJ-bJ-izz">
@@ -591,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLR-BA-GcD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="1340"/>
+            <point key="canvasLocation" x="-382" y="1166"/>
         </scene>
         <!--Results Day View Controller-->
         <scene sceneID="6oP-wk-UIM">
@@ -630,7 +630,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIh-oI-SDL" customClass="CPTGraphHostingView">
-                                <rect key="frame" x="90" y="132" width="420" height="0.0"/>
+                                <rect key="frame" x="40" y="132" width="520" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" id="5of-Dv-zT9"/>
@@ -698,14 +698,14 @@
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yoh-at-p4b" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" constant="-20" id="1o7-0D-xOx"/>
-                            <constraint firstItem="iIh-oI-SDL" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" constant="70" id="97q-p8-nvd"/>
+                            <constraint firstItem="iIh-oI-SDL" firstAttribute="leading" secondItem="vVX-2H-fDH" secondAttribute="leadingMargin" constant="20" id="97q-p8-nvd"/>
                             <constraint firstItem="qvD-Ai-nfA" firstAttribute="top" secondItem="yuv-U5-ht4" secondAttribute="bottom" constant="8" id="Awu-nH-j8U"/>
                             <constraint firstItem="BEY-2q-cyR" firstAttribute="top" secondItem="fNJ-8q-AOr" secondAttribute="bottom" constant="8" id="Ba5-rF-vc1"/>
                             <constraint firstItem="yoh-at-p4b" firstAttribute="height" secondItem="vVX-2H-fDH" secondAttribute="height" multiplier="0.4" id="Dqo-wC-xQ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yoh-at-p4b" secondAttribute="trailing" constant="-20" id="GcL-Gb-EYN"/>
                             <constraint firstItem="yoh-at-p4b" firstAttribute="top" secondItem="BEY-2q-cyR" secondAttribute="bottom" priority="750" constant="18" id="KDO-Nw-0Bi"/>
                             <constraint firstItem="yoh-at-p4b" firstAttribute="top" secondItem="BEY-2q-cyR" secondAttribute="bottom" constant="120" id="PtM-W5-JoJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iIh-oI-SDL" secondAttribute="trailing" constant="70" id="X82-S2-L6a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iIh-oI-SDL" secondAttribute="trailing" constant="20" id="X82-S2-L6a"/>
                             <constraint firstItem="iIh-oI-SDL" firstAttribute="top" secondItem="BEY-2q-cyR" secondAttribute="bottom" constant="18" id="cjf-5y-obV"/>
                             <constraint firstItem="qvD-Ai-nfA" firstAttribute="trailing" secondItem="vVX-2H-fDH" secondAttribute="trailingMargin" id="gOg-DK-BEH"/>
                             <constraint firstItem="C2U-z4-y2Z" firstAttribute="top" secondItem="yoh-at-p4b" secondAttribute="bottom" id="hIO-4i-eNq"/>
@@ -725,15 +725,18 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="fNJ-8q-AOr" id="wgl-Cx-2UL"/>
                         <outlet property="graphView" destination="iIh-oI-SDL" id="93i-xa-HrP"/>
                         <outlet property="graphViewHeightConstraint" destination="5of-Dv-zT9" id="385-HQ-wK9"/>
+                        <outlet property="numberSessionsLabel" destination="BEY-2q-cyR" id="dR9-LD-EKp"/>
                         <outlet property="tableView" destination="yoh-at-p4b" id="IkC-iZ-0VQ"/>
                         <outlet property="tableViewHeightConstraint" destination="3uW-1h-Mhx" id="wAG-zs-MRz"/>
+                        <outlet property="userNameLabel" destination="qvD-Ai-nfA" id="SEo-cW-GUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8B-Lx-Sqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498" y="1340"/>
+            <point key="canvasLocation" x="273" y="1166"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="B6b-i7-iK0">
@@ -771,7 +774,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoR-jQ-tXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="552"/>
+            <point key="canvasLocation" x="-382" y="456"/>
         </scene>
         <!--Viewer-->
         <scene sceneID="pat-Q3-lpQ">
@@ -790,7 +793,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bj-Cu-0N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="-209"/>
+            <point key="canvasLocation" x="362" y="-281"/>
         </scene>
         <!--Settings-->
         <scene sceneID="DLh-jr-1WV">
@@ -853,7 +856,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3Y-pS-3a4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sEM-X7-g8a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="362" y="-917"/>
+            <point key="canvasLocation" x="362" y="-1005"/>
         </scene>
     </scenes>
     <resources>

@@ -17,7 +17,7 @@ class BTDiscoveryViewController: UIViewController {
   
   lazy var refreshControl: UIRefreshControl = {
     let refreshControl = UIRefreshControl()
-    refreshControl.addTarget(self, action: #selector(BTDiscoveryViewController.scanDevices(_:)), forControlEvents: UIControlEvents.ValueChanged)
+    refreshControl.addTarget(self, action: #selector(BTDiscoveryViewController.scanDevices(_:)), for: UIControlEvents.valueChanged)
     
     return refreshControl
   }()
@@ -29,36 +29,36 @@ class BTDiscoveryViewController: UIViewController {
     
     tableView.addSubview(refreshControl)
     
-    tableView.hidden = true
+    tableView.isHidden = true
     
     continueButton.disable()
     
     // Watch Bluetooth connection
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: Constants.BLEServiceChangedStatusNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: NSNotification.Name(rawValue: Constants.BLEServiceChangedStatusNotification), object: nil)
     
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BTDiscoveryViewController.scanStatusChanged(_:)), name: Constants.BLEServiceScanStatusNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.scanStatusChanged(_:)), name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification), object: nil)
     
     // Start the Bluetooth discovery process
     btDiscoverySharedInstance
   }
   
-  override func viewWillDisappear(animated: Bool) {
+  override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     stopRefresh()
   }
   
   deinit {
-    NSNotificationCenter.defaultCenter().removeObserver(self, name: Constants.BLEServiceChangedStatusNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: Constants.BLEServiceChangedStatusNotification), object: nil)
     
-    NSNotificationCenter.defaultCenter().removeObserver(self, name: Constants.BLEServiceScanStatusNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification), object: nil)
   }
   
-  func connectionChanged(notification: NSNotification) {
+  func connectionChanged(_ notification: Notification) {
     // Connection status changed
     
-    let userInfo = notification.userInfo as! [String: Bool]
+    let userInfo = (notification as NSNotification).userInfo as! [String: Bool]
     
-    dispatch_async(dispatch_get_main_queue(), {
+    DispatchQueue.main.async(execute: {
       SVProgressHUD.dismiss()
       self.refreshControl.endRefreshing()
       
@@ -70,17 +70,17 @@ class BTDiscoveryViewController: UIViewController {
   }
   
   func hideOrShowTableView() {
-    tableView.hidden = !(btDiscoverySharedInstance.isConnectedToPeripheral())
+    tableView.isHidden = !(btDiscoverySharedInstance.isConnectedToPeripheral())
   }
   
   // MARK: IBActions
-  @IBAction func scanDevices(sender: UIButton) {
+  @IBAction func scanDevices(_ sender: UIButton) {
     btDiscoverySharedInstance.startScanning()
   }
   
   // MARK: UI Settings
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return .LightContent
+  override var preferredStatusBarStyle : UIStatusBarStyle {
+    return .lightContent
   }
   
   func stopRefresh() {
@@ -90,26 +90,26 @@ class BTDiscoveryViewController: UIViewController {
   }
   
   // Notification methods
-  func scanStatusChanged(notification: NSNotification) {
+  func scanStatusChanged(_ notification: Notification) {
     
-    let userInfo = notification.userInfo as! [String: Bool]
+    let userInfo = (notification as NSNotification).userInfo as! [String: Bool]
     
-    dispatch_async(dispatch_get_main_queue()) {
+    DispatchQueue.main.async {
       
       if let _: Bool = userInfo[BLEScanStatus.Started] {
-        self.emptyStateView.hidden = true
+        self.emptyStateView.isHidden = true
         SVProgressHUD.dismiss()
-        SVProgressHUD.showWithStatus("Searching for Bluetooth Triggers...")
+        SVProgressHUD.show(withStatus: "Searching for Bluetooth Triggers...")
       }
       
       if let _: Bool = userInfo[BLEScanStatus.Stopped] {
-        self.emptyStateView.hidden = false
+        self.emptyStateView.isHidden = false
         SVProgressHUD.dismiss()
         self.refreshControl.endRefreshing()
       }
       
       if let _: Bool = userInfo[BLEScanStatus.TimedOut] {
-        self.emptyStateView.hidden = false
+        self.emptyStateView.isHidden = false
         SVProgressHUD.dismiss()
         self.refreshControl.endRefreshing()
         let alertPresenter = AlertPresenter(controller: self)
@@ -124,9 +124,9 @@ class BTDiscoveryViewController: UIViewController {
 // MARK - UITableViewDataSource
 extension BTDiscoveryViewController: UITableViewDataSource {
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! BTDeviceTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! BTDeviceTableViewCell
     if let name = btDiscoverySharedInstance.peripheralName {
       cell.bTDeviceName.text = "\(name)"
     } else {
@@ -135,7 +135,7 @@ extension BTDiscoveryViewController: UITableViewDataSource {
     return cell
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 1;
   }
 }
@@ -143,23 +143,23 @@ extension BTDiscoveryViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension BTDiscoveryViewController: UITableViewDelegate {
   
-  func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+  func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
     let header = view as! UITableViewHeaderFooterView
     if let sectionTitleLabel = header.textLabel {
       sectionTitleLabel.font = Fonts.defaultRegularFontWithSize(13.0)
-      sectionTitleLabel.textColor = UIColor.whiteColor();
+      sectionTitleLabel.textColor = UIColor.white;
     }
   }
   
-  func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return "Select a Bluetooth Device..."
   }
   
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80.0
   }
   
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     continueButton.enable()
     continueButton.pumpAnimation()
   }

@@ -8,18 +8,44 @@
 
 import UIKit
 import CorePlot
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class ResultsDayViewController: UIViewController {
   
+  // Firebase Manager
+  let firManager = FIRDataManager()
+
+  // Data for plot
   var data = [String:String]()
   var sortedTimes = [(String, AnyObject)]()
   var sessionData = [NSArray]()
   var currentSession = NSArray()
+  var dayString: String = ""
+  var sessionCount: Int = 0
   
   // Core Plot
   let plot = CPTScatterPlot()
   var maxTime: Double = 0
-  var maxValue: Double = 300.0
+  var maxValue: Double = 0
 
   // Layout Constraints
   @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
@@ -28,22 +54,29 @@ class ResultsDayViewController: UIViewController {
   // Storyboard elements
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var graphView: CPTGraphHostingView!
+  @IBOutlet weak var userNameLabel: UILabel!
+  @IBOutlet weak var dateLabel: UILabel!
+  @IBOutlet weak var numberSessionsLabel: UILabel!
   
   
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.backgroundColor = Colors.defaultBlackColor()
-    tableView.separatorStyle = .None
+    tableView.separatorStyle = .none
     //loadTestData()
+    
+    userNameLabel.text = firManager.currentUser.displayName
+    dateLabel.text = dayString;
+    numberSessionsLabel.text = sessionCount == 1 ? "\(sessionCount) Session" : "\(sessionCount) Sessions"
     setupGraphView()
   }
   
   func loadTestData() {
-    guard let path = NSBundle.mainBundle().pathForResource("sample_data", ofType: "json") else { return }
+    guard let path = Bundle.main.path(forResource: "sample_data", ofType: "json") else { return }
     do {
-      let jsonData = try NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
-      data = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) as! [String : String]
+      let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+      data = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as! [String : String]
       sortedTimes = Helpers.sortedKeysAndValuesFromDict(data)
     }
     catch let error as NSError {
@@ -54,20 +87,20 @@ class ResultsDayViewController: UIViewController {
   func animateViews() {
     view.layoutIfNeeded()
     
-    UIView.animateWithDuration(1.0) {
+    UIView.animate(withDuration: 1.0, animations: {
       self.tableViewHeightConstraint.priority = UILayoutPriorityDefaultHigh;
       self.graphViewHeightConstraint.priority = UILayoutPriorityDefaultLow;
       self.view.layoutIfNeeded()
-    }
+    }) 
   }
   
   // MARK: UI Settings
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return .LightContent
+  override var preferredStatusBarStyle : UIStatusBarStyle {
+    return .lightContent
   }  
 }
 
-extension ResultsDayViewController: CPTPlotDataSource {
+extension ResultsDayViewController: CPTPlotDataSource, CPTPlotSpaceDelegate {
   func setupGraphView() {
     
     // Reset graph view
@@ -76,36 +109,43 @@ extension ResultsDayViewController: CPTPlotDataSource {
     // Styles
     let dataLineStyle = CPTMutableLineStyle()
     dataLineStyle.lineWidth = 3.0
-    dataLineStyle.lineColor = CPTColor(CGColor: Colors.defaultGreenColor().CGColor)
+    dataLineStyle.lineColor = CPTColor(cgColor: Colors.defaultGreenColor().cgColor)
     
     // Plotting Space
-    let graph = CPTXYGraph(frame: CGRectZero)
+    let graph = CPTXYGraph(frame: CGRect.zero)
     
     let axisSet = graph.axisSet as! CPTXYAxisSet
+    axisSet.xAxis?.labelingPolicy = .none
     axisSet.xAxis?.axisLineStyle = nil
+    axisSet.xAxis?.isHidden = true
+    axisSet.yAxis?.labelingPolicy = .none
     axisSet.yAxis?.axisLineStyle = nil
+    axisSet.yAxis?.isHidden = true
     
     plot.dataSource = self
-    plot.interpolation = .Curved
+    plot.interpolation = .curved
     plot.dataLineStyle = dataLineStyle
     
     let plotSpace = graph.defaultPlotSpace as! CPTXYPlotSpace
     let xRange = plotSpace.xRange.mutableCopy() as! CPTMutablePlotRange
     let yRange = plotSpace.yRange.mutableCopy() as! CPTMutablePlotRange
-    xRange.length = maxTime
+    xRange.length = NSNumber(maxTime)
     yRange.length = maxValue + 10.0
-    plotSpace.xRange = xRange
-    plotSpace.yRange = yRange
+    plotSpace.xRange = CPTPlotRange(location: 0, length: NSNumber(maxTime))
+    plotSpace.yRange = CPTPlotRange(location: NSNumber(Constants.MinYValue), length: maxValue + 10.0)
     
-    graph.addPlot(plot)
+    plotSpace.delegate = self;
+    plotSpace.allowsUserInteraction = true;
+    
+    graph.add(plot)
     graphView.hostedGraph = graph
   }
   
-  func numberOfRecordsForPlot(plot: CPTPlot) -> UInt {
+  func numberOfRecords(for plot: CPTPlot) -> UInt {
     return UInt(currentSession.count)
   }
   
-  func doubleForPlot(plot: CPTPlot, field fieldEnum: UInt, recordIndex idx: UInt) -> Double {
+  func double(for plot: CPTPlot, field fieldEnum: UInt, record idx: UInt) -> Double {
     var dataPoint = ""
     
     switch (fieldEnum) {
@@ -124,10 +164,15 @@ extension ResultsDayViewController: CPTPlotDataSource {
     return Double(dataPoint)!
     
   }
+  
+  func plotSpace(_ space: CPTPlotSpace, shouldScaleBy interactionScale: CGFloat, aboutPoint interactionPoint: CGPoint) -> Bool {
+    return true
+  }
+  
 }
 
 extension ResultsDayViewController: CPTScatterPlotDataSource {
-  func symbolForScatterPlot(plot: CPTScatterPlot, recordIndex idx: UInt) -> CPTPlotSymbol? {
+  func symbol(for plot: CPTScatterPlot, record idx: UInt) -> CPTPlotSymbol? {
     return nil
   }
 }
@@ -137,51 +182,51 @@ extension ResultsDayViewController: UITableViewDelegate {
 }
 
 extension ResultsDayViewController: UITableViewDataSource {
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SessionTableViewCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SessionTableViewCell
     
     return cell
   }
   
-  func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     
     // Need control over when delegate and data source are set for the collection view
     guard let tableViewCell = cell as? SessionTableViewCell else { return }
-    tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
+    tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: (indexPath as NSIndexPath).section)
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
     return 1
   }
   
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return sessionData.count
   }
   
-  func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     var time = ""
     let currentSessionData = sessionData[section]
     let lastShot = currentSessionData.lastObject as! NSDictionary
     if let elapsedTime = lastShot["time"] {
       if let doubleTime = Double(elapsedTime as! String) {
-        time = NSDate.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
+        time = Date.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
       }
     }
-    return "Session \(section): \(time)"
+    return "Session \(section+1): \(time)"
   }
 }
 
 extension ResultsDayViewController: UICollectionViewDelegate {
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! ShotCollectionViewCell
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ShotCollectionViewCell
     
     var time = ""
     let currentSessionData = sessionData[collectionView.tag]
     let lastShot = currentSessionData.lastObject as! NSDictionary
     if let elapsedTime = lastShot["time"] {
       if let doubleTime = Double(elapsedTime as! String) {
-        time = NSDate.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
+        time = Date.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
       }
     }
     
@@ -191,10 +236,23 @@ extension ResultsDayViewController: UICollectionViewDelegate {
   }
   
   
-  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+    // Reset plot length limits
+    maxValue = 0
+    maxTime = 0
     
     // Generate graph for selected session
     currentSession = sessionData[collectionView.tag]
+    
+    for session in currentSession {
+      if let stringValue = session["value"] {
+        let value = stringValue as! String
+        if Double(value) > maxValue {
+          maxValue = Double(value)!
+        }
+      }
+    }
     
     let lastShot = currentSession.lastObject as! NSDictionary
     if let elapsedTime = lastShot["time"] {
@@ -212,7 +270,7 @@ extension ResultsDayViewController: UICollectionViewDelegate {
 }
 
 extension ResultsDayViewController: UICollectionViewDataSource {
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
     return 1
   }

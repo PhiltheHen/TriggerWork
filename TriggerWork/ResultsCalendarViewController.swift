@@ -21,7 +21,7 @@ class ResultsCalendarViewController: UIViewController {
   // Session Data
   var sessions = [AnyObject]()
   var dataToPass = [NSArray]()
-
+  var sessionCount: Int = 0
   // IBOutlets
   @IBOutlet weak var calendarMenuView: CVCalendarMenuView!
   @IBOutlet weak var calendarView: CVCalendarView!
@@ -34,7 +34,7 @@ class ResultsCalendarViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = CVDate(date: NSDate()).globalDescription
+    title = CVDate(date: Date()).globalDescription
     userNameLabel.text = firManager.currentUser.displayName
     
     viewResultsButton.disable()
@@ -48,7 +48,7 @@ class ResultsCalendarViewController: UIViewController {
       for session in self.sessions {
         print("Session: \(session["uid"])")
         let shotDate = session["date"] as! String
-        let cvDate = CVDate(date: NSDate.stringToDate(shotDate))
+        let cvDate = CVDate(date: Date.stringToDate(shotDate))
         if let shotData = session["shot_data"] as? NSArray {
           let lastShot = shotData.lastObject as! NSDictionary
           if let elapsedTime = lastShot["time"] {
@@ -62,7 +62,7 @@ class ResultsCalendarViewController: UIViewController {
     }
   }
   
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
   }
@@ -75,11 +75,11 @@ class ResultsCalendarViewController: UIViewController {
   }
   
   // MARK: IBActions
-  @IBAction func viewResultsButtonPressed(sender: AnyObject) {
+  @IBAction func viewResultsButtonPressed(_ sender: AnyObject) {
     dataToPass.removeAll()
     for session in sessions {
       let shotDate = session["date"] as! String
-      let cvDate = CVDate(date: NSDate.stringToDate(shotDate))
+      let cvDate = CVDate(date: Date.stringToDate(shotDate))
       if cvDate.convertedDate() == selectedDay.date.convertedDate() {
         if let shotData = session["shot_data"] as? NSArray {
           dataToPass.append(shotData)
@@ -88,21 +88,23 @@ class ResultsCalendarViewController: UIViewController {
     }
     
     if dataToPass.count > 0 {
-      self.performSegueWithIdentifier("ViewResultsSegue", sender: self)
+      self.performSegue(withIdentifier: "ViewResultsSegue", sender: self)
     }
 
   }
   
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "ViewResultsSegue" {
-      let controller = segue.destinationViewController as! ResultsDayViewController
+      let controller = segue.destination as! ResultsDayViewController
       controller.sessionData = dataToPass
+      controller.sessionCount = sessionCount
+      controller.dayString = selectedDay.date.commonDescription
     }
   }
   
   // MARK: UI Settings
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return .LightContent
+  override var preferredStatusBarStyle : UIStatusBarStyle {
+    return .lightContent
   }
 }
 
@@ -116,7 +118,7 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
     return .MonthView
   }
   
-  func didSelectDayView(dayView: DayView, animationDidFinish: Bool) {
+  func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
     selectedDay = dayView
 
     if (dayView.date != nil) {
@@ -126,7 +128,7 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
       var totalTime: Double = 0
       var numberSessions: Int = 0
       for date in sessionDates {
-        if date["date"] as! NSDate == convertedDate {
+        if date["date"] as! Date == convertedDate {
           if let sessionTime = date["sessionTime"] {
             // Necessary checks due to data arch changes in Dev database
             if let doubleTime = Double(sessionTime as! String) {
@@ -143,16 +145,16 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
       }
       
       // Again, extra checks to maintain backward compatability with database
-      let formattedSeconds = NSDate.formatElapsedSecondsDouble(totalTime.roundToHundredths())
+      let formattedSeconds = Date.formatElapsedSecondsDouble(totalTime.roundToHundredths())
       sessionTimeLabel.text = "Total time: \(formattedSeconds)"
       numberSessionsLabel.text = numberSessions == 1 ? "\(numberSessions) Session" : "\(numberSessions) Sessions"
-
+      sessionCount = numberSessions
     }
     
         print(dayView.date.commonDescription)
   }
   
-  func presentedDateUpdated(date: Date) {
+  func presentedDateUpdated(_ date: Date) {
     if title != date.globalDescription {
       title = date.globalDescription
     }
@@ -218,23 +220,23 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
     let diameter: CGFloat = (newView.bounds.width) - ringSpacing
     let radius: CGFloat = diameter / 2.0
     
-    let rect = CGRectMake(newView.frame.midX-radius, newView.frame.midY-radius-ringVerticalOffset, diameter, diameter)
+    let rect = CGRect(x: newView.frame.midX-radius, y: newView.frame.midY-radius-ringVerticalOffset, width: diameter, height: diameter)
     
     ringLayer = CAShapeLayer()
     newView.layer.addSublayer(ringLayer)
     
     ringLayer.fillColor = nil
     ringLayer.lineWidth = ringLineWidth
-    ringLayer.strokeColor = ringLineColour.CGColor
+    ringLayer.strokeColor = ringLineColour.cgColor
     
     let ringLineWidthInset: CGFloat = CGFloat(ringLineWidth/2.0) + ringInsetWidth
-    let ringRect: CGRect = CGRectInset(rect, ringLineWidthInset, ringLineWidthInset)
-    let centrePoint: CGPoint = CGPointMake(ringRect.midX, ringRect.midY)
+    let ringRect: CGRect = rect.insetBy(dx: ringLineWidthInset, dy: ringLineWidthInset)
+    let centrePoint: CGPoint = CGPoint(x: ringRect.midX, y: ringRect.midY)
     let startAngle: CGFloat = CGFloat(-π/2.0)
     let endAngle: CGFloat = CGFloat(π * 2.0) + startAngle
     let ringPath: UIBezierPath = UIBezierPath(arcCenter: centrePoint, radius: ringRect.width/2.0, startAngle: startAngle, endAngle: endAngle, clockwise: true)
     
-    ringLayer.path = ringPath.CGPath
+    ringLayer.path = ringPath.cgPath
     ringLayer.frame = newView.layer.bounds
     
     return newView
@@ -247,7 +249,7 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
       guard let convertedDate = dayView.date.convertedDate() else { return false }
       
       for sessionDate in sessionDates {
-        if sessionDate["date"] as! NSDate == convertedDate {
+        if sessionDate["date"] as! Date == convertedDate {
           return true
         }
       }
@@ -269,7 +271,7 @@ extension ResultsCalendarViewController: CVCalendarViewAppearanceDelegate {
   }
   
   func dayOfWeekTextColor() -> UIColor {
-    return UIColor.whiteColor()
+    return UIColor.white
   }
   
   func dayLabelWeekdayFont() -> UIFont {
@@ -277,7 +279,7 @@ extension ResultsCalendarViewController: CVCalendarViewAppearanceDelegate {
   }
   
   func dayLabelWeekdayInTextColor() -> UIColor {
-    return UIColor.whiteColor()
+    return UIColor.white
   }
   
   func dayLabelPresentWeekdayHighlightedBackgroundAlpha() -> CGFloat {

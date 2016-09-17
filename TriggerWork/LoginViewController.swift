@@ -34,15 +34,15 @@ class LoginViewController: UIViewController {
     fetchAccessToken()
     
     // Initialize SVProgressHUD style
-    SVProgressHUD.setDefaultStyle(.Dark)
-    SVProgressHUD.setDefaultMaskType(.Black)
+    SVProgressHUD.setDefaultStyle(.dark)
+    SVProgressHUD.setDefaultMaskType(.black)
   }
   
   func fetchAccessToken() {
     let authFetch = NSFetchRequest(entityName: "Authentication")
     
     do {
-      let fetchedAuth = try moc.executeFetchRequest(authFetch) as! [Authentication]
+      let fetchedAuth = try moc.fetch(authFetch) as! [Authentication]
       guard let authentication = fetchedAuth.first else { return }
       guard let token = authentication.accessToken else { return }
       accessToken = token
@@ -51,12 +51,12 @@ class LoginViewController: UIViewController {
     }
   }
   
-  @IBAction func skipButtonPressed(sender: AnyObject) {
+  @IBAction func skipButtonPressed(_ sender: AnyObject) {
     // Sign in user anonymously to obtain temp user ID
     self.loginAnonymousUser()
   }
   
-  @IBAction func loginButtonPressed(sender: AnyObject) {
+  @IBAction func loginButtonPressed(_ sender: AnyObject) {
     
     isSignedOut = false
     
@@ -70,18 +70,18 @@ class LoginViewController: UIViewController {
     }
     
     // 2. Check if user is already signed in
-    authListener = FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+    authListener = FIRAuth.auth()?.addStateDidChangeListener { auth, user in
       
       if self.isSignedOut { return }
       
-      dispatch_async(dispatch_get_main_queue()) {
+      DispatchQueue.main.async {
         SVProgressHUD.show()
       }
       
       if user != nil {
         print("User already signed in.")
         self.removeAuthStateListener()
-        self.performSegueWithIdentifier("LoginSegue", sender: self)
+        self.performSegue(withIdentifier: "LoginSegue", sender: self)
       } else {
         // Check for existing access token
         if self.accessToken != nil {
@@ -93,7 +93,7 @@ class LoginViewController: UIViewController {
             // No network connection
             let alertPresenter = AlertPresenter(controller: self)
             alertPresenter.presentNoNetworkForLoginError()
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
               SVProgressHUD.dismiss()
             }
           }
@@ -108,7 +108,7 @@ class LoginViewController: UIViewController {
             // No network connection
             let alertPresenter = AlertPresenter(controller: self)
             alertPresenter.presentNoNetworkForLoginError()
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
               SVProgressHUD.dismiss()
             }
           }
@@ -123,20 +123,20 @@ class LoginViewController: UIViewController {
   // Facebook Login
   func beginFacebookLoginProcedure() {
     let login = FBSDKLoginManager()
-    login.logInWithReadPermissions(["public_profile", "email"], fromViewController: self) { (result, error) in
+    login.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
       if let error = error {
         print("Login error: \(error.localizedDescription)")
         return
-      } else if (result.isCancelled) {
+      } else if (result?.isCancelled)! {
         print("Login cancelled")
       } else {
         print("Login successful")
         
         // Save access token to prevent facebok dialog from reappearing after initial authorization
         // Also helps in offline mode to maintain authenticated user's access token
-        let entity = NSEntityDescription.insertNewObjectForEntityForName("Authentication", inManagedObjectContext: self.moc) as! Authentication
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "Authentication", into: self.moc) as! Authentication
         
-        entity.setValue(FBSDKAccessToken.currentAccessToken().tokenString, forKey: "accessToken")
+        entity.setValue(FBSDKAccessToken.current().tokenString, forKey: "accessToken")
         
         print("Saving access token...")
         do {
@@ -146,16 +146,16 @@ class LoginViewController: UIViewController {
         }
         
         // User is authorized, now log in
-        self.loginAuthorizedUserWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+        self.loginAuthorizedUserWithAccessToken(FBSDKAccessToken.current().tokenString)
       }
     }
   }
   
   // Authorized User Login - Facebook
-  func loginAuthorizedUserWithAccessToken(accessToken: String) {
-    let credential = FIRFacebookAuthProvider.credentialWithAccessToken(accessToken)
-    FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
-      dispatch_async(dispatch_get_main_queue()) {
+  func loginAuthorizedUserWithAccessToken(_ accessToken: String) {
+    let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken)
+    FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+      DispatchQueue.main.async {
         SVProgressHUD.dismiss()
       }
       if let error = error {
@@ -164,13 +164,13 @@ class LoginViewController: UIViewController {
       } else {
         // Link anonymous user with authorized account
         if let user = user {
-          user.linkWithCredential(credential) { (user, error) in
+          user.link(with: credential) { (user, error) in
             if let error = error {
               print("Error linking accounts: \(error.localizedDescription)")
               print("Logging in anyway...")
-              self.performSegueWithIdentifier("LoginSegue", sender: self)
+              self.performSegue(withIdentifier: "LoginSegue", sender: self)
             } else {
-              self.performSegueWithIdentifier("LoginSegue", sender: self)
+              self.performSegue(withIdentifier: "LoginSegue", sender: self)
             }
             
           }
@@ -181,26 +181,26 @@ class LoginViewController: UIViewController {
   
   // Anonymous User Login
   func loginAnonymousUser() {
-    FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-      dispatch_async(dispatch_get_main_queue()) {
+    FIRAuth.auth()?.signInAnonymously() { (user, error) in
+      DispatchQueue.main.async {
         SVProgressHUD.dismiss()
       }
       if let error = error {
         print("Firebase sign-in error: \(error.localizedDescription)")
         return
       } else {
-        self.performSegueWithIdentifier("LoginSegue", sender: self)
+        self.performSegue(withIdentifier: "LoginSegue", sender: self)
       }
     }
   }
   
   // MARK: UI Settings
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return .LightContent
+  override var preferredStatusBarStyle : UIStatusBarStyle {
+    return .lightContent
   }
   
   // MARK: Unwind Segues
-  @IBAction func logoutUser(segue:UIStoryboardSegue) {
+  @IBAction func logoutUser(_ segue:UIStoryboardSegue) {
     isSignedOut = true
     //FBSDKLoginManager().logOut()
     try! FIRAuth.auth()!.signOut()
@@ -208,12 +208,12 @@ class LoginViewController: UIViewController {
   
   // MARK: Navigation
   func removeAuthStateListener() {
-    FIRAuth.auth()?.removeAuthStateDidChangeListener(authListener!)
+    FIRAuth.auth()?.removeStateDidChangeListener(authListener!)
   }
 }
 
 extension LoginViewController: UITextFieldDelegate {
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     passwordTextField.resignFirstResponder()
     return true
   }
