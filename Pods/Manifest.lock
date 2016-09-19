@@ -1,5 +1,5 @@
 PODS:
-  - CorePlot (2.1)
+  - CorePlot (2.2)
   - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
   - CVCalendar (1.4.0)
@@ -67,7 +67,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/thii/SwiftHEXColors.git
 
 SPEC CHECKSUMS:
-  CorePlot: ab9898c79b94999018e9634ab0aa4c21480c8552
+  CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
   Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
   CVCalendar: ec1a06a508f99d8e5067258754f811a8a1433a3f
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
