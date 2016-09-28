@@ -39,7 +39,7 @@ class BTDiscoveryViewController: UIViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.scanStatusChanged(_:)), name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification), object: nil)
     
     // Start the Bluetooth discovery process
-    btDiscoverySharedInstance
+    let _ = btDiscoverySharedInstance
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -138,6 +138,10 @@ extension BTDiscoveryViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 1;
   }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return "Select a Bluetooth Device..."
+  }
 }
 
 // MARK: - UITableViewDelegate
@@ -150,11 +154,7 @@ extension BTDiscoveryViewController: UITableViewDelegate {
       sectionTitleLabel.textColor = UIColor.white;
     }
   }
-  
-  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Select a Bluetooth Device..."
-  }
-  
+    
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80.0
   }

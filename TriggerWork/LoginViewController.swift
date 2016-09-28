@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
   }
   
   func fetchAccessToken() {
-    let authFetch = NSFetchRequest(entityName: "Authentication")
+    let authFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Authentication")
     
     do {
       let fetchedAuth = try moc.fetch(authFetch) as! [Authentication]
@@ -61,13 +61,7 @@ class LoginViewController: UIViewController {
     isSignedOut = false
     
     // 1. Check network availability
-    let reachability: Reachability
-    do {
-      reachability = try Reachability.reachabilityForInternetConnection()
-    } catch {
-      print("Unable to create Reachability")
-      return
-    }
+    let reachability = Reachability()!
     
     // 2. Check if user is already signed in
     authListener = FIRAuth.auth()?.addStateDidChangeListener { auth, user in
@@ -86,7 +80,7 @@ class LoginViewController: UIViewController {
         // Check for existing access token
         if self.accessToken != nil {
           print("Access token exists - logging in...")
-          if reachability.isReachable() {
+          if reachability.isReachable {
             self.removeAuthStateListener()
             self.loginAuthorizedUserWithAccessToken(self.accessToken!)
           } else {
@@ -99,7 +93,7 @@ class LoginViewController: UIViewController {
           }
         } else {
           // Create new access token
-          if reachability.isReachable() {
+          if reachability.isReachable {
             // Network connection via WiFi or Cellular
             print("Access token does not exist - trying Facebook login")
             self.beginFacebookLoginProcedure()
@@ -159,7 +153,9 @@ class LoginViewController: UIViewController {
         SVProgressHUD.dismiss()
       }
       if let error = error {
-        print("Firebase sign-in error: \(error.localizedDescription)")
+        print("Firebase sign-in error: \(error.localizedDescription). Attempting Facebook login...")
+        // If error, try authenticating with facebook from scratch
+        self.beginFacebookLoginProcedure()
         return
       } else {
         // Link anonymous user with authorized account
@@ -202,7 +198,9 @@ class LoginViewController: UIViewController {
   // MARK: Unwind Segues
   @IBAction func logoutUser(_ segue:UIStoryboardSegue) {
     isSignedOut = true
-    //FBSDKLoginManager().logOut()
+    
+    // Fetch access token to use for next sign in
+    fetchAccessToken()
     try! FIRAuth.auth()!.signOut()
   }
   

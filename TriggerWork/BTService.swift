@@ -4,7 +4,7 @@
 //
 //  Created by Owen L Brown on 10/11/14.
 //  Copyright (c) 2014 Razeware LLC. All rights reserved.
-// 
+//
 //  Modified by Phil Henson on 3/9/16.
 //  Copyright © 2016 Lost Nation R & D. All rights reserved.
 //
@@ -22,6 +22,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   weak var delegate: BTServiceDelegate?
   var peripheral: CBPeripheral?
   var broadcastingCharacteristic: CBCharacteristic?
+  var impulseCharacteristic: CBCharacteristic?
   var cachedValue: Data?
   init(initWithPeripheral peripheral: CBPeripheral) {
     super.init()
@@ -76,15 +77,22 @@ class BTService: NSObject, CBPeripheralDelegate {
   
   // Want to manually control the data retrieval instead of relying on automatic updates from the receiver
   func fetchBroadcastingCharacteristicValue() {
+   
+    
     if let characteristic = broadcastingCharacteristic {
-      
       // This method calls the peripheral:didUpdateValueForCharacteristic:error: method
       peripheral?.readValue(for: characteristic)
     }
+ 
+    
+    //if let impulse = impulseCharacteristic {
+    //  peripheral?.readValue(for: impulse)
+    //}
   }
   
   func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-    let buffer: [UInt8] = [0, 1, 2]
+    
+    let buffer: [UInt8] = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     
     let value: Data?
     
@@ -99,18 +107,20 @@ class BTService: NSObject, CBPeripheralDelegate {
       }
     }
     
-    if characteristic.uuid == UUID.ShotFiredCharUUID {
-      print("Shot Fired Value: \(characteristic.value)")
-    }
     
     // Cache latest value in case we can't read from the characteristic
     cachedValue = characteristic.value
     
     // Value guaranteed to not be nil
     (value! as NSData).getBytes(UnsafeMutablePointer<UInt8>(mutating: buffer), length:buffer.count)
-    self.delegate?.didUpdateTriggerValue(String(buffer[1]))
-  }
 
+    print("Buffer Value: \(buffer)")
+    self.delegate?.didUpdateTriggerValue(String(buffer[1]))
+    
+    if (buffer[0] > 0) {
+      print("Interrupt Fired")
+    }
+  }
   
   func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
     //print("Charactaristic UUID: \(characteristic.UUID), Value: \(characteristic.value)")
@@ -141,6 +151,7 @@ class BTService: NSObject, CBPeripheralDelegate {
           
         } else if characteristic.uuid == UUID.ShotFiredCharUUID {
           // TODO: Not implemented yet
+          impulseCharacteristic = characteristic
           peripheral.setNotifyValue(true, for: characteristic)
         }
       }

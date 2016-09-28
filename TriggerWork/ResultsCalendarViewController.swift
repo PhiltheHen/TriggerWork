@@ -42,7 +42,7 @@ class ResultsCalendarViewController: UIViewController {
     // Retrieve session dates and create listener for new session data
     firManager.retrieveDataForUser(firManager.userID) { (result) in
       
-      self.sessions = Array(result.allValues)
+      self.sessions = Array(result.allValues) as [AnyObject]
       print("Found \(self.sessions.count) sessions for userID \(self.firManager.userID)")
     
       for session in self.sessions {
@@ -52,8 +52,8 @@ class ResultsCalendarViewController: UIViewController {
         if let shotData = session["shot_data"] as? NSArray {
           let lastShot = shotData.lastObject as! NSDictionary
           if let elapsedTime = lastShot["time"] {
-            self.sessionDates.append(["date" : cvDate.convertedDate()!,
-              "sessionTime" : elapsedTime as! String])
+            self.sessionDates.append(["date" : cvDate.convertedDate()! as AnyObject,
+              "sessionTime" : elapsedTime as! String as AnyObject])
           }
 
         }
@@ -111,11 +111,11 @@ class ResultsCalendarViewController: UIViewController {
 // MARK: - Required Calendar View Delegate Methods
 extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
   func firstWeekday() -> Weekday {
-    return .Sunday
+    return .sunday
   }
   
   func presentationMode() -> CalendarMode {
-    return .MonthView
+    return .monthView
   }
   
   func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
@@ -154,15 +154,15 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
         print(dayView.date.commonDescription)
   }
   
-  func presentedDateUpdated(_ date: Date) {
+  func presentedDateUpdated(_ date: CVDate) {
     if title != date.globalDescription {
       title = date.globalDescription
     }
   }
   
   func preliminaryView(viewOnDayView dayView: DayView) -> UIView {
-    let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.bounds, shape: CVShape.Circle)
-    circleView.fillColor = .clearColor()
+    let circleView = CVAuxiliaryView(dayView: dayView, rect: dayView.bounds, shape: CVShape.circle)
+    circleView.fillColor = UIColor.clear
     return circleView
   }
   

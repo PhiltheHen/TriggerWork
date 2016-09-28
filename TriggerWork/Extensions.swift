@@ -23,7 +23,7 @@ extension Double {
    Simple rounding function for doubles.
    */
   func roundToHundredths() -> Double {
-    return Double(round(100*self)/100)
+    return Double((100*self).rounded()/100)
   }
 }
 
@@ -77,15 +77,12 @@ extension Date {
     dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
     return dateFormatter.date(from: dateString)!
   }
-  
-  /**
-   Formats a string of seconds into HH:mm:ss.0
-   Source: http://stackoverflow.com/questions/26794703/swift-integer-conversion-to-hours-minutes-seconds
-   */
+
   static func formatElapsedSecondsDouble(_ elapsedSeconds: Double) -> String {
     let hours = Int(elapsedSeconds / 3600)
     let minutes = Int((elapsedSeconds.truncatingRemainder(dividingBy: 3600)) / 60)
-    let seconds: Double = (elapsedSeconds % 3600).truncatingRemainder(dividingBy: 60)
+    var seconds: Double = (elapsedSeconds / 3600).truncatingRemainder(dividingBy: 60)
+    seconds = seconds.roundToHundredths()
     
     if hours > 0 {
       return "\(hours):\(minutes):\(seconds)"

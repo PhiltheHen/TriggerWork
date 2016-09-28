@@ -131,33 +131,41 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   }
   
   func centralManagerDidUpdateState(_ central: CBCentralManager) {
-    switch (central.state) {
-    case CBCentralManagerState.poweredOff:
-      print("Bluetooth powered off")
-      self.clearDevices()
-      
-    case CBCentralManagerState.unauthorized:
-      // Indicate to user that the iOS device does not support BLE.
-      print("Bluetooth access unauthorized");
-      break
-      
-    case CBCentralManagerState.unknown:
-      // Wait for another event
-      print("Bluetooth state unknown")
-      break
-      
-    case CBCentralManagerState.poweredOn:
-      print("Bluetooth powered on")
-      self.stopScanning()
-      self.startScanning()
-      
-    case CBCentralManagerState.resetting:
-      print("Bluetooth resetting")
-      self.clearDevices()
-      
-    case CBCentralManagerState.unsupported:
-      print("Bluetooth not supported by device")
-      break
+    
+    // Necessary fix at the moment, according to Apple: http://stackoverflow.com/questions/39450534/cbcentralmanager-ios10-and-ios9
+    if #available(iOS 10.0, *) {
+      switch central.state{
+      case CBManagerState.unauthorized:
+        print("This app is not authorised to use Bluetooth low energy")
+      case CBManagerState.poweredOff:
+        self.clearDevices()
+        print("Bluetooth is currently powered off.")
+      case CBManagerState.poweredOn:
+        self.stopScanning()
+        self.startScanning()
+        print("Bluetooth is currently powered on and available to use.")
+      case CBManagerState.resetting:
+        self.clearDevices()
+        print("Bluetooth resetting")
+      default:break
+      }
+    } else {
+      // Fallback on earlier versions
+      switch central.state.rawValue {
+      case 1: // CBCentralManagerState.resetting :
+        self.clearDevices()
+        print("Bluetooth resetting")
+      case 3: // CBCentralManagerState.unauthorized :
+        print("This app is not authorised to use Bluetooth low energy")
+      case 4: // CBCentralManagerState.poweredOff:
+        self.clearDevices()
+        print("Bluetooth is currently powered off.")
+      case 5: //CBCentralManagerState.poweredOn:
+        self.stopScanning()
+        self.startScanning()
+        print("Bluetooth is currently powered on and available to use.")
+      default:break
+      }
     }
   }
   

@@ -77,7 +77,7 @@ class ResultsDayViewController: UIViewController {
     do {
       let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
       data = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as! [String : String]
-      sortedTimes = Helpers.sortedKeysAndValuesFromDict(data)
+      sortedTimes = Helpers.sortedKeysAndValuesFromDict(data as Dictionary<String, AnyObject>)
     }
     catch let error as NSError {
       print("Failed to load: \(error.localizedDescription)")
@@ -129,10 +129,10 @@ extension ResultsDayViewController: CPTPlotDataSource, CPTPlotSpaceDelegate {
     let plotSpace = graph.defaultPlotSpace as! CPTXYPlotSpace
     let xRange = plotSpace.xRange.mutableCopy() as! CPTMutablePlotRange
     let yRange = plotSpace.yRange.mutableCopy() as! CPTMutablePlotRange
-    xRange.length = NSNumber(maxTime)
-    yRange.length = maxValue + 10.0
-    plotSpace.xRange = CPTPlotRange(location: 0, length: NSNumber(maxTime))
-    plotSpace.yRange = CPTPlotRange(location: NSNumber(Constants.MinYValue), length: maxValue + 10.0)
+    xRange.length = maxTime as NSNumber
+    yRange.length = (maxValue + 10.0) as NSNumber
+    plotSpace.xRange = CPTPlotRange(location: 0, length: maxTime as NSNumber)
+    plotSpace.yRange = CPTPlotRange(location: Constants.MinYValue as NSNumber, length: (maxValue + 10.0) as NSNumber)
     
     plotSpace.delegate = self;
     plotSpace.allowsUserInteraction = true;
@@ -150,11 +150,13 @@ extension ResultsDayViewController: CPTPlotDataSource, CPTPlotSpaceDelegate {
     
     switch (fieldEnum) {
     case 0:
-      guard let time = currentSession[Int(idx)]["time"] else { break }
+      guard let sessionDataPoint = currentSession[Int(idx)] as? NSDictionary else { break }
+      guard let time = sessionDataPoint["time"] else { break }
       dataPoint = time as! String
       break;
     case 1:
-      guard let value = currentSession[Int(idx)]["value"] else { break }
+      guard let sessionDataPoint = currentSession[Int(idx)] as? NSDictionary else { break }
+      guard let value = sessionDataPoint["value"] else { break }
       dataPoint = value as! String
       break;
     default:
@@ -178,7 +180,12 @@ extension ResultsDayViewController: CPTScatterPlotDataSource {
 }
 
 extension ResultsDayViewController: UITableViewDelegate {
-  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    
+    // Need control over when delegate and data source are set for the collection view
+    guard let tableViewCell = cell as? SessionTableViewCell else { return }
+    tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: (indexPath as NSIndexPath).section)
+  }
 }
 
 extension ResultsDayViewController: UITableViewDataSource {
@@ -186,13 +193,6 @@ extension ResultsDayViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SessionTableViewCell
     
     return cell
-  }
-  
-  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    
-    // Need control over when delegate and data source are set for the collection view
-    guard let tableViewCell = cell as? SessionTableViewCell else { return }
-    tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: (indexPath as NSIndexPath).section)
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -218,23 +218,6 @@ extension ResultsDayViewController: UITableViewDataSource {
 }
 
 extension ResultsDayViewController: UICollectionViewDelegate {
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ShotCollectionViewCell
-    
-    var time = ""
-    let currentSessionData = sessionData[collectionView.tag]
-    let lastShot = currentSessionData.lastObject as! NSDictionary
-    if let elapsedTime = lastShot["time"] {
-      if let doubleTime = Double(elapsedTime as! String) {
-        time = Date.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
-      }
-    }
-    
-    cell.timeLabel.text = time
-    
-    return cell
-  }
-  
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
@@ -246,14 +229,15 @@ extension ResultsDayViewController: UICollectionViewDelegate {
     currentSession = sessionData[collectionView.tag]
     
     for session in currentSession {
-      if let stringValue = session["value"] {
-        let value = stringValue as! String
-        if Double(value) > maxValue {
-          maxValue = Double(value)!
+      if let sessionDataPoint = session as? NSDictionary {
+        if let stringValue = sessionDataPoint["value"] {
+          let value = stringValue as! String
+          if Double(value) > maxValue {
+            maxValue = Double(value)!
+          }
         }
       }
     }
-    
     let lastShot = currentSession.lastObject as! NSDictionary
     if let elapsedTime = lastShot["time"] {
       if let doubleTime = Double(elapsedTime as! String) {
@@ -270,8 +254,25 @@ extension ResultsDayViewController: UICollectionViewDelegate {
 }
 
 extension ResultsDayViewController: UICollectionViewDataSource {
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ShotCollectionViewCell
     
+    var time = ""
+    let currentSessionData = sessionData[collectionView.tag]
+    let lastShot = currentSessionData.lastObject as! NSDictionary
+    if let elapsedTime = lastShot["time"] {
+      if let doubleTime = Double(elapsedTime as! String) {
+        time = Date.formatElapsedSecondsDouble(doubleTime.roundToHundredths())
+      }
+    }
+    
+    cell.timeLabel.text = time
+    
+    return cell
+  }
+
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 1
   }
   

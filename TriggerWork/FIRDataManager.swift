@@ -35,8 +35,8 @@ class FIRDataManager: NSObject {
     
     let key = ref.child("sessions").childByAutoId().key
     let session : [String : AnyObject] = ["uid" : userID as AnyObject,
-                                          "date" : Date.currentDateToString(),
-                                          "shot_data" : data]
+                                          "date" : Date.currentDateToString() as AnyObject,
+                                          "shot_data" : data as AnyObject]
     
     let childUpdates = ["/sessions/\(key)" : session,
                         "/user-sessions/\(userID!)/\(key)/" : session]

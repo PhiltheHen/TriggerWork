@@ -127,13 +127,13 @@ extension RecordSessionViewController: BTServiceDelegate {
     // Might return to this in the future
     
     /*
-        resetPlot = Int(value) <= 1
-        if Int(value) > 0 {
-          dispatch_async(dispatch_get_main_queue(), {
-            self.infoView.hidden = true
-            self.updatePlot(value)
-          })
-        }
+     resetPlot = Int(value) <= 1
+     if Int(value) > 0 {
+     dispatch_async(dispatch_get_main_queue(), {
+     self.infoView.hidden = true
+     self.updatePlot(value)
+     })
+     }
      */
   }
 }
@@ -165,8 +165,8 @@ extension RecordSessionViewController: CPTPlotDataSource {
     plot.dataLineStyle = dataLineStyle
     
     let plotSpace = graph.defaultPlotSpace as! CPTXYPlotSpace
-    plotSpace.xRange = CPTPlotRange(location: 0, length: Constants.MaxDataPoints - 2)
-    plotSpace.yRange = CPTPlotRange(location: NSNumber(Constants.MinYValue), length: Constants.MaxYValue)
+    plotSpace.xRange = CPTPlotRange(location: 0, length: (Constants.MaxDataPoints - 2) as NSNumber)
+    plotSpace.yRange = CPTPlotRange(location: Constants.MinYValue as NSNumber, length: Constants.MaxYValue as NSNumber)
     
     graph.add(plot)
     graphView.hostedGraph = graph
@@ -206,8 +206,8 @@ extension RecordSessionViewController: CPTPlotDataSource {
       // Shift X Range
       let plotSpace = graph!.defaultPlotSpace as! CPTXYPlotSpace
       let location = currentIndex >= Constants.MaxDataPoints ? currentIndex - Constants.MaxDataPoints + 2 : 0
-      let newXRange = CPTPlotRange(location: NSNumber(location),
-                                  length: Constants.MaxDataPoints - 2)
+      let newXRange = CPTPlotRange(location: location as NSNumber,
+                                   length: (Constants.MaxDataPoints - 2) as NSNumber)
       
       CPTAnimation.animate(plotSpace,
                            property: "xRange",
@@ -217,20 +217,20 @@ extension RecordSessionViewController: CPTPlotDataSource {
       
       // Scale Y Range if necessary - Want the plot to max out 4/5 of the way up
       if (Float(newValue) > Float(currentYMax) * (4/5)) {
-    
+        
         currentYMax = Int(Float(newValue)! * 5/4)
         
-        let newYRange = CPTPlotRange(location: NSNumber(Constants.MinYValue), length: NSNumber(value: currentYMax as Int))
+        let newYRange = CPTPlotRange(location: Constants.MinYValue as NSNumber, length: NSNumber(value: currentYMax as Int))
         
         CPTAnimation.animate(plotSpace,
                              property: "yRange",
                              from: plotSpace.yRange,
                              to: newYRange,
                              duration: CGFloat(Constants.BLEDataUpdateInterval))
-
+        
       }
       
-
+      
       
       currentIndex += 1
       
@@ -239,32 +239,32 @@ extension RecordSessionViewController: CPTPlotDataSource {
       let elapsedTime = (currentTime - startTime).roundToHundredths()
       
       data.append(["time" : "\(Double(elapsedTime))",
-                   "value" : newValue])
+        "value" : newValue])
       plot!.insertData(at: UInt(data.count - 1), numberOfRecords: 1)
-      print("location: \(location)")
-      print("xRange length: \(plotSpace.xRange.length)")
-      print("data count: \(data.count)")
-      print("")
+     // print("location: \(location)")
+     // print("xRange length: \(plotSpace.xRange.length)")
+     // print("data count: \(data.count)")
+     // print("")
     }
   }
-
+  
   func numberOfRecords(for plot: CPTPlot) -> UInt {
     return UInt(data.count)
   }
   
-  func number(for plot: CPTPlot, field fieldEnum: UInt, record idx: UInt) -> AnyObject? {
+  func number(for plot: CPTPlot, field fieldEnum: UInt, record idx: UInt) -> Any? {
     var dataPoint: Double = 0.0
     
     switch (fieldEnum) {
     case 0:
       dataPoint = Double(Int(idx) + currentIndex - data.count)
-      print("dataX: \(dataPoint)")
+      //print("dataX: \(dataPoint)")
       break;
     case 1:
       if let stringValue = data[Int(idx)]["value"] {
         if let value = Double(stringValue) {
           dataPoint = value
-          print("dataY: \(dataPoint)")
+          //print("dataY: \(dataPoint)")
         }
       }
       break;
@@ -272,8 +272,9 @@ extension RecordSessionViewController: CPTPlotDataSource {
       break;
     }
     return dataPoint as AnyObject?
-  
+    
   }
+  
 }
 
 // MARK: - Scatter Plot Data Source

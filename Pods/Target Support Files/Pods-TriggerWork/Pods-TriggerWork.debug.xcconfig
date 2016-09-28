@@ -1,3 +1,4 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 ALWAYS_SEARCH_USER_PATHS = YES
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
 FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CVCalendar" "$PODS_CONFIGURATION_BUILD_DIR/CorePlot" "$PODS_CONFIGURATION_BUILD_DIR/ReachabilitySwift" "$PODS_CONFIGURATION_BUILD_DIR/SVProgressHUD" "$PODS_CONFIGURATION_BUILD_DIR/SwiftHEXColors" "${PODS_ROOT}/Crashlytics/iOS" "${PODS_ROOT}/Fabric/iOS" "${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks" "${PODS_ROOT}/FirebaseAuth/Frameworks/frameworks" "${PODS_ROOT}/FirebaseDatabase/Frameworks" "${PODS_ROOT}/FirebaseInstanceID/Frameworks/frameworks" "${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks" "${PODS_ROOT}/GoogleNetworkingUtilities/Frameworks" "${PODS_ROOT}/GoogleSymbolUtilities/Frameworks" "${PODS_ROOT}/GoogleUtilities/Frameworks"
