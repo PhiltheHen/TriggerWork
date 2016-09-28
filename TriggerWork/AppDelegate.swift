@@ -35,8 +35,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     navigationBarAppearace.barTintColor = Colors.defaultBlackColor()
     navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,
                                                   NSFontAttributeName:Fonts.defaultRegularFontWithSize(21)]
+    
+    determineRootViewController()
 
     return true
+  }
+  
+  func determineRootViewController() {
+    // Check if user is already signed in
+    FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+      var controllerID = "loginController"
+      
+      if user != nil {
+        // User is signed in.
+        controllerID = "tabBarController"
+      }
+      
+      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      let viewController = mainStoryboard.instantiateViewController(withIdentifier: controllerID) as! UITabBarController
+      UIApplication.shared.keyWindow?.rootViewController = viewController;
+    }
   }
   
   func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {

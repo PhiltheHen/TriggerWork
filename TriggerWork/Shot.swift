@@ -9,11 +9,13 @@
 import Foundation
 
 class Shot {
-    var shotTime: String
-    var data: [String: [String:String]]
-    
-    init(shotTime: String, data:[String: [String:String]]) {
-        self.shotTime = shotTime
-        self.data = data
-    }
+  var shotTime: String
+  var data: [String: [String:String]]
+  var interrupts: [String: Bool]
+  
+  init(shotTime: String, data:[String: [String:String]], interrupts:[String : Bool]) {
+    self.shotTime = shotTime
+    self.data = data
+    self.interrupts = interrupts
+  }
 }

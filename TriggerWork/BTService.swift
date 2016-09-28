@@ -14,7 +14,7 @@ import CoreBluetooth
 
 // MARK: - BTService Delegate Methods
 protocol BTServiceDelegate: class {
-  func didUpdateTriggerValue(_ value: String)
+  func didUpdateTriggerValue(value: String, interrupt: Bool)
 }
 
 class BTService: NSObject, CBPeripheralDelegate {
@@ -24,6 +24,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   var broadcastingCharacteristic: CBCharacteristic?
   var impulseCharacteristic: CBCharacteristic?
   var cachedValue: Data?
+  var cachedValueString: String = "0"
   init(initWithPeripheral peripheral: CBPeripheral) {
     super.init()
     
@@ -92,7 +93,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   
   func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
     
-    let buffer: [UInt8] = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    let buffer: [UInt8] = [0, 1]
     
     let value: Data?
     
@@ -107,7 +108,6 @@ class BTService: NSObject, CBPeripheralDelegate {
       }
     }
     
-    
     // Cache latest value in case we can't read from the characteristic
     cachedValue = characteristic.value
     
@@ -115,11 +115,20 @@ class BTService: NSObject, CBPeripheralDelegate {
     (value! as NSData).getBytes(UnsafeMutablePointer<UInt8>(mutating: buffer), length:buffer.count)
 
     print("Buffer Value: \(buffer)")
-    self.delegate?.didUpdateTriggerValue(String(buffer[1]))
+    
+    // Data payload for the force characteristic changes based on whether or not an interrupt was detected. We check the first element of the buffer array for that change.
     
     if (buffer[0] > 0) {
       print("Interrupt Fired")
+      self.delegate?.didUpdateTriggerValue(value: cachedValueString, interrupt: true)
+    } else {
+      // Need to keep track of latest force value that makes sense
+      // Can't get the exact force value at the time of interrupt
+      cachedValueString = String(buffer[1])
+      self.delegate?.didUpdateTriggerValue(value: cachedValueString, interrupt: false)
     }
+    
+    
   }
   
   func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {

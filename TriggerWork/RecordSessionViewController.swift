@@ -8,6 +8,7 @@
 
 import UIKit
 import CorePlot
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -33,6 +34,7 @@ class RecordSessionViewController: UIViewController {
   
   // Data
   var data = [[String : String]]()
+  var interruptIndices = [UInt]()
   var currentIndex = 0
   var resetPlot = false
   var currentYMax: Int = Constants.MaxYValue
@@ -112,29 +114,14 @@ extension RecordSessionViewController: BTServiceDelegate {
       service.delegate = self
     }
   }
-  
-  func didUpdateTriggerValue(_ value: String) {
+
+  func didUpdateTriggerValue(value: String, interrupt: Bool) {
     // Append new values to data array for plotting
-    
     DispatchQueue.main.async(execute: {
       self.infoView.isHidden = true
-      self.updatePlot(value)
+      self.updatePlot(value, interrupt: interrupt)
     })
-    
-    
-    // The following was used for only plotting values greater than 0
-    // Right now we want continuous plotting regarless of magnitude
-    // Might return to this in the future
-    
-    /*
-     resetPlot = Int(value) <= 1
-     if Int(value) > 0 {
-     dispatch_async(dispatch_get_main_queue(), {
-     self.infoView.hidden = true
-     self.updatePlot(value)
-     })
-     }
-     */
+
   }
 }
 
@@ -191,7 +178,13 @@ extension RecordSessionViewController: CPTPlotDataSource {
     self.clearPlot()
   }
   
-  func updatePlot(_ newValue: String) {
+  
+  func updatePlot(_ newValue: String, interrupt: Bool) {
+    
+    // Add interrupt index to array for easier searching
+    if interrupt {
+      interruptIndices.append(UInt(data.count))
+    }
     
     // Optional reset when data is < 1. Currently unused
     //    if resetPlot {
@@ -238,9 +231,9 @@ extension RecordSessionViewController: CPTPlotDataSource {
       currentTime = Date.timeIntervalSinceReferenceDate
       let elapsedTime = (currentTime - startTime).roundToHundredths()
       
-      data.append(["time" : "\(Double(elapsedTime))",
-        "value" : newValue])
+      data.append(["time" : "\(Double(elapsedTime))", "value" : newValue, "interrupt" : String(interrupt)])
       plot!.insertData(at: UInt(data.count - 1), numberOfRecords: 1)
+      
      // print("location: \(location)")
      // print("xRange length: \(plotSpace.xRange.length)")
      // print("data count: \(data.count)")
@@ -272,14 +265,17 @@ extension RecordSessionViewController: CPTPlotDataSource {
       break;
     }
     return dataPoint as AnyObject?
-    
   }
-  
 }
 
 // MARK: - Scatter Plot Data Source
 extension RecordSessionViewController: CPTScatterPlotDataSource {
   func symbol(for plot: CPTScatterPlot, record idx: UInt) -> CPTPlotSymbol? {
+    
+    if interruptIndices.contains(idx) {
+      return ShotFiredPlotSymbol()
+    }
+    
     return nil
   }
 }
