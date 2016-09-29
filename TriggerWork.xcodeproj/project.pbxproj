@@ -49,6 +49,8 @@
 		4EBCE8801CDEE32100436123 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */; };
 		4ECD4DED1D9B9AEC00B34011 /* ShotFiredPlotSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD4DEC1D9B9AEC00B34011 /* ShotFiredPlotSymbol.swift */; };
 		4ECD4DEE1D9B9AEC00B34011 /* ShotFiredPlotSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD4DEC1D9B9AEC00B34011 /* ShotFiredPlotSymbol.swift */; };
+		4ECD4DF01D9C875B00B34011 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD4DEF1D9C875B00B34011 /* Stopwatch.swift */; };
+		4ECD4DF11D9C875B00B34011 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD4DEF1D9C875B00B34011 /* Stopwatch.swift */; };
 		4EDB8E401CD55CC500BC4459 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */; };
 		4EDB8E421CD5639B00BC4459 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB8E411CD5639B00BC4459 /* Timeout.swift */; };
 		4EDC50BC1C99AA3000BA5267 /* ResultsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */; };
@@ -159,6 +161,7 @@
 		4EBCE87D1CDEDE1F00436123 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		4ECD4DEC1D9B9AEC00B34011 /* ShotFiredPlotSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotFiredPlotSymbol.swift; sourceTree = "<group>"; };
+		4ECD4DEF1D9C875B00B34011 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4EDB8E411CD5639B00BC4459 /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		4EDC50BB1C99AA3000BA5267 /* ResultsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDayViewController.swift; sourceTree = "<group>"; };
@@ -354,6 +357,7 @@
 				4EBCE87F1CDEE32100436123 /* AlertPresenter.swift */,
 				4EDB8E411CD5639B00BC4459 /* Timeout.swift */,
 				4E4809651D5EC05C00A6079D /* RepeatingTimer.swift */,
+				4ECD4DEF1D9C875B00B34011 /* Stopwatch.swift */,
 				4EDB8E3F1CD55CC500BC4459 /* Extensions.swift */,
 				4E3A82131C853C03002561E2 /* AppDelegate.swift */,
 			);
@@ -854,6 +858,7 @@
 				4E4809661D5EC05C00A6079D /* RepeatingTimer.swift in Sources */,
 				4EDB8E401CD55CC500BC4459 /* Extensions.swift in Sources */,
 				4E5A5C3A1D32BAC2007E71B1 /* FIRDataManager.swift in Sources */,
+				4ECD4DF01D9C875B00B34011 /* Stopwatch.swift in Sources */,
 				4E5CF8901D4EB3080026F679 /* SettingsViewController.swift in Sources */,
 				4E5A6CC81C8B833700806161 /* Constants.swift in Sources */,
 				4E1CAF721C9DDED20049A2DA /* Shot.swift in Sources */,
@@ -907,6 +912,7 @@
 				4E4809671D5EC05C00A6079D /* RepeatingTimer.swift in Sources */,
 				4EF1319D1D0DE37400300960 /* ShotCollectionViewCell.swift in Sources */,
 				4E5A5C3B1D32BAC2007E71B1 /* FIRDataManager.swift in Sources */,
+				4ECD4DF11D9C875B00B34011 /* Stopwatch.swift in Sources */,
 				4E5CF8911D4EB3080026F679 /* SettingsViewController.swift in Sources */,
 				4EF1319E1D0DE37400300960 /* Extensions.swift in Sources */,
 				4EF1319F1D0DE37400300960 /* Constants.swift in Sources */,

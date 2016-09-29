@@ -47,6 +47,7 @@ class RecordSessionViewController: UIViewController {
   var startTime: TimeInterval = Date.timeIntervalSinceReferenceDate
   var currentTime: TimeInterval = 0
   var fetchTimer: RepeatingTimer?
+  var stopwatch: Stopwatch?
   
   // Firebase
   let firManager = FIRDataManager()
@@ -55,12 +56,16 @@ class RecordSessionViewController: UIViewController {
   @IBOutlet weak var graphView: CPTGraphHostingView!
   @IBOutlet weak var infoView: UIView!
   @IBOutlet weak var startStopButton: StartStopButton!
-  
+  @IBOutlet weak var stopwatchLabel: UILabel!
+
   // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     // Unsure if this is needed
     //startStopButton = StartStopButton()
+    
+    stopwatchLabel.isHidden = true;
+    stopwatch = Stopwatch(self.stopwatchLabel)
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -88,7 +93,17 @@ class RecordSessionViewController: UIViewController {
       // Clear plot and prepare to save data
       self.clearPlot()
       startTime = Date.timeIntervalSinceReferenceDate
+      
+      // Show stopwatch as it updates with the BLE data fetch
+      stopwatchLabel.textColor = Colors.defaultRedColor()
+      stopwatchLabel.isHidden = false
+      stopwatch?.start()
     } else {
+      
+      // Change color of stopwatch to indicate session time is completed
+      stopwatch?.stop()
+      stopwatchLabel.textColor = Colors.defaultGreenColor()
+
       // Save data and clear plot
       self.saveDataAndClearPlot()
     }

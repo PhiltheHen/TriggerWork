@@ -81,7 +81,7 @@ extension Date {
   static func formatElapsedSecondsDouble(_ elapsedSeconds: Double) -> String {
     let hours = Int(elapsedSeconds / 3600)
     let minutes = Int((elapsedSeconds.truncatingRemainder(dividingBy: 3600)) / 60)
-    var seconds: Double = (elapsedSeconds / 3600).truncatingRemainder(dividingBy: 60)
+    var seconds: Double = elapsedSeconds.truncatingRemainder(dividingBy: 60)
     seconds = seconds.roundToHundredths()
     
     if hours > 0 {

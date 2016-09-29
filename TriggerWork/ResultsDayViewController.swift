@@ -57,7 +57,7 @@ class ResultsDayViewController: UIViewController {
   @IBOutlet weak var userNameLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
   @IBOutlet weak var numberSessionsLabel: UILabel!
-  
+  @IBOutlet weak var closeGraphButton: UIButton!
   
   // MARK: - Lifecycle
   override func viewDidLoad() {
@@ -70,6 +70,7 @@ class ResultsDayViewController: UIViewController {
     dateLabel.text = dayString;
     numberSessionsLabel.text = sessionCount == 1 ? "\(sessionCount) Session" : "\(sessionCount) Sessions"
     setupGraphView()
+    closeGraphButton.isHidden = true
   }
   
   func loadTestData() {
@@ -84,14 +85,21 @@ class ResultsDayViewController: UIViewController {
     }
   }
   
-  func animateViews() {
+  func animateViews(_ showGraph:Bool) {
     view.layoutIfNeeded()
     
+    closeGraphButton.isHidden = !showGraph
+
+    self.tableViewHeightConstraint.priority = showGraph ? UILayoutPriorityDefaultHigh : UILayoutPriorityDefaultLow
+    self.graphViewHeightConstraint.priority = showGraph ? UILayoutPriorityDefaultLow : UILayoutPriorityDefaultHigh
+
     UIView.animate(withDuration: 1.0, animations: {
-      self.tableViewHeightConstraint.priority = UILayoutPriorityDefaultHigh;
-      self.graphViewHeightConstraint.priority = UILayoutPriorityDefaultLow;
       self.view.layoutIfNeeded()
     }) 
+  }
+  
+  @IBAction func closeGraphView(_ sender: AnyObject) {
+    animateViews(false)
   }
   
   // MARK: UI Settings
@@ -248,7 +256,7 @@ extension ResultsDayViewController: UICollectionViewDelegate {
     self.setupGraphView()
     
     if (tableViewHeightConstraint.priority == UILayoutPriorityDefaultLow) {
-      animateViews()
+      animateViews(true)
     }
   }
 }

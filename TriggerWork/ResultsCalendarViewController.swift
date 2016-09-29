@@ -132,7 +132,7 @@ extension ResultsCalendarViewController: CVCalendarViewDelegate, CVCalendarMenuV
           if let sessionTime = date["sessionTime"] {
             // Necessary checks due to data arch changes in Dev database
             if let doubleTime = Double(sessionTime as! String) {
-              totalTime = totalTime + doubleTime
+              totalTime = totalTime + doubleTime.roundToHundredths()
             }
           }
           numberSessions = numberSessions + 1;
