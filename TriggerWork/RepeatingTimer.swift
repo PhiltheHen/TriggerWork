@@ -16,10 +16,10 @@ class RepeatingTimer: NSObject {
     super.init()
     self.callback = callback
     self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(delaySeconds),
-                                                        target: self,
-                                                        selector: #selector(Timeout.invoke),
-                                                        userInfo: nil,
-                                                        repeats: true)
+                                      target: self,
+                                      selector: #selector(Timeout.invoke),
+                                      userInfo: nil,
+                                      repeats: true)
     
   }
   

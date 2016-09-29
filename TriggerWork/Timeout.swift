@@ -16,10 +16,10 @@ class Timeout: NSObject {
     super.init()
     self.callback = callback
     self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(delaySeconds),
-                                                        target: self,
-                                                        selector: #selector(Timeout.invoke),
-                                                        userInfo: nil,
-                                                        repeats: false)
+                                      target: self,
+                                      selector: #selector(Timeout.invoke),
+                                      userInfo: nil,
+                                      repeats: false)
     
   }
   
