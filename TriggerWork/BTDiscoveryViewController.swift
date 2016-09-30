@@ -36,10 +36,19 @@ class BTDiscoveryViewController: UIViewController {
     // Watch Bluetooth connection
     NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: NSNotification.Name(rawValue: Constants.BLEServiceChangedStatusNotification), object: nil)
     
+    NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.peripheralFound(_:)), name: NSNotification.Name(rawValue: Constants.BLEPeripheralFoundNotification), object: nil)
+    
     NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.scanStatusChanged(_:)), name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification), object: nil)
     
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
     // Start the Bluetooth discovery process
     let _ = btDiscoverySharedInstance
+    
+    if btDiscoverySharedInstance.peripheralCount == 0{
+      btDiscoverySharedInstance.startScanning()
+    }
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -48,9 +57,17 @@ class BTDiscoveryViewController: UIViewController {
   }
   
   deinit {
-    NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: Constants.BLEServiceChangedStatusNotification), object: nil)
+    NotificationCenter.default.removeObserver(self,
+                                              name: NSNotification.Name(rawValue: Constants.BLEServiceChangedStatusNotification),
+                                              object: nil)
     
-    NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification), object: nil)
+    NotificationCenter.default.removeObserver(self,
+                                              name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification),
+                                              object: nil)
+    
+    NotificationCenter.default.removeObserver(self,
+                                              name: NSNotification.Name(rawValue: Constants.BLEPeripheralFoundNotification),
+                                              object: nil)
   }
   
   func connectionChanged(_ notification: Notification) {
@@ -62,15 +79,28 @@ class BTDiscoveryViewController: UIViewController {
       SVProgressHUD.dismiss()
       self.refreshControl.endRefreshing()
       
+      // Enable continue button once BLE connection has succeeded
       if let _: Bool = userInfo[BLEConnectionStatus.Connected] {
-        self.hideOrShowTableView()
-        self.tableView.reloadData()
+        self.continueButton.enable()
+        self.continueButton.pumpAnimation()
       }
     });
   }
   
+  func peripheralFound(_ notification: Notification) {
+    
+    // Peripheral found
+    DispatchQueue.main.async(execute: {
+      SVProgressHUD.dismiss()
+      self.refreshControl.endRefreshing()
+      self.tableView.reloadData()
+      self.hideOrShowTableView()
+    });
+  }
+  
   func hideOrShowTableView() {
-    tableView.isHidden = !(btDiscoverySharedInstance.isConnectedToPeripheral())
+    // Hide table view if no peipherals are available
+    tableView.isHidden = btDiscoverySharedInstance.peripheralCount == 0
   }
   
   // MARK: IBActions
@@ -97,23 +127,20 @@ class BTDiscoveryViewController: UIViewController {
     DispatchQueue.main.async {
       
       if let _: Bool = userInfo[BLEScanStatus.Started] {
-        self.emptyStateView.isHidden = true
         SVProgressHUD.dismiss()
         SVProgressHUD.show(withStatus: "Searching for Bluetooth Triggers...")
       }
       
       if let _: Bool = userInfo[BLEScanStatus.Stopped] {
-        self.emptyStateView.isHidden = false
         SVProgressHUD.dismiss()
         self.refreshControl.endRefreshing()
       }
       
       if let _: Bool = userInfo[BLEScanStatus.TimedOut] {
-        self.emptyStateView.isHidden = false
         SVProgressHUD.dismiss()
         self.refreshControl.endRefreshing()
         let alertPresenter = AlertPresenter(controller: self)
-        alertPresenter.presentAlertWithTitle("Unable to connect to a trigger",
+        alertPresenter.presentAlertWithTitle("Unable to find any triggers",
                                              message: "Ensure bluetooth is turned on in settings and you are in range of your BLE trigger") { (_) in
         }
       }
@@ -127,16 +154,12 @@ extension BTDiscoveryViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! BTDeviceTableViewCell
-    if let name = btDiscoverySharedInstance.peripheralName {
-      cell.bTDeviceName.text = "\(name)"
-    } else {
-      cell.bTDeviceName.text = "Unkonwn";
-    }
+    cell.bTDeviceName.text = btDiscoverySharedInstance.peripheralNameAtIndex(idx: indexPath.row);
     return cell
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1;
+    return btDiscoverySharedInstance.peripheralCount!;
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -154,14 +177,21 @@ extension BTDiscoveryViewController: UITableViewDelegate {
       sectionTitleLabel.textColor = UIColor.white;
     }
   }
-    
+  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 80.0
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    continueButton.enable()
-    continueButton.pumpAnimation()
+    
+    // Stop scanning for new peripherals once user selects one to connect
+    btDiscoverySharedInstance.stopScanning()
+    
+    DispatchQueue.main.async(execute: {
+      SVProgressHUD.show()
+    })
+    
+    btDiscoverySharedInstance.peripheralSelectedAtIndex(indexPath.row)
   }
   
 }

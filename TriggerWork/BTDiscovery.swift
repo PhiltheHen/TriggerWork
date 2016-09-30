@@ -18,7 +18,8 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   
   fileprivate var centralManager: CBCentralManager?
   fileprivate var peripheralBLE: CBPeripheral?
-    
+  fileprivate var availablePeripherals = [CBPeripheral]()
+
   override init() {
     super.init()
     
@@ -26,10 +27,10 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     centralManager = CBCentralManager(delegate: self, queue: centralQueue)
   }
   
-  func startScanning() {
+  func startScanning() {    
     self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Started)
-    // Start timer to cancel scan if no devices are found in 8 seconds
     
+    // Start timer to cancel scan if no devices are found in 8 seconds
     DispatchQueue.main.async(execute: {
       let _ = Timeout(Constants.BLETimeout) {
         self.scanTimeout()
@@ -41,6 +42,23 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     }
   }
   
+  func peripheralSelectedAtIndex(_ idx: Int) {
+    
+    if availablePeripherals.indexExists(idx) {
+      
+      // Retain the peripheral before trying to connect
+      self.peripheralBLE = availablePeripherals[idx]
+      
+      // Reset service
+      self.bleService = nil
+      
+      // Connect to peripheral
+      if let central = centralManager {
+        central.connect(self.peripheralBLE!, options: nil)
+      }
+    }
+  }
+  
   func stopScanning() {
     self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Stopped)
     if let central = centralManager {
@@ -49,16 +67,30 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   }
   
   func scanTimeout() {
-    if (!isConnectedToPeripheral()) {
+    if availablePeripherals.count == 0 {
       self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.TimedOut)
       self.stopScanning()
     }
   }
   
-  var peripheralName: String? {
+  var connectedPeripheralName: String? {
     get {
       return peripheralBLE?.name
     }
+  }
+  
+  var peripheralCount: Int? {
+    get {
+      return availablePeripherals.count
+    }
+  }
+  
+  func peripheralNameAtIndex(idx: Int) -> String? {
+    if availablePeripherals.indexExists(idx) {
+      let peripheral = availablePeripherals[idx]
+      return peripheral.name
+    }
+    return ""
   }
   
   func isConnectedToPeripheral() -> Bool {
@@ -83,16 +115,12 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
       return
     }
     
-    // If not already connected to a peripheral, then connect to this one
+    // Add to peripheral array
     if ((self.peripheralBLE == nil) || (self.peripheralBLE?.state == CBPeripheralState.disconnected)) {
-      // Retain the peripheral before trying to connect
-      self.peripheralBLE = peripheral
-      
-      // Reset service
-      self.bleService = nil
-      
-      // Connect to peripheral
-      central.connect(peripheral, options: nil)
+      if !availablePeripherals.contains(peripheral) {
+        availablePeripherals.append(peripheral)
+        self.sendBTDiscoveryNotificationWithPeripheralFound()
+      }
     }
   }
   
@@ -172,6 +200,10 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   func sendBTDiscoveryNotificationWithScanStatus(_ scanStatus: String) {
     let scanDetails = [scanStatus: true]
     NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.BLEServiceScanStatusNotification), object: self, userInfo: scanDetails)
+  }
+  
+  func sendBTDiscoveryNotificationWithPeripheralFound() {
+    NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.BLEPeripheralFoundNotification), object: self, userInfo: nil)
   }
 
 }

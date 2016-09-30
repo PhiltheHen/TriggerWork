@@ -46,6 +46,12 @@ extension UIView {
   }
 }
 
+extension Array {
+  func indexExists(_ index: Int) -> Bool {
+    return self.indices.contains(index)
+  }
+}
+
 extension UIButton {
   func enable() {
     self.alpha = 1.0

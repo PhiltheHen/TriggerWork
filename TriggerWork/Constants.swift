@@ -19,8 +19,9 @@ struct Constants {
   static let MaxYValue = 100
   static let MinYValue = -5
   static let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
+  static let BLEPeripheralFoundNotification = "kBLEPeripheralFoundNotification"
   static let BLEServiceScanStatusNotification = "kBLEServiceScanStatusNotification"
-
+  
 }
 
 struct UUID {

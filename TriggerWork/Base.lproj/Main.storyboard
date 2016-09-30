@@ -536,8 +536,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="JK2-kJ-8v5"/>
                                 <exclude reference="xyG-uv-iws"/>
+                                <exclude reference="JK2-kJ-8v5"/>
                             </mask>
                         </variation>
                     </view>
@@ -735,7 +735,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTg-JB-p8b" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Results" image="results" id="LhV-oJ-mPR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="55k-jk-SS9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="55k-jk-SS9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -754,7 +754,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWg-y4-YdC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Viewer" image="viewer" id="HRe-Fx-TlJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="p0V-ob-beR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p0V-ob-beR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
