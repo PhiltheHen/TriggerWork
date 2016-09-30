@@ -19,6 +19,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
   fileprivate var centralManager: CBCentralManager?
   fileprivate var peripheralBLE: CBPeripheral?
   fileprivate var availablePeripherals = [CBPeripheral]()
+  fileprivate var scanTimeoutTimer: Timeout?
 
   override init() {
     super.init()
@@ -31,8 +32,12 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.Started)
     
     // Start timer to cancel scan if no devices are found in 8 seconds
+    if (scanTimeoutTimer != nil) {
+      self.scanTimeoutTimer?.cancel()
+    }
+    
     DispatchQueue.main.async(execute: {
-      let _ = Timeout(Constants.BLETimeout) {
+      self.scanTimeoutTimer = Timeout(Constants.BLETimeout) {
         self.scanTimeout()
       }
     })
@@ -64,6 +69,8 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     if let central = centralManager {
       central.stopScan()
     }
+    
+    self.scanTimeoutTimer?.cancel()
   }
   
   func scanTimeout() {
@@ -71,6 +78,8 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
       self.sendBTDiscoveryNotificationWithScanStatus(BLEScanStatus.TimedOut)
       self.stopScanning()
     }
+    
+    self.scanTimeoutTimer?.cancel()
   }
   
   var connectedPeripheralName: String? {

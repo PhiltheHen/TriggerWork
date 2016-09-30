@@ -113,8 +113,6 @@ class BTService: NSObject, CBPeripheralDelegate {
     
     // Value guaranteed to not be nil
     (value! as NSData).getBytes(UnsafeMutablePointer<UInt8>(mutating: buffer), length:buffer.count)
-
-    print("Buffer Value: \(buffer)")
     
     // Data payload for the force characteristic changes based on whether or not an interrupt was detected. We check the first element of the buffer array for that change.
     

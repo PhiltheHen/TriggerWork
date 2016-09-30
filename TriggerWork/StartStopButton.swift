@@ -13,17 +13,17 @@ class StartStopButton: UIButton {
   
   override var isSelected: Bool {
     willSet(newValue) {
-
+      
       if newValue {
-        self.backgroundColor = Colors.defaultRedColor()
+        self.clipsToBounds = false
         self.pumpAnimation()
       } else {
-        self.backgroundColor = Colors.defaultGreenColor()
+        self.clipsToBounds = true
         self.pumpAnimation()
       }
     }
     didSet {
-
+      
     }
   }
   
@@ -55,15 +55,20 @@ class StartStopButton: UIButton {
   }
   
   func setup() {
+    
+    self.layoutIfNeeded()
     self.layer.cornerRadius = self.frame.width/2;
-    self.backgroundColor = Colors.defaultGreenColor()
+    self.clipsToBounds = true
     self.tintColor = UIColor.white
 
-    self.setTitle("Start", for: UIControlState())
+    self.setTitle("Start", for: .normal)
     self.setTitle("Stop", for: .selected)
-    self.setBackgroundImage(nil, for: .selected)
-    self.setTitleColor(UIColor.white, for: UIControlState())
+    self.setTitleColor(UIColor.white, for: .normal)
     self.setTitleColor(UIColor.white, for: .selected)
+
+    // Discoverd the proper way to set a background color, instead of manually changing on 'setSelected'
+    self.backgroundColor = UIColor.clear
+    self.setBackgroundImage(UIImage.imageWithColor(color: Colors.defaultGreenColor()), for: .normal)
+    self.setBackgroundImage(UIImage.imageWithColor(color: Colors.defaultRedColor()), for: .selected)
   }
-  
 }

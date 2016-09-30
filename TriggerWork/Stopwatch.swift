@@ -58,7 +58,8 @@ class Stopwatch: NSObject {
     let fraction = UInt8(elapsedTime * 100)
     
     let strMinutes = String(format: "%02d", minutes)
-    let strSeconds = String(format: "%02d", seconds)
+    let secondsFormat = (seconds < 10 && minutes < 1) ? "%01d" : "%02d"
+    let strSeconds = String(format: secondsFormat, seconds)
     let strFraction = String(format: "%02d", fraction)
     
     if minutes < 1 {
