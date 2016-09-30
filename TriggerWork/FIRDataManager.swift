@@ -42,7 +42,7 @@ class FIRDataManager: NSObject {
                         "/user-sessions/\(userID!)/\(key)/" : session]
     ref.updateChildValues(childUpdates)
   }
-  
+
   /**
    Retrieve data once with a specific session ID
    */

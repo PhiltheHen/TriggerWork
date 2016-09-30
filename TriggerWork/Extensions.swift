@@ -64,6 +64,16 @@ extension UIButton {
   }
 }
 
+extension UserDefaults {
+  class func savePeripheralName(_ uuid: String, name: String) {
+    standard.set(name, forKey: uuid)
+  }
+  
+  class func retrievePeripheralName(_ uuid: String) -> String? {
+    return standard.object(forKey: uuid) as! String?
+  }
+}
+
 extension UIImage {
   
   class func imageWithColor(color:UIColor?) -> UIImage! {

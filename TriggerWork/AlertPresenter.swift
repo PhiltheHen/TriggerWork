@@ -12,6 +12,7 @@ import UIKit
 class AlertPresenter: NSObject {
   
   var viewController: UIViewController?
+  var inputTextField: UITextField?
   
   init(controller: UIViewController) {
     viewController = controller;
@@ -26,6 +27,30 @@ class AlertPresenter: NSObject {
     alertController.addAction(okAction)
     viewController?.present(alertController, animated: true, completion: nil)
   }
+  
+  func presentTextFieldAlertWithTitle(_ title: String,
+                                      message: String,
+                                      placeholderText: String?,
+                                      cancelHandler: ((UIAlertAction) -> Void)?,
+                                      saveHandler: ((UIAlertAction) -> Void)?) {
+    
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelHandler)
+    let saveAction = UIAlertAction(title: "Save", style: .default, handler: saveHandler)
+    
+    alertController.addAction(cancelAction)
+    alertController.addAction(saveAction)
+
+    
+    alertController.addTextField { (textField) in
+      textField.placeholder = placeholderText
+      self.inputTextField = textField
+    }
+    
+    viewController?.present(alertController, animated: true, completion: nil)
+  }
+  
+  
   
   func presentAlertWithTitle(_ title: String,
                              message: String,
@@ -42,8 +67,8 @@ class AlertPresenter: NSObject {
   
   func presentNoNetworkForLoginError() {
     self.presentAlertWithTitle("Network unavailable",
-                                         message: "Can't authorize login without network connection.") { (_) in
+                               message: "Can't authorize login without network connection.") { (_) in
     }
-
+    
   }
 }

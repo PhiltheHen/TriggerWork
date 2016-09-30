@@ -143,6 +143,7 @@ class BTService: NSObject, CBPeripheralDelegate {
       return
     }
     
+    
     if let characteristics = service.characteristics {
       
       for characteristic in characteristics {

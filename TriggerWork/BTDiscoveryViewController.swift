@@ -14,7 +14,8 @@ class BTDiscoveryViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var emptyStateView: UIView!
   @IBOutlet weak var continueButton: UIButton!
-  
+  var alertPresenter: AlertPresenter? = nil
+
   lazy var refreshControl: UIRefreshControl = {
     let refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(BTDiscoveryViewController.scanDevices(_:)), for: UIControlEvents.valueChanged)
@@ -27,6 +28,8 @@ class BTDiscoveryViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    alertPresenter = AlertPresenter(controller: self)
+
     tableView.addSubview(refreshControl)
     
     tableView.isHidden = true
@@ -105,6 +108,7 @@ class BTDiscoveryViewController: UIViewController {
   
   // MARK: IBActions
   @IBAction func scanDevices(_ sender: UIButton) {
+    btDiscoverySharedInstance.stopScanning()
     btDiscoverySharedInstance.startScanning()
   }
   
@@ -139,8 +143,7 @@ class BTDiscoveryViewController: UIViewController {
       if let _: Bool = userInfo[BLEScanStatus.TimedOut] {
         SVProgressHUD.dismiss()
         self.refreshControl.endRefreshing()
-        let alertPresenter = AlertPresenter(controller: self)
-        alertPresenter.presentAlertWithTitle("Unable to find any triggers",
+        self.alertPresenter?.presentAlertWithTitle("Unable to find any triggers",
                                              message: "Ensure bluetooth is turned on in settings and you are in range of your BLE trigger") { (_) in
         }
       }
@@ -165,10 +168,42 @@ extension BTDiscoveryViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return "Select a Bluetooth Device..."
   }
+  
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+  }
 }
 
 // MARK: - UITableViewDelegate
 extension BTDiscoveryViewController: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    
+    let rename = UITableViewRowAction(style: .normal, title: "Rename") { action, index in
+      self.alertPresenter?.presentTextFieldAlertWithTitle("Rename Trigger",
+                                                          message: "",
+                                                          placeholderText: btDiscoverySharedInstance.peripheralNameAtIndex(idx: indexPath.row),
+                                                          cancelHandler: nil,
+                                                          saveHandler: { (_) in
+                                                            
+                                                            // Save off the new name for the BLE peripheral
+                                                            if let renameTextField = self.alertPresenter?.inputTextField {
+                                                              if let newPeripheralName = renameTextField.text {
+                                                                UserDefaults.savePeripheralName(btDiscoverySharedInstance.peripheralUUIDAtIndex(indexPath.row)!, name: newPeripheralName)
+                                                                self.tableView.reloadData()
+
+                                                              }
+                                                            }
+      })
+    }
+    
+    rename.backgroundColor = UIColor.orange
+    
+    return [rename]
+  }
   
   func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
     let header = view as! UITableViewHeaderFooterView
