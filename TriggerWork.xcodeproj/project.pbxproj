@@ -1152,6 +1152,7 @@
 				);
 				INFOPLIST_FILE = TriggerWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NAME_SUFFIX = "";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lostnationrd.TriggerWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
