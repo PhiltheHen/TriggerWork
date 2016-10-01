@@ -11,6 +11,10 @@ import SVProgressHUD
 
 class BTDiscoveryViewController: UIViewController {
   
+  // For use in maintaining cell selection during editing
+  var swipeGestureStarted: Bool = false
+  var selectedIndexPath: IndexPath?
+
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var emptyStateView: UIView!
   @IBOutlet weak var continueButton: UIButton!
@@ -24,7 +28,6 @@ class BTDiscoveryViewController: UIViewController {
   }()
   
   //MARK: - Lifecycle
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -34,14 +37,26 @@ class BTDiscoveryViewController: UIViewController {
     
     tableView.isHidden = true
     
+    // So renaming our triggers by swiping left will maintain any currently selected triggers
+    tableView.allowsSelectionDuringEditing = true
+    
     continueButton.disable()
     
     // Watch Bluetooth connection
-    NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.connectionChanged(_:)), name: NSNotification.Name(rawValue: Constants.BLEServiceChangedStatusNotification), object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(BTDiscoveryViewController.connectionChanged(_:)),
+                                           name: NSNotification.Name(rawValue: Constants.BLEServiceChangedStatusNotification),
+                                           object: nil)
     
-    NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.peripheralFound(_:)), name: NSNotification.Name(rawValue: Constants.BLEPeripheralFoundNotification), object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(BTDiscoveryViewController.peripheralFound(_:)),
+                                           name: NSNotification.Name(rawValue: Constants.BLEPeripheralFoundNotification),
+                                           object: nil)
     
-    NotificationCenter.default.addObserver(self, selector: #selector(BTDiscoveryViewController.scanStatusChanged(_:)), name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification), object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(BTDiscoveryViewController.scanStatusChanged(_:)),
+                                           name: NSNotification.Name(rawValue: Constants.BLEServiceScanStatusNotification),
+                                           object: nil)
     
   }
   
@@ -132,7 +147,8 @@ class BTDiscoveryViewController: UIViewController {
       
       if let _: Bool = userInfo[BLEScanStatus.Started] {
         SVProgressHUD.dismiss()
-        SVProgressHUD.show(withStatus: "Searching for Bluetooth Triggers...")
+        // Temporarily removing this. Kept showing up when triggers were turned off. Want to keep searching, but without any UI updates.
+        //SVProgressHUD.show(withStatus: "Searching for Bluetooth Triggers...")
       }
       
       if let _: Bool = userInfo[BLEScanStatus.Stopped] {
@@ -175,18 +191,34 @@ extension BTDiscoveryViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
   }
+
 }
 
 // MARK: - UITableViewDelegate
 extension BTDiscoveryViewController: UITableViewDelegate {
   
+  func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+    
+      swipeGestureStarted = true;
+  }
+  
+  func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+    if swipeGestureStarted {
+      swipeGestureStarted = false
+      
+      tableView.selectRow(at: selectedIndexPath as IndexPath?, animated: true, scrollPosition: .none)
+    }
+  }
+
   func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
     
     let rename = UITableViewRowAction(style: .normal, title: "Rename") { action, index in
       self.alertPresenter?.presentTextFieldAlertWithTitle("Rename Trigger",
                                                           message: "",
                                                           placeholderText: btDiscoverySharedInstance.peripheralNameAtIndex(idx: indexPath.row),
-                                                          cancelHandler: nil,
+                                                          cancelHandler: { (_) in
+                                                            self.tableView.isEditing = false
+        },
                                                           saveHandler: { (_) in
                                                             
                                                             // Save off the new name for the BLE peripheral
@@ -194,7 +226,6 @@ extension BTDiscoveryViewController: UITableViewDelegate {
                                                               if let newPeripheralName = renameTextField.text {
                                                                 UserDefaults.savePeripheralName(btDiscoverySharedInstance.peripheralUUIDAtIndex(indexPath.row)!, name: newPeripheralName)
                                                                 self.tableView.reloadData()
-
                                                               }
                                                             }
       })
@@ -218,6 +249,8 @@ extension BTDiscoveryViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    selectedIndexPath = indexPath
     
     // Stop scanning for new peripherals once user selects one to connect
     btDiscoverySharedInstance.stopScanning()
