@@ -71,6 +71,9 @@ class ResultsDayViewController: UIViewController {
     numberSessionsLabel.text = sessionCount == 1 ? "\(sessionCount) Session" : "\(sessionCount) Sessions"
     setupGraphView()
     closeGraphButton.isHidden = true
+    
+   // let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: Selector("handlePinch:"))
+  //  self.graphView.addGestureRecognizer(pinchGestureRecognizer)
   }
   
   func loadTestData() {
@@ -105,7 +108,11 @@ class ResultsDayViewController: UIViewController {
   // MARK: UI Settings
   override var preferredStatusBarStyle : UIStatusBarStyle {
     return .lightContent
-  }  
+  }
+  
+  func handlePinch(gestureRecognizer: UIGestureRecognizer) {
+  //  if gestureRecognizer.state == .
+  }
 }
 
 extension ResultsDayViewController: CPTPlotDataSource, CPTPlotSpaceDelegate {
@@ -177,6 +184,17 @@ extension ResultsDayViewController: CPTPlotDataSource, CPTPlotSpaceDelegate {
   
   func plotSpace(_ space: CPTPlotSpace, shouldScaleBy interactionScale: CGFloat, aboutPoint interactionPoint: CGPoint) -> Bool {
     return true
+  }
+  
+  func plotSpace(_ space: CPTPlotSpace, willChangePlotRangeTo newRange: CPTPlotRange, for coordinate: CPTCoordinate) -> CPTPlotRange? {
+    
+    // Here we can fix the y axis from scrolling by checking the proposed coordinate change
+    if coordinate == .X {
+      return newRange
+    } else {
+      let plotSpace: CPTXYPlotSpace = space as! CPTXYPlotSpace
+      return plotSpace.yRange
+    }
   }
   
 }

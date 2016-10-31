@@ -212,10 +212,10 @@
                                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Eyk-6o-Fzk" customClass="BTDeviceTableViewCell" customModule="TriggerWork" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="56" width="343" height="44"/>
+                                                <rect key="frame" x="0.0" y="56" width="1000" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyk-6o-Fzk" id="2wf-MJ-lNd">
-                                                    <frame key="frameInset" width="343" height="43"/>
+                                                    <frame key="frameInset" width="1000" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-I0-3EW">
@@ -618,7 +618,7 @@
                                         <rect key="frame" x="0.0" y="56" width="383" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUa-FC-YNj" id="cY9-Ox-KQF">
-                                            <frame key="frameInset" width="383" height="49"/>
+                                            <frame key="frameInset" width="383" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oow-Uy-UJ0">
@@ -747,7 +747,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTg-JB-p8b" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Results" image="results" id="LhV-oJ-mPR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="55k-jk-SS9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="55k-jk-SS9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -766,7 +766,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWg-y4-YdC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Viewer" image="viewer" id="HRe-Fx-TlJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="p0V-ob-beR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p0V-ob-beR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
