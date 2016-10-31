@@ -57,6 +57,7 @@ class RecordSessionViewController: UIViewController {
   @IBOutlet weak var infoView: UIView!
   @IBOutlet weak var startStopButton: StartStopButton!
   @IBOutlet weak var stopwatchLabel: UILabel!
+  @IBOutlet weak var connectedTriggerLabel: UILabel!
 
   // MARK: - Lifecycle
   override func viewDidLoad() {
@@ -66,6 +67,12 @@ class RecordSessionViewController: UIViewController {
     
     stopwatchLabel.isHidden = true;
     stopwatch = Stopwatch(self.stopwatchLabel)
+    
+    if let peripheralName = btDiscoverySharedInstance.connectedPeripheralName {
+      connectedTriggerLabel.text = "Connected to " + peripheralName
+    } else {
+      connectedTriggerLabel.text = "Connected to Bluetooth Trigger"
+    }
   }
   
   override func viewDidAppear(_ animated: Bool) {

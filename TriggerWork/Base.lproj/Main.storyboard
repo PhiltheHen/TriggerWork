@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -409,6 +409,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected Trigger" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPp-PR-z3a">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="CBS-Q0-8c4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -417,14 +425,17 @@
                             <constraint firstAttribute="trailing" secondItem="Wrc-8o-yoi" secondAttribute="trailing" constant="10" id="C9x-bM-Iyi"/>
                             <constraint firstItem="dsc-DY-2fu" firstAttribute="top" secondItem="rO9-XO-vQS" secondAttribute="bottom" constant="8" id="S53-st-iCK"/>
                             <constraint firstItem="pIi-hM-Nja" firstAttribute="bottom" secondItem="5cu-Jm-eoV" secondAttribute="bottom" id="Skf-0N-2H6"/>
+                            <constraint firstItem="PPp-PR-z3a" firstAttribute="leading" secondItem="qu2-ne-Fhr" secondAttribute="leading" constant="10" id="TWZ-oP-eWA"/>
                             <constraint firstAttribute="trailing" secondItem="dsc-DY-2fu" secondAttribute="trailing" constant="20" id="Uge-Lv-Vgg"/>
                             <constraint firstItem="5cu-Jm-eoV" firstAttribute="top" secondItem="dsc-DY-2fu" secondAttribute="bottom" constant="20" id="Xpf-SZ-5au"/>
                             <constraint firstItem="pIi-hM-Nja" firstAttribute="top" secondItem="5cu-Jm-eoV" secondAttribute="top" id="gTh-oc-oq2"/>
+                            <constraint firstAttribute="trailing" secondItem="PPp-PR-z3a" secondAttribute="trailing" constant="10" id="hJa-ip-Pxr"/>
                             <constraint firstItem="5cu-Jm-eoV" firstAttribute="top" secondItem="Wrc-8o-yoi" secondAttribute="bottom" constant="20" id="hWr-60-v2r"/>
                             <constraint firstItem="5cu-Jm-eoV" firstAttribute="centerX" secondItem="qu2-ne-Fhr" secondAttribute="centerX" id="llY-0a-dgj"/>
                             <constraint firstItem="dsc-DY-2fu" firstAttribute="leading" secondItem="qu2-ne-Fhr" secondAttribute="leading" constant="20" id="mgn-e7-nRE"/>
                             <constraint firstItem="5cu-Jm-eoV" firstAttribute="leading" secondItem="pIi-hM-Nja" secondAttribute="trailing" constant="8" id="n0b-OL-z0P"/>
                             <constraint firstItem="pIi-hM-Nja" firstAttribute="leading" secondItem="qu2-ne-Fhr" secondAttribute="leading" constant="10" id="n3B-Ov-JEY"/>
+                            <constraint firstItem="PPp-PR-z3a" firstAttribute="top" secondItem="rO9-XO-vQS" secondAttribute="bottom" constant="8" id="nUV-EJ-J5u"/>
                             <constraint firstItem="5cu-Jm-eoV" firstAttribute="trailing" secondItem="qu2-ne-Fhr" secondAttribute="trailingMargin" id="uF3-aS-6mU"/>
                             <constraint firstItem="Wrc-8o-yoi" firstAttribute="leading" secondItem="qu2-ne-Fhr" secondAttribute="leading" constant="10" id="zQg-XP-4w3"/>
                         </constraints>
@@ -435,6 +446,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="connectedTriggerLabel" destination="PPp-PR-z3a" id="baD-Y6-OXJ"/>
                         <outlet property="graphView" destination="Wrc-8o-yoi" id="kKI-i1-GtQ"/>
                         <outlet property="infoView" destination="dsc-DY-2fu" id="XlB-UO-AkQ"/>
                         <outlet property="startStopButton" destination="5cu-Jm-eoV" id="0lL-S2-S4a"/>
@@ -735,7 +747,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTg-JB-p8b" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Results" image="results" id="LhV-oJ-mPR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="55k-jk-SS9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="55k-jk-SS9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -754,7 +766,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWg-y4-YdC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Viewer" image="viewer" id="HRe-Fx-TlJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p0V-ob-beR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="p0V-ob-beR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -809,11 +821,22 @@
                                     <segue destination="sEM-X7-g8a" kind="unwind" identifier="LogoutUser" unwindAction="logoutUser:" id="CG2-FK-Rmf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected Trigger" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX7-Hl-YSc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="f8M-Am-8R4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Light" family="Myriad Pro" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vka-VK-Kvy" firstAttribute="top" secondItem="V70-3j-8PF" secondAttribute="bottom" constant="8" id="3eg-84-fVB"/>
                             <constraint firstItem="V70-3j-8PF" firstAttribute="centerX" secondItem="FQD-M0-8fg" secondAttribute="centerX" id="M2I-wl-ZHW"/>
-                            <constraint firstItem="vka-VK-Kvy" firstAttribute="top" secondItem="V70-3j-8PF" secondAttribute="bottom" constant="8" id="lIn-aY-Pj2"/>
+                            <constraint firstItem="qX7-Hl-YSc" firstAttribute="leading" secondItem="FQD-M0-8fg" secondAttribute="leading" constant="10" id="Mdd-IS-kjC"/>
+                            <constraint firstItem="qX7-Hl-YSc" firstAttribute="top" secondItem="Q5N-yE-bQP" secondAttribute="bottom" constant="20" id="Y1C-M1-kM5"/>
+                            <constraint firstAttribute="trailing" secondItem="qX7-Hl-YSc" secondAttribute="trailing" constant="10" id="k8n-pf-RFa"/>
                             <constraint firstItem="V70-3j-8PF" firstAttribute="trailing" secondItem="FQD-M0-8fg" secondAttribute="trailingMargin" id="r4Q-yV-gpW"/>
                             <constraint firstItem="V70-3j-8PF" firstAttribute="centerY" secondItem="FQD-M0-8fg" secondAttribute="centerY" id="s92-gv-pcU"/>
                         </constraints>
@@ -826,6 +849,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="9ds-gP-NcG"/>
                     <navigationItem key="navigationItem" id="XrO-9X-ilf"/>
+                    <connections>
+                        <outlet property="connectedTriggerLabel" destination="qX7-Hl-YSc" id="NqJ-7E-1SE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3Y-pS-3a4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sEM-X7-g8a" userLabel="Exit" sceneMemberID="exit"/>

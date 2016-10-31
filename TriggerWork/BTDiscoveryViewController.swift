@@ -123,6 +123,7 @@ class BTDiscoveryViewController: UIViewController {
   
   // MARK: IBActions
   @IBAction func scanDevices(_ sender: UIButton) {
+    self.hideOrShowTableView()
     btDiscoverySharedInstance.stopScanning()
     btDiscoverySharedInstance.startScanning()
   }

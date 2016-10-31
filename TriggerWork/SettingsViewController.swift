@@ -10,10 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+  @IBOutlet weak var connectedTriggerLabel: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      if let peripheralName = btDiscoverySharedInstance.connectedPeripheralName {
+        connectedTriggerLabel.text = "Connected to " + peripheralName
+      } else {
+        connectedTriggerLabel.text = "Connected to Bluetooth Trigger"
+      }
     }
 
     override func didReceiveMemoryWarning() {
