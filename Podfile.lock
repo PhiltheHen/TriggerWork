@@ -1,6 +1,6 @@
 PODS:
   - CorePlot (2.2)
-  - Crashlytics (3.8.1):
+  - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - CVCalendar (1.4.0)
   - Fabric (1.6.8)
@@ -68,7 +68,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
-  Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   CVCalendar: ec1a06a508f99d8e5067258754f811a8a1433a3f
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   Firebase: 34187200ef4979dbd485c7aa685ef078bf587c86

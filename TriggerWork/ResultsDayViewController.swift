@@ -71,9 +71,6 @@ class ResultsDayViewController: UIViewController {
     numberSessionsLabel.text = sessionCount == 1 ? "\(sessionCount) Session" : "\(sessionCount) Sessions"
     setupGraphView()
     closeGraphButton.isHidden = true
-    
-   // let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: Selector("handlePinch:"))
-  //  self.graphView.addGestureRecognizer(pinchGestureRecognizer)
   }
   
   func loadTestData() {
@@ -108,10 +105,6 @@ class ResultsDayViewController: UIViewController {
   // MARK: UI Settings
   override var preferredStatusBarStyle : UIStatusBarStyle {
     return .lightContent
-  }
-  
-  func handlePinch(gestureRecognizer: UIGestureRecognizer) {
-  //  if gestureRecognizer.state == .
   }
 }
 
