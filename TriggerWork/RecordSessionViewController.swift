@@ -198,7 +198,18 @@ extension RecordSessionViewController: CPTPlotDataSource {
     
     // Add interrupt index to array for easier searching
     if interrupt {
-      interruptIndices.append(UInt(data.count))
+      let dataPoint = UInt(data.count)
+      
+      // Shot detection is finicky. Need to ignore any recent shots detected and only display one
+      
+      if interruptIndices.count == 0 {
+        interruptIndices.append(UInt(data.count))
+      } else if Int(dataPoint) - Int(interruptIndices.last!) > 20 {
+        interruptIndices.append(UInt(data.count))
+      } else {
+        // We don't want to update the plot when this method is called from the interrupt
+        return;
+      }
     }
     
     // Optional reset when data is < 1. Currently unused
