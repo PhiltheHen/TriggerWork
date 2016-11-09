@@ -9,7 +9,7 @@ def shared_pods
 	pod 'Firebase'
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
-	pod 'SwiftHEXColors', :git => 'https://github.com/thii/SwiftHEXColors.git', :branch => 'swift-3.0'
+	pod 'SwiftHEXColors'
 	pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 	pod 'CVCalendar', '~> 1.4.0'
 	pod 'CorePlot'

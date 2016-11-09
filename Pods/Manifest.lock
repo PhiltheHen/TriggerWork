@@ -3,41 +3,51 @@ PODS:
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - CVCalendar (1.4.0)
-  - Fabric (1.6.8)
-  - Firebase (3.6.0):
-    - Firebase/Core (= 3.6.0)
-  - Firebase/Analytics (3.6.0):
-    - FirebaseAnalytics (= 3.4.2)
-  - Firebase/Auth (3.6.0):
-    - Firebase/Analytics
-    - FirebaseAuth (= 3.0.5)
-  - Firebase/Core (3.6.0):
-    - Firebase/Analytics
-  - Firebase/Database (3.6.0):
-    - Firebase/Analytics
-    - FirebaseDatabase (= 3.0.3)
-  - FirebaseAnalytics (3.4.2):
+  - Fabric (1.6.11)
+  - Firebase (3.9.0):
+    - Firebase/Core (= 3.9.0)
+  - Firebase/Auth (3.9.0):
+    - Firebase/Core
+    - FirebaseAuth (= 3.0.6)
+  - Firebase/Core (3.9.0):
+    - FirebaseAnalytics (= 3.5.1)
+    - FirebaseCore (= 3.4.4)
+  - Firebase/Database (3.9.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 3.1.0)
+  - FirebaseAnalytics (3.5.1):
+    - FirebaseCore (~> 3.4)
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
-    - GoogleUtilities (~> 1.2)
-  - FirebaseAuth (3.0.5):
-    - FirebaseAnalytics (~> 3.3)
-    - GoogleNetworkingUtilities (~> 1.2)
-    - GoogleUtilities (~> 1.2)
-  - FirebaseDatabase (3.0.3):
-    - FirebaseAnalytics (~> 3.3)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseAuth (3.0.6):
+    - FirebaseAnalytics (~> 3.4)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (3.4.4):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (3.1.0):
+    - FirebaseAnalytics (~> 3.4)
   - FirebaseInstanceID (1.0.8)
-  - GoogleInterchangeUtilities (1.2.1):
-    - GoogleSymbolUtilities (~> 1.0)
-  - GoogleNetworkingUtilities (1.2.1):
-    - GoogleSymbolUtilities (~> 1.0)
-  - GoogleSymbolUtilities (1.1.1)
-  - GoogleUtilities (1.3.1):
-    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/DebugUtils (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - GoogleToolboxForMac/Defines (2.1.0)
+  - GoogleToolboxForMac/NSData+zlib (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.0):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.0)
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
+  - GTMSessionFetcher/Core (1.1.7)
   - ReachabilitySwift (3)
   - SVProgressHUD (2.0.3)
-  - SwiftHEXColors (1.0.4)
+  - SwiftHEXColors (1.1.0)
 
 DEPENDENCIES:
   - CorePlot
@@ -49,41 +59,36 @@ DEPENDENCIES:
   - Firebase/Database
   - ReachabilitySwift (~> 3)
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
-  - SwiftHEXColors (from `https://github.com/thii/SwiftHEXColors.git`, branch `swift-3.0`)
+  - SwiftHEXColors
 
 EXTERNAL SOURCES:
   SVProgressHUD:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
-  SwiftHEXColors:
-    :branch: swift-3.0
-    :git: https://github.com/thii/SwiftHEXColors.git
 
 CHECKOUT OPTIONS:
   SVProgressHUD:
-    :commit: cc5f7d68fe76afdb79e215b8ff00133575fafacc
+    :commit: 1871e8e12740f5fc672cb03f314737ab4ff319bc
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
-  SwiftHEXColors:
-    :commit: f4b98e298528fd9d88b10ab55e806d29ce497daa
-    :git: https://github.com/thii/SwiftHEXColors.git
 
 SPEC CHECKSUMS:
   CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   CVCalendar: ec1a06a508f99d8e5067258754f811a8a1433a3f
-  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
-  Firebase: 34187200ef4979dbd485c7aa685ef078bf587c86
-  FirebaseAnalytics: 3f5358d9104adf159cc8d99b7b501e50099a39ad
-  FirebaseAuth: 75a062bbf2d3c97d1e6e55bbc110e13a6853e25d
-  FirebaseDatabase: 750a4a0fe18ef114318876fd654b2d9c671e0992
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
+  FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
+  FirebaseAuth: 96e9674ff31d6e1f826d53e26aa003a57cab0295
+  FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
+  FirebaseDatabase: 3ebb2edb6007c3f0f87b248f3fa212bde56a1468
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
-  GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
-  GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
-  GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
-  GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
-  SwiftHEXColors: b0ecc7bd83a1aa2e1956f9ba51f55ebb2bcf86ef
+  SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
 
-PODFILE CHECKSUM: ef45567459994c2ffb57371f10671a37829295ae
+PODFILE CHECKSUM: f3f718f18439ac8d2eb7e852cd9baa0080c724ac
 
 COCOAPODS: 1.1.0.rc.2
